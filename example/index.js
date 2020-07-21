@@ -5,8 +5,15 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
 
 (async () => {
+  let apiBasePath = process.env.API_TEST_PATH
+  if (!apiBasePath) {
+    apiBasePath = "http://localhost:8080"
+  }
+  const license = process.env.TEST_LICENSE
+
   const raw_image = fs.readFileSync('australia_passport.jpg').buffer
-  const api = new DocumentReaderApi({basePath: "http://localhost:8080"});
+  const api = new DocumentReaderApi({basePath: apiBasePath});
+  api.setLicense(license)
 
   const response = await api.process({
     images: [raw_image],
