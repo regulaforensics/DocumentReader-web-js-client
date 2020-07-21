@@ -21,7 +21,7 @@ jobs:
       - run: npm run build
       - run: cd example
       - run: npm install
-      - run: node .
+      - run: node index.js
         env:
           API_BASE_PATH: "http://test-api.regulaforensics.com"
           TEST_LICENSE: ${{secrets.TEST_LICENSE}}
