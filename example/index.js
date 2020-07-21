@@ -5,7 +5,7 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
 
 (async () => {
-  let apiBasePath = process.env.API_TEST_PATH
+  let apiBasePath = process.env.API_BASE_PATH
   if (!apiBasePath) {
     apiBasePath = "http://localhost:8080"
   }
