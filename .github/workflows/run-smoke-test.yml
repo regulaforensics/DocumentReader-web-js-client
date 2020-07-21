@@ -19,9 +19,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install
       - run: npm run build
-      - run: cd example
       - run: npm install
+        working-directory: ./example
       - run: node index.js
+        working-directory: ./example
         env:
           API_BASE_PATH: "http://test-api.regulaforensics.com"
           TEST_LICENSE: ${{secrets.TEST_LICENSE}}
