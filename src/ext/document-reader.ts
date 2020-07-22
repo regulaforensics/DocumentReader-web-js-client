@@ -43,11 +43,11 @@ export class DocumentReaderApi extends DefaultApi {
       .then((axiosResult) => new Response(axiosResult.data));
   }
 
-  public getLicense() {
+  public getLicense(): string | undefined {
     return this.license
   }
 
-  public setLicense(license: string) {
+  public setLicense(license: string): void {
     this.license = license
   }
 }
