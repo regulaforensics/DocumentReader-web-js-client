@@ -36,6 +36,12 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
   // text fields example
   const docNumberField = response.text.getField(DOCUMENT_NUMBER);
+  const docNumberFieldByName = response.text.getFieldByName("Document Number")
+
+  if (docNumberField != docNumberFieldByName) {
+    throw Error("getField() and getFieldByName() must return the same result")
+  }
+
   const docNumberVisual = docNumberField.getValue(Source.VISUAL)
   const docNumberMrz = docNumberField.getValue(Source.MRZ)
   const docNumberVisualValidity = docNumberField.sourceValidity(Source.VISUAL)
