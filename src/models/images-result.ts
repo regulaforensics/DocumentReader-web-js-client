@@ -18,7 +18,6 @@ import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { GraphicsResult } from './graphics-result';
 import { Images } from './images';
-import { ImagesResult } from './images-result';
 import { ImagesResultAllOf } from './images-result-all-of';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { ResultItem } from './result-item';

@@ -23,7 +23,6 @@ import { ResultItem } from './result-item';
 import { StatusResult } from './status-result';
 import { Text } from './text';
 import { TextDataResult } from './text-data-result';
-import { TextResult } from './text-result';
 import { TextResultAllOf } from './text-result-all-of';
 
 /**

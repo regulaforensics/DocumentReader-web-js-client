@@ -17,7 +17,6 @@ import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { GraphicFieldsList } from './graphic-fields-list';
-import { GraphicsResult } from './graphics-result';
 import { GraphicsResultAllOf } from './graphics-result-all-of';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';

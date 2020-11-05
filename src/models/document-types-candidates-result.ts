@@ -16,7 +16,6 @@
 import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesList } from './document-types-candidates-list';
-import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { DocumentTypesCandidatesResultAllOf } from './document-types-candidates-result-all-of';
 import { GraphicsResult } from './graphics-result';
 import { ImagesResult } from './images-result';
