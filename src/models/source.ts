@@ -20,11 +20,11 @@
  * @enum {string}
  */
 export enum Source {
-    MRZ = 'MRZ',
-    VISUAL = 'VISUAL',
-    BARCODE = 'BARCODE',
-    RFID = 'RFID',
-    MAGNETIC = 'MAGNETIC'
+    Mrz = 'MRZ',
+    Visual = 'VISUAL',
+    Barcode = 'BARCODE',
+    Rfid = 'RFID',
+    Magnetic = 'MAGNETIC'
 }
 
 

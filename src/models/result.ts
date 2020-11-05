@@ -20,19 +20,61 @@
  * @enum {string}
  */
 export enum Result {
+    /**
+    * Contains cropped and rotated with perspective compensation image of document. Single input image can contain multiple document side/pages, which will be returned as separated results. Most of coordinates in other types defined on that image
+    */
     DOCUMENT_IMAGE = 1,
+    /**
+    * Contains check statuses with details, grouped by source
+    */
     STATUS = 33,
+    /**
+    * Contains document textual fields from all sources (mrz, rfid, visual, barcode) with validity and cross-source compare checks
+    */
     TEXT = 36,
+    /**
+    * Contains images from all document sources (mrz, rfid, visual, barcode)
+    */
     IMAGES = 37,
+    /**
+    * Contains MRZ OCR results
+    */
     MRZ_TEXT = 3,
+    /**
+    * Contains Visual zone OCR results
+    */
     VISUAL_TEXT = 17,
+    /**
+    * Contains barcode parsing result with text fields
+    */
     BARCODE_TEXT = 18,
+    /**
+    * Contains RFID parsing result with text fields
+    */
     RFID_TEXT = 102,
+    /**
+    * Contains lexical data analysis results that allow you to compare MRZ OCR results, Visual zone OCR results, barcodes and RFID chip data for an additional assessment of the authenticity of the document (this is an old format, better use TEXT type)
+    */
     LEXICAL_ANALYSIS = 15,
+    /**
+    * Contains cropped graphic fields from Visual zone
+    */
     VISUAL_GRAPHICS = 6,
+    /**
+    * Contains barcode parsing result with graphic fields
+    */
     BARCODE_GRAPHICS = 19,
+    /**
+    * Contains RFID parsing result with graphic fields
+    */
     RFID_GRAPHICS = 103,
+    /**
+    * Contains list of document type candidates with their probabilities and descriptions
+    */
     DOCUMENT_TYPE_CANDIDATES = 8,
+    /**
+    * Contains description of determined document type, if any
+    */
     DOCUMENT_TYPE = 9
 }
 

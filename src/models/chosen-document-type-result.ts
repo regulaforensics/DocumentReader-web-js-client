@@ -13,6 +13,7 @@
  */
 
 
+import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { ChosenDocumentTypeResultAllOf } from './chosen-document-type-result-all-of';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
