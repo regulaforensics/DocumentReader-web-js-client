@@ -68,7 +68,8 @@ export class TextField implements BaseTextField {
    * @param source See {@code Source}
    */
   public sourceValidity(source: Source): CheckResult {
-    return this.validityList.find(sv => sv.source === source)?.status || CheckResult.WAS_NOT_DONE
+    const status = this.validityList.find(sv => sv.source === source)?.status;
+    return typeof status === 'number' ? status : CheckResult.WAS_NOT_DONE
   }
 
   /**
