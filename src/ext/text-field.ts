@@ -69,7 +69,7 @@ export class TextField implements BaseTextField {
    */
   public sourceValidity(source: Source): CheckResult {
     const status = this.validityList.find(sv => sv.source === source)?.status;
-    return typeof status === 'number' ? status : CheckResult.WAS_NOT_DONE
+    return this.statusOrNotDone(status)
   }
 
   /**
@@ -81,6 +81,13 @@ export class TextField implements BaseTextField {
       return (sv.sourceLeft === one && sv.sourceRight === other)
         || (sv.sourceLeft === other && sv.sourceRight === one);
     })
-    return comparison?.status || CheckResult.WAS_NOT_DONE
+    return this.statusOrNotDone(comparison?.status)
+  }
+
+  /**
+   * Returns not done status in case of missing status value.
+   */
+  private statusOrNotDone(status: CheckResult | undefined): CheckResult {
+    return status === undefined ? CheckResult.WAS_NOT_DONE : status
   }
 }
