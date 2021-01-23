@@ -13,9 +13,10 @@
  */
 
 
+import { AuthenticityCheckList } from './authenticity-check-list';
 import { AuthenticityResult } from './authenticity-result';
+import { AuthenticityResultAllOf } from './authenticity-result-all-of';
 import { ChosenDocumentTypeResult } from './chosen-document-type-result';
-import { DocVisualExtendedInfo } from './doc-visual-extended-info';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { GraphicsResult } from './graphics-result';
@@ -24,15 +25,13 @@ import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { ResultItem } from './result-item';
 import { StatusResult } from './status-result';
 import { TextDataResult } from './text-data-result';
-import { TextDataResultAllOf } from './text-data-result-all-of';
 import { TextResult } from './text-result';
 
 /**
- * @type TextDataResult
- * Text fields extracted from one document source. Contains results of specific source for each provided page.
+ * @type AuthenticityResult
  * @export
  */
-export type TextDataResult = ResultItem & TextDataResultAllOf;
+export type AuthenticityResult = AuthenticityResultAllOf & ResultItem;
 
 
 

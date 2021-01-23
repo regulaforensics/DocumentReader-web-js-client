@@ -13,25 +13,24 @@
  */
 
 
-import { AuthenticityResult } from './authenticity-result';
-import { ChosenDocumentTypeResult } from './chosen-document-type-result';
-import { DocumentImageResult } from './document-image-result';
-import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
-import { GraphicsResult } from './graphics-result';
-import { ImagesResult } from './images-result';
-import { LexicalAnalysisResult } from './lexical-analysis-result';
-import { ResultItem } from './result-item';
-import { Status } from './status';
-import { StatusResult } from './status-result';
-import { StatusResultAllOf } from './status-result-all-of';
-import { TextDataResult } from './text-data-result';
-import { TextResult } from './text-result';
+import { AuthenticityCheckResultItem } from './authenticity-check-result-item';
+import { CheckDiagnose } from './check-diagnose';
+import { CheckResult } from './check-result';
+import { Critical } from './critical';
+import { FiberResult } from './fiber-result';
+import { IdentResult } from './ident-result';
+import { Light } from './light';
+import { OCRSecurityTextResult } from './ocrsecurity-text-result';
+import { OCRSecurityTextResultAllOf } from './ocrsecurity-text-result-all-of';
+import { PhotoIdentResult } from './photo-ident-result';
+import { RectangleCoordinates } from './rectangle-coordinates';
+import { SecurityFeatureResult } from './security-feature-result';
 
 /**
- * @type StatusResult
+ * @type OCRSecurityTextResult
  * @export
  */
-export type StatusResult = ResultItem & StatusResultAllOf;
+export type OCRSecurityTextResult = AuthenticityCheckResultItem & OCRSecurityTextResultAllOf;
 
 
 

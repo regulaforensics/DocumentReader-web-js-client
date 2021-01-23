@@ -75,7 +75,11 @@ export enum Result {
     /**
     * Contains description of determined document type, if any
     */
-    DOCUMENT_TYPE = 9
+    DOCUMENT_TYPE = 9,
+    /**
+    * Contains result of document authenticity checks
+    */
+    AUTHENTICITY = 20
 }
 
 

@@ -13,25 +13,22 @@
  */
 
 
-import { AuthenticityResult } from './authenticity-result';
-import { ChosenDocumentTypeResult } from './chosen-document-type-result';
-import { DocumentImageResult } from './document-image-result';
-import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
-import { GraphicsResult } from './graphics-result';
-import { ImagesResult } from './images-result';
-import { LexicalAnalysisResult } from './lexical-analysis-result';
-import { ResultItem } from './result-item';
-import { Status } from './status';
-import { StatusResult } from './status-result';
-import { StatusResultAllOf } from './status-result-all-of';
-import { TextDataResult } from './text-data-result';
-import { TextResult } from './text-result';
 
 /**
- * @type StatusResult
+ * Enumeration contains identifiers determining the criticality of the security element
  * @export
+ * @enum {string}
  */
-export type StatusResult = ResultItem & StatusResultAllOf;
+export enum Critical {
+    /**
+    * Security element may be absent in a valid document
+    */
+    NOT_CRITICAL = 0,
+    /**
+    * Security element must be present in a valid document
+    */
+    CRITICAL = 1
+}
 
 
 

@@ -13,25 +13,26 @@
  */
 
 
-import { AuthenticityResult } from './authenticity-result';
-import { ChosenDocumentTypeResult } from './chosen-document-type-result';
-import { DocumentImageResult } from './document-image-result';
-import { DocumentImageResultAllOf } from './document-image-result-all-of';
-import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
-import { GraphicsResult } from './graphics-result';
 import { ImageData } from './image-data';
-import { ImagesResult } from './images-result';
-import { LexicalAnalysisResult } from './lexical-analysis-result';
-import { ResultItem } from './result-item';
-import { StatusResult } from './status-result';
-import { TextDataResult } from './text-data-result';
-import { TextResult } from './text-result';
 
 /**
- * @type DocumentImageResult
+ * 
  * @export
+ * @interface RawImageContainerList
  */
-export type DocumentImageResult = DocumentImageResultAllOf & ResultItem;
-
+export interface RawImageContainerList {
+    /**
+     * 
+     * @type {number}
+     * @memberof RawImageContainerList
+     */
+    Count?: number;
+    /**
+     * 
+     * @type {Array<ImageData>}
+     * @memberof RawImageContainerList
+     */
+    Images?: Array<ImageData>;
+}
 
 

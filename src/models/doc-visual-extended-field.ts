@@ -53,7 +53,7 @@ export interface DocVisualExtendedField {
      * @type {string}
      * @memberof DocVisualExtendedField
      */
-    Buf_Text: string;
+    Buf_Text?: string;
     /**
      * 
      * @type {RectangleCoordinates}

@@ -33,7 +33,7 @@ export interface ProcessRequestImage {
      * @type {Light}
      * @memberof ProcessRequestImage
      */
-    LightIndex?: Light;
+    light?: Light;
     /**
      * page/image number
      * @type {number}
