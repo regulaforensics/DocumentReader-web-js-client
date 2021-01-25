@@ -57,11 +57,11 @@ This sample generates next text output:
 ```text
     ---------------------------------------------------------------------------
                    Document Overall Status: 0
-                    Document Number Visual: undefined
+                    Document Number Visual: OO0000000
                        Document Number MRZ: OO0000000
-        Validity Of Document Number Visual: 2
+        Validity Of Document Number Visual: 0
            Validity Of Document Number MRZ: 0
-              MRZ-Visual values comparison: 2
+              MRZ-Visual values comparison: 1
     ---------------------------------------------------------------------------
 ```
 Also, it creates [portrait](portrait.jpg) and [document image](document-image.jpg) pictures inside current folder.
