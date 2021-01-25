@@ -75,10 +75,10 @@ export function requestToBaseRequest(request: ProcessRequest): ProcessRequestBas
 
   request.images.forEach((image, index) => {
     if (typeof image === "string") {
-      imageList.push({ImageData: {'image': image}, LightIndex: Light.WHITE, page_idx: index});
+      imageList.push({ImageData: {'image': image}, light: Light.WHITE, page_idx: index});
     } else if (image instanceof ArrayBuffer) {
       const data = bufferToBase64String(image);
-      imageList.push({ImageData: {'image': data}, LightIndex: Light.WHITE, page_idx: index});
+      imageList.push({ImageData: {'image': data}, light: Light.WHITE, page_idx: index});
     } else {
       imageList.push(imageDataToBaseImageData(image, index))
     }
@@ -98,7 +98,7 @@ function imageDataToBaseImageData(image: ProcessRequestImage, pageId: number): P
   } else {
     data = bufferToBase64String(image.ImageData)
   }
-  return {ImageData: {'image': data}, LightIndex: image.LightIndex, page_idx: image.page_idx || pageId}
+  return {ImageData: {'image': data}, light: image.light, page_idx: image.page_idx || pageId}
 }
 
 function bufferToBase64String(buffer: ArrayBuffer): string {

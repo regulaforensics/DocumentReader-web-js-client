@@ -56,12 +56,12 @@ API_BASE_PATH="https://test-api.regulaforensics.com" node .
 This sample generates next text output:
 ```text
     ---------------------------------------------------------------------------
-                   Document Overall Status: not valid
-                    Document Number Visual: U0996738
-                       Document Number MRZ: U0996738
-        Validity Of Document Number Visual: 1
-           Validity Of Document Number MRZ: 1
-              MRZ-Visual values comparison: 1
+                   Document Overall Status: 0
+                    Document Number Visual: undefined
+                       Document Number MRZ: OO0000000
+        Validity Of Document Number Visual: 2
+           Validity Of Document Number MRZ: 0
+              MRZ-Visual values comparison: 2
     ---------------------------------------------------------------------------
 ```
 Also, it creates [portrait](portrait.jpg) and [document image](document-image.jpg) pictures inside current folder.

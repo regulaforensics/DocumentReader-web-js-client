@@ -23,7 +23,6 @@ import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { ResultItem } from './result-item';
 import { StatusResult } from './status-result';
-import { TextDataResult } from './text-data-result';
 import { TextDataResultAllOf } from './text-data-result-all-of';
 import { TextResult } from './text-result';
 

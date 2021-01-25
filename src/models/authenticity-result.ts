@@ -14,7 +14,6 @@
 
 
 import { AuthenticityCheckList } from './authenticity-check-list';
-import { AuthenticityResult } from './authenticity-result';
 import { AuthenticityResultAllOf } from './authenticity-result-all-of';
 import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocumentImageResult } from './document-image-result';

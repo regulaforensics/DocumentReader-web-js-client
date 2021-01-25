@@ -21,7 +21,6 @@ import { IdentResult } from './ident-result';
 import { ImageData } from './image-data';
 import { Light } from './light';
 import { OCRSecurityTextResult } from './ocrsecurity-text-result';
-import { PhotoIdentResult } from './photo-ident-result';
 import { PhotoIdentResultAllOf } from './photo-ident-result-all-of';
 import { RawImageContainerList } from './raw-image-container-list';
 import { RectangleCoordinates } from './rectangle-coordinates';

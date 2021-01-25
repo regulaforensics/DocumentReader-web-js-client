@@ -17,11 +17,11 @@ import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 import { Configuration } from '../configuration';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base.js';
 // @ts-ignore
-import { ProcessRequest } from '../models';
+import { ProcessRequest } from '../models.js';
 // @ts-ignore
-import { ProcessResponse } from '../models';
+import { ProcessResponse } from '../models.js';
 /**
  * ProcessApi - axios parameter creator
  * @export

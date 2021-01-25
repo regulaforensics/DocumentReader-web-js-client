@@ -23,7 +23,6 @@ import { IdentResult } from './ident-result';
 import { OCRSecurityTextResult } from './ocrsecurity-text-result';
 import { PhotoIdentResult } from './photo-ident-result';
 import { RectangleCoordinates } from './rectangle-coordinates';
-import { SecurityFeatureResult } from './security-feature-result';
 import { SecurityFeatureResultAllOf } from './security-feature-result-all-of';
 import { SecurityFeatureType } from './security-feature-type';
 import { Visibility } from './visibility';

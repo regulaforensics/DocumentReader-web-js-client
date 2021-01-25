@@ -22,7 +22,6 @@ import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { ResultItem } from './result-item';
 import { Status } from './status';
-import { StatusResult } from './status-result';
 import { StatusResultAllOf } from './status-result-all-of';
 import { TextDataResult } from './text-data-result';
 import { TextResult } from './text-result';
