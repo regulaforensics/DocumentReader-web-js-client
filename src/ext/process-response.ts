@@ -1,10 +1,14 @@
 import {
-  ContainerList, ImagesResult,
+  AuthenticityResult,
+  ContainerList,
+  ImagesResult,
   ProcessingStatus,
   ProcessResponse,
   Result,
   ResultItem,
-  RfidLocation, Status, StatusResult,
+  RfidLocation,
+  Status,
+  StatusResult,
   TextResult,
   TransactionInfo
 } from "../models/index.js";
@@ -12,6 +16,7 @@ import {Text} from "./text.js";
 import {Images} from "./images.js";
 // @ts-ignore
 import converter from "base64-arraybuffer";
+import {Authenticity} from "./authenticity/authenticity.js";
 
 
 export class Response {
@@ -22,6 +27,7 @@ export class Response {
   status?: Status
   text?: Text
   images?: Images
+  authenticity?: Authenticity
 
   lowLvlResponse: LowLvlResponse
 
@@ -38,6 +44,10 @@ export class Response {
     const imagesResult = lowLvlResponse.imagesResult()
     if (imagesResult) {
       this.images = new Images(imagesResult.Images)
+    }
+    const authenticityResult = lowLvlResponse.authenticityResult()
+    if (authenticityResult) {
+      this.authenticity = new Authenticity(authenticityResult.AuthenticityCheckList)
     }
   }
 
@@ -87,6 +97,10 @@ export class LowLvlResponse implements ProcessResponse {
 
   public imagesResult(): ImagesResult | undefined {
     return <ImagesResult>this.resultByType(Result.IMAGES)
+  }
+
+  public authenticityResult(): AuthenticityResult | undefined {
+    return <AuthenticityResult>this.resultByType(Result.AUTHENTICITY)
   }
 
   public resultByType(type: Result): ResultItem | undefined {

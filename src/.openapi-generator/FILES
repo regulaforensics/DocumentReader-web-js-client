@@ -3,7 +3,7 @@ api/process-api.ts
 base.ts
 configuration.ts
 models/area-container.ts
-models/authenticity-check-list.ts
+models/authenticity.ts
 models/authenticity-check-result-item.ts
 models/authenticity-check-result.ts
 models/authenticity-result-all-of.ts

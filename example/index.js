@@ -7,7 +7,8 @@ import {
   Source,
   TextFieldType,
   GraphicFieldType,
-  Light
+  Light,
+  SecurityFeatureType
 } from '@regulaforensics/document-reader-webclient/esm';
 
 const {PORTRAIT, DOCUMENT_FRONT} = GraphicFieldType;
@@ -64,6 +65,14 @@ const {DOCUMENT_NUMBER} = TextFieldType;
   const docNumberVisualValidity = docNumberField.sourceValidity(Source.VISUAL)
   const docNumberMrzValidity = docNumberField.sourceValidity(Source.MRZ)
   const docNumberMrzVisualMatching = docNumberField.crossSourceComparison(Source.MRZ, Source.VISUAL)
+
+  const docAuthenticity = response.authenticity
+
+  const docIrB900 = docAuthenticity.irB900()
+  const docIrB900Blank = docIrB900.itemByElementType(SecurityFeatureType.BLANK)
+
+  const docImagePattern = docAuthenticity.imagePattern()
+  const docImagePatternBlank = docImagePattern.itemByElementType(SecurityFeatureType.BLANK)
 
   // images example
   const documentImage = response.images.getField(DOCUMENT_FRONT).getValue()
