@@ -14,6 +14,7 @@
 
 
 import { ImageQA } from './image-qa';
+import { MeasureSystem } from './measure-system';
 import { Result } from './result';
 import { Scenario } from './scenario';
 import { TextFieldType } from './text-field-type';
@@ -54,6 +55,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     dateFormat?: string;
+    /**
+     * 
+     * @type {MeasureSystem}
+     * @memberof ProcessParams
+     */
+    measureSystem?: MeasureSystem;
     /**
      * This option controls maximum resolution in dpi of output images. Resolution will remain original in case 0 is supplied. By default is set to return images in response with resolution not greater than 300 dpi.
      * @type {number}

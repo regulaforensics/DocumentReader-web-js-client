@@ -1,13 +1,18 @@
-import {AuthenticityCheckResult, CheckResult, OCRSecurityTextResult, SecurityFeatureType} from "../../models";
+import {
+  AuthenticityCheckResult,
+  AuthenticityResultType,
+  CheckResult,
+  OCRSecurityTextResult
+} from "../../models";
 
-export class OCRSecurityText implements AuthenticityCheckResult {
-    List: Array<OCRSecurityTextResult>;
-    Result: CheckResult;
-    Type: SecurityFeatureType;
+export class OCRSecurityTextChecks implements AuthenticityCheckResult {
+  List: Array<OCRSecurityTextResult>;
+  Result: CheckResult;
+  Type: AuthenticityResultType;
 
-    constructor(origin: AuthenticityCheckResult) {
-        this.List = <Array<OCRSecurityText>>origin.List
-        this.Result = origin.Result
-        this.Type = origin.Type
-    }
+  constructor(origin: AuthenticityCheckResult) {
+    this.List = <Array<OCRSecurityTextChecks>>origin.List
+    this.Result = origin.Result
+    this.Type = origin.Type
+  }
 }

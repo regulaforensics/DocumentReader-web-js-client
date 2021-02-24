@@ -68,11 +68,11 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
   const docAuthenticity = response.authenticity
 
-  const docIrB900 = docAuthenticity.irB900()
-  const docIrB900Blank = docIrB900.itemByElementType(SecurityFeatureType.BLANK)
+  const docIrB900 = docAuthenticity.irB900Checks()
+  const docIrB900BlankChecks = docIrB900.checksByElement(SecurityFeatureType.BLANK)
 
-  const docImagePattern = docAuthenticity.imagePattern()
-  const docImagePatternBlank = docImagePattern.itemByElementType(SecurityFeatureType.BLANK)
+  const docImagePattern = docAuthenticity.imageAreaChecks()
+  const docImagePatternBlankChecks = docImagePattern.checksByElement(SecurityFeatureType.BLANK)
 
   // images example
   const documentImage = response.images.getField(DOCUMENT_FRONT).getValue()

@@ -3,10 +3,11 @@ api/process-api.ts
 base.ts
 configuration.ts
 models/area-container.ts
-models/authenticity.ts
+models/authenticity-check-list.ts
 models/authenticity-check-result-item.ts
 models/authenticity-check-result.ts
 models/authenticity-result-all-of.ts
+models/authenticity-result-type.ts
 models/authenticity-result.ts
 models/check-diagnose.ts
 models/check-result.ts
@@ -55,6 +56,7 @@ models/lexical-analysis-result-all-of.ts
 models/lexical-analysis-result.ts
 models/light.ts
 models/list-verified-fields.ts
+models/measure-system.ts
 models/ocrsecurity-text-result-all-of.ts
 models/ocrsecurity-text-result.ts
 models/one-candidate.ts

@@ -29,7 +29,7 @@ export interface ProcessResponse {
      * @type {RfidLocation}
      * @memberof ProcessResponse
      */
-    ChipPage: RfidLocation;
+    ChipPage?: RfidLocation;
     /**
      * 
      * @type {ProcessingStatus}
@@ -54,6 +54,12 @@ export interface ProcessResponse {
      * @memberof ProcessResponse
      */
     log?: string;
+    /**
+     * Free-form object provided in request. See passBackObject property of ProcessRequest.
+     * @type {{ [key: string]: object; }}
+     * @memberof ProcessResponse
+     */
+    passBackObject?: { [key: string]: object; };
 }
 
 
