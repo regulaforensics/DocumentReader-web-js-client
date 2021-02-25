@@ -66,12 +66,12 @@ const {DOCUMENT_NUMBER} = TextFieldType;
   const docNumberMrzValidity = docNumberField.sourceValidity(Source.MRZ)
   const docNumberMrzVisualMatching = docNumberField.crossSourceComparison(Source.MRZ, Source.VISUAL)
 
-  const docAuthenticity = response.authenticity
+  const docAuthenticity = response.authenticity()
 
   const docIrB900 = docAuthenticity.irB900Checks()
   const docIrB900BlankChecks = docIrB900.checksByElement(SecurityFeatureType.BLANK)
 
-  const docImagePattern = docAuthenticity.imageAreaChecks()
+  const docImagePattern = docAuthenticity.imagePatternChecks()
   const docImagePatternBlankChecks = docImagePattern.checksByElement(SecurityFeatureType.BLANK)
 
   // images example

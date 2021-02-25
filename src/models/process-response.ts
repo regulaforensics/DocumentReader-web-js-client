@@ -56,10 +56,10 @@ export interface ProcessResponse {
     log?: string;
     /**
      * Free-form object provided in request. See passBackObject property of ProcessRequest.
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof ProcessResponse
      */
-    passBackObject?: { [key: string]: object; };
+    passBackObject?: { [key: string]: any; };
 }
 
 

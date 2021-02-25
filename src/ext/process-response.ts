@@ -27,7 +27,6 @@ export class Response {
   status?: Status
   text?: Text
   images?: Images
-  authenticity?: Authenticity
 
   lowLvlResponse: LowLvlResponse
 
@@ -45,10 +44,11 @@ export class Response {
     if (imagesResult) {
       this.images = new Images(imagesResult.Images)
     }
-    const authenticityResult = lowLvlResponse.authenticityResult()
-    if (authenticityResult) {
-      this.authenticity = new Authenticity(authenticityResult.AuthenticityCheckList)
-    }
+  }
+
+  public authenticity(page_idx = 0): Authenticity | undefined {
+    const r = <AuthenticityResult>this.lowLvlResponse.resultByTypeAndPage(Result.AUTHENTICITY, page_idx)
+    return new Authenticity(r.AuthenticityCheckList)
   }
 
   public decodedLog(): string | undefined {
@@ -78,6 +78,7 @@ export class LowLvlResponse implements ProcessResponse {
   TransactionInfo: TransactionInfo
   ChipPage: RfidLocation
   log?: string
+  passBackObject?: { [key: string]: any; };
 
   constructor(original: ProcessResponse) {
     this.ContainerList = original.ContainerList
@@ -85,6 +86,7 @@ export class LowLvlResponse implements ProcessResponse {
     this.TransactionInfo = original.TransactionInfo
     this.ChipPage = original.ChipPage
     this.log = original.log
+    this.passBackObject = original.passBackObject
   }
 
   public statusResult(): StatusResult | undefined {
@@ -99,13 +101,18 @@ export class LowLvlResponse implements ProcessResponse {
     return <ImagesResult>this.resultByType(Result.IMAGES)
   }
 
-  public authenticityResult(): AuthenticityResult | undefined {
-    return <AuthenticityResult>this.resultByType(Result.AUTHENTICITY)
-  }
-
   public resultByType(type: Result): ResultItem | undefined {
     for (const container of this.ContainerList.List) {
       if (container.result_type === type) {
+        return container
+      }
+    }
+    return undefined
+  }
+
+  public resultByTypeAndPage(type: Result, page_idx = 0): ResultItem | undefined {
+    for (const container of this.ContainerList.List) {
+      if (container.result_type === type && container.page_idx == page_idx) {
         return container
       }
     }
