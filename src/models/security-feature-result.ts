@@ -24,7 +24,7 @@ import { OCRSecurityTextResult } from './ocrsecurity-text-result';
 import { PhotoIdentResult } from './photo-ident-result';
 import { RectangleCoordinates } from './rectangle-coordinates';
 import { SecurityFeatureResultAllOf } from './security-feature-result-all-of';
-import { SecurityFeatureType } from './security-feature-type';
+import { SecurityFeatureType2 } from './security-feature-type2';
 import { Visibility } from './visibility';
 
 /**

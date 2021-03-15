@@ -13,54 +13,60 @@
  */
 
 
-import { AreaContainer } from './area-container';
-import { Critical } from './critical';
-import { RectangleCoordinates } from './rectangle-coordinates';
-import { SecurityFeatureType2 } from './security-feature-type2';
-import { Visibility } from './visibility';
+import { AreaArray } from './area-array';
+import { CheckResult } from './check-result';
+import { ImageQualityCheckType } from './image-quality-check-type';
+import { Numbers } from './numbers';
+import { SecurityFeatureType } from './security-feature-type';
 
 /**
  * 
  * @export
- * @interface SecurityFeatureResultAllOf
+ * @interface ImageQualityCheck
  */
-export interface SecurityFeatureResultAllOf {
+export interface ImageQualityCheck {
     /**
      * 
-     * @type {SecurityFeatureType2}
-     * @memberof SecurityFeatureResultAllOf
+     * @type {ImageQualityCheckType}
+     * @memberof ImageQualityCheck
      */
-    ElementType?: SecurityFeatureType2;
+    _type?: ImageQualityCheckType;
     /**
      * 
-     * @type {RectangleCoordinates}
-     * @memberof SecurityFeatureResultAllOf
+     * @type {CheckResult}
+     * @memberof ImageQualityCheck
      */
-    ElementRect?: RectangleCoordinates;
+    result?: CheckResult;
     /**
      * 
-     * @type {Visibility}
-     * @memberof SecurityFeatureResultAllOf
+     * @type {SecurityFeatureType}
+     * @memberof ImageQualityCheck
      */
-    Visibility?: Visibility;
+    featureType?: SecurityFeatureType;
     /**
      * 
-     * @type {Critical}
-     * @memberof SecurityFeatureResultAllOf
+     * @type {Array<AreaArray>}
+     * @memberof ImageQualityCheck
      */
-    CriticalFlag?: Critical;
+    areas?: Array<AreaArray>;
     /**
      * 
-     * @type {Array<AreaContainer>}
-     * @memberof SecurityFeatureResultAllOf
+     * @type {Numbers}
+     * @memberof ImageQualityCheck
      */
-    AreaList?: Array<AreaContainer>;
+    mean?: Numbers;
+    /**
+     * 
+     * @type {Numbers}
+     * @memberof ImageQualityCheck
+     */
+    stdDev?: Numbers;
     /**
      * 
      * @type {number}
-     * @memberof SecurityFeatureResultAllOf
+     * @memberof ImageQualityCheck
      */
-    Reserved2?: number;
+    probability?: number;
 }
 
 

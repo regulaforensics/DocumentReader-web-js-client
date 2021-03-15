@@ -15,42 +15,139 @@
 
 
 /**
- * Enumeration contains identifiers determining type of features for a document authenticity checks
+ * 
  * @export
  * @enum {string}
  */
 export enum SecurityFeatureType {
-    BLANK = 0,
-    FILL = 1,
-    PHOTO = 2,
+    /**
+    * 
+    */
+    Blank = 0,
+    /**
+    * 
+    */
+    Fill = 1,
+    /**
+    * 
+    */
+    Photo = 2,
+    /**
+    * 
+    */
     MRZ = 3,
-    FALSE_LUMINESCENCE = 4,
-    HOLO_SIMPLE = 5,
-    HOLO_VERIFY_STATIC = 6,
-    HOLO_VERIFY_MULTI_STATIC = 7,
-    HOLO_VERIFY_DYNAMIC = 8,
-    PATTERN_NOT_INTERRUPTED = 9,
-    PATTERN_NOT_SHIFTED = 10,
-    PATTERN_SAME_COLORS = 11,
-    PATTERN_IR_INVISIBLE = 12,
-    PHOTO_SIZE_CHECK = 13,
-    PORTRAIT_COMPARISON_VS_GHOST = 14,
-    PORTRAIT_COMPARISON_VS_RFID = 15,
-    PORTRAIT_COMPARISON_VS_VISUAL = 16,
-    BARCODE = 17,
-    PATTERN_DIFFERENT_LINES_THICKNESS = 18,
-    PORTRAIT_COMPARISON_VS_CAMERA = 19,
-    PORTRAIT_COMPARISON_RFID_VS_CAMERA = 20,
-    GHOST_PHOTO = 21,
-    CLEAR_GHOST_PHOTO = 22,
-    INVISIBLE_OBJECT = 23,
-    LOW_CONTRAST_OBJECT = 24,
-    PHOTO_COLOR = 25,
-    PHOTO_SHAPE = 26,
-    PHOTO_CORNERS = 27,
-    PORTRAIT_COMPARISON_EXT_VS_VISUAL = 29,
-    PORTRAIT_COMPARISON_EXT_VS_RFID = 30,
-    PORTRAIT_COMPARISON_EXT_VS_CAMERA = 31
+    /**
+    * 
+    */
+    FalseLuminescene = 4,
+    /**
+    * 
+    */
+    HoloSimple = 5,
+    /**
+    * 
+    */
+    HoloVerifyStatic = 6,
+    /**
+    * 
+    */
+    HoloVerifyMultyStatic = 7,
+    /**
+    * 
+    */
+    HoloVerifyDinamic = 8,
+    /**
+    * 
+    */
+    PatternNotInterrupted = 9,
+    /**
+    * 
+    */
+    PatternNotShifted = 10,
+    /**
+    * 
+    */
+    PatternSameColors = 11,
+    /**
+    * 
+    */
+    PatternIRInvisible = 12,
+    /**
+    * 
+    */
+    PhotoSizeCheck = 13,
+    /**
+    * 
+    */
+    Portrait_Comparison_vsGhost = 14,
+    /**
+    * 
+    */
+    Portrait_Comparison_vsRFID = 15,
+    /**
+    * 
+    */
+    Portrait_Comparison_vsVisual = 16,
+    /**
+    * 
+    */
+    Barcode = 17,
+    /**
+    * 
+    */
+    Pattern_DifferentLinesThickness = 18,
+    /**
+    * 
+    */
+    Portrait_Comparison_vsCamera = 19,
+    /**
+    * 
+    */
+    Portrait_Comparison_RFIDvsCamera = 20,
+    /**
+    * 
+    */
+    GhostPhoto = 21,
+    /**
+    * 
+    */
+    ClearGhostPhoto = 22,
+    /**
+    * 
+    */
+    InvisibleObject = 23,
+    /**
+    * 
+    */
+    LowContrastObject = 24,
+    /**
+    * 
+    */
+    Photo_Color = 25,
+    /**
+    * 
+    */
+    Photo_Shape = 26,
+    /**
+    * 
+    */
+    Photo_Corners = 27,
+    /**
+    * 
+    */
+    Document_Cancelling_Detector = 28,
+    /**
+    * 
+    */
+    Portrait_Comparison_ExtvsVisual = 29,
+    /**
+    * 
+    */
+    Portrait_Comparison_ExtvsRFID = 30,
+    /**
+    * 
+    */
+    Portrait_Comparison_ExtvsLive = 31
 }
 
 

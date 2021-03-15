@@ -13,25 +13,27 @@
  */
 
 
-import { AreaContainer } from './area-container';
-import { AuthenticityCheckResultItem } from './authenticity-check-result-item';
-import { CheckDiagnose } from './check-diagnose';
 import { CheckResult } from './check-result';
-import { FiberResult } from './fiber-result';
-import { IdentResultAllOf } from './ident-result-all-of';
-import { ImageData } from './image-data';
-import { Light } from './light';
-import { OCRSecurityTextResult } from './ocrsecurity-text-result';
-import { PhotoIdentResult } from './photo-ident-result';
-import { RectangleCoordinates } from './rectangle-coordinates';
-import { SecurityFeatureResult } from './security-feature-result';
-import { SecurityFeatureType2 } from './security-feature-type2';
+import { ImageQualityCheck } from './image-quality-check';
 
 /**
- * @type IdentResult
+ * 
  * @export
+ * @interface ImageQualityListResult
  */
-export type IdentResult = AuthenticityCheckResultItem & IdentResultAllOf;
-
+export interface ImageQualityListResult {
+    /**
+     * 
+     * @type {CheckResult}
+     * @memberof ImageQualityListResult
+     */
+    result?: CheckResult;
+    /**
+     * 
+     * @type {Array<ImageQualityCheck>}
+     * @memberof ImageQualityListResult
+     */
+    list?: Array<ImageQualityCheck>;
+}
 
 

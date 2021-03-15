@@ -17,7 +17,7 @@ import { AreaContainer } from './area-container';
 import { ImageData } from './image-data';
 import { Light } from './light';
 import { RectangleCoordinates } from './rectangle-coordinates';
-import { SecurityFeatureType } from './security-feature-type';
+import { SecurityFeatureType2 } from './security-feature-type2';
 
 /**
  * 
@@ -27,10 +27,10 @@ import { SecurityFeatureType } from './security-feature-type';
 export interface IdentResultAllOf {
     /**
      * 
-     * @type {SecurityFeatureType}
+     * @type {SecurityFeatureType2}
      * @memberof IdentResultAllOf
      */
-    ElementType?: SecurityFeatureType;
+    ElementType?: SecurityFeatureType2;
     /**
      * 
      * @type {Light}
