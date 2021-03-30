@@ -82,7 +82,6 @@ const {DOCUMENT_NUMBER} = TextFieldType;
   fs.appendFileSync('document-image.jpg', Buffer.from(documentImage));
 
   const docImageQuality = response.imageQualityChecks();
-  console.log(docImageQuality)
 
   console.log("-----------------------------------------------------------------")
   console.log(`           Document Overall Status: ${docOverallStatus}`)
