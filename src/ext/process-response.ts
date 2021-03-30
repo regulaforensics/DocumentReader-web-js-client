@@ -1,6 +1,8 @@
 import {
   AuthenticityResult,
   ContainerList,
+  ImageQualityCheckList,
+  ImageQualityListResult,
   ImagesResult,
   ProcessingStatus,
   ProcessResponse,
@@ -57,6 +59,14 @@ export class Response {
     return this.lowLvlResponse.resultsByType(Result.AUTHENTICITY)
       .map((e: AuthenticityResult, i) => new Authenticity(e.AuthenticityCheckList, e.page_idx))
       .sort((a, b) => a.page_idx - b.page_idx)
+  }
+
+  public imageQualityChecks(page_idx = 0): ImageQualityCheckList | undefined {
+    const result = <ImageQualityListResult>this.lowLvlResponse.resultByTypeAndPage(Result.IMAGE_QUALITY, page_idx)
+    if(result)
+    {
+      return result.ImageQualityCheckList;
+    }
   }
 
   public decodedLog(): string | undefined {

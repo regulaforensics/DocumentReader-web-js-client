@@ -18,49 +18,20 @@ import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { GraphicsResult } from './graphics-result';
-import { ImageQualityListResult } from './image-quality-list-result';
+import { ImageQualityCheckList } from './image-quality-check-list';
+import { ImageQualityListResultAllOf } from './image-quality-list-result-all-of';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
+import { ResultItem } from './result-item';
 import { StatusResult } from './status-result';
 import { TextDataResult } from './text-data-result';
 import { TextResult } from './text-result';
 
 /**
- * Common fields for all result objects
+ * @type ImageQualityListResult
  * @export
- * @interface ResultItem
  */
-export interface ResultItem {
-    /**
-     * 
-     * @type {number}
-     * @memberof ResultItem
-     */
-    buf_length?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ResultItem
-     */
-    light?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ResultItem
-     */
-    list_idx?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ResultItem
-     */
-    page_idx?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof ResultItem
-     */
-    result_type: number;
-}
+export type ImageQualityListResult = ImageQualityListResultAllOf & ResultItem;
+
 
 

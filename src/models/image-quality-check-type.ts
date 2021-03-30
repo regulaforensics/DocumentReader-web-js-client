@@ -13,25 +13,38 @@
  */
 
 
-import { AuthenticityResult } from './authenticity-result';
-import { ChosenDocumentTypeResult } from './chosen-document-type-result';
-import { DocumentImageResult } from './document-image-result';
-import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
-import { GraphicsResult } from './graphics-result';
-import { ImageQualityListResult } from './image-quality-list-result';
-import { ImagesResult } from './images-result';
-import { LexicalAnalysisResult } from './lexical-analysis-result';
-import { ResultItem } from './result-item';
-import { StatusResult } from './status-result';
-import { Text } from './text';
-import { TextDataResult } from './text-data-result';
-import { TextResultAllOf } from './text-result-all-of';
 
 /**
- * @type TextResult
+ * 
  * @export
+ * @enum {string}
  */
-export type TextResult = ResultItem & TextResultAllOf;
+export enum ImageQualityCheckType {
+    /**
+    * 
+    */
+    ImageGlares = 0,
+    /**
+    * 
+    */
+    ImageFocus = 1,
+    /**
+    * 
+    */
+    ImageResolution = 2,
+    /**
+    * 
+    */
+    ImageColorness = 3,
+    /**
+    * 
+    */
+    Perspective = 4,
+    /**
+    * 
+    */
+    Bounds = 5
+}
 
 
 

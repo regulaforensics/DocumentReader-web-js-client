@@ -25,6 +25,10 @@ export enum Result {
     */
     DOCUMENT_IMAGE = 1,
     /**
+    * Todo add description
+    */
+    IMAGE_QUALITY = 30,
+    /**
     * Contains check statuses with details, grouped by source
     */
     STATUS = 33,
