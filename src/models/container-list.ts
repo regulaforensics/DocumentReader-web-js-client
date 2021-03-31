@@ -18,7 +18,7 @@ import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { GraphicsResult } from './graphics-result';
-import { ImageQualityListResult } from './image-quality-list-result';
+import { ImageQualityResult } from './image-quality-result';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { StatusResult } from './status-result';
@@ -33,10 +33,10 @@ import { TextResult } from './text-result';
 export interface ContainerList {
     /**
      * 
-     * @type {Array<StatusResult | TextResult | DocumentImageResult | ImagesResult | ChosenDocumentTypeResult | DocumentTypesCandidatesResult | TextDataResult | GraphicsResult | LexicalAnalysisResult | AuthenticityResult | ImageQualityListResult>}
+     * @type {Array<StatusResult | TextResult | DocumentImageResult | ImagesResult | ChosenDocumentTypeResult | DocumentTypesCandidatesResult | TextDataResult | GraphicsResult | LexicalAnalysisResult | AuthenticityResult | ImageQualityResult>}
      * @memberof ContainerList
      */
-    List: Array<StatusResult | TextResult | DocumentImageResult | ImagesResult | ChosenDocumentTypeResult | DocumentTypesCandidatesResult | TextDataResult | GraphicsResult | LexicalAnalysisResult | AuthenticityResult | ImageQualityListResult>;
+    List: Array<StatusResult | TextResult | DocumentImageResult | ImagesResult | ChosenDocumentTypeResult | DocumentTypesCandidatesResult | TextDataResult | GraphicsResult | LexicalAnalysisResult | AuthenticityResult | ImageQualityResult>;
 }
 
 

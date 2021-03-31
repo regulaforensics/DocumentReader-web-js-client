@@ -18,13 +18,13 @@ import { ImageQualityCheckList } from './image-quality-check-list';
 /**
  * 
  * @export
- * @interface ImageQualityListResultAllOf
+ * @interface ImageQualityResultAllOf
  */
-export interface ImageQualityListResultAllOf {
+export interface ImageQualityResultAllOf {
     /**
      * 
      * @type {ImageQualityCheckList}
-     * @memberof ImageQualityListResultAllOf
+     * @memberof ImageQualityResultAllOf
      */
     ImageQualityCheckList: ImageQualityCheckList;
 }

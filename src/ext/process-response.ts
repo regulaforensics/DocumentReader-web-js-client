@@ -2,7 +2,7 @@ import {
   AuthenticityResult,
   ContainerList,
   ImageQualityCheckList,
-  ImageQualityListResult,
+  ImageQualityResult,
   ImagesResult,
   ProcessingStatus,
   ProcessResponse,
@@ -62,7 +62,7 @@ export class Response {
   }
 
   public imageQualityChecks(page_idx = 0): ImageQualityCheckList | undefined {
-    const result = <ImageQualityListResult>this.lowLvlResponse.resultByTypeAndPage(Result.IMAGE_QUALITY, page_idx)
+    const result = <ImageQualityResult>this.lowLvlResponse.resultByTypeAndPage(Result.IMAGE_QUALITY, page_idx)
     if(result)
     {
       return result.ImageQualityCheckList;

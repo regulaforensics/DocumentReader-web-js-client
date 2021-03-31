@@ -19,7 +19,7 @@ import { DocVisualExtendedInfo } from './doc-visual-extended-info';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { GraphicsResult } from './graphics-result';
-import { ImageQualityListResult } from './image-quality-list-result';
+import { ImageQualityResult } from './image-quality-result';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { ResultItem } from './result-item';

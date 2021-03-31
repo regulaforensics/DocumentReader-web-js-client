@@ -19,7 +19,7 @@ import { DocumentImageResult } from './document-image-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { GraphicsResult } from './graphics-result';
 import { ImageQualityCheckList } from './image-quality-check-list';
-import { ImageQualityListResultAllOf } from './image-quality-list-result-all-of';
+import { ImageQualityResultAllOf } from './image-quality-result-all-of';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { ResultItem } from './result-item';
@@ -28,10 +28,10 @@ import { TextDataResult } from './text-data-result';
 import { TextResult } from './text-result';
 
 /**
- * @type ImageQualityListResult
+ * @type ImageQualityResult
  * @export
  */
-export type ImageQualityListResult = ImageQualityListResultAllOf & ResultItem;
+export type ImageQualityResult = ImageQualityResultAllOf & ResultItem;
 
 
 

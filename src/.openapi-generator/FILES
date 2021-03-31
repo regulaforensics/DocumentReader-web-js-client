@@ -48,8 +48,8 @@ models/image-qa.ts
 models/image-quality-check-list.ts
 models/image-quality-check-type.ts
 models/image-quality-check.ts
-models/image-quality-list-result-all-of.ts
-models/image-quality-list-result.ts
+models/image-quality-result-all-of.ts
+models/image-quality-result.ts
 models/images-available-source.ts
 models/images-field-value.ts
 models/images-field.ts

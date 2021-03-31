@@ -25,7 +25,7 @@ export enum Result {
     */
     DOCUMENT_IMAGE = 1,
     /**
-    * Todo add description
+    * Contains image quality check results
     */
     IMAGE_QUALITY = 30,
     /**
