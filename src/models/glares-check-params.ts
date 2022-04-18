@@ -13,27 +13,25 @@
  */
 
 
-import { DocumentTypeRecognitionResult } from './document-type-recognition-result';
-import { OneCandidate } from './one-candidate';
 
 /**
  * 
  * @export
- * @interface DocumentTypesCandidatesList
+ * @interface GlaresCheckParams
  */
-export interface DocumentTypesCandidatesList {
+export interface GlaresCheckParams {
     /**
-     * 
-     * @type {DocumentTypeRecognitionResult}
-     * @memberof DocumentTypesCandidatesList
+     * Margin from the edges of the image. 0.35 = 35%
+     * @type {number}
+     * @memberof GlaresCheckParams
      */
-    RecResult?: DocumentTypeRecognitionResult;
+    imgMarginPart?: number;
     /**
-     * 
-     * @type {Array<OneCandidate>}
-     * @memberof DocumentTypesCandidatesList
+     * The maximum allowable part of the area occupied by the glare. The same: 0.06 = 6%
+     * @type {number}
+     * @memberof GlaresCheckParams
      */
-    Candidates?: Array<OneCandidate>;
+    maxGlaringPart?: number;
 }
 
 
