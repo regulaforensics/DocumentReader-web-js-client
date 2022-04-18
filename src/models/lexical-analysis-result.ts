@@ -23,7 +23,6 @@ import { EncryptedRCLResult } from './encrypted-rclresult';
 import { GraphicsResult } from './graphics-result';
 import { ImageQualityResult } from './image-quality-result';
 import { ImagesResult } from './images-result';
-import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { LexicalAnalysisResultAllOf } from './lexical-analysis-result-all-of';
 import { LicenseResult } from './license-result';
 import { ListVerifiedFields } from './list-verified-fields';

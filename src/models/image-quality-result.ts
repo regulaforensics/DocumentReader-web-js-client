@@ -22,7 +22,6 @@ import { DocumentTypesCandidatesResult } from './document-types-candidates-resul
 import { EncryptedRCLResult } from './encrypted-rclresult';
 import { GraphicsResult } from './graphics-result';
 import { ImageQualityCheckList } from './image-quality-check-list';
-import { ImageQualityResult } from './image-quality-result';
 import { ImageQualityResultAllOf } from './image-quality-result-all-of';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';

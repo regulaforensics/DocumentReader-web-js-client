@@ -18,7 +18,6 @@ import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocBarCodeInfo } from './doc-bar-code-info';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentPosition } from './document-position';
-import { DocumentPositionResult } from './document-position-result';
 import { DocumentPositionResultAllOf } from './document-position-result-all-of';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { EncryptedRCLResult } from './encrypted-rclresult';

@@ -16,7 +16,6 @@
 import { AuthenticityCheckResultItem } from './authenticity-check-result-item';
 import { CheckDiagnose } from './check-diagnose';
 import { CheckResult } from './check-result';
-import { FiberResult } from './fiber-result';
 import { FiberResultAllOf } from './fiber-result-all-of';
 import { IdentResult } from './ident-result';
 import { Light } from './light';

@@ -20,7 +20,6 @@ import { Critical } from './critical';
 import { FiberResult } from './fiber-result';
 import { IdentResult } from './ident-result';
 import { Light } from './light';
-import { OCRSecurityTextResult } from './ocrsecurity-text-result';
 import { OCRSecurityTextResultAllOf } from './ocrsecurity-text-result-all-of';
 import { PhotoIdentResult } from './photo-ident-result';
 import { RectangleCoordinates } from './rectangle-coordinates';

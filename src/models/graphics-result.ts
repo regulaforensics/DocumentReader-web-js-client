@@ -21,7 +21,6 @@ import { DocumentPositionResult } from './document-position-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { EncryptedRCLResult } from './encrypted-rclresult';
 import { GraphicFieldsList } from './graphic-fields-list';
-import { GraphicsResult } from './graphics-result';
 import { GraphicsResultAllOf } from './graphics-result-all-of';
 import { ImageQualityResult } from './image-quality-result';
 import { ImagesResult } from './images-result';

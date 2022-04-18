@@ -19,7 +19,6 @@ import { DocBarCodeInfo } from './doc-bar-code-info';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentPositionResult } from './document-position-result';
 import { DocumentTypesCandidatesList } from './document-types-candidates-list';
-import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { DocumentTypesCandidatesResultAllOf } from './document-types-candidates-result-all-of';
 import { EncryptedRCLResult } from './encrypted-rclresult';
 import { GraphicsResult } from './graphics-result';
