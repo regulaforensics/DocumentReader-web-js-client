@@ -13,6 +13,7 @@
  */
 
 
+import { GlaresCheckParams } from './glares-check-params';
 
 /**
  * 
@@ -56,6 +57,12 @@ export interface ImageQA {
      * @memberof ImageQA
      */
     moireCheck?: boolean;
+    /**
+     * 
+     * @type {GlaresCheckParams}
+     * @memberof ImageQA
+     */
+    glaresCheckParams?: GlaresCheckParams;
 }
 
 

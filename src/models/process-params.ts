@@ -222,6 +222,36 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     convertCase?: TextPostProcessing;
+    /**
+     * If it is set to true, the Surname and GivenNames fields from the MRZ will be divided into the ft_First_Name, ft_Second_Name, ft_Third_Name, ft_Fourth_Name, ft_Last_Name fields
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    splitNames?: boolean;
+    /**
+     * Disables reading perforated fields
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    disablePerforationOCR?: boolean;
+    /**
+     * Checks filter
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    processAuth?: boolean;
+    /**
+     * Filter documents by group
+     * @type {string}
+     * @memberof ProcessParams
+     */
+    documentGroupFilter?: string;
+    /**
+     * When it true ImageQuality can affect on Optical Status
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    respectImageQuality?: boolean;
 }
 
 

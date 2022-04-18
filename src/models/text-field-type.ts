@@ -2371,7 +2371,23 @@ export enum TextFieldType {
     /**
     * Issuer identification number
     */
-    ISSUER_IDENTIFICATION_NUMBER = 641
+    ISSUER_IDENTIFICATION_NUMBER = 641,
+    /**
+    * Second name
+    */
+    FT_SECOND_NAME = 647,
+    /**
+    * Third name
+    */
+    FT_THIRD_NAME = 648,
+    /**
+    * Fourth name
+    */
+    FT_FOURTH_NAME = 649,
+    /**
+    * Last name
+    */
+    FT_LAST_NAME = 650
 }
 
 
