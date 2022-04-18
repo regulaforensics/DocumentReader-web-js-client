@@ -46,6 +46,7 @@ models/encrypted-rclresult.ts
 models/fdsidlist.ts
 models/fiber-result-all-of.ts
 models/fiber-result.ts
+models/glares-check-params.ts
 models/graphic-field-type.ts
 models/graphic-field.ts
 models/graphic-fields-list.ts
