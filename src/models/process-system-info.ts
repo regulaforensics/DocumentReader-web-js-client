@@ -32,6 +32,12 @@ export interface ProcessSystemInfo {
      * @memberof ProcessSystemInfo
      */
     recaptcha_token?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ProcessSystemInfo
+     */
+    commitTransactions?: boolean;
 }
 
 
