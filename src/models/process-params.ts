@@ -13,6 +13,7 @@
  */
 
 
+import { AuthenticityResultType } from './authenticity-result-type';
 import { DocumentFormat } from './document-format';
 import { DocumentType } from './document-type';
 import { ImageQA } from './image-qa';
@@ -247,6 +248,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     documentGroupFilter?: Array<DocumentType>;
+    /**
+     * Authenticity checks that should be performed regardless of the document type. The available checks are listed in the eRPRM_Authenticity enum. Note that only supported by your license checks can be added. 
+     * @type {Array<AuthenticityResultType>}
+     * @memberof ProcessParams
+     */
+    processAuth?: Array<AuthenticityResultType>;
 }
 
 

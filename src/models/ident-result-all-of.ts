@@ -63,10 +63,10 @@ export interface IdentResultAllOf {
     PercentValue?: number;
     /**
      * 
-     * @type {Array<AreaContainer>}
+     * @type {AreaContainer}
      * @memberof IdentResultAllOf
      */
-    AreaList?: Array<AreaContainer>;
+    AreaList?: AreaContainer;
 }
 
 

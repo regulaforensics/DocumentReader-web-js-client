@@ -22,6 +22,12 @@ import { AuthenticityCheckResult } from './authenticity-check-result';
  */
 export interface AuthenticityCheckList {
     /**
+     * Count of items in List
+     * @type {number}
+     * @memberof AuthenticityCheckList
+     */
+    Count?: number;
+    /**
      * Authenticity Check
      * @type {Array<AuthenticityCheckResult>}
      * @memberof AuthenticityCheckList
