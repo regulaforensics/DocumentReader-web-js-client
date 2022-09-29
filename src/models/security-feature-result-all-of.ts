@@ -51,10 +51,10 @@ export interface SecurityFeatureResultAllOf {
     CriticalFlag?: Critical;
     /**
      * 
-     * @type {Array<AreaContainer>}
+     * @type {AreaContainer}
      * @memberof SecurityFeatureResultAllOf
      */
-    AreaList?: Array<AreaContainer>;
+    AreaList?: AreaContainer;
     /**
      * 
      * @type {number}

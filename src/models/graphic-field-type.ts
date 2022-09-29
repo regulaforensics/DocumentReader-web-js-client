@@ -107,7 +107,19 @@ export enum GraphicFieldType {
     /**
     * Fingerprint (little, right hand)
     */
-    FINGER_RIGHT_LITTLE = 309
+    FINGER_RIGHT_LITTLE = 309,
+    /**
+    * Fingerprint (four without thumb on right hand)
+    */
+    FINGER_RIGHT_FOUR_FINGERS = 313,
+    /**
+    * Fingerprint (four without thumb on left hand
+    */
+    FINGER_LEFT_FOUR_FINGERS = 314,
+    /**
+    * Fingerprint (two thumbs)
+    */
+    FINGER_TWO_THUMBS = 315
 }
 
 
