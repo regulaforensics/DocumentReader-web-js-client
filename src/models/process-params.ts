@@ -14,8 +14,10 @@
 
 
 import { AuthenticityResultType } from './authenticity-result-type';
+import { Bool } from './bool';
 import { DocumentFormat } from './document-format';
 import { DocumentType } from './document-type';
+import { FaceApi } from './face-api';
 import { ImageQA } from './image-qa';
 import { LogLevel } from './log-level';
 import { MRZFormat } from './mrzformat';
@@ -33,6 +35,30 @@ import { TextPostProcessing } from './text-post-processing';
  * @interface ProcessParams
  */
 export interface ProcessParams {
+    /**
+     * This parameter allows processing an image that contains a person and a document and compare the portrait photo from the document with the person\'s face
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    oneShotIdentification?: boolean;
+    /**
+     * This parameter allows comparing faces on Regula Face Web Service
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    useFaceApi?: boolean;
+    /**
+     * 
+     * @type {FaceApi}
+     * @memberof ProcessParams
+     */
+    faceApi?: FaceApi;
+    /**
+     * This parameter allows enabling the CAN (Card Access Number) detection and recognition when using scenarios with document location and MRZ reading, such as the MrzAndLocate scenario.
+     * @type {Bool}
+     * @memberof ProcessParams
+     */
+    doDetectCan?: Bool;
     /**
      * This parameter allows setting maximum height in pixels of output images and thus reducing image size to desired. Does not change the aspect ratio. Changes disabled if equals to 0. Default 0.
      * @type {number}
@@ -266,7 +292,7 @@ export interface ProcessParams {
      * @type {AuthenticityResultType<object>}
      * @memberof ProcessParams
      */
-    processAuth?: number;
+    processAuth?: AuthenticityResultType<object>;
     /**
      * This parameter is used to specify the document reader device type from which input images were captured. Default 0.
      * @type {number}
