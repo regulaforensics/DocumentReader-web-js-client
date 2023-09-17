@@ -15,7 +15,9 @@
 
 import { AuthenticityResult } from './authenticity-result';
 import { ChosenDocumentTypeResult } from './chosen-document-type-result';
+import { DocBarCodeInfoFieldsList } from './doc-bar-code-info-fields-list';
 import { DocBarCodeInfoResult } from './doc-bar-code-info-result';
+import { DocBarCodeInfoResultAllOf } from './doc-bar-code-info-result-all-of';
 import { DocumentImageResult } from './document-image-result';
 import { DocumentPositionResult } from './document-position-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
@@ -25,17 +27,17 @@ import { ImageQualityResult } from './image-quality-result';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { LicenseResult } from './license-result';
-import { LicenseResultAllOf } from './license-result-all-of';
 import { ResultItem } from './result-item';
 import { StatusResult } from './status-result';
 import { TextDataResult } from './text-data-result';
 import { TextResult } from './text-result';
 
 /**
- * @type LicenseResult
+ * @type DocBarCodeInfoResult
+ * Raw data from BarCodes
  * @export
  */
-export type LicenseResult = LicenseResultAllOf & ResultItem;
+export type DocBarCodeInfoResult = DocBarCodeInfoResultAllOf & ResultItem;
 
 
 
