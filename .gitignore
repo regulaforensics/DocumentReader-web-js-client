@@ -72,5 +72,4 @@ typings/
 /example/regula.license
 .parcel-cache
 dist
-esm
 lib

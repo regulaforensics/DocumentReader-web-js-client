@@ -14,7 +14,7 @@ const { PORTRAIT, DOCUMENT_FRONT } = GraphicFieldType;
 const { DOCUMENT_NUMBER } = TextFieldType;
 
 (async () => {
-    let apiBasePath = process.env.API_BASE_PATH || 'https://api.regulaforensics.com';
+    const apiBasePath = process.env.API_BASE_PATH || 'https://api.regulaforensics.com';
     let license = process.env.TEST_LICENSE; // optional, used here only for smoke test purposes
 
     if (fs.existsSync('regula.license')) {
@@ -76,7 +76,7 @@ const { DOCUMENT_NUMBER } = TextFieldType;
     const response = await api.process(request);
 
     const requestJson = JSON.stringify(request);
-    const responseJson = await response.json();
+    const responseJson = response.json();
 
     const docOverallStatus = response.status.overallStatus;
     const docOpticalTextStatus = response.status.detailsOptical.text;

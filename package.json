@@ -1,5 +1,5 @@
 {
-  "name": "test-client-regula",
+  "name": "@regulaforensics/document-reader-webclient",
   "source": "src/index.ts",
   "browserslist": "> 0.25%, not dead",
   "version": "6.6.0",
@@ -17,12 +17,16 @@
     "type": "git",
     "url": "git@github.com/regulaforensics/DocumentReader-api-js-client"
   },
-  "main": "dist/main.js",
-  "module": "esm/main.js",
+  "exports": {
+    "import": "./dist/module/index.mjs",
+    "require": "./dist/main/index.cjs"
+  },
+  "main": "dist/main/index.cjs",
+  "module": "dist/module/index.mjs",
+  "type": "module",
   "types": "lib/index.d.ts",
   "files": [
     "dist",
-    "esm",
     "lib"
   ],
   "targets": {
