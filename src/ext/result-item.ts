@@ -1,8 +1,6 @@
-import {ResultItem} from "../models/index.js";
-
+import { ResultItem } from '../models';
 
 export class BaseResultItem implements ResultItem {
-
     buf_length?: number;
     light?: number;
     list_idx?: number;

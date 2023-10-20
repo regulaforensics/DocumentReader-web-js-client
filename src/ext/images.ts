@@ -1,77 +1,75 @@
 import {
-  GraphicFieldType,
-  Images as BaseImages,
-  ImagesField as BaseImagesField,
-  ImagesAvailableSource, ImagesFieldValue, Source
-} from "../models/index.js";
-import * as converter from "base64-arraybuffer";
+    GraphicFieldType,
+    Images as BaseImages,
+    ImagesField as BaseImagesField,
+    ImagesAvailableSource,
+    ImagesFieldValue,
+    Source,
+} from '../models';
+import * as converter from 'base64-arraybuffer';
 
 export class Images implements BaseImages {
+    availableSourceList: Array<ImagesAvailableSource>;
+    fieldList: Array<ImagesField>;
 
-  availableSourceList: Array<ImagesAvailableSource>;
-  fieldList: Array<ImagesField>;
-
-  constructor(origin: BaseImages) {
-    this.availableSourceList = origin.availableSourceList
-    this.fieldList = origin.fieldList.map(field => new ImagesField(field))
-  }
-
-  public getField(type: GraphicFieldType): ImagesField | undefined {
-    for (const field of this.fieldList) {
-      if (field.fieldType == type) {
-        return field
-      }
+    constructor(origin: BaseImages) {
+        this.availableSourceList = origin.availableSourceList;
+        this.fieldList = origin.fieldList.map((field) => new ImagesField(field));
     }
-    return undefined
-  }
 
-  public getFields(type: GraphicFieldType): Array<ImagesField> | undefined {
-    return this.fieldList.filter(field => field.fieldType == type)
-  }
+    public getField(type: GraphicFieldType): ImagesField | undefined {
+        for (const field of this.fieldList) {
+            if (field.fieldType == type) {
+                return field;
+            }
+        }
+    }
+
+    public getFields(type: GraphicFieldType): Array<ImagesField> | undefined {
+        return this.fieldList.filter((field) => field.fieldType == type);
+    }
 }
 
 export class ImagesField implements BaseImagesField {
+    fieldName: string;
+    fieldType: GraphicFieldType;
+    valueList: Array<ImagesFieldValue>;
 
-  fieldName: string;
-  fieldType: GraphicFieldType;
-  valueList: Array<ImagesFieldValue>;
-
-  constructor(origin: BaseImagesField) {
-    this.fieldName = origin.fieldName
-    this.fieldType = origin.fieldType
-    this.valueList = origin.valueList
-  }
-
-  public getValue(source?: Source, original = false): ArrayBuffer | undefined {
-    let fieldValue
-    if (!source) {
-      // rfid -> visual -> barcode
-      fieldValue = this.getValueBySource(Source.RFID) || this.getValueBySource(Source.VISUAL)
-        || this.getValueBySource(Source.BARCODE)
-    } else {
-      fieldValue = this.getValueBySource(source)
+    constructor(origin: BaseImagesField) {
+        this.fieldName = origin.fieldName;
+        this.fieldType = origin.fieldType;
+        this.valueList = origin.valueList;
     }
 
-    if (!fieldValue) {
-      return undefined
+    public getValue(source?: Source, original = false) {
+        let fieldValue;
+        if (!source) {
+            // rfid -> visual -> barcode
+            fieldValue =
+                this.getValueBySource(Source.RFID) ||
+                this.getValueBySource(Source.VISUAL) ||
+                this.getValueBySource(Source.BARCODE);
+        } else {
+            fieldValue = this.getValueBySource(source);
+        }
+
+        if (!fieldValue) return;
+
+        if (original && fieldValue.originalValue) {
+            return base64ToBuffer(fieldValue.originalValue);
+        }
+        return base64ToBuffer(fieldValue.value);
     }
 
-    if (original && fieldValue.originalValue) {
-      return base64ToBuffer(fieldValue.originalValue)
+    private getValueBySource(source: Source): ImagesFieldValue | undefined {
+        for (const value of this.valueList) {
+            if (value.source == source) {
+                return value;
+            }
+        }
     }
-    return base64ToBuffer(fieldValue.value)
-  }
-
-  private getValueBySource(source: Source): ImagesFieldValue | undefined {
-    for (const value of this.valueList) {
-      if (value.source == source) {
-        return value
-      }
-    }
-    return undefined
-  }
 }
 
-function base64ToBuffer(str: string): ArrayBuffer {
-  return converter.decode(str);
+function base64ToBuffer(str: string) {
+    return converter.decode(str);
 }

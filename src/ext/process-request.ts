@@ -1,10 +1,9 @@
-import {ContainerList, ProcessParams, ProcessSystemInfo} from "../models/index.js";
-import {ProcessRequestImage} from "./process-request-image.js";
+import { ContainerList, ProcessParams, ProcessSystemInfo } from '../models';
+import { ProcessRequestImage } from './process-request-image';
 
 export type Base64String = string;
 
 export interface ProcessRequest {
-
     /**
      *
      * @type {ProcessParams}
@@ -23,7 +22,7 @@ export interface ProcessRequest {
      * @type {ContainerList}
      * @memberOf ProcessRequest
      */
-    ContainerList: ContainerList
+    ContainerList: ContainerList;
 
     /**
      *
@@ -38,9 +37,9 @@ export interface ProcessRequest {
      * @type {{ [key: string]: object; }}
      * @memberof ProcessRequest
      */
-    passBackObject?: { [key: string]: any; };
+    passBackObject?: { [key: string]: any };
 }
 
 export const instanceOfProcessRequest = (data: any): data is ProcessRequest => {
-    return 'images' in data
-}
+    return 'images' in data;
+};

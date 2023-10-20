@@ -1,9 +1,0 @@
-src/.openapi-generator
-src/.openapi-generator-ignore
-ts-generator-config.json
-.idea/
-node_modules
-.gitignore
-.eslintrc
-generator-templates/
-example/
