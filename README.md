@@ -12,7 +12,7 @@ If you have any problems with or questions about this client, please contact us
 through a [GitHub issue](https://github.com/regulaforensics/DocumentReader-api-js-client/issues).
 You are invited to contribute new features, fixes, or updates, large or small. 
 We are always thrilled to receive pull requests, and do our best to process them as fast as we can.
-See [dev guide](./dev.md)
+See [dev guide](https://github.com/regulaforensics/DocumentReader-web-js-client/blob/master/dev.md)
 
 ## Install package
 
