@@ -13,26 +13,31 @@
  */
 
 
-import { AuthenticityCheckResult } from './authenticity-check-result';
 
 /**
- * 
+ * A search filter that can be applied if the \"match+search\" mode is enabled. May include limit, threshold, group_ids. If the group_ids are specified, the search is performed only in these groups. Find more information in the <a href=\"https://dev.regulaforensics.com/FaceSDK-web-openapi/#tag/search/operation/search\" target=\"_blank\">OpenAPI documentation</a>.
  * @export
- * @interface AuthenticityCheckList
+ * @interface FaceApiSearch
  */
-export interface AuthenticityCheckList {
+export interface FaceApiSearch {
     /**
-     * Count of items in List
+     * The maximum number of results to be returned.
      * @type {number}
-     * @memberof AuthenticityCheckList
+     * @memberof FaceApiSearch
      */
-    Count?: number;
+    limit?: number;
     /**
-     * Authenticity Check
-     * @type {Array<AuthenticityCheckResult>}
-     * @memberof AuthenticityCheckList
+     * The similarity threshold.
+     * @type {number}
+     * @memberof FaceApiSearch
      */
-    List: Array<AuthenticityCheckResult>;
+    threshold?: number;
+    /**
+     *  The groups where to conduct the search.
+     * @type {Array<number>}
+     * @memberof FaceApiSearch
+     */
+    group_ids?: Array<number>;
 }
 
 

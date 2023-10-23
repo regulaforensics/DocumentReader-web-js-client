@@ -13,26 +13,26 @@
  */
 
 
-import { AuthenticityCheckResult } from './authenticity-check-result';
+import { PArrayField } from './parray-field';
 
 /**
  * 
  * @export
- * @interface AuthenticityCheckList
+ * @interface DocBarCodeInfoFieldsList
  */
-export interface AuthenticityCheckList {
+export interface DocBarCodeInfoFieldsList {
     /**
-     * Count of items in List
+     * Count of array fields
      * @type {number}
-     * @memberof AuthenticityCheckList
+     * @memberof DocBarCodeInfoFieldsList
      */
-    Count?: number;
+    nFields?: number;
     /**
-     * Authenticity Check
-     * @type {Array<AuthenticityCheckResult>}
-     * @memberof AuthenticityCheckList
+     * Data from barcode
+     * @type {Array<PArrayField>}
+     * @memberof DocBarCodeInfoFieldsList
      */
-    List: Array<AuthenticityCheckResult>;
+    pArrayFields?: Array<PArrayField>;
 }
 
 

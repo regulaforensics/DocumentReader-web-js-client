@@ -25,6 +25,7 @@ models/details-optical.ts
 models/details-rfid.ts
 models/device-info.ts
 models/doc-bar-code-info-all-of.ts
+models/doc-bar-code-info-fields-list.ts
 models/doc-bar-code-info.ts
 models/doc-visual-extended-field.ts
 models/doc-visual-extended-info.ts
@@ -43,6 +44,8 @@ models/document-types-candidates-result.ts
 models/document-types-candidates.ts
 models/encrypted-rclresult-all-of.ts
 models/encrypted-rclresult.ts
+models/face-api-search.ts
+models/face-api.ts
 models/fdsidlist.ts
 models/fiber-result-all-of.ts
 models/fiber-result.ts
