@@ -1,7 +1,7 @@
 {
   "name": "@regulaforensics/document-reader-webclient",
   "source": "src/index.ts",
-  "browserslist": "> 0.25%, not dead",
+  "browserslist": ["> 0.2%", "not dead"],
   "version": "6.6.0",
   "description": "Regula Document Reader js client for the browser and node.js based on axios",
   "author": "Regula Forensics, Inc.",
@@ -18,11 +18,11 @@
     "url": "git@github.com/regulaforensics/DocumentReader-api-js-client"
   },
   "exports": {
-    "import": "./dist/module/index.mjs",
+    "import": "./dist/module/index.js",
     "require": "./dist/main/index.cjs"
   },
   "main": "dist/main/index.cjs",
-  "module": "dist/module/index.mjs",
+  "module": "dist/module/index.js",
   "type": "module",
   "types": "lib/index.d.ts",
   "files": [
@@ -52,6 +52,7 @@
     "*.{js,ts}": "eslint --fix"
   },
   "dependencies": {
+    "@swc/helpers": "^0.5.3",
     "axios": "^1.5.1",
     "base64-arraybuffer": "^1.0.2",
     "pako": "^2.1.0"
