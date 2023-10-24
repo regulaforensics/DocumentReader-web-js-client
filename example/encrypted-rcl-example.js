@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-
 import {
     DocumentReaderApi,
     Result,
@@ -7,20 +6,19 @@ import {
     Source,
     TextFieldType,
     GraphicFieldType,
-} from '@regulaforensics/document-reader-webclient/esm';
+} from '@regulaforensics/document-reader-webclient';
 
-const {PORTRAIT, DOCUMENT_FRONT} = GraphicFieldType;
-const {DOCUMENT_NUMBER} = TextFieldType;
-
+const { PORTRAIT, DOCUMENT_FRONT } = GraphicFieldType;
+const { DOCUMENT_NUMBER } = TextFieldType;
 
 (async () => {
-    let apiBasePath = process.env.API_BASE_PATH || "https://api.regulaforensics.com";
-    let license = process.env.TEST_LICENSE;  // optional, used here only for smoke test purposes
+    const apiBasePath = process.env.API_BASE_PATH || 'https://api.regulaforensics.com';
+    let license = process.env.TEST_LICENSE; // optional, used here only for smoke test purposes
     if (fs.existsSync('regula.license')) {
         license = fs.readFileSync('regula.license');
     }
 
-    const api = new DocumentReaderApi({basePath: apiBasePath});
+    const api = new DocumentReaderApi({ basePath: apiBasePath });
 
     api.setLicense(license);
 
@@ -33,17 +31,24 @@ const {DOCUMENT_NUMBER} = TextFieldType;
         ContainerList: {
             Count: 2,
             List: [
-                {License: license_file, light: 0, page_idx: 0, buf_length: 1372, list_idx: 0, result_type: 50},
-                {EncryptedRCL: encrypted_rcl, light: 0, page_idx: 0, buf_length: 453276, list_idx: 0, result_type: 49}
-            ]
+                { License: license_file, light: 0, page_idx: 0, buf_length: 1372, list_idx: 0, result_type: 50 },
+                {
+                    EncryptedRCL: encrypted_rcl,
+                    light: 0,
+                    page_idx: 0,
+                    buf_length: 453276,
+                    list_idx: 0,
+                    result_type: 49,
+                },
+            ],
         },
         processParam: {
             scenario: Scenario.FULL_AUTH,
             doublePageSpread: true,
             measureSystem: 0,
-            dateFormat: "M/d/yyyy",
-            alreadyCropped: true
-        }
+            dateFormat: 'M/d/yyyy',
+            alreadyCropped: true,
+        },
     });
 
     const docOverallStatus = response.status.overallStatus;
@@ -51,7 +56,7 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
     // text fields example
     const docNumberField = response.text.getField(DOCUMENT_NUMBER);
-    const docNumberFieldByName = response.text.getFieldByName("Document Number");
+    const docNumberFieldByName = response.text.getFieldByName('Document Number');
 
     const docNumberVisual = docNumberField.getValue(Source.VISUAL);
     const docNumberMrz = docNumberField.getValue(Source.MRZ);
@@ -68,16 +73,16 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
     const docImageQuality = response.imageQualityChecks();
 
-    console.log("-----------------------------------------------------------------");
+    console.log('-----------------------------------------------------------------');
     console.log(`            Web API version: ${serverInfo.version}`);
-    console.log("-----------------------------------------------------------------");
+    console.log('-----------------------------------------------------------------');
     console.log(`           Document Overall Status: ${docOverallStatus}`);
     console.log(`            Document Number Visual: ${docNumberVisual}`);
     console.log(`               Document Number MRZ: ${docNumberMrz}`);
     console.log(`Validity Of Document Number Visual: ${docNumberVisualValidity}`);
     console.log(`   Validity Of Document Number MRZ: ${docNumberMrzValidity}`);
     console.log(`      MRZ-Visual values comparison: ${docNumberMrzVisualMatching}`);
-    console.log("-----------------------------------------------------------------");
+    console.log('-----------------------------------------------------------------');
 
     // how to get low lvl individual results
     const lexResult = response.lowLvlResponse.resultByType(Result.LEXICAL_ANALYSIS);

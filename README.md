@@ -10,9 +10,9 @@ Documents recognition as easy as reading two bytes.
 
 If you have any problems with or questions about this client, please contact us
 through a [GitHub issue](https://github.com/regulaforensics/DocumentReader-api-js-client/issues).
-You are invited to contribute [new features, fixes, or updates](https://github.com/regulaforensics/DocumentReader-api-js-clien/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22), large or small; 
+You are invited to contribute new features, fixes, or updates, large or small. 
 We are always thrilled to receive pull requests, and do our best to process them as fast as we can.
-See [dev guide](./dev.md)
+See [dev guide](https://github.com/regulaforensics/DocumentReader-web-js-client/blob/master/dev.md)
 
 ## Install package
 
@@ -23,25 +23,25 @@ npm install @regulaforensics/document-reader-webclient
 
 Performing request:
 ```js
-import {DocumentReaderApi, TextFieldType, GraphicFieldType} from '@regulaforensics/document-reader-webclient'
-const {DOCUMENT_NUMBER, SURNAME_AND_GIVEN_NAMES, DATE_OF_BIRTH} = TextFieldType
-const {PORTRAIT, SIGNATURE} = GraphicFieldType
+import { DocumentReaderApi, Scenario, TextFieldType, GraphicFieldType } from '@regulaforensics/document-reader-webclient';
+const { DOCUMENT_NUMBER, SURNAME_AND_GIVEN_NAMES, DATE_OF_BIRTH } = TextFieldType;
+const { PORTRAIT, SIGNATURE } = GraphicFieldType;
 
-const imageAsBase64String = getDocImageAsBase64String()
-const api = new DocumentReaderApi({basePath: "http://localhost:8080"})
-const result = await api.process({images: [imageAsBase64String]})
+const imageAsBase64String = getDocImageAsBase64String();
+const api = new DocumentReaderApi({ basePath: 'http://localhost:8080' });
+const result = await api.process({ images: [documentImage], processParam: { scenario: Scenario.FULL_PROCESS} });
 ```
 
 Parsing results:
 ```js
 // text fields
-const docNumber = result.text.getField(DOCUMENT_NUMBER)
-const fullName = result.text.getField(SURNAME_AND_GIVEN_NAMES)
-const dateOfBirth = result.text.getField(DATE_OF_BIRTH)
+const docNumber = result.text?.getField(DOCUMENT_NUMBER);
+const fullName = result.text?.getField(SURNAME_AND_GIVEN_NAMES);
+const dateOfBirth = result.text?.getField(DATE_OF_BIRTH);
     
 // graphics fields
-const portraitAsBase64 = result.images.getField(PORTRAIT)
-const signatureAsBase64 = result.images.getField(SIGNATURE)
+const portraitAsBase64 = result.images?.getField(PORTRAIT);
+const signatureAsBase64 = result.images?.getField(SIGNATURE);
 ```
 
 ## Compatibility
@@ -55,4 +55,4 @@ Module system
 * ES6 module system
 
 Definitions
-* TypeScript's definitions should be automatically resolved via `package.json`. ([Reference](http://www.typescriptlang.org/docs/handbook/typings-for-npm-packages.html))
+* TypeScript's definitions should be automatically resolved via `package.json`. ([Reference](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package))

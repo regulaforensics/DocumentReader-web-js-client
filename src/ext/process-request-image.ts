@@ -1,6 +1,6 @@
-import {ProcessRequestImage as ProcessRequestImageBase} from "../models/index.js";
-import {Base64String} from "./process-request.js";
+import { ProcessRequestImage as ProcessRequestImageBase } from '../models';
+import { Base64String } from './process-request';
 
 export interface ProcessRequestImage extends Omit<ProcessRequestImageBase, 'ImageData'> {
-    ImageData: ArrayBuffer | Base64String
+    ImageData: ArrayBuffer | Base64String;
 }

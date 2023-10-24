@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-
 import {
     DocumentReaderApi,
     Result,
@@ -8,22 +7,21 @@ import {
     TextFieldType,
     GraphicFieldType,
     Light,
-    SecurityFeatureType
-} from '@regulaforensics/document-reader-webclient/esm';
+    SecurityFeatureType,
+} from '@regulaforensics/document-reader-webclient';
 
-const {PORTRAIT, DOCUMENT_FRONT} = GraphicFieldType;
-const {DOCUMENT_NUMBER} = TextFieldType;
-
+const { PORTRAIT, DOCUMENT_FRONT } = GraphicFieldType;
+const { DOCUMENT_NUMBER } = TextFieldType;
 
 (async () => {
-    let apiBasePath = process.env.API_BASE_PATH || "https://api.regulaforensics.com";
-    let license = process.env.TEST_LICENSE;  // optional, used here only for smoke test purposes
+    const apiBasePath = process.env.API_BASE_PATH || 'https://api.regulaforensics.com';
+    let license = process.env.TEST_LICENSE; // optional, used here only for smoke test purposes
 
     if (fs.existsSync('regula.license')) {
         license = fs.readFileSync('regula.license');
     }
 
-    const api = new DocumentReaderApi({basePath: apiBasePath});
+    const api = new DocumentReaderApi({ basePath: apiBasePath });
 
     api.setLicense(license);
 
@@ -36,28 +34,44 @@ const {DOCUMENT_NUMBER} = TextFieldType;
     const request = {
         images: [
             {
-                ImageData: white_page_0, light: Light.WHITE, page_idx: 0
+                ImageData: white_page_0,
+                light: Light.WHITE,
+                page_idx: 0,
             },
             {
-                ImageData: ir_page_0, light: Light.IR, page_idx: 0
+                ImageData: ir_page_0,
+                light: Light.IR,
+                page_idx: 0,
             },
             {
-                ImageData: uv_page_0, light: Light.UV, page_idx: 0
-            }
+                ImageData: uv_page_0,
+                light: Light.UV,
+                page_idx: 0,
+            },
         ],
         processParam: {
             scenario: Scenario.FULL_AUTH,
             resultTypeOutput: [
                 // actual results
-                Result.STATUS, Result.AUTHENTICITY, Result.TEXT, Result.IMAGES,
-                Result.DOCUMENT_TYPE, Result.DOCUMENT_TYPE_CANDIDATES, Result.IMAGE_QUALITY,
+                Result.STATUS,
+                Result.AUTHENTICITY,
+                Result.TEXT,
+                Result.IMAGES,
+                Result.DOCUMENT_TYPE,
+                Result.DOCUMENT_TYPE_CANDIDATES,
+                Result.IMAGE_QUALITY,
                 // legacy results
-                Result.MRZ_TEXT, Result.VISUAL_TEXT, Result.BARCODE_TEXT, Result.RFID_TEXT,
-                Result.VISUAL_GRAPHICS, Result.BARCODE_GRAPHICS, Result.RFID_GRAPHICS,
-                Result.LEXICAL_ANALYSIS
-            ]
-        }
-    }
+                Result.MRZ_TEXT,
+                Result.VISUAL_TEXT,
+                Result.BARCODE_TEXT,
+                Result.RFID_TEXT,
+                Result.VISUAL_GRAPHICS,
+                Result.BARCODE_GRAPHICS,
+                Result.RFID_GRAPHICS,
+                Result.LEXICAL_ANALYSIS,
+            ],
+        },
+    };
 
     const response = await api.process(request);
 
@@ -69,7 +83,7 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
     // text fields example
     const docNumberField = response.text.getField(DOCUMENT_NUMBER);
-    const docNumberFieldByName = response.text.getFieldByName("Document Number");
+    const docNumberFieldByName = response.text.getFieldByName('Document Number');
 
     const docNumberVisual = docNumberField.getValue(Source.VISUAL);
     const docNumberMrz = docNumberField.getValue(Source.MRZ);
@@ -94,17 +108,16 @@ const {DOCUMENT_NUMBER} = TextFieldType;
 
     const docImageQuality = response.imageQualityChecks();
 
-    console.log("-----------------------------------------------------------------");
+    console.log('-----------------------------------------------------------------');
     console.log(`            Web API version: ${serverInfo.version}`);
-    console.log("-----------------------------------------------------------------");
+    console.log('-----------------------------------------------------------------');
     console.log(`           Document Overall Status: ${docOverallStatus}`);
     console.log(`            Document Number Visual: ${docNumberVisual}`);
     console.log(`               Document Number MRZ: ${docNumberMrz}`);
     console.log(`Validity Of Document Number Visual: ${docNumberVisualValidity}`);
     console.log(`   Validity Of Document Number MRZ: ${docNumberMrzValidity}`);
     console.log(`      MRZ-Visual values comparison: ${docNumberMrzVisualMatching}`);
-    console.log("-----------------------------------------------------------------");
-
+    console.log('-----------------------------------------------------------------');
 
     // how to get low lvl individual results
     const lexResult = response.lowLvlResponse.resultByType(Result.LEXICAL_ANALYSIS);
