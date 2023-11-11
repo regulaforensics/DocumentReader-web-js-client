@@ -1,7 +1,10 @@
 {
   "name": "@regulaforensics/document-reader-webclient",
   "source": "src/index.ts",
-  "browserslist": ["> 0.2%", "not dead"],
+  "browserslist": [
+    "> 0.2%",
+    "not dead"
+  ],
   "version": "6.6.0",
   "description": "Regula Document Reader js client for the browser and node.js based on axios",
   "author": "Regula Forensics, Inc.",
@@ -53,7 +56,7 @@
   },
   "dependencies": {
     "@swc/helpers": "^0.5.3",
-    "axios": "^1.5.1",
+    "axios": "^1.6.1",
     "base64-arraybuffer": "^1.0.2",
     "pako": "^2.1.0"
   },
