@@ -44,7 +44,7 @@ node .
 ### Running with local Regula Document Reader web API installation
 
 Get your [free trial here](https://mobile.regulaforensics.com/). When you receive the `regula.license` file,
-copy it to the [example](../example) folder. Now you are ready for start!
+copy it to the [example](..) folder. Now you are ready for start!
 
 Follow [the instructions](https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/) to run Regula Document Reader web API.
 If the instance has been launched successfully, use the following line command to run the example:
@@ -69,5 +69,5 @@ This sample generates the following text output:
     ---------------------------------------------------------------------------
 ```
 Also, it stores [portrait](portrait.jpg) and [document image](document-image.jpg) images in the current folder.
-You can modify [this example](../example/index.js)
+You can modify [this example](/index.js)
 and re-run it to get your own results.

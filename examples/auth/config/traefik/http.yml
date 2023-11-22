@@ -1,0 +1,41 @@
+http:
+  middlewares:
+    auth:
+      forwardAuth:
+        address: "http://auth:3000/verify-token"
+        trustForwardHeader: true
+
+  routers:
+    route-api:
+      rule: "PathPrefix(`/api/process`)"
+      service: regula-api
+      priority: 1000
+      entryPoints:
+        - web
+      middlewares:
+        - auth
+
+    route-keycloak:
+      rule: "PathPrefix(`/realms`)"
+      service: auth-api
+      priority: 1001
+      entryPoints:
+        - web
+
+    route-default:
+      rule: "PathPrefix(`/`)"
+      service: regula-api
+      priority: 1
+      entryPoints:
+        - web
+
+  services:
+    regula-api:
+      loadBalancer:
+        servers:
+          - url: "https://api.regulaforensics.com/"
+
+    auth-api:
+      loadBalancer:
+        servers:
+          - url: "http://keycloak:8080/"

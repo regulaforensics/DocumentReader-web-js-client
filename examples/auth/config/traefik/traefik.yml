@@ -1,0 +1,20 @@
+log:
+  level: DEBUG
+
+api:
+  insecure: true
+  dashboard: false
+
+providers:
+  file:
+    filename: "/etc/traefik/http.yml"
+    watch: true
+
+# Entry Points configuration
+# ---
+entryPoints:
+  web:
+    address: :80
+
+  traefik:
+    address: :9090
