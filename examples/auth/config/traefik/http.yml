@@ -15,12 +15,6 @@ http:
       middlewares:
         - auth
 
-    route-keycloak:
-      rule: "PathPrefix(`/realms`)"
-      service: auth-api
-      priority: 1001
-      entryPoints:
-        - web
 
     route-default:
       rule: "PathPrefix(`/`)"
@@ -34,8 +28,3 @@ http:
       loadBalancer:
         servers:
           - url: "https://api.regulaforensics.com/"
-
-    auth-api:
-      loadBalancer:
-        servers:
-          - url: "http://keycloak:8080/"
