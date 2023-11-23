@@ -67,9 +67,13 @@ typings/
 .vscode
 
 # Project
-/examples/portrait.jpg
-/examples/document-image.jpg
-/examples/regula.license
+/examples/auth/client/portrait.jpg
+/examples/auth/client/document-image.jpg
+/examples/auth/client/regula.license
+
+/examples/basic/portrait.jpg
+/examples/basic/document-image.jpg
+/examples/basic/regula.license
 .parcel-cache
 dist
 lib
