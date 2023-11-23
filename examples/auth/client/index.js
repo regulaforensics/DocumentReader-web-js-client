@@ -12,7 +12,7 @@ import {
 import axios from "axios";
 import qs from "qs";
 
-const GATEWAY_BASE_URL = "http://localhost:4333"
+const GATEWAY_BASE_URL = "http://localhost:8080"
 
 const { PORTRAIT, DOCUMENT_FRONT } = GraphicFieldType;
 const { DOCUMENT_NUMBER } = TextFieldType;
