@@ -2,6 +2,7 @@
   "name": "@regulaforensics/document-reader-client-example",
   "type": "module",
   "dependencies": {
-    "@regulaforensics/document-reader-webclient": "file:.."
+    "@regulaforensics/document-reader-webclient": "file:../../..",
+    "qs": "^6.11.2"
   }
 }

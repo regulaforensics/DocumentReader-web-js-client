@@ -1,7 +1,7 @@
 import axios from "axios";
 import jwt from "jsonwebtoken";
 import jwkToPem from "jwk-to-pem";
-import { prop, path, find, compose, flip, curryN } from "ramda";
+import { path, find, compose, flip, curryN } from "ramda";
 
 const verify = curryN(2)(jwt.verify);
 const IDP_KEYCLOAK_URL = "http://keycloak:8080";
@@ -52,7 +52,7 @@ const getUserFromJWK = token => jwk =>
     decode({ complete: true })
   )(token);
 
-const verifyOffline = (accessToken, options = {}) => {
+export const verifyOffline = (accessToken, options = {}) => {
   const url = `${IDP_KEYCLOAK_URL}/realms/${IDP_KEYCLOAK_REALM}/protocol/openid-connect/certs`;
 
   return axios.get(url)

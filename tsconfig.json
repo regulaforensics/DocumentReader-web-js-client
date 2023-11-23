@@ -12,4 +12,5 @@
     "noUnusedParameters": false,
     "isolatedModules": true,
   },
+   "exclude": ["examples"]
 }

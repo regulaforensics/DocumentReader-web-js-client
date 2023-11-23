@@ -55,24 +55,10 @@
     "*.{js,ts}": "eslint --fix"
   },
   "dependencies": {
-    "@regulaforensics/document-reader-webclient": "^6.9.4",
     "@swc/helpers": "^0.5.3",
     "axios": "^1.6.1",
     "base64-arraybuffer": "^1.0.2",
-    "body-parser": "^1.20.2",
-    "braces": "^2.3.1",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "get-keycloak-public-key": "^1.0.3",
-    "glob-parent": "^5.1.2",
-    "helmet": "^7.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "jwk-to-pem": "^2.0.5",
-    "morgan": "^1.10.0",
-    "pako": "^2.1.0",
-    "qs": "^6.11.2",
-    "ramda": "^0.29.1",
-    "urlsafe-base64": "^1.0.0"
+    "pako": "^2.1.0"
   },
   "devDependencies": {
     "@parcel/packager-ts": "^2.10.0",
