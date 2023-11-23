@@ -18,7 +18,7 @@ jobs:
       - run: npm run build
       - run: npm install
         working-directory: ./examples
-      - run: node --unhandled-rejections=strict index.js
+      - run: npm install && node --unhandled-rejections=strict index.js
         working-directory: ./examples/basic/
         env:
           API_BASE_PATH: "https://test-api.regulaforensics.com"
