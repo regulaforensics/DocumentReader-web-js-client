@@ -1,0 +1,38 @@
+version: "3.9"
+
+networks:
+  keycloak-example:
+    driver: bridge
+
+services:
+  keycloak:
+    container_name: "keycloak"
+    image: quay.io/keycloak/keycloak:21.1
+    command: start-dev --import-realm
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/config/keycloak/example.json:/opt/keycloak/data/import/example.json
+    networks:
+      - keycloak-example
+    ports:
+      - "8080:8080"
+
+  auth:
+    container_name: "auth"
+    build:
+      context: ./server
+    networks:
+      - keycloak-example
+
+  traefik:
+    container_name: "traefik"
+    image: traefik:v2.10.5
+    networks:
+      - keycloak-example
+    volumes:
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/config/traefik/traefik.yml:/etc/traefik/traefik.yml
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/config/traefik/http.yml:/etc/traefik/http.yml
+    ports:
+      - "4333:80"

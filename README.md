@@ -10,7 +10,7 @@ Documents recognition as easy as reading two bytes.
 
 If you have any problems with or questions about this client, please contact us
 through a [GitHub issue](https://github.com/regulaforensics/DocumentReader-api-js-client/issues).
-You are invited to contribute new features, fixes, or updates, large or small. 
+You are invited to contribute new features, fixes, or updates, large or small.
 We are always thrilled to receive pull requests, and do our best to process them as fast as we can.
 See [dev guide](https://github.com/regulaforensics/DocumentReader-web-js-client/blob/master/dev.md)
 
@@ -19,7 +19,7 @@ See [dev guide](https://github.com/regulaforensics/DocumentReader-web-js-client/
 ```
 npm install @regulaforensics/document-reader-webclient
 ```
-## Example
+## Basic Example
 
 Performing request:
 ```js
@@ -38,17 +38,18 @@ Parsing results:
 const docNumber = result.text?.getField(DOCUMENT_NUMBER);
 const fullName = result.text?.getField(SURNAME_AND_GIVEN_NAMES);
 const dateOfBirth = result.text?.getField(DATE_OF_BIRTH);
-    
+
 // graphics fields
 const portraitAsBase64 = result.images?.getField(PORTRAIT);
 const signatureAsBase64 = result.images?.getField(SIGNATURE);
 ```
 
+
 ## Compatibility
 
 Language level
 * ES5 with some ES6 features [Promise] and whatwg **URL**. If your environment doesn't support ES6 required features, you can polyfill.
-* nodejs 10+
+* nodejs 18+
 
 Module system
 * CommonJS

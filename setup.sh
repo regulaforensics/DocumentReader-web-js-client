@@ -2,7 +2,7 @@ npm install
 
 npm run build
 
-cd ./example || exit
+cd ./examples/basic || exit
 
 npm install
 

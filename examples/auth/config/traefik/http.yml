@@ -1,0 +1,29 @@
+http:
+  middlewares:
+    auth:
+      forwardAuth:
+        address: "http://auth:3000/verify-token"
+        trustForwardHeader: true
+
+  routers:
+    route-api:
+      rule: "PathPrefix(`/api/process`)"
+      service: regula-api
+      priority: 1000
+      entryPoints:
+        - web
+      middlewares:
+        - auth
+
+    route-default:
+      rule: "PathPrefix(`/`)"
+      service: regula-api
+      priority: 1
+      entryPoints:
+        - web
+
+  services:
+    regula-api:
+      loadBalancer:
+        servers:
+          - url: "https://api.regulaforensics.com/"

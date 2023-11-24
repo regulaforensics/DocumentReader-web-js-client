@@ -1,0 +1,9 @@
+{
+  "name": "@regulaforensics/document-reader-client-example",
+  "type": "module",
+  "dependencies": {
+    "@regulaforensics/document-reader-webclient": "file:../../..",
+    "axios": "^1.6.2",
+    "qs": "^6.11.2"
+  }
+}
