@@ -8,4 +8,12 @@ module.exports = {
     rules: {
         '@typescript-eslint/no-explicit-any': ['warn'],
     },
+    overrides: [
+        {
+            files: ['./examples/**'],
+            rules: {
+                '@typescript-eslint/no-unused-vars': 'off',
+            }
+        },
+    ]
 };

@@ -16,8 +16,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install
       - run: npm run build
-      - run: npm install
-        working-directory: ./examples
       - run: npm install && node --unhandled-rejections=strict index.js
         working-directory: ./examples/basic/
         env:
