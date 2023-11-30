@@ -1,23 +1,23 @@
-import { TextAvailableSource as AvailableSource, CheckResult, Text as BaseText, TextFieldType, LCID } from '../models';
-import { TextField } from './text-field';
+import { TextAvailableSource, CheckResult, Text, TextFieldType, LCID } from '../models';
+import { TextFieldExt } from './text-field-ext';
 
-export class Text implements BaseText {
+export class TextExt implements Text {
     status: CheckResult;
     validityStatus: CheckResult;
     comparisonStatus: CheckResult;
 
-    availableSourceList: Array<AvailableSource>;
-    fieldList: Array<TextField>;
+    availableSourceList: Array<TextAvailableSource>;
+    fieldList: Array<TextFieldExt>;
 
-    constructor(origin: BaseText) {
+    constructor(origin: Text) {
         this.status = origin.status;
         this.validityStatus = origin.validityStatus;
         this.comparisonStatus = origin.comparisonStatus;
         this.availableSourceList = origin.availableSourceList;
-        this.fieldList = origin.fieldList.map((field) => new TextField(field));
+        this.fieldList = origin.fieldList.map((field) => new TextFieldExt(field));
     }
 
-    public getField(type: TextFieldType, lcid?: number): TextField | undefined {
+    public getField(type: TextFieldType, lcid?: number): TextFieldExt | undefined {
         let result;
         for (const field of this.fieldList) {
             if (field.fieldType == type) {
@@ -33,7 +33,7 @@ export class Text implements BaseText {
         return result;
     }
 
-    public getFieldByName(name: string, lcid?: number): TextField | undefined {
+    public getFieldByName(name: string, lcid?: number): TextFieldExt | undefined {
         let result;
         for (const field of this.fieldList) {
             if (field.fieldName == name) {

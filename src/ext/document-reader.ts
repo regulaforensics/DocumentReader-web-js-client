@@ -5,15 +5,15 @@ import { Configuration, ConfigurationParameters } from '../configuration';
 import globalAxios, { AxiosInstance } from 'axios';
 import { BASE_PATH } from '../base';
 import {
-    ProcessRequestImage as ProcessRequestImageBase,
+    ProcessRequestImage,
     Light,
     ProcessRequest as ProcessRequestBase,
     Scenario,
     Result,
     DeviceInfo,
 } from '../models';
-import { Base64String, instanceOfProcessRequest, ProcessRequest } from './process-request';
-import { ProcessRequestImage } from './process-request-image';
+import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
+import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
 import * as converter from 'base64-arraybuffer';
 
 export class DocumentReaderApi {
@@ -39,11 +39,15 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Process list of documents images and return extracted data
-     * @param {ProcessRequest} [request] Request options such as image, results types and etc.
+     * @param {ProcessRequestExt} [request] Request options such as image, results types and etc.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError} If some request params are missed
      * */
-    async process(request: ProcessRequest | ProcessRequestBase, xRequestID?: string, options?: any): Promise<Response> {
+    async process(
+        request: ProcessRequestExt | ProcessRequestBase,
+        xRequestID?: string,
+        options?: any,
+    ): Promise<Response> {
         let baseRequest;
 
         if (instanceOfProcessRequest(request)) {
@@ -79,8 +83,8 @@ export class DocumentReaderApi {
     }
 }
 
-export function requestToBaseRequest(request: ProcessRequest): ProcessRequestBase {
-    const imageList: Array<ProcessRequestImageBase> = [];
+export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequestBase {
+    const imageList: Array<ProcessRequestImage> = [];
 
     request.images.forEach((image, index) => {
         if (typeof image === 'string') {
@@ -101,7 +105,7 @@ export function requestToBaseRequest(request: ProcessRequest): ProcessRequestBas
     };
 }
 
-function imageDataToBaseImageData(image: ProcessRequestImage, arrayIndex: number): ProcessRequestImageBase {
+function imageDataToBaseImageData(image: ProcessRequestImageWrapper, arrayIndex: number): ProcessRequestImage {
     let data: string;
     if (typeof image.ImageData === 'string') {
         data = image.ImageData;

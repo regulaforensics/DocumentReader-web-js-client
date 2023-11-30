@@ -1,23 +1,16 @@
-import {
-    GraphicFieldType,
-    Images as BaseImages,
-    ImagesField as BaseImagesField,
-    ImagesAvailableSource,
-    ImagesFieldValue,
-    Source,
-} from '../models';
+import { GraphicFieldType, Images, ImagesField, ImagesAvailableSource, ImagesFieldValue, Source } from '../models';
 import * as converter from 'base64-arraybuffer';
 
-export class Images implements BaseImages {
+export class ImagesExt implements Images {
     availableSourceList: Array<ImagesAvailableSource>;
-    fieldList: Array<ImagesField>;
+    fieldList: Array<ImagesFieldWrapper>;
 
-    constructor(origin: BaseImages) {
+    constructor(origin: Images) {
         this.availableSourceList = origin.availableSourceList;
-        this.fieldList = origin.fieldList.map((field) => new ImagesField(field));
+        this.fieldList = origin.fieldList.map((field) => new ImagesFieldWrapper(field));
     }
 
-    public getField(type: GraphicFieldType): ImagesField | undefined {
+    public getField(type: GraphicFieldType): ImagesFieldWrapper | undefined {
         for (const field of this.fieldList) {
             if (field.fieldType == type) {
                 return field;
@@ -25,17 +18,17 @@ export class Images implements BaseImages {
         }
     }
 
-    public getFields(type: GraphicFieldType): Array<ImagesField> | undefined {
+    public getFields(type: GraphicFieldType): Array<ImagesFieldWrapper> | undefined {
         return this.fieldList.filter((field) => field.fieldType == type);
     }
 }
 
-export class ImagesField implements BaseImagesField {
+export class ImagesFieldWrapper implements ImagesField {
     fieldName: string;
     fieldType: GraphicFieldType;
     valueList: Array<ImagesFieldValue>;
 
-    constructor(origin: BaseImagesField) {
+    constructor(origin: ImagesField) {
         this.fieldName = origin.fieldName;
         this.fieldType = origin.fieldType;
         this.valueList = origin.valueList;

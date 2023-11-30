@@ -34,21 +34,16 @@
   ],
   "targets": {
     "main": {
-      "optimize": true,
-      "sourceMap": false
+      "optimize": true
     },
     "module": {
-      "optimize": true,
-      "sourceMap": false
-    },
-    "types": {
-      "sourceMap": false
+      "optimize": true
     }
   },
   "scripts": {
     "check-types": "tsc --noEmit",
     "format": "eslint --fix",
-    "build": "parcel build",
+    "build": "parcel build --no-source-maps --no-cache",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -61,8 +56,8 @@
     "pako": "^2.1.0"
   },
   "devDependencies": {
-    "@parcel/packager-ts": "^2.10.0",
-    "@parcel/transformer-typescript-types": "^2.10.0",
+    "@parcel/packager-ts": "^2.10.3",
+    "@parcel/transformer-typescript-types": "^2.10.3",
     "@types/pako": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
@@ -71,8 +66,8 @@
     "eslint-plugin-prettier": "^5.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.1",
-    "parcel": "^2.10.0",
+    "parcel": "^2.10.3",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   }
 }
