@@ -1,33 +1,33 @@
 import { ContainerList, ProcessParams, ProcessSystemInfo } from '../models';
-import { ProcessRequestImage } from './process-request-image';
+import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
 
 export type Base64String = string;
 
-export interface ProcessRequest {
+export interface ProcessRequestExt {
     /**
      *
      * @type {ProcessParams}
-     * @memberof ProcessRequest
+     * @memberof ProcessRequestExt
      */
     processParam: ProcessParams;
 
     /**
      *
      * @type {Array<ProcessRequestImage>}
-     * @memberof ProcessRequest
+     * @memberof ProcessRequestExt
      */
-    images: Array<ProcessRequestImage | ArrayBuffer | Base64String>;
+    images: Array<ProcessRequestImageWrapper | ArrayBuffer | Base64String>;
 
     /**
      * @type {ContainerList}
-     * @memberOf ProcessRequest
+     * @memberOf ProcessRequestExt
      */
     ContainerList: ContainerList;
 
     /**
      *
      * @type {ProcessParams}
-     * @memberof ProcessRequest
+     * @memberof ProcessRequestExt
      */
     systemInfo?: ProcessSystemInfo;
 
@@ -35,11 +35,11 @@ export interface ProcessRequest {
      * Free-form object to be included in response. Must be object, not list or simple value.
      * Do not affect document processing. Use it freely to pass your app params. Stored in process logs.
      * @type {{ [key: string]: object; }}
-     * @memberof ProcessRequest
+     * @memberof ProcessRequestExt
      */
     passBackObject?: { [key: string]: any };
 }
 
-export const instanceOfProcessRequest = (data: any): data is ProcessRequest => {
+export const instanceOfProcessRequest = (data: any): data is ProcessRequestExt => {
     return 'images' in data;
 };

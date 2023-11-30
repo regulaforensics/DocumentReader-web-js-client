@@ -17,8 +17,8 @@ import {
     TransactionInfo,
     OneCandidate,
 } from '../models';
-import { Text } from './text';
-import { Images } from './images';
+import { TextExt } from './text-ext';
+import { ImagesExt } from './images-ext';
 import * as converter from 'base64-arraybuffer';
 import { Authenticity } from './authenticity';
 import * as pako from 'pako';
@@ -28,8 +28,8 @@ export class Response {
     // - authenticity
     // - document
     status?: Status;
-    text?: Text;
-    images?: Images;
+    text?: TextExt;
+    images?: ImagesExt;
 
     lowLvlResponse: LowLvlResponse;
     rawResponse: ProcessResponse;
@@ -42,11 +42,11 @@ export class Response {
         this.status = lowLvlResponse.statusResult()?.Status;
         const textResult = lowLvlResponse.textResult();
         if (textResult) {
-            this.text = new Text(textResult.Text);
+            this.text = new TextExt(textResult.Text);
         }
         const imagesResult = lowLvlResponse.imagesResult();
         if (imagesResult) {
-            this.images = new Images(imagesResult.Images);
+            this.images = new ImagesExt(imagesResult.Images);
         }
     }
 

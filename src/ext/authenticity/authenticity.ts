@@ -1,19 +1,15 @@
-import {
-    AuthenticityCheckList as BaseAuthenticityCheckList,
-    AuthenticityCheckResult,
-    AuthenticityResultType,
-} from '../../models';
+import { AuthenticityCheckList, AuthenticityCheckResult, AuthenticityResultType } from '../../models';
 import { FiberChecks } from './fiber';
 import { IdentChecks } from './ident';
 import { ImageIdentChecks } from './image-ident';
 import { OCRSecurityTextChecks } from './ocr-security-text';
 import { SecurityFeatureChecks } from './security-feature';
 
-export class Authenticity implements BaseAuthenticityCheckList {
+export class Authenticity implements AuthenticityCheckList {
     List: Array<AuthenticityCheckResult>;
     page_idx: number;
 
-    constructor(origin: BaseAuthenticityCheckList, page_idx: number) {
+    constructor(origin: AuthenticityCheckList, page_idx: number) {
         this.List = origin.List;
         this.page_idx = page_idx;
     }

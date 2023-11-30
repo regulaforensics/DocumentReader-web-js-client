@@ -3,7 +3,7 @@ import {
     CrossSourceValueComparison,
     Source,
     SourceValidity,
-    TextField as BaseTextField,
+    TextField,
     TextFieldType,
     TextFieldValue,
 } from '../models';
@@ -152,7 +152,7 @@ const LCID_MAP: Record<number, string> = {
     50002: 'CTC Traditional',
     9999: 'Custom',
 };
-export class TextField implements BaseTextField {
+export class TextFieldExt implements TextField {
     // see BaseTextField for docs
     fieldType: TextFieldType;
     fieldName: string;
@@ -167,7 +167,7 @@ export class TextField implements BaseTextField {
     validityList: Array<SourceValidity>;
     comparisonList: Array<CrossSourceValueComparison>;
 
-    constructor(origin: BaseTextField) {
+    constructor(origin: TextField) {
         this.fieldType = origin.fieldType;
         this.fieldName = origin.fieldName;
         this.lcid = origin.lcid;
