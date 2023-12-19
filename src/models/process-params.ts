@@ -34,6 +34,18 @@ import { TextPostProcessing } from './text-post-processing';
  */
 export interface ProcessParams {
     /**
+     * This parameter is used to enable document liveness check.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    checkLiveness?: boolean;
+    /**
+     * The list of LCID types to ignore during the recognition. If empty, values with all LCID types will be extracted. Narrowing down the list can reduce processing time. Empty by default.
+     * @type {Array<number>}
+     * @memberof ProcessParams
+     */
+    lcidIgnoreFilter?: Array<number>;
+    /**
      * This parameter allows processing an image that contains a person and a document and compare the portrait photo from the document with the person\'s face
      * @type {boolean}
      * @memberof ProcessParams

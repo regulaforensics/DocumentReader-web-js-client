@@ -51,7 +51,8 @@ export enum ImageQualityCheckType {
     /**
     * Signals if the portrait is present
     */
-    Portrait = 7
+    Portrait = 7,
+    Brightness = 8
 }
 
 
