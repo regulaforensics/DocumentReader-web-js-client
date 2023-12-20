@@ -34,6 +34,12 @@ import { TextPostProcessing } from './text-post-processing';
  */
 export interface ProcessParams {
     /**
+     * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
+     * @type {Array<number>}
+     * @memberof ProcessParams
+     */
+    lcidFilter?: Array<number>;
+    /**
      * This parameter is used to enable document liveness check.
      * @type {boolean}
      * @memberof ProcessParams
