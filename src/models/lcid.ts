@@ -121,6 +121,10 @@ export enum LCID {
     */
     BULGARIAN = 1026,
     /**
+    * Burmese
+    */
+    BURMESE = 1109,
+    /**
     * Catalan
     */
     CATALAN = 1027,
@@ -341,6 +345,10 @@ export enum LCID {
     */
     KAZAKH = 1087,
     /**
+    * Khmer
+    */
+    KHMER = 1107,
+    /**
     * Konkani
     */
     KONKANI = 1111,
@@ -368,6 +376,10 @@ export enum LCID {
     * Malay (Brunei Darussalam)
     */
     MALAY_BRUNEI_DARUSSALAM = 2110,
+    /**
+    * Maltese
+    */
+    MALTESE = 1082,
     /**
     * Marathi
     */

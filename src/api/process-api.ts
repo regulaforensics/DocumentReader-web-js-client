@@ -57,6 +57,8 @@ export const ProcessApiAxiosParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter['X-RequestID'] = String(xRequestID);
             }
 
+
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             const queryParameters = new URLSearchParams(localVarUrlObj.search);

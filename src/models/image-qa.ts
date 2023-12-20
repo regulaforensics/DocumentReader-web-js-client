@@ -21,6 +21,12 @@
  */
 export interface ImageQA {
     /**
+     * Set the threshold for an actual document brightness below which the check fails
+     * @type {number}
+     * @memberof ImageQA
+     */
+    brightnessThreshold?: number;
+    /**
      * This parameter sets threshold for Image QA check of the presented document physical dpi. If actual document dpi is below this threshold, check will fail.
      * @type {number}
      * @memberof ImageQA
