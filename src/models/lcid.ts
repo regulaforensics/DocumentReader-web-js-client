@@ -595,7 +595,19 @@ export enum LCID {
     /**
     * CTC Traditional
     */
-    CTC_TRADITIONAL = 50002
+    CTC_TRADITIONAL = 50002,
+    /**
+    * Bengali (Bangladesh)
+    */
+    BengaliBangladesh = 2117,
+    /**
+    * BengaliIndia
+    */
+    BengaliIndia = 1093,
+    /**
+    * Assamese
+    */
+    Assamese = 1101
 }
 
 
