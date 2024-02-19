@@ -2527,7 +2527,15 @@ export enum TextFieldType {
     /**
     * Building type
     */
-    ADDRESS_BUILDING_TYPE = 680
+    ADDRESS_BUILDING_TYPE = 680,
+    /**
+    * Date of Retirement
+    */
+    DATE_OF_RETIREMENT = 681,
+    /**
+    * Document Status
+    */
+    DOCUMENT_STATUS = 682
 }
 
 

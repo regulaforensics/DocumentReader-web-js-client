@@ -129,25 +129,9 @@ export enum LCID {
     */
     CATALAN = 1027,
     /**
-    * Chinese (HongKong S.A.R.)
-    */
-    CHINESE_HONGKONG_SAR = 3076,
-    /**
-    * Chinese (Macao S.A.R.)
-    */
-    CHINESE_MACAO_SAR = 5124,
-    /**
     * Chinese
     */
     CHINESE = 2052,
-    /**
-    * Chinese (Singapore)
-    */
-    CHINESE_SINGAPORE = 4100,
-    /**
-    * Chinese (Taiwan)
-    */
-    CHINESE_TAIWAN = 1028,
     /**
     * Croatian
     */
@@ -160,10 +144,6 @@ export enum LCID {
     * Danish
     */
     DANISH = 1030,
-    /**
-    * Divehi
-    */
-    DIVEHI = 1125,
     /**
     * Dutch (Belgium)
     */
@@ -437,6 +417,10 @@ export enum LCID {
     */
     SERBIAN_LATIN = 2074,
     /**
+    * Sinhala
+    */
+    SINHALA = 1115,
+    /**
     * Slovak
     */
     SLOVAK = 1051,
@@ -537,10 +521,6 @@ export enum LCID {
     */
     SWEDISH_FINLAND = 2077,
     /**
-    * Syriac
-    */
-    SYRIAC = 1114,
-    /**
     * Tamil
     */
     TAMIL = 1097,
@@ -607,7 +587,79 @@ export enum LCID {
     /**
     * Assamese
     */
-    Assamese = 1101
+    Assamese = 1101,
+    /**
+    * Oriya
+    */
+    ORIYA = 1096,
+    /**
+    * Malayalam
+    */
+    MALAYALAM = 1100,
+    /**
+    * Lao
+    */
+    LAO = 1108,
+    /**
+    * Sindhi (India)
+    */
+    SINDHI_INDIA = 1113,
+    /**
+    * Amharic
+    */
+    AMHARIC = 1118,
+    /**
+    * Kashmiri
+    */
+    KASHMIRI = 1120,
+    /**
+    * Nepali
+    */
+    NEPALI = 1121,
+    /**
+    * Pashto
+    */
+    PASHTO = 1123,
+    /**
+    * Sindhi
+    */
+    SINDHI = 2137,
+    /**
+    * Arabic (World)
+    */
+    ARABIC = 4096,
+    /**
+    * Bank Card Number
+    */
+    BANK_CARD_NUMBER = 10000,
+    /**
+    * Bank Card Expiry Date
+    */
+    BANK_CARD_EXPIRY_DATE = 10001,
+    /**
+    * Bank Card Name
+    */
+    BANK_CARD_NAME = 10002,
+    /**
+    * Bank Card
+    */
+    BANK_CARD = 10003,
+    /**
+    * Bank Card CVV2
+    */
+    BANK_CARD_CVV2 = 10004,
+    /**
+    * Abkhazian (Cyrillic)
+    */
+    ABKHAZIAN = 10011,
+    /**
+    * Karakalpak (Latin)
+    */
+    KARAKALPAK = 10012,
+    /**
+    * Urdu Detection
+    */
+    URDU_DETECTION = 10560
 }
 
 

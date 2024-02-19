@@ -65,6 +65,10 @@ export enum GraphicFieldType {
     */
     STAMP = 211,
     /**
+    * Contact chip
+    */
+    CONTACT_CHIP = 213,
+    /**
     * Undefined image type
     */
     OTHER = 250,

@@ -1,9 +1,11 @@
 api/default-api.ts
 api/process-api.ts
+api/transaction-api.ts
 base.ts
 configuration.ts
 models/area-array.ts
 models/area-container.ts
+models/auth-params.ts
 models/authenticity-check-list.ts
 models/authenticity-check-result-item.ts
 models/authenticity-check-result.ts
@@ -69,7 +71,12 @@ models/images-field.ts
 models/images-result-all-of.ts
 models/images-result.ts
 models/images.ts
+models/in-data-rfid-session.ts
+models/in-data-video.ts
+models/in-data.ts
 models/index.ts
+models/inline-response200.ts
+models/inline-response2001.ts
 models/lcid.ts
 models/lexical-analysis-result-all-of.ts
 models/lexical-analysis-result.ts
@@ -77,6 +84,7 @@ models/license-result-all-of.ts
 models/license-result.ts
 models/light.ts
 models/list-verified-fields.ts
+models/liveness-params.ts
 models/log-level.ts
 models/measure-system.ts
 models/mrzformat.ts
@@ -84,6 +92,7 @@ models/ocrsecurity-text-result-all-of.ts
 models/ocrsecurity-text-result.ts
 models/one-candidate.ts
 models/original-symbol.ts
+models/out-data.ts
 models/parray-field.ts
 models/parsing-notification-codes.ts
 models/per-document-config.ts
@@ -128,6 +137,7 @@ models/text-result-all-of.ts
 models/text-result.ts
 models/text.ts
 models/transaction-info.ts
+models/transaction-process-get-response.ts
 models/verification-result.ts
 models/verified-field-map.ts
 models/visibility.ts

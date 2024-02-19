@@ -13,6 +13,7 @@
  */
 
 
+import { AuthParams } from './auth-params';
 import { DocumentFormat } from './document-format';
 import { DocumentType } from './document-type';
 import { FaceApi } from './face-api';
@@ -39,12 +40,6 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     lcidFilter?: Array<number>;
-    /**
-     * This parameter is used to enable document liveness check.
-     * @type {boolean}
-     * @memberof ProcessParams
-     */
-    checkLiveness?: boolean;
     /**
      * The list of LCID types to ignore during the recognition. If empty, values with all LCID types will be extracted. Narrowing down the list can reduce processing time. Empty by default.
      * @type {Array<number>}
@@ -103,6 +98,7 @@ export interface ProcessParams {
      * Enable this option if the image you provide contains double page spread of the passport and you want to process both pages in one go. It makes sense to use it for documents that have meaningful information on both pages, like Russian domestic passport, or some others. Disabled by default.
      * @type {boolean}
      * @memberof ProcessParams
+     * @deprecated
      */
     doublePageSpread?: boolean;
     /**
@@ -181,6 +177,7 @@ export interface ProcessParams {
      * When enabled, shorten the list of candidates to process during document detection in a single image process mode. Reduces processing time for specific backgrounds. Enabled by default.
      * @type {boolean}
      * @memberof ProcessParams
+     * @deprecated
      */
     fastDocDetect?: boolean;
     /**
@@ -345,6 +342,18 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     rfid?: ProcessParamsRfid;
+    /**
+     * This parameter is used to enable authenticity checks
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    checkAuth?: boolean;
+    /**
+     * 
+     * @type {AuthParams}
+     * @memberof ProcessParams
+     */
+    authParams?: AuthParams;
 }
 
 
