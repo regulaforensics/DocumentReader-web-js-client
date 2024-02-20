@@ -65,6 +65,7 @@ models/image-quality-check-type.ts
 models/image-quality-check.ts
 models/image-quality-result-all-of.ts
 models/image-quality-result.ts
+models/image-transaction-data.ts
 models/images-available-source.ts
 models/images-field-value.ts
 models/images-field.ts
@@ -136,6 +137,7 @@ models/text-post-processing.ts
 models/text-result-all-of.ts
 models/text-result.ts
 models/text.ts
+models/transaction-image.ts
 models/transaction-info.ts
 models/transaction-process-get-response.ts
 models/verification-result.ts
