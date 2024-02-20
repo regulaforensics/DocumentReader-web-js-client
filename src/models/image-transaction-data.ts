@@ -13,19 +13,20 @@
  */
 
 
+import { ImagesFieldValue } from './images-field-value';
 
 /**
  * 
  * @export
- * @interface ImageData
+ * @interface ImageTransactionData
  */
-export interface ImageData {
+export interface ImageTransactionData {
     /**
-     * Base64 encoded image
-     * @type {string}
-     * @memberof ImageData
+     * 
+     * @type {ImagesFieldValue}
+     * @memberof ImageTransactionData
      */
-    image: string;
+    image?: ImagesFieldValue;
 }
 
 

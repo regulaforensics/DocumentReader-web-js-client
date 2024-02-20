@@ -21,55 +21,55 @@ import { ProcessSystemInfo } from './process-system-info';
 /**
  * 
  * @export
- * @interface ProcessRequest
+ * @interface TransactionProcessRequest
  */
-export interface ProcessRequest {
+export interface TransactionProcessRequest {
     /**
      * session id
      * @type {string}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     tag?: string;
     /**
      * 
      * @type {ProcessParams}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     processParam: ProcessParams;
     /**
      * 
      * @type {Array<ProcessRequestImage>}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     List?: Array<ProcessRequestImage>;
     /**
      * Live portrait photo
      * @type {string}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     livePortrait?: string;
     /**
      * Portrait photo from an external source
      * @type {string}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     extPortrait?: string;
     /**
      * 
      * @type {ContainerList}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     ContainerList?: ContainerList;
     /**
      * 
      * @type {ProcessSystemInfo}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     systemInfo?: ProcessSystemInfo;
     /**
      * Free-form object to be included in response. Must be object, not list or simple value. Do not affect document processing. Use it freely to pass your app params. Stored in process logs.
      * @type {{ [key: string]: object; }}
-     * @memberof ProcessRequest
+     * @memberof TransactionProcessRequest
      */
     passBackObject?: { [key: string]: object; };
 }
