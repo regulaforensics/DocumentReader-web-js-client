@@ -122,19 +122,14 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
          * 
          * @summary Preprocess
          * @param {number} transactionId Transaction id
-         * @param {string} xCLIENTKEY 
          * @param {TransactionProcessRequest} transactionProcessRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdProcessPost: async (transactionId: number, xCLIENTKEY: string, transactionProcessRequest: TransactionProcessRequest, options: any = {}): Promise<RequestArgs> => {
+        apiV2TransactionTransactionIdProcessPost: async (transactionId: number, transactionProcessRequest: TransactionProcessRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'transactionId' is not null or undefined
             if (transactionId === null || transactionId === undefined) {
                 throw new RequiredError('transactionId','Required parameter transactionId was null or undefined when calling apiV2TransactionTransactionIdProcessPost.');
-            }
-            // verify required parameter 'xCLIENTKEY' is not null or undefined
-            if (xCLIENTKEY === null || xCLIENTKEY === undefined) {
-                throw new RequiredError('xCLIENTKEY','Required parameter xCLIENTKEY was null or undefined when calling apiV2TransactionTransactionIdProcessPost.');
             }
             // verify required parameter 'transactionProcessRequest' is not null or undefined
             if (transactionProcessRequest === null || transactionProcessRequest === undefined) {
@@ -152,10 +147,6 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (xCLIENTKEY !== undefined && xCLIENTKEY !== null) {
-                localVarHeaderParameter['X-CLIENT-KEY'] = String(xCLIENTKEY);
-            }
 
 
     
@@ -273,13 +264,12 @@ export const TransactionApiFp = function(configuration?: Configuration) {
          * 
          * @summary Preprocess
          * @param {number} transactionId Transaction id
-         * @param {string} xCLIENTKEY 
          * @param {TransactionProcessRequest} transactionProcessRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdProcessPost(transactionId: number, xCLIENTKEY: string, transactionProcessRequest: TransactionProcessRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
-            const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TransactionTransactionIdProcessPost(transactionId, xCLIENTKEY, transactionProcessRequest, options);
+        async apiV2TransactionTransactionIdProcessPost(transactionId: number, transactionProcessRequest: TransactionProcessRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+            const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -333,13 +323,12 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
          * 
          * @summary Preprocess
          * @param {number} transactionId Transaction id
-         * @param {string} xCLIENTKEY 
          * @param {TransactionProcessRequest} transactionProcessRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdProcessPost(transactionId: number, xCLIENTKEY: string, transactionProcessRequest: TransactionProcessRequest, options?: any): AxiosPromise<InlineResponse200> {
-            return TransactionApiFp(configuration).apiV2TransactionTransactionIdProcessPost(transactionId, xCLIENTKEY, transactionProcessRequest, options).then((request) => request(axios, basePath));
+        apiV2TransactionTransactionIdProcessPost(transactionId: number, transactionProcessRequest: TransactionProcessRequest, options?: any): AxiosPromise<InlineResponse200> {
+            return TransactionApiFp(configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -390,14 +379,13 @@ export class TransactionApi extends BaseAPI {
      * 
      * @summary Preprocess
      * @param {number} transactionId Transaction id
-     * @param {string} xCLIENTKEY 
      * @param {TransactionProcessRequest} transactionProcessRequest 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TransactionTransactionIdProcessPost(transactionId: number, xCLIENTKEY: string, transactionProcessRequest: TransactionProcessRequest, options?: any) {
-        return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdProcessPost(transactionId, xCLIENTKEY, transactionProcessRequest, options).then((request) => request(this.axios, this.basePath));
+    public apiV2TransactionTransactionIdProcessPost(transactionId: number, transactionProcessRequest: TransactionProcessRequest, options?: any) {
+        return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
