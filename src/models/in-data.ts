@@ -13,9 +13,8 @@
  */
 
 
-import { ImageTransactionData } from './image-transaction-data';
-import { InDataRfidSession } from './in-data-rfid-session';
 import { InDataVideo } from './in-data-video';
+import { TransactionImagesFieldValue } from './transaction-images-field-value';
 
 /**
  * 
@@ -25,22 +24,16 @@ import { InDataVideo } from './in-data-video';
 export interface InData {
     /**
      * 
-     * @type {InDataRfidSession}
-     * @memberof InData
-     */
-    rfidSession?: InDataRfidSession;
-    /**
-     * 
      * @type {InDataVideo}
      * @memberof InData
      */
     video?: InDataVideo;
     /**
      * 
-     * @type {Array<ImageTransactionData>}
+     * @type {Array<TransactionImagesFieldValue>}
      * @memberof InData
      */
-    images?: Array<ImageTransactionData>;
+    images?: Array<TransactionImagesFieldValue>;
 }
 
 

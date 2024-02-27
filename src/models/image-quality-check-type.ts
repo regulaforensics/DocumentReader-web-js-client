@@ -52,7 +52,10 @@ export enum ImageQualityCheckType {
     * Signals if the portrait is present
     */
     Portrait = 7,
-    Brightness = 8
+    /**
+    * Signals if the document image is bright enough
+    */
+    Brightness = 9
 }
 
 

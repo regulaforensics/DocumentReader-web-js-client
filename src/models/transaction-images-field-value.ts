@@ -13,26 +13,45 @@
  */
 
 
-import { TransactionImagesFieldValue } from './transaction-images-field-value';
+import { GraphicFieldType } from './graphic-field-type';
+import { Light } from './light';
 
 /**
  * 
  * @export
- * @interface OutData
+ * @interface TransactionImagesFieldValue
  */
-export interface OutData {
-    /**
-     * Response url
-     * @type {string}
-     * @memberof OutData
-     */
-    url?: string;
+export interface TransactionImagesFieldValue {
     /**
      * 
-     * @type {Array<TransactionImagesFieldValue>}
-     * @memberof OutData
+     * @type {GraphicFieldType}
+     * @memberof TransactionImagesFieldValue
      */
-    images?: Array<TransactionImagesFieldValue>;
+    fieldType?: GraphicFieldType;
+    /**
+     * 
+     * @type {Light}
+     * @memberof TransactionImagesFieldValue
+     */
+    light?: Light;
+    /**
+     * 
+     * @type {number}
+     * @memberof TransactionImagesFieldValue
+     */
+    listIdx?: number;
+    /**
+     * Page index of the image from input list
+     * @type {number}
+     * @memberof TransactionImagesFieldValue
+     */
+    pageIdx?: number;
+    /**
+     * Image url
+     * @type {string}
+     * @memberof TransactionImagesFieldValue
+     */
+    url?: string;
 }
 
 
