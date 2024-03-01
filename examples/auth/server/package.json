@@ -1,7 +1,7 @@
 {
   "name": "@regulaforensics/document-reader-auth-example",
   "source": "index.js",
-  "version": "7.1.2",
+  "version": "0.0.0",
   "author": "Regula Forensics, Inc.",
   "license": "MIT",
   "type": "module",
