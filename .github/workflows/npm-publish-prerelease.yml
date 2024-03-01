@@ -16,6 +16,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: |
           npm version $(npm info | grep next | sed 's/^.*: //') --no-git-tag-version --allow-same-version
+      - run: npm install
+      - run: npm run build
       - run: npm version prerelease --no-git-tag-version --allow-same-version --preid beta
       - run: npm publish --tag next
         env:
