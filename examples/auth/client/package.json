@@ -5,5 +5,6 @@
     "@regulaforensics/document-reader-webclient": "file:../../..",
     "axios": "^1.6.2",
     "qs": "^6.11.2"
-  }
+  },
+  "version": "0.0.0"
 }

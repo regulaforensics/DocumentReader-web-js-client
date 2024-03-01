@@ -5,7 +5,7 @@
     "> 0.2%",
     "not dead"
   ],
-  "version": "6.6.0",
+  "version": "0.0.0",
   "description": "Regula Document Reader js client for the browser and node.js based on axios",
   "author": "Regula Forensics, Inc.",
   "keywords": [
