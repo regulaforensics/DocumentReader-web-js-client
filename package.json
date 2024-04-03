@@ -22,7 +22,8 @@
   },
   "exports": {
     "import": "./dist/module/index.js",
-    "require": "./dist/main/index.cjs"
+    "require": "./dist/main/index.cjs",
+    "types": "./lib/index.d.ts"
   },
   "main": "dist/main/index.cjs",
   "module": "dist/module/index.js",
@@ -51,7 +52,7 @@
   },
   "dependencies": {
     "@swc/helpers": "^0.5.3",
-    "axios": "^1.6.1",
+    "axios": "^1.6.8",
     "base64-arraybuffer": "^1.0.2",
     "pako": "^2.1.0"
   },
