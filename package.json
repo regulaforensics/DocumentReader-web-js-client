@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@swc/helpers": "^0.5.3",
-    "axios": "^1.6.1",
+    "axios": "^1.6.8",
     "base64-arraybuffer": "^1.0.2",
     "pako": "^2.1.0"
   },
