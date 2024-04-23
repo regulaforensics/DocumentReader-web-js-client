@@ -72,6 +72,7 @@ models/images-field.ts
 models/images-result-all-of.ts
 models/images-result.ts
 models/images.ts
+models/in-data-transaction-images-field-value.ts
 models/in-data-video.ts
 models/in-data.ts
 models/index.ts
@@ -87,11 +88,13 @@ models/list-verified-fields.ts
 models/liveness-params.ts
 models/log-level.ts
 models/measure-system.ts
+models/mrz-detect-mode-enum.ts
 models/mrzformat.ts
 models/ocrsecurity-text-result-all-of.ts
 models/ocrsecurity-text-result.ts
 models/one-candidate.ts
 models/original-symbol.ts
+models/out-data-transaction-images-field-value.ts
 models/out-data.ts
 models/parray-field.ts
 models/parsing-notification-codes.ts
@@ -137,7 +140,6 @@ models/text-result-all-of.ts
 models/text-result.ts
 models/text.ts
 models/transaction-image.ts
-models/transaction-images-field-value.ts
 models/transaction-info.ts
 models/transaction-process-get-response.ts
 models/transaction-process-request.ts
