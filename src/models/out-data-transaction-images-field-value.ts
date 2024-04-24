@@ -13,20 +13,45 @@
  */
 
 
-import { VerifiedFieldMap } from './verified-field-map';
+import { GraphicFieldType } from './graphic-field-type';
+import { Light } from './light';
 
 /**
  * 
  * @export
- * @interface ListVerifiedFields
+ * @interface OutDataTransactionImagesFieldValue
  */
-export interface ListVerifiedFields {
+export interface OutDataTransactionImagesFieldValue {
     /**
      * 
-     * @type {Array<VerifiedFieldMap>}
-     * @memberof ListVerifiedFields
+     * @type {GraphicFieldType}
+     * @memberof OutDataTransactionImagesFieldValue
      */
-    pFieldMaps?: Array<VerifiedFieldMap>;
+    fieldType?: GraphicFieldType;
+    /**
+     * 
+     * @type {Light}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
+    light?: Light;
+    /**
+     * 
+     * @type {number}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
+    listIdx?: number;
+    /**
+     * Page index of the image from input list
+     * @type {number}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
+    pageIdx?: number;
+    /**
+     * Image url
+     * @type {string}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
+    url?: string;
 }
 
 

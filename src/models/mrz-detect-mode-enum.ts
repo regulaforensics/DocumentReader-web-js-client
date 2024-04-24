@@ -13,20 +13,17 @@
  */
 
 
-import { VerifiedFieldMap } from './verified-field-map';
 
 /**
- * 
+ * Make better MRZ detection on complex noisy backgrounds, like BW photocopy of some documents.
  * @export
- * @interface ListVerifiedFields
+ * @enum {string}
  */
-export interface ListVerifiedFields {
-    /**
-     * 
-     * @type {Array<VerifiedFieldMap>}
-     * @memberof ListVerifiedFields
-     */
-    pFieldMaps?: Array<VerifiedFieldMap>;
+export enum MrzDetectModeEnum {
+    eMDM_Default = 0,
+    eMDM_ResizeBinarizeWindow = 1,
+    eMDM_BlurBeforeBinarization = 2
 }
+
 
 

@@ -13,20 +13,38 @@
  */
 
 
-import { VerifiedFieldMap } from './verified-field-map';
+import { Light } from './light';
 
 /**
  * 
  * @export
- * @interface ListVerifiedFields
+ * @interface InDataTransactionImagesFieldValue
  */
-export interface ListVerifiedFields {
+export interface InDataTransactionImagesFieldValue {
     /**
      * 
-     * @type {Array<VerifiedFieldMap>}
-     * @memberof ListVerifiedFields
+     * @type {Light}
+     * @memberof InDataTransactionImagesFieldValue
      */
-    pFieldMaps?: Array<VerifiedFieldMap>;
+    light?: Light;
+    /**
+     * 
+     * @type {number}
+     * @memberof InDataTransactionImagesFieldValue
+     */
+    listIdx?: number;
+    /**
+     * Page index of the image from input list
+     * @type {number}
+     * @memberof InDataTransactionImagesFieldValue
+     */
+    pageIdx?: number;
+    /**
+     * Image url
+     * @type {string}
+     * @memberof InDataTransactionImagesFieldValue
+     */
+    url?: string;
 }
 
 
