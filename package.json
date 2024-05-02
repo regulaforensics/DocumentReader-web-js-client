@@ -53,13 +53,11 @@
   "dependencies": {
     "@swc/helpers": "^0.5.3",
     "axios": "^1.6.8",
-    "base64-arraybuffer": "^1.0.2",
-    "pako": "^2.1.0"
+    "base64-arraybuffer": "^1.0.2"
   },
   "devDependencies": {
     "@parcel/packager-ts": "^2.10.3",
     "@parcel/transformer-typescript-types": "^2.10.3",
-    "@types/pako": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "eslint": "^8.51.0",

@@ -21,7 +21,6 @@ import { TextExt } from './text-ext';
 import { ImagesExt } from './images-ext';
 import * as converter from 'base64-arraybuffer';
 import { Authenticity } from './authenticity';
-import * as pako from 'pako';
 
 export class Response {
     // other future modules:
@@ -93,28 +92,10 @@ export class Response {
         const log = this.lowLvlResponse.log;
         if (log) {
             const decoded = converter.decode(log);
-            const uintArray = new Uint8Array(decoded);
-
-            let dataUintArray;
-            try {
-                const currentDataUintArray = pako.inflate(uintArray);
-
-                dataUintArray = currentDataUintArray.length > uintArray.length ? currentDataUintArray : uintArray;
-            } catch (err) {
-                dataUintArray = uintArray;
-            }
-
-            const uintArraySize = dataUintArray.length;
-            const step = 10000;
-            const result = [];
-            const convertedUnitArray = [].slice.call(dataUintArray);
-            // To avoid maximum call stack size excess
-            for (let i = 0; i < uintArraySize; i += step) {
-                const chunk = String.fromCharCode.apply(null, convertedUnitArray.slice(i, i + step));
-                result.push(chunk);
-            }
-            return result.join('');
+            const blob = new Blob([new Uint8Array(decoded)]);
+            return getTextFromReadableStream(blob.stream().pipeThrough(new DecompressionStream('deflate')));
         }
+        return Promise.resolve('');
     }
 }
 
@@ -176,4 +157,23 @@ export class LowLvlResponse implements ProcessResponse {
     public resultsByType(type: Result): Array<ResultItem | AuthenticityResult | ImageQualityCheckList> {
         return this.ContainerList.List.filter((container) => container.result_type === type);
     }
+}
+
+async function getTextFromReadableStream(readableStream: ReadableStream) {
+    const decoder = new TextDecoder('utf-8');
+    let result = '';
+
+    const reader = readableStream.getReader();
+    while (true) {
+        const { done, value } = await reader.read();
+        if (done) {
+            break;
+        }
+        result += decoder.decode(value);
+    }
+
+    // Decode the last chunk if it wasn't completely decoded
+    result += decoder.decode();
+
+    return result;
 }
