@@ -1,9 +1,13 @@
 import {
     AuthenticityResult,
+    ChosenDocumentTypeResult,
     ContainerList,
+    DocBarCodeInfo,
     ImageQualityCheckList,
     ImageQualityResult,
     ImagesResult,
+    InlineResponse2001,
+    OneCandidate,
     ProcessingStatus,
     ProcessResponse,
     Result,
@@ -12,10 +16,7 @@ import {
     Status,
     StatusResult,
     TextResult,
-    ChosenDocumentTypeResult,
-    DocBarCodeInfo,
     TransactionInfo,
-    OneCandidate,
 } from '../models';
 import { TextExt } from './text-ext';
 import { ImagesExt } from './images-ext';
@@ -32,9 +33,9 @@ export class Response {
     images?: ImagesExt;
 
     lowLvlResponse: LowLvlResponse;
-    rawResponse: ProcessResponse;
+    rawResponse: ProcessResponse | InlineResponse2001;
 
-    constructor(original: ProcessResponse) {
+    constructor(original: ProcessResponse | InlineResponse2001) {
         const lowLvlResponse = new LowLvlResponse(original);
         this.lowLvlResponse = lowLvlResponse;
         this.rawResponse = original;
@@ -127,10 +128,10 @@ export class LowLvlResponse implements ProcessResponse {
     passBackObject?: { [key: string]: any };
     morePagesAvailable?: number;
 
-    constructor(original: ProcessResponse) {
-        this.ContainerList = original.ContainerList;
-        this.ProcessingFinished = original.ProcessingFinished;
-        this.TransactionInfo = original.TransactionInfo;
+    constructor(original: ProcessResponse | InlineResponse2001) {
+        this.ContainerList = original.ContainerList || { Count: 0, List: [] };
+        this.ProcessingFinished = original.ProcessingFinished || ProcessingStatus.NOT_FINISHED;
+        this.TransactionInfo = original.TransactionInfo || {};
         this.ChipPage = original.ChipPage;
         this.log = original.log;
         this.passBackObject = original.passBackObject;
