@@ -3,7 +3,7 @@ import { ProcessApi } from '../api/process-api';
 import { TransactionApi } from '../api/transaction-api';
 import { Response } from './process-response';
 import { Configuration, ConfigurationParameters } from '../configuration';
-import globalAxios, { AxiosInstance } from 'axios';
+import globalAxios, { AxiosInstance, AxiosResponse } from 'axios';
 import { BASE_PATH } from '../base';
 import {
     ProcessRequestImage,
@@ -13,6 +13,7 @@ import {
     Result,
     DeviceInfo,
     TransactionProcessRequest,
+    InlineResponse200,
 } from '../models';
 import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
 import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
@@ -98,7 +99,7 @@ export class DocumentReaderApi {
         transactionId: number,
         transactionProcessRequest: TransactionProcessRequest,
         options?: any,
-    ) {
+    ): Promise<AxiosResponse<InlineResponse200, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdProcessPost(
             transactionId,
             transactionProcessRequest,
