@@ -13,20 +13,20 @@
  */
 
 
-import { SymbolRecognitionResult } from './symbol-recognition-result';
+import { Scenario } from './scenario';
 
 /**
- * Describes single row recognition results in multi-line text field of a document
+ * 
  * @export
- * @interface StringRecognitionResult
+ * @interface TransactionScenarioRequest
  */
-export interface StringRecognitionResult {
+export interface TransactionScenarioRequest {
     /**
-     * Array of recognition results for individual characters of a string
-     * @type {Array<SymbolRecognitionResult>}
-     * @memberof StringRecognitionResult
+     * 
+     * @type {Scenario}
+     * @memberof TransactionScenarioRequest
      */
-    StringResult: Array<SymbolRecognitionResult>;
+    scenario?: Scenario;
 }
 
 

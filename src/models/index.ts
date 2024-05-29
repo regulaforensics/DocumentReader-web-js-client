@@ -137,6 +137,7 @@ export * from './transaction-image';
 export * from './transaction-info';
 export * from './transaction-process-get-response';
 export * from './transaction-process-request';
+export * from './transaction-scenario-request';
 export * from './verification-result';
 export * from './verified-field-map';
 export * from './visibility';
