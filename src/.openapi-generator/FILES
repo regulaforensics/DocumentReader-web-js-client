@@ -143,6 +143,7 @@ models/transaction-image.ts
 models/transaction-info.ts
 models/transaction-process-get-response.ts
 models/transaction-process-request.ts
+models/transaction-scenario-request.ts
 models/verification-result.ts
 models/verified-field-map.ts
 models/visibility.ts
