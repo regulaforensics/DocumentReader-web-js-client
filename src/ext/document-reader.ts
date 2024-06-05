@@ -115,7 +115,7 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getReprocessTransactionResult(transactionId: number, withImages?: boolean, options?: any) {
+    async getReprocessTransactionResult(transactionId: number, withImages?: boolean, options?: any): Promise<Response> {
         const axiosResult = await this.transactionApi.apiV2TransactionTransactionIdResultsGet(
             transactionId,
             withImages,
