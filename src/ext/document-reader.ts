@@ -1,8 +1,9 @@
 import { DefaultApi } from '../api/default-api';
 import { ProcessApi } from '../api/process-api';
+import { TransactionApi } from '../api/transaction-api';
 import { Response } from './process-response';
 import { Configuration, ConfigurationParameters } from '../configuration';
-import globalAxios, { AxiosInstance } from 'axios';
+import globalAxios, { AxiosInstance, AxiosResponse } from 'axios';
 import { BASE_PATH } from '../base';
 import {
     ProcessRequestImage,
@@ -11,6 +12,8 @@ import {
     Scenario,
     Result,
     DeviceInfo,
+    TransactionProcessRequest,
+    InlineResponse200,
 } from '../models';
 import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
 import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
@@ -19,6 +22,7 @@ import * as converter from 'base64-arraybuffer';
 export class DocumentReaderApi {
     private readonly defaultApi: DefaultApi;
     private readonly processApi: ProcessApi;
+    private readonly transactionApi: TransactionApi;
 
     private license: string | undefined;
 
@@ -29,6 +33,7 @@ export class DocumentReaderApi {
     ) {
         this.defaultApi = new DefaultApi(new Configuration(configuration), basePath, axios);
         this.processApi = new ProcessApi(new Configuration(configuration), basePath, axios);
+        this.transactionApi = new TransactionApi(new Configuration(configuration), basePath, axios);
     }
 
     async ping(xRequestID?: string): Promise<DeviceInfo> {
@@ -80,6 +85,43 @@ export class DocumentReaderApi {
         } else {
             this.license = bufferToBase64String(license);
         }
+    }
+
+    /**
+     *
+     * @summary Reprocess
+     * @param {number} transactionId Transaction id
+     * @param {TransactionProcessRequest} transactionProcessRequest
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public reprocessTransaction(
+        transactionId: number,
+        transactionProcessRequest: TransactionProcessRequest,
+        options?: any,
+    ): Promise<AxiosResponse<InlineResponse200, any>> {
+        return this.transactionApi.apiV2TransactionTransactionIdProcessPost(
+            transactionId,
+            transactionProcessRequest,
+            options,
+        );
+    }
+
+    /**
+     *
+     * @summary Get Reprocess transaction result
+     * @param {number} transactionId Transaction id
+     * @param {boolean} [withImages] With base64 images or url
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async getReprocessTransactionResult(transactionId: number, withImages?: boolean, options?: any): Promise<Response> {
+        const axiosResult = await this.transactionApi.apiV2TransactionTransactionIdResultsGet(
+            transactionId,
+            withImages,
+            options,
+        );
+        return new Response(axiosResult.data);
     }
 }
 
