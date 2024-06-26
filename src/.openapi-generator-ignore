@@ -1,6 +1,7 @@
 .gitignore
 .npmignore
 package.json
+package-lock.json
 tsconfig.*
 README.md
 git_push.sh
