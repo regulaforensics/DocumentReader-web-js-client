@@ -9,14 +9,14 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "axios": "^1.6.8",
+    "axios": "^1.7.4",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "jwk-to-pem": "^2.0.5",
+    "jwk-to-pem": "^2.0.6",
     "morgan": "^1.10.0",
-    "ramda": "^0.29.1"
+    "ramda": "^0.30.1"
   }
 }
