@@ -51,6 +51,7 @@ models/face-api.ts
 models/fdsidlist.ts
 models/fiber-result-all-of.ts
 models/fiber-result.ts
+models/get-transactions-by-tag-response.ts
 models/graphic-field-type.ts
 models/graphic-field.ts
 models/graphic-fields-list.ts
@@ -143,7 +144,6 @@ models/transaction-image.ts
 models/transaction-info.ts
 models/transaction-process-get-response.ts
 models/transaction-process-request.ts
-models/transaction-scenario-request.ts
 models/verification-result.ts
 models/verified-field-map.ts
 models/visibility.ts

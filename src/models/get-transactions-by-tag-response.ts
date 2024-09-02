@@ -15,44 +15,29 @@
 
 
 /**
- * Image quality check type
+ * 
  * @export
- * @enum {string}
+ * @interface GetTransactionsByTagResponse
  */
-export enum ImageQualityCheckType {
+export interface GetTransactionsByTagResponse {
     /**
-    * Signals glare presence on the image
-    */
-    ImageGlares = 0,
+     * Transaction id
+     * @type {number}
+     * @memberof GetTransactionsByTagResponse
+     */
+    id?: number;
     /**
-    * Signals whether image is in focus
-    */
-    ImageFocus = 1,
+     * Transaction status
+     * @type {number}
+     * @memberof GetTransactionsByTagResponse
+     */
+    state?: number;
     /**
-    * Signals if image resolution is below threshold
-    */
-    ImageResolution = 2,
-    /**
-    * Signals if image is colorless
-    */
-    ImageColorness = 3,
-    /**
-    * Signals if document in the image has prespective distortion above threshold
-    */
-    Perspective = 4,
-    /**
-    * Signals if document is not fully present in the image
-    */
-    Bounds = 5,
-    /**
-    * Signals if the portrait is present
-    */
-    Portrait = 7,
-    /**
-    * Signals if the document image is bright enough
-    */
-    Brightness = 9
+     * Last time updated
+     * @type {string}
+     * @memberof GetTransactionsByTagResponse
+     */
+    updatedAt?: string;
 }
-
 
 
