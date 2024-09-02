@@ -49,6 +49,10 @@ export enum Result {
     */
     LEXICAL_ANALYSIS = 15,
     /**
+    * Contains raw uncropped images
+    */
+    RAW_UNCROPPED_IMAGE = 16,
+    /**
     * Contains Visual zone OCR results
     */
     VISUAL_TEXT = 17,

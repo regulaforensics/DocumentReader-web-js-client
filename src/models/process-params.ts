@@ -355,6 +355,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     mrzDetectMode?: MrzDetectModeEnum;
+    /**
+     * This parameter is used to generate numeric representation for issuing state and nationality codes
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    generateNumericCodes?: boolean;
 }
 
 

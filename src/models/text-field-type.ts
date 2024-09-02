@@ -2539,7 +2539,39 @@ export enum TextFieldType {
     /**
     * Signature
     */
-    SIGNATURE = 683
+    SIGNATURE = 683,
+    /**
+    * Unique Certificate Identifier
+    */
+    FT_UNIQUE_CERTIFICATE_IDENTIFIER = 684,
+    /**
+    * Email
+    */
+    FT_EMAIL = 685,
+    /**
+    * Date of Specimen Collection
+    */
+    FT_DATE_OF_SPECIMEN_COLLECTION = 686,
+    /**
+    * Type Of Testing
+    */
+    FT_TYPE_OF_TESTING = 687,
+    /**
+    * Result Of Testing
+    */
+    FT_RESULT_OF_TESTING = 688,
+    /**
+    * Method Of Testing
+    */
+    FT_METHOD_OF_TESTING = 689,
+    /**
+    * Digital Travel Authorization Number
+    */
+    FT_DIGITAL_TRAVEL_AUTHORIZATION_NUMBER = 690,
+    /**
+    * Date of First Positive Test Result
+    */
+    FT_DATE_OF_FIRST_POSITIVE_TEST_RESULT = 691
 }
 
 
