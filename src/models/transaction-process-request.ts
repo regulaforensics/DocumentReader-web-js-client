@@ -13,7 +13,10 @@
  */
 
 
-import { TransactionScenarioRequest } from './transaction-scenario-request';
+import { ContainerList } from './container-list';
+import { ProcessParams } from './process-params';
+import { ProcessRequestImage } from './process-request-image';
+import { ProcessSystemInfo } from './process-system-info';
 
 /**
  * 
@@ -23,10 +26,46 @@ import { TransactionScenarioRequest } from './transaction-scenario-request';
 export interface TransactionProcessRequest {
     /**
      * 
-     * @type {TransactionScenarioRequest}
+     * @type {ProcessParams}
      * @memberof TransactionProcessRequest
      */
-    processParam: TransactionScenarioRequest;
+    processParam: ProcessParams;
+    /**
+     * 
+     * @type {Array<ProcessRequestImage>}
+     * @memberof TransactionProcessRequest
+     */
+    List?: Array<ProcessRequestImage>;
+    /**
+     * Live portrait photo
+     * @type {string}
+     * @memberof TransactionProcessRequest
+     */
+    livePortrait?: string;
+    /**
+     * Portrait photo from an external source
+     * @type {string}
+     * @memberof TransactionProcessRequest
+     */
+    extPortrait?: string;
+    /**
+     * 
+     * @type {ContainerList}
+     * @memberof TransactionProcessRequest
+     */
+    ContainerList?: ContainerList;
+    /**
+     * 
+     * @type {ProcessSystemInfo}
+     * @memberof TransactionProcessRequest
+     */
+    systemInfo?: ProcessSystemInfo;
+    /**
+     * Free-form object to be included in response. Must be object, not list or simple value. Do not affect document processing. Use it freely to pass your app params. Stored in process logs.
+     * @type {{ [key: string]: object; }}
+     * @memberof TransactionProcessRequest
+     */
+    passBackObject?: { [key: string]: object; };
 }
 
 

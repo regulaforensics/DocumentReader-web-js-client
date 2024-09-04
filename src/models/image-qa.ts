@@ -57,12 +57,6 @@ export interface ImageQA {
      */
     colornessCheck?: boolean;
     /**
-     * This option enables screen capture (moire patterns) check while performing image quality validation.
-     * @type {boolean}
-     * @memberof ImageQA
-     */
-    moireCheck?: boolean;
-    /**
      * This parameter specifies the necessary margin. Default 0.
      * @type {number}
      * @memberof ImageQA

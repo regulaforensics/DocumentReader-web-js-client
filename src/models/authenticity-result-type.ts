@@ -103,7 +103,11 @@ export enum AuthenticityResultType {
     /**
     * Extended MRZ check
     */
-    EXTENDED_MRZ_CHECK = 8388608
+    EXTENDED_MRZ_CHECK = 8388608,
+    /**
+    * Encrypted IPI
+    */
+    ENCRYPTED_IPI = 16777216
 }
 
 
