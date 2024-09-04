@@ -25,12 +25,6 @@ import { ProcessSystemInfo } from './process-system-info';
  */
 export interface ProcessRequest {
     /**
-     * session id
-     * @type {string}
-     * @memberof ProcessRequest
-     */
-    tag?: string;
-    /**
      * 
      * @type {ProcessParams}
      * @memberof ProcessRequest
@@ -42,6 +36,24 @@ export interface ProcessRequest {
      * @memberof ProcessRequest
      */
     List?: Array<ProcessRequestImage>;
+    /**
+     * Session ID
+     * @type {string}
+     * @memberof ProcessRequest
+     */
+    tag?: string;
+    /**
+     * Customer name
+     * @type {string}
+     * @memberof ProcessRequest
+     */
+    tenant?: string;
+    /**
+     * Environment type
+     * @type {string}
+     * @memberof ProcessRequest
+     */
+    env?: string;
     /**
      * Live portrait photo
      * @type {string}

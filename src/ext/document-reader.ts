@@ -123,6 +123,51 @@ export class DocumentReaderApi {
         );
         return new Response(axiosResult.data);
     }
+
+    /**
+     *
+     * @summary Get transactions by tag
+     * @param {number} tagId Tag id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async getTransactionsByTag(tagId: number, options?: any) {
+        return this.transactionApi.apiV2TagTagIdTransactionsGet(tagId, options);
+    }
+
+    /**
+     *
+     * @summary Delete Reprocess transactions by tag
+     * @param {number} tagId Tag id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async deleteReprocessTransactionsByTag(tagId: number, options?: any) {
+        return this.transactionApi.apiV2TagTagIdDelete(tagId, options);
+    }
+
+    /**
+     *
+     * @summary Get Reprocess transaction file
+     * @param {number} transactionId Transaction id
+     * @param {string} name File name
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async getReprocessTransactionFile(transactionId: number, name: string, options?: any) {
+        return this.transactionApi.apiV2TransactionTransactionIdFileGet(transactionId, name, options);
+    }
+
+    /**
+     *
+     * @summary Get Reprocess transaction data
+     * @param {number} transactionId Transaction id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    async getReprocessTransactionData(transactionId: number, options?: any) {
+        return this.transactionApi.apiV2TransactionTransactionIdGet(transactionId, options);
+    }
 }
 
 export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequestBase {
