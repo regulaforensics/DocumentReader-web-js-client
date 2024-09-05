@@ -38,10 +38,10 @@ export interface ProcessRequest {
     List?: Array<ProcessRequestImage>;
     /**
      * Session ID
-     * @type {string}
+     * @type {number}
      * @memberof ProcessRequest
      */
-    tag?: string;
+    tag?: number;
     /**
      * Customer name
      * @type {string}

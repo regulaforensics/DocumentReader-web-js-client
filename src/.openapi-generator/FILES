@@ -85,6 +85,7 @@ models/lexical-analysis-result.ts
 models/license-result-all-of.ts
 models/license-result.ts
 models/light.ts
+models/list-transactions-by-tag-response.ts
 models/list-verified-fields.ts
 models/liveness-params.ts
 models/log-level.ts

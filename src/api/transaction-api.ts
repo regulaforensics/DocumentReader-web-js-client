@@ -19,11 +19,11 @@ import { Configuration } from '../configuration';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
 // @ts-ignore
-import { GetTransactionsByTagResponse } from '../models';
-// @ts-ignore
 import { InlineResponse200 } from '../models';
 // @ts-ignore
 import { InlineResponse2001 } from '../models';
+// @ts-ignore
+import { ListTransactionsByTagResponse } from '../models';
 // @ts-ignore
 import { TransactionProcessGetResponse } from '../models';
 // @ts-ignore
@@ -350,7 +350,7 @@ export const TransactionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TagTagIdTransactionsGet(tagId: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetTransactionsByTagResponse>>> {
+        async apiV2TagTagIdTransactionsGet(tagId: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListTransactionsByTagResponse>> {
             const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TagTagIdTransactionsGet(tagId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
@@ -442,7 +442,7 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TagTagIdTransactionsGet(tagId: number, options?: any): AxiosPromise<Array<GetTransactionsByTagResponse>> {
+        apiV2TagTagIdTransactionsGet(tagId: number, options?: any): AxiosPromise<ListTransactionsByTagResponse> {
             return TransactionApiFp(configuration).apiV2TagTagIdTransactionsGet(tagId, options).then((request) => request(axios, basePath));
         },
         /**

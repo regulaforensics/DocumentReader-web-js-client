@@ -36,10 +36,10 @@ export interface InlineResponse200 {
     InData?: InData;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof InlineResponse200
      */
-    tag?: string;
+    tag?: number;
     /**
      * 
      * @type {string}

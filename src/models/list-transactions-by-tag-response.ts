@@ -13,39 +13,26 @@
  */
 
 
-import { InData } from './in-data';
-import { OutData } from './out-data';
+import { GetTransactionsByTagResponse } from './get-transactions-by-tag-response';
 
 /**
  * 
  * @export
- * @interface TransactionProcessGetResponse
+ * @interface ListTransactionsByTagResponse
  */
-export interface TransactionProcessGetResponse {
+export interface ListTransactionsByTagResponse {
     /**
      * 
-     * @type {number}
-     * @memberof TransactionProcessGetResponse
+     * @type {Array<GetTransactionsByTagResponse>}
+     * @memberof ListTransactionsByTagResponse
      */
-    transactionId?: number;
+    items?: Array<GetTransactionsByTagResponse>;
     /**
      * 
-     * @type {number}
-     * @memberof TransactionProcessGetResponse
+     * @type {{ [key: string]: object; }}
+     * @memberof ListTransactionsByTagResponse
      */
-    tag?: number;
-    /**
-     * 
-     * @type {OutData}
-     * @memberof TransactionProcessGetResponse
-     */
-    outData?: OutData;
-    /**
-     * 
-     * @type {InData}
-     * @memberof TransactionProcessGetResponse
-     */
-    inData?: InData;
+    metadata?: { [key: string]: object; };
 }
 
 
