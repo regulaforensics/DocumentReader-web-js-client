@@ -19,11 +19,11 @@ import { Configuration } from '../configuration';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
 // @ts-ignore
-import { GetTransactionsByTagResponse } from '../models';
-// @ts-ignore
 import { InlineResponse200 } from '../models';
 // @ts-ignore
 import { InlineResponse2001 } from '../models';
+// @ts-ignore
+import { ListTransactionsByTagResponse } from '../models';
 // @ts-ignore
 import { TransactionProcessGetResponse } from '../models';
 // @ts-ignore
@@ -80,11 +80,11 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
         /**
          * 
          * @summary Get transactions by tag
-         * @param {number} tagId Tag id
+         * @param {string} tagId Tag id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TagTagIdTransactionsGet: async (tagId: number, options: any = {}): Promise<RequestArgs> => {
+        apiV2TagTagIdTransactionsGet: async (tagId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'tagId' is not null or undefined
             if (tagId === null || tagId === undefined) {
                 throw new RequiredError('tagId','Required parameter tagId was null or undefined when calling apiV2TagTagIdTransactionsGet.');
@@ -346,11 +346,11 @@ export const TransactionApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Get transactions by tag
-         * @param {number} tagId Tag id
+         * @param {string} tagId Tag id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TagTagIdTransactionsGet(tagId: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetTransactionsByTagResponse>>> {
+        async apiV2TagTagIdTransactionsGet(tagId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListTransactionsByTagResponse>> {
             const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TagTagIdTransactionsGet(tagId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
@@ -438,11 +438,11 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
         /**
          * 
          * @summary Get transactions by tag
-         * @param {number} tagId Tag id
+         * @param {string} tagId Tag id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TagTagIdTransactionsGet(tagId: number, options?: any): AxiosPromise<Array<GetTransactionsByTagResponse>> {
+        apiV2TagTagIdTransactionsGet(tagId: string, options?: any): AxiosPromise<ListTransactionsByTagResponse> {
             return TransactionApiFp(configuration).apiV2TagTagIdTransactionsGet(tagId, options).then((request) => request(axios, basePath));
         },
         /**
@@ -513,12 +513,12 @@ export class TransactionApi extends BaseAPI {
     /**
      * 
      * @summary Get transactions by tag
-     * @param {number} tagId Tag id
+     * @param {string} tagId Tag id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TagTagIdTransactionsGet(tagId: number, options?: any) {
+    public apiV2TagTagIdTransactionsGet(tagId: string, options?: any) {
         return TransactionApiFp(this.configuration).apiV2TagTagIdTransactionsGet(tagId, options).then((request) => request(this.axios, this.basePath));
     }
 
