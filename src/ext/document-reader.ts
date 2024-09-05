@@ -14,6 +14,8 @@ import {
     DeviceInfo,
     TransactionProcessRequest,
     InlineResponse200,
+    ListTransactionsByTagResponse,
+    TransactionProcessGetResponse,
 } from '../models';
 import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
 import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
@@ -131,7 +133,7 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getTransactionsByTag(tagId: number, options?: any) {
+    async getTransactionsByTag(tagId: string, options?: any): Promise<AxiosResponse<ListTransactionsByTagResponse>> {
         return this.transactionApi.apiV2TagTagIdTransactionsGet(tagId, options);
     }
 
@@ -142,7 +144,7 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async deleteReprocessTransactionsByTag(tagId: number, options?: any) {
+    async deleteReprocessTransactionsByTag(tagId: number, options?: any): Promise<AxiosResponse<object, any>> {
         return this.transactionApi.apiV2TagTagIdDelete(tagId, options);
     }
 
@@ -154,7 +156,11 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getReprocessTransactionFile(transactionId: number, name: string, options?: any) {
+    async getReprocessTransactionFile(
+        transactionId: number,
+        name: string,
+        options?: any,
+    ): Promise<AxiosResponse<any, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdFileGet(transactionId, name, options);
     }
 
@@ -165,7 +171,10 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getReprocessTransactionData(transactionId: number, options?: any) {
+    async getReprocessTransactionData(
+        transactionId: number,
+        options?: any,
+    ): Promise<AxiosResponse<TransactionProcessGetResponse, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdGet(transactionId, options);
     }
 }
