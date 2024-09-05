@@ -45,6 +45,12 @@ export interface AuthenticityCheckResultItem {
      * @memberof AuthenticityCheckResultItem
      */
     ElementDiagnose?: CheckDiagnose;
+    /**
+     * 
+     * @type {number}
+     * @memberof AuthenticityCheckResultItem
+     */
+    PercentValue?: number;
 }
 
 
