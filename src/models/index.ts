@@ -79,6 +79,7 @@ export * from './lexical-analysis-result-all-of';
 export * from './license-result';
 export * from './license-result-all-of';
 export * from './light';
+export * from './list-transactions-by-tag-response';
 export * from './list-verified-fields';
 export * from './liveness-params';
 export * from './log-level';
