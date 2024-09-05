@@ -131,9 +131,9 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getTransactionsByTag(tagId: number, options?: any) {
-        return this.transactionApi.apiV2TagTagIdTransactionsGet(tagId, options);
-    }
+    // async getTransactionsByTag(tagId: number, options?: any) {
+    //     return this.transactionApi.apiV2TagTagIdTransactionsGet(tagId, options);
+    // }
 
     /**
      *
@@ -142,9 +142,9 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async deleteReprocessTransactionsByTag(tagId: number, options?: any) {
-        return this.transactionApi.apiV2TagTagIdDelete(tagId, options);
-    }
+    // async deleteReprocessTransactionsByTag(tagId: number, options?: any) {
+    //     return this.transactionApi.apiV2TagTagIdDelete(tagId, options);
+    // }
 
     /**
      *
