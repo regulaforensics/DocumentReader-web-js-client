@@ -51,8 +51,8 @@
     "*.{js,ts}": "eslint --fix"
   },
   "dependencies": {
-    "@swc/helpers": "^0.5.12",
-    "axios": "^1.7.4",
+    "@swc/helpers": "^0.5.13",
+    "axios": "^1.7.7",
     "base64-arraybuffer": "^1.0.2",
     "pako": "^2.1.0"
   },
@@ -66,7 +66,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "parcel": "^2.12.0",
     "prettier": "^3.3.3",
     "typescript": "^5.3.2"
