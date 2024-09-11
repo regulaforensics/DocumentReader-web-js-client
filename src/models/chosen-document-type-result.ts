@@ -14,6 +14,7 @@
 
 
 import { AuthenticityResult } from './authenticity-result';
+import { BinaryDataResult } from './binary-data-result';
 import { ChosenDocumentTypeResultAllOf } from './chosen-document-type-result-all-of';
 import { DocBarCodeInfo } from './doc-bar-code-info';
 import { DocumentImageResult } from './document-image-result';
@@ -26,6 +27,8 @@ import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
 import { LicenseResult } from './license-result';
 import { OneCandidate } from './one-candidate';
+import { OriginalGraphicsResult } from './original-graphics-result';
+import { RawDataResult } from './raw-data-result';
 import { ResultItem } from './result-item';
 import { StatusResult } from './status-result';
 import { TextDataResult } from './text-data-result';
