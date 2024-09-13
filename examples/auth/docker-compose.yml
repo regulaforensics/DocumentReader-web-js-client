@@ -18,6 +18,9 @@ services:
       - keycloak-example
     ports:
       - "8080:8080"
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
 
   auth:
     container_name: "auth"
@@ -36,3 +39,6 @@ services:
       - ${DOCKER_VOLUME_DIRECTORY:-.}/config/traefik/http.yml:/etc/traefik/http.yml
     ports:
       - "4333:80"
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
