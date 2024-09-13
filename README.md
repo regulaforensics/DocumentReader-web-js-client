@@ -1,4 +1,4 @@
-# Regula Document Reader js client for the browser and node.js based on axios
+# Regula Document Reader js client for the browser and node.js based on axios test
 
 [![npm version](https://img.shields.io/npm/v/@regulaforensics/document-reader-webclient?color=yellow&style=flat-square)](https://www.npmjs.org/package/@regulaforensics/document-reader-webclient)
 ![npm type definitions](https://img.shields.io/npm/types/typescript?style=flat-square&collor=858df6)
