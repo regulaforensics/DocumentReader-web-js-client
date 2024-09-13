@@ -7,7 +7,7 @@ networks:
 services:
   keycloak:
     container_name: "keycloak"
-    image: quay.io/keycloak/keycloak:21.1
+    image: quay.io/keycloak/keycloak
     command: start-dev --import-realm
     environment:
       KEYCLOAK_ADMIN: admin
@@ -18,9 +18,6 @@ services:
       - keycloak-example
     ports:
       - "8080:8080"
-    security_opt:
-      - no-new-privileges:true
-    read_only: true
 
   auth:
     container_name: "auth"
@@ -31,7 +28,7 @@ services:
 
   traefik:
     container_name: "traefik"
-    image: traefik:v2.10.5
+    image: traefik
     networks:
       - keycloak-example
     volumes:
@@ -39,6 +36,3 @@ services:
       - ${DOCKER_VOLUME_DIRECTORY:-.}/config/traefik/http.yml:/etc/traefik/http.yml
     ports:
       - "4333:80"
-    security_opt:
-      - no-new-privileges:true
-    read_only: true
