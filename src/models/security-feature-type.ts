@@ -217,11 +217,11 @@ export enum SecurityFeatureType {
     */
     PORTRAIT_COMPARISON_BARCODE_VS_CAMERA = 49,
     /**
-    * Digital signature сheck
+    * Digital signature check
     */
     CHECK_DIGITAL_SIGNATURE = 50,
     /**
-    * Contact сhip check
+    * Contact chip check
     */
     CONTACT_CHIP_CLASSIFICATION = 51
 }
