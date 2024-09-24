@@ -11,7 +11,6 @@ import {
     ProcessingStatus,
     ProcessResponse,
     Result,
-    ResultItem,
     RfidLocation,
     Status,
     StatusResult,
@@ -78,7 +77,7 @@ export class Response {
     }
 
     public imageQualityChecksPerPage(): Array<ImageQualityCheckList> | undefined {
-        return <Array<ImageQualityCheckList>>this.lowLvlResponse.resultsByType(Result.IMAGE_QUALITY);
+        return <Array<ImageQualityCheckList>>(<unknown>this.lowLvlResponse.resultsByType(Result.IMAGE_QUALITY));
     }
 
     public documentType(page_idx = 0): OneCandidate | undefined {
@@ -158,7 +157,7 @@ export class LowLvlResponse implements ProcessResponse {
         return <Array<ChosenDocumentTypeResult>>this.resultsByType(Result.DOCUMENT_TYPE);
     }
 
-    public resultByType(type: Result): ResultItem | undefined {
+    public resultByType(type: Result): ContainerList['List'][number] | undefined {
         for (const container of this.ContainerList.List) {
             if (container.result_type === type) {
                 return container;
@@ -166,7 +165,7 @@ export class LowLvlResponse implements ProcessResponse {
         }
     }
 
-    public resultByTypeAndPage(type: Result, page_idx = 0): ResultItem | undefined {
+    public resultByTypeAndPage(type: Result, page_idx = 0): ContainerList['List'][number] | undefined {
         for (const container of this.ContainerList.List) {
             if (container.result_type === type && container.page_idx == page_idx) {
                 return container;
@@ -174,7 +173,7 @@ export class LowLvlResponse implements ProcessResponse {
         }
     }
 
-    public resultsByType(type: Result): Array<ResultItem | AuthenticityResult | ImageQualityCheckList> {
+    public resultsByType(type: Result): ContainerList['List'] {
         return this.ContainerList.List.filter((container) => container.result_type === type);
     }
 }
