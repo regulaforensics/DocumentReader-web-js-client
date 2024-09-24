@@ -56,12 +56,6 @@ export interface IdentResultAllOf {
      */
     EtalonImage?: ImageData;
     /**
-     * Probability percent for IMAGE_PATTERN check or element\'s visibility for IR_VISIBILITY
-     * @type {number}
-     * @memberof IdentResultAllOf
-     */
-    PercentValue?: number;
-    /**
      * 
      * @type {AreaContainer}
      * @memberof IdentResultAllOf
