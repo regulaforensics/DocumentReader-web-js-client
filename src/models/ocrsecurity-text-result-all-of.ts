@@ -18,75 +18,75 @@ import type { Light } from './light';
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
-* 
-* @export
-* @interface OCRSecurityTextResultAllOf
-*/
+ * 
+ * @export
+ * @interface OCRSecurityTextResultAllOf
+ */
 export interface OCRSecurityTextResultAllOf {
     /**
-    * 
-    * @type {Critical}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {Critical}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     CriticalFlag: Critical;
     /**
-    * 
-    * @type {Light}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {Light}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     LightType: Light;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     FieldRect: RectangleCoordinates;
     /**
-    * 
-    * @type {number}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     EtalonResultType: number;
     /**
-    * 
-    * @type {number}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     EtalonFieldType: number;
     /**
-    * 
-    * @type {number}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     EtalonLightType: number;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     EtalonFieldRect: RectangleCoordinates;
     /**
-    * 
-    * @type {string}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {string}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     SecurityTextResultOCR: string;
     /**
-    * 
-    * @type {string}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {string}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     EtalonResultOCR: string;
     /**
-    * 
-    * @type {number}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     Reserved1?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof OCRSecurityTextResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof OCRSecurityTextResultAllOf
+     */
     Reserved2?: number;
 }

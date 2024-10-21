@@ -16,21 +16,21 @@
 import type { GetTransactionsByTagResponse } from './get-transactions-by-tag-response';
 
 /**
-* 
-* @export
-* @interface ListTransactionsByTagResponse
-*/
+ * 
+ * @export
+ * @interface ListTransactionsByTagResponse
+ */
 export interface ListTransactionsByTagResponse {
     /**
-    * 
-    * @type {Array<GetTransactionsByTagResponse>}
-    * @memberof ListTransactionsByTagResponse
-    */
+     * 
+     * @type {Array<GetTransactionsByTagResponse>}
+     * @memberof ListTransactionsByTagResponse
+     */
     items?: Array<GetTransactionsByTagResponse>;
     /**
-    * 
-    * @type {{ [key: string]: object; }}
-    * @memberof ListTransactionsByTagResponse
-    */
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof ListTransactionsByTagResponse
+     */
     metadata?: { [key: string]: object; };
 }

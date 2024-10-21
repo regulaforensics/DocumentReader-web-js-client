@@ -16,57 +16,57 @@
 import type { DocumentsDatabase } from './documents-database';
 
 /**
-* 
-* @export
-* @interface TransactionInfo
-*/
+ * 
+ * @export
+ * @interface TransactionInfo
+ */
 export interface TransactionInfo {
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionInfo
+     */
     ComputerName?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionInfo
+     */
     DateTime?: string;
     /**
-    * 
-    * @type {DocumentsDatabase}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {DocumentsDatabase}
+     * @memberof TransactionInfo
+     */
     DocumentsDatabase?: DocumentsDatabase;
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionInfo
+     */
     SystemInfo?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionInfo
+     */
     Tag?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionInfo
+     */
     TransactionID?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionInfo
+     */
     UserName?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionInfo
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionInfo
+     */
     Version?: string;
 }

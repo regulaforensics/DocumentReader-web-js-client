@@ -16,15 +16,15 @@
 import type { DocumentTypesCandidatesList } from './document-types-candidates-list';
 
 /**
-* 
-* @export
-* @interface DocumentTypesCandidatesResultAllOf
-*/
+ * 
+ * @export
+ * @interface DocumentTypesCandidatesResultAllOf
+ */
 export interface DocumentTypesCandidatesResultAllOf {
     /**
-    * 
-    * @type {DocumentTypesCandidatesList}
-    * @memberof DocumentTypesCandidatesResultAllOf
-    */
+     * 
+     * @type {DocumentTypesCandidatesList}
+     * @memberof DocumentTypesCandidatesResultAllOf
+     */
     CandidatesList?: DocumentTypesCandidatesList;
 }

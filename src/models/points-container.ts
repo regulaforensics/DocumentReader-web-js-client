@@ -16,21 +16,21 @@
 import type { Point } from './point';
 
 /**
-* 
-* @export
-* @interface PointsContainer
-*/
+ * 
+ * @export
+ * @interface PointsContainer
+ */
 export interface PointsContainer {
     /**
-    * 
-    * @type {number}
-    * @memberof PointsContainer
-    */
+     * 
+     * @type {number}
+     * @memberof PointsContainer
+     */
     PointCount?: number;
     /**
-    * 
-    * @type {Array<Point>}
-    * @memberof PointsContainer
-    */
+     * 
+     * @type {Array<Point>}
+     * @memberof PointsContainer
+     */
     PointsList: Array<Point>;
 }

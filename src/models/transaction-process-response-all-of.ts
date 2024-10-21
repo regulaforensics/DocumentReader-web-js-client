@@ -15,15 +15,15 @@
 
 
 /**
-* 
-* @export
-* @interface TransactionProcessResponseAllOf
-*/
+ * 
+ * @export
+ * @interface TransactionProcessResponseAllOf
+ */
 export interface TransactionProcessResponseAllOf {
     /**
-    * 
-    * @type {number}
-    * @memberof TransactionProcessResponseAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof TransactionProcessResponseAllOf
+     */
     CoreLibResultCode: number;
 }

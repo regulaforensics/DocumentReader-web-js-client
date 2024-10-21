@@ -15,33 +15,33 @@
 
 
 /**
-* 
-* @export
-* @interface DocumentsDatabase
-*/
+ * 
+ * @export
+ * @interface DocumentsDatabase
+ */
 export interface DocumentsDatabase {
     /**
-    * 
-    * @type {string}
-    * @memberof DocumentsDatabase
-    */
+     * 
+     * @type {string}
+     * @memberof DocumentsDatabase
+     */
     Description?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof DocumentsDatabase
-    */
+     * 
+     * @type {string}
+     * @memberof DocumentsDatabase
+     */
     ExportDate?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof DocumentsDatabase
-    */
+     * 
+     * @type {string}
+     * @memberof DocumentsDatabase
+     */
     ID?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof DocumentsDatabase
-    */
+     * 
+     * @type {string}
+     * @memberof DocumentsDatabase
+     */
     Version?: string;
 }

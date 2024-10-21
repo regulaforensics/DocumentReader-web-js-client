@@ -16,15 +16,15 @@
 import type { BinaryData } from './binary-data';
 
 /**
-* 
-* @export
-* @interface TDocBinaryInfo
-*/
+ * 
+ * @export
+ * @interface TDocBinaryInfo
+ */
 export interface TDocBinaryInfo {
     /**
-    * 
-    * @type {BinaryData}
-    * @memberof TDocBinaryInfo
-    */
+     * 
+     * @type {BinaryData}
+     * @memberof TDocBinaryInfo
+     */
     RFID_BINARY_DATA: BinaryData;
 }

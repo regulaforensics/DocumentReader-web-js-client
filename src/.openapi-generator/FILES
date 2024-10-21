@@ -1,4 +1,4 @@
-api/default-api.ts
+api/healthcheck-api.ts
 api/process-api.ts
 api/transaction-api.ts
 base.ts
@@ -28,6 +28,7 @@ models/cross-source-value-comparison.ts
 models/data-module.ts
 models/details-optical.ts
 models/details-rfid.ts
+models/device-info-deprecated.ts
 models/device-info.ts
 models/doc-bar-code-info-all-of.ts
 models/doc-bar-code-info-fields-list.ts

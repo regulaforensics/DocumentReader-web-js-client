@@ -19,33 +19,33 @@ import type { ParsingNotificationCodes } from './parsing-notification-codes';
 import type { TextFieldType } from './text-field-type';
 
 /**
-* Structure is used to store information about the numeric field (4 bytes) that is a part of one of the informational data groups.
-* @export
-* @interface TrfFtString
-*/
+ * Structure is used to store information about the numeric field (4 bytes) that is a part of one of the informational data groups.
+ * @export
+ * @interface TrfFtString
+ */
 export interface TrfFtString {
     /**
-    * 
-    * @type {GraphicFieldType | TextFieldType}
-    * @memberof TrfFtString
-    */
+     * 
+     * @type {GraphicFieldType | TextFieldType}
+     * @memberof TrfFtString
+     */
     Type: GraphicFieldType | TextFieldType;
     /**
-    * Result of logical analysis of compliance of the contents of the field with the requirements of the specification
-    * @type {ParsingNotificationCodes | ParsingErrorCodes}
-    * @memberof TrfFtString
-    */
+     * Result of logical analysis of compliance of the contents of the field with the requirements of the specification
+     * @type {ParsingNotificationCodes | ParsingErrorCodes}
+     * @memberof TrfFtString
+     */
     Status: ParsingNotificationCodes | ParsingErrorCodes;
     /**
-    * Mask of format of text information (for example, «YYMMDD» for date of birth)
-    * @type {string}
-    * @memberof TrfFtString
-    */
+     * Mask of format of text information (for example, «YYMMDD» for date of birth)
+     * @type {string}
+     * @memberof TrfFtString
+     */
     Format: string;
     /**
-    * Numeric value.
-    * @type {string}
-    * @memberof TrfFtString
-    */
+     * Numeric value.
+     * @type {string}
+     * @memberof TrfFtString
+     */
     Data: string;
 }

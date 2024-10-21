@@ -16,15 +16,15 @@
 import type { RawImageContainerFieldList } from './raw-image-container-field-list';
 
 /**
-* 
-* @export
-* @interface DocumentImageResultAllOf
-*/
+ * 
+ * @export
+ * @interface DocumentImageResultAllOf
+ */
 export interface DocumentImageResultAllOf {
     /**
-    * 
-    * @type {RawImageContainerFieldList}
-    * @memberof DocumentImageResultAllOf
-    */
+     * 
+     * @type {RawImageContainerFieldList}
+     * @memberof DocumentImageResultAllOf
+     */
     RawImageContainer: RawImageContainerFieldList;
 }

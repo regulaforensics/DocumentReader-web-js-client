@@ -15,33 +15,30 @@
 
 
 /**
-* 
-* @export
-* @enum {string}
-*/
-
-export const LogLevel = {
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum LogLevel {
     /**
     * Fatal error
     */
-    FATAL_ERROR: 'FatalError',
+    FATAL_ERROR = 'FatalError',
     /**
     * Error
     */
-    ERROR: 'Error',
+    ERROR = 'Error',
     /**
     * Warning
     */
-    WARNING: 'Warning',
+    WARNING = 'Warning',
     /**
     * Info
     */
-    INFO: 'Info',
+    INFO = 'Info',
     /**
     * Debug
     */
-    DEBUG: 'Debug'
-} as const;
-
-export type LogLevel = typeof LogLevel[keyof typeof LogLevel];
+    DEBUG = 'Debug'
+}
 

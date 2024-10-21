@@ -17,75 +17,75 @@ import type { FDSIDList } from './fdsidlist';
 import type { RfidLocation } from './rfid-location';
 
 /**
-* Contains information about one document type candidate
-* @export
-* @interface OneCandidate
-*/
+ * Contains information about one document type candidate
+ * @export
+ * @interface OneCandidate
+ */
 export interface OneCandidate {
     /**
-    * Document name
-    * @type {string}
-    * @memberof OneCandidate
-    */
+     * Document name
+     * @type {string}
+     * @memberof OneCandidate
+     */
     DocumentName: string;
     /**
-    * Unique document type template identifier (Regula\'s internal numeric code)
-    * @type {number}
-    * @memberof OneCandidate
-    */
+     * Unique document type template identifier (Regula\'s internal numeric code)
+     * @type {number}
+     * @memberof OneCandidate
+     */
     ID: number;
     /**
-    * A measure of the likelihood of correct recognition in the analysis of this type of document
-    * @type {number}
-    * @memberof OneCandidate
-    */
+     * A measure of the likelihood of correct recognition in the analysis of this type of document
+     * @type {number}
+     * @memberof OneCandidate
+     */
     P: number;
     /**
-    * true if the document of the given type is rotated by 180 degrees
-    * @type {boolean}
-    * @memberof OneCandidate
-    */
+     * true if the document of the given type is rotated by 180 degrees
+     * @type {boolean}
+     * @memberof OneCandidate
+     */
     Rotated180: boolean;
     /**
-    * 
-    * @type {RfidLocation}
-    * @memberof OneCandidate
-    */
+     * 
+     * @type {RfidLocation}
+     * @memberof OneCandidate
+     */
     RFID_Presence: RfidLocation;
     /**
-    * 
-    * @type {FDSIDList}
-    * @memberof OneCandidate
-    */
+     * 
+     * @type {FDSIDList}
+     * @memberof OneCandidate
+     */
     FDSIDList: FDSIDList;
     /**
-    * Combination of lighting scheme identifiers (Light enum) required to conduct OCR for this type of document
-    * @type {number}
-    * @memberof OneCandidate
-    */
+     * Combination of lighting scheme identifiers (Light enum) required to conduct OCR for this type of document
+     * @type {number}
+     * @memberof OneCandidate
+     */
     NecessaryLights: number;
     /**
-    * Set of authentication options provided for this type of document (combination of Authenticity enum)
-    * @type {number}
-    * @memberof OneCandidate
-    */
+     * Set of authentication options provided for this type of document (combination of Authenticity enum)
+     * @type {number}
+     * @memberof OneCandidate
+     */
     CheckAuthenticity: number;
     /**
-    * The required exposure value of the camera when receiving images of a document of this type for a UV lighting scheme
-    * @type {number}
-    * @memberof OneCandidate
-    */
+     * The required exposure value of the camera when receiving images of a document of this type for a UV lighting scheme
+     * @type {number}
+     * @memberof OneCandidate
+     */
     UVExp: number;
     /**
-    * Combination of lighting scheme identifiers (combination of Light enum) needed to perform all authenticity checks specified in CheckAuthenticity
-    * @type {number}
-    * @memberof OneCandidate
-    */
+     * Combination of lighting scheme identifiers (combination of Light enum) needed to perform all authenticity checks specified in CheckAuthenticity
+     * @type {number}
+     * @memberof OneCandidate
+     */
     AuthenticityNecessaryLights: number;
     /**
-    * Camera exposure value necessary when obtaining document images of the given type for AXIAL lighting scheme
-    * @type {number}
-    * @memberof OneCandidate
-    */
+     * Camera exposure value necessary when obtaining document images of the given type for AXIAL lighting scheme
+     * @type {number}
+     * @memberof OneCandidate
+     */
     OVIExp: number;
 }

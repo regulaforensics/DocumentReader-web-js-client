@@ -16,15 +16,15 @@
 import type { TDocBinaryInfo } from './tdoc-binary-info';
 
 /**
-* Structure is used to store the data reading results from the RFID-chip in a form of a list of the logically separated data groups.
-* @export
-* @interface DocumentBinaryInfoResultAllOf
-*/
+ * Structure is used to store the data reading results from the RFID-chip in a form of a list of the logically separated data groups.
+ * @export
+ * @interface DocumentBinaryInfoResultAllOf
+ */
 export interface DocumentBinaryInfoResultAllOf {
     /**
-    * 
-    * @type {TDocBinaryInfo}
-    * @memberof DocumentBinaryInfoResultAllOf
-    */
+     * 
+     * @type {TDocBinaryInfo}
+     * @memberof DocumentBinaryInfoResultAllOf
+     */
     TDocBinaryInfo: TDocBinaryInfo;
 }

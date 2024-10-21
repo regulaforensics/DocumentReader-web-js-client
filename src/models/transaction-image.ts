@@ -16,15 +16,15 @@
 import type { ImagesFieldValue } from './images-field-value';
 
 /**
-* 
-* @export
-* @interface TransactionImage
-*/
+ * 
+ * @export
+ * @interface TransactionImage
+ */
 export interface TransactionImage {
     /**
-    * 
-    * @type {ImagesFieldValue}
-    * @memberof TransactionImage
-    */
+     * 
+     * @type {ImagesFieldValue}
+     * @memberof TransactionImage
+     */
     image?: ImagesFieldValue;
 }

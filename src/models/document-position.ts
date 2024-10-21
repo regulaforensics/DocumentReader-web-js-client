@@ -17,69 +17,69 @@ import type { DocumentFormat } from './document-format';
 import type { Point } from './point';
 
 /**
-* 
-* @export
-* @interface DocumentPosition
-*/
+ * 
+ * @export
+ * @interface DocumentPosition
+ */
 export interface DocumentPosition {
     /**
-    * 
-    * @type {DocumentFormat}
-    * @memberof DocumentPosition
-    */
+     * 
+     * @type {DocumentFormat}
+     * @memberof DocumentPosition
+     */
     docFormat: DocumentFormat;
     /**
-    * Document rotation angle
-    * @type {number}
-    * @memberof DocumentPosition
-    */
+     * Document rotation angle
+     * @type {number}
+     * @memberof DocumentPosition
+     */
     Angle: number;
     /**
-    * Document width
-    * @type {number}
-    * @memberof DocumentPosition
-    */
+     * Document width
+     * @type {number}
+     * @memberof DocumentPosition
+     */
     Width: number;
     /**
-    * Document height
-    * @type {number}
-    * @memberof DocumentPosition
-    */
+     * Document height
+     * @type {number}
+     * @memberof DocumentPosition
+     */
     Height: number;
     /**
-    * 
-    * @type {Point}
-    * @memberof DocumentPosition
-    */
+     * 
+     * @type {Point}
+     * @memberof DocumentPosition
+     */
     Center: Point;
     /**
-    * 
-    * @type {Point}
-    * @memberof DocumentPosition
-    */
+     * 
+     * @type {Point}
+     * @memberof DocumentPosition
+     */
     LeftBottom: Point;
     /**
-    * 
-    * @type {Point}
-    * @memberof DocumentPosition
-    */
+     * 
+     * @type {Point}
+     * @memberof DocumentPosition
+     */
     LeftTop: Point;
     /**
-    * 
-    * @type {Point}
-    * @memberof DocumentPosition
-    */
+     * 
+     * @type {Point}
+     * @memberof DocumentPosition
+     */
     RightBottom: Point;
     /**
-    * 
-    * @type {Point}
-    * @memberof DocumentPosition
-    */
+     * 
+     * @type {Point}
+     * @memberof DocumentPosition
+     */
     RightTop: Point;
     /**
-    * 
-    * @type {number}
-    * @memberof DocumentPosition
-    */
+     * 
+     * @type {number}
+     * @memberof DocumentPosition
+     */
     Dpi: number;
 }

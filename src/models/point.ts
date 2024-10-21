@@ -15,21 +15,21 @@
 
 
 /**
-* 
-* @export
-* @interface Point
-*/
+ * 
+ * @export
+ * @interface Point
+ */
 export interface Point {
     /**
-    * 
-    * @type {number}
-    * @memberof Point
-    */
+     * 
+     * @type {number}
+     * @memberof Point
+     */
     x: number;
     /**
-    * 
-    * @type {number}
-    * @memberof Point
-    */
+     * 
+     * @type {number}
+     * @memberof Point
+     */
     y: number;
 }

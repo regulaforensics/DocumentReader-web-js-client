@@ -15,21 +15,18 @@
 
 
 /**
-* 
-* @export
-* @enum {string}
-*/
-
-export const MeasureSystem = {
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum MeasureSystem {
     /**
     * Metric system of measurement, where things are measured in meters and grams
     */
-    METRIC: 0,
+    METRIC = 0,
     /**
     * Imperial System of Measurement, where things are measured in feet, inches and pounds
     */
-    IMPERIAL: 1
-} as const;
-
-export type MeasureSystem = typeof MeasureSystem[keyof typeof MeasureSystem];
+    IMPERIAL = 1
+}
 

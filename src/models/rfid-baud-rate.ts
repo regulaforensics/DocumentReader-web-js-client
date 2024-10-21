@@ -15,33 +15,30 @@
 
 
 /**
-* Enumeration contains a set of constants specifying the rate of data exchange between the reader and the RFID-chip
-* @export
-* @enum {string}
-*/
-
-export const RfidBaudRate = {
+ * Enumeration contains a set of constants specifying the rate of data exchange between the reader and the RFID-chip
+ * @export
+ * @enum {string}
+ */
+export enum RfidBaudRate {
     /**
     * Unknown
     */
-    UNKNOWN: 0,
+    UNKNOWN = 0,
     /**
     * 106 bits/s
     */
-    RFBR_106: 1,
+    RFBR_106 = 1,
     /**
     * 212 bits/s
     */
-    RFBR_212: 2,
+    RFBR_212 = 2,
     /**
     * 424 bits/s
     */
-    RFBR_424: 4,
+    RFBR_424 = 4,
     /**
     * 848 bits/s
     */
-    RFBR_848: 8
-} as const;
-
-export type RfidBaudRate = typeof RfidBaudRate[keyof typeof RfidBaudRate];
+    RFBR_848 = 8
+}
 

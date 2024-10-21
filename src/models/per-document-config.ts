@@ -15,21 +15,21 @@
 
 
 /**
-* 
-* @export
-* @interface PerDocumentConfig
-*/
+ * 
+ * @export
+ * @interface PerDocumentConfig
+ */
 export interface PerDocumentConfig {
     /**
-    * Specific template IDs, for which apply current custom configuration
-    * @type {Array<number>}
-    * @memberof PerDocumentConfig
-    */
+     * Specific template IDs, for which apply current custom configuration
+     * @type {Array<number>}
+     * @memberof PerDocumentConfig
+     */
     docID?: Array<number>;
     /**
-    * Contains items from AuthenticityResultType as sum via OR operation
-    * @type {number}
-    * @memberof PerDocumentConfig
-    */
+     * Contains items from AuthenticityResultType as sum via OR operation
+     * @type {number}
+     * @memberof PerDocumentConfig
+     */
     excludeAuthChecks?: number;
 }

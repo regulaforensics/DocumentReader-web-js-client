@@ -16,15 +16,15 @@
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
-* 
-* @export
-* @interface DocVisualExtendedFieldRectAllOf
-*/
+ * 
+ * @export
+ * @interface DocVisualExtendedFieldRectAllOf
+ */
 export interface DocVisualExtendedFieldRectAllOf {
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof DocVisualExtendedFieldRectAllOf
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof DocVisualExtendedFieldRectAllOf
+     */
     FieldRect?: RectangleCoordinates;
 }

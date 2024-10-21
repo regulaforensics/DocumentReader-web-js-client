@@ -15,39 +15,39 @@
 
 
 /**
-* Common fields for all result objects
-* @export
-* @interface ResultItem
-*/
+ * Common fields for all result objects
+ * @export
+ * @interface ResultItem
+ */
 export interface ResultItem {
     /**
-    * 
-    * @type {number}
-    * @memberof ResultItem
-    */
+     * 
+     * @type {number}
+     * @memberof ResultItem
+     */
     buf_length?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof ResultItem
-    */
+     * 
+     * @type {number}
+     * @memberof ResultItem
+     */
     light?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof ResultItem
-    */
+     * 
+     * @type {number}
+     * @memberof ResultItem
+     */
     list_idx?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof ResultItem
-    */
+     * 
+     * @type {number}
+     * @memberof ResultItem
+     */
     page_idx?: number;
     /**
-    * Same as Result type, but used for safe parsing of not-described values. See Result type.
-    * @type {number}
-    * @memberof ResultItem
-    */
+     * Same as Result type, but used for safe parsing of not-described values. See Result type.
+     * @type {number}
+     * @memberof ResultItem
+     */
     result_type: number;
 }

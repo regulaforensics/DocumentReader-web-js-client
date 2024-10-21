@@ -15,25 +15,22 @@
 
 
 /**
-* Enumeration contains a set of constants specifying the type of the RFID-chip by the physical parameters of connection between antennas of the chip and the reader
-* @export
-* @enum {string}
-*/
-
-export const RfidType = {
+ * Enumeration contains a set of constants specifying the type of the RFID-chip by the physical parameters of connection between antennas of the chip and the reader
+ * @export
+ * @enum {string}
+ */
+export enum RfidType {
     /**
     * Unknown
     */
-    UNKNOWN: 0,
+    UNKNOWN = 0,
     /**
     * Type A
     */
-    A: 1,
+    A = 1,
     /**
     * Type B
     */
-    B: 2
-} as const;
-
-export type RfidType = typeof RfidType[keyof typeof RfidType];
+    B = 2
+}
 

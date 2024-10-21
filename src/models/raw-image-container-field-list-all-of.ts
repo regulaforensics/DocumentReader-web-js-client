@@ -15,15 +15,15 @@
 
 
 /**
-* 
-* @export
-* @interface RawImageContainerFieldListAllOf
-*/
+ * 
+ * @export
+ * @interface RawImageContainerFieldListAllOf
+ */
 export interface RawImageContainerFieldListAllOf {
     /**
-    * Image format
-    * @type {string}
-    * @memberof RawImageContainerFieldListAllOf
-    */
+     * Image format
+     * @type {string}
+     * @memberof RawImageContainerFieldListAllOf
+     */
     format: string;
 }

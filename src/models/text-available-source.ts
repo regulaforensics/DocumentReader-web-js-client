@@ -17,27 +17,27 @@ import type { CheckResult } from './check-result';
 import type { Source } from './source';
 
 /**
-* 
-* @export
-* @interface TextAvailableSource
-*/
+ * 
+ * @export
+ * @interface TextAvailableSource
+ */
 export interface TextAvailableSource {
     /**
-    * 
-    * @type {Source}
-    * @memberof TextAvailableSource
-    */
+     * 
+     * @type {Source}
+     * @memberof TextAvailableSource
+     */
     source: Source;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof TextAvailableSource
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof TextAvailableSource
+     */
     validityStatus: CheckResult;
     /**
-    * Same as Result type, but used for safe parsing of not-described values. See Result type.
-    * @type {number}
-    * @memberof TextAvailableSource
-    */
+     * Same as Result type, but used for safe parsing of not-described values. See Result type.
+     * @type {number}
+     * @memberof TextAvailableSource
+     */
     containerType?: number;
 }

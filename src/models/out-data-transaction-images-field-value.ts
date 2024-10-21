@@ -17,39 +17,39 @@ import type { GraphicFieldType } from './graphic-field-type';
 import type { Light } from './light';
 
 /**
-* 
-* @export
-* @interface OutDataTransactionImagesFieldValue
-*/
+ * 
+ * @export
+ * @interface OutDataTransactionImagesFieldValue
+ */
 export interface OutDataTransactionImagesFieldValue {
     /**
-    * 
-    * @type {GraphicFieldType}
-    * @memberof OutDataTransactionImagesFieldValue
-    */
+     * 
+     * @type {GraphicFieldType}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
     fieldType?: GraphicFieldType;
     /**
-    * 
-    * @type {Light}
-    * @memberof OutDataTransactionImagesFieldValue
-    */
+     * 
+     * @type {Light}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
     light?: Light;
     /**
-    * 
-    * @type {number}
-    * @memberof OutDataTransactionImagesFieldValue
-    */
+     * 
+     * @type {number}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
     listIdx?: number;
     /**
-    * Page index of the image from input list
-    * @type {number}
-    * @memberof OutDataTransactionImagesFieldValue
-    */
+     * Page index of the image from input list
+     * @type {number}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
     pageIdx?: number;
     /**
-    * Image url
-    * @type {string}
-    * @memberof OutDataTransactionImagesFieldValue
-    */
+     * Image url
+     * @type {string}
+     * @memberof OutDataTransactionImagesFieldValue
+     */
     url?: string;
 }

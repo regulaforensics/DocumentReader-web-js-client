@@ -17,105 +17,105 @@ import type { DocumentFormat } from './document-format';
 import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
-* Structure used to store the contents of EF.DG1 informational data group of ePassport application – document MRZ data
-* @export
-* @interface RfidDG1
-*/
+ * Structure used to store the contents of EF.DG1 informational data group of ePassport application – document MRZ data
+ * @export
+ * @interface RfidDG1
+ */
 export interface RfidDG1 {
     /**
-    * 
-    * @type {RfidDataGroupTypeTag}
-    * @memberof RfidDG1
-    */
+     * 
+     * @type {RfidDataGroupTypeTag}
+     * @memberof RfidDG1
+     */
     Type: RfidDataGroupTypeTag;
     /**
-    * 
-    * @type {DocumentFormat}
-    * @memberof RfidDG1
-    */
+     * 
+     * @type {DocumentFormat}
+     * @memberof RfidDG1
+     */
     DocumentID: DocumentFormat;
     /**
-    * Symbolic code of document type
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * Symbolic code of document type
+     * @type {string}
+     * @memberof RfidDG1
+     */
     DocumentType: string;
     /**
-    * Symbolic code of document issuing state
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * Symbolic code of document issuing state
+     * @type {string}
+     * @memberof RfidDG1
+     */
     State: string;
     /**
-    * DO’s name and surname
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * DO’s name and surname
+     * @type {string}
+     * @memberof RfidDG1
+     */
     Holder: string;
     /**
-    * Document number
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * Document number
+     * @type {string}
+     * @memberof RfidDG1
+     */
     DocumentNumber: string;
     /**
-    * Check digit of document number
-    * @type {number}
-    * @memberof RfidDG1
-    */
+     * Check digit of document number
+     * @type {number}
+     * @memberof RfidDG1
+     */
     CheckDigitDocumentNumber: number;
     /**
-    * Symbolic code of DO’s nationality
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * Symbolic code of DO’s nationality
+     * @type {string}
+     * @memberof RfidDG1
+     */
     Nationality: string;
     /**
-    * DO’s date of birth
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * DO’s date of birth
+     * @type {string}
+     * @memberof RfidDG1
+     */
     Birthday: string;
     /**
-    * Check digit of DO’s date of birth
-    * @type {number}
-    * @memberof RfidDG1
-    */
+     * Check digit of DO’s date of birth
+     * @type {number}
+     * @memberof RfidDG1
+     */
     CheckDigitBirthday: number;
     /**
-    * DO’s sex
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * DO’s sex
+     * @type {string}
+     * @memberof RfidDG1
+     */
     Sex: string;
     /**
-    * Term of validity of the document
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * Term of validity of the document
+     * @type {string}
+     * @memberof RfidDG1
+     */
     ExpiryDate: string;
     /**
-    * Check digit of term of validity of the document
-    * @type {number}
-    * @memberof RfidDG1
-    */
+     * Check digit of term of validity of the document
+     * @type {number}
+     * @memberof RfidDG1
+     */
     CheckDigitExpiryDate: number;
     /**
-    * DO’s personal number or other additional data
-    * @type {string}
-    * @memberof RfidDG1
-    */
+     * DO’s personal number or other additional data
+     * @type {string}
+     * @memberof RfidDG1
+     */
     OptionalData: string;
     /**
-    * Check digit of additional data
-    * @type {number}
-    * @memberof RfidDG1
-    */
+     * Check digit of additional data
+     * @type {number}
+     * @memberof RfidDG1
+     */
     CheckDigitOptionalData: number;
     /**
-    * General check digit
-    * @type {number}
-    * @memberof RfidDG1
-    */
+     * General check digit
+     * @type {number}
+     * @memberof RfidDG1
+     */
     CheckDigitComposite: number;
 }

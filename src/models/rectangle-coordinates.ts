@@ -15,33 +15,33 @@
 
 
 /**
-* Coordinates of the rectangle region on a document image(result type 1). Represented by two points - (left, top) + (right, bottom)
-* @export
-* @interface RectangleCoordinates
-*/
+ * Coordinates of the rectangle region on a document image(result type 1). Represented by two points - (left, top) + (right, bottom)
+ * @export
+ * @interface RectangleCoordinates
+ */
 export interface RectangleCoordinates {
     /**
-    * 
-    * @type {number}
-    * @memberof RectangleCoordinates
-    */
+     * 
+     * @type {number}
+     * @memberof RectangleCoordinates
+     */
     left: number;
     /**
-    * 
-    * @type {number}
-    * @memberof RectangleCoordinates
-    */
+     * 
+     * @type {number}
+     * @memberof RectangleCoordinates
+     */
     top: number;
     /**
-    * 
-    * @type {number}
-    * @memberof RectangleCoordinates
-    */
+     * 
+     * @type {number}
+     * @memberof RectangleCoordinates
+     */
     right: number;
     /**
-    * 
-    * @type {number}
-    * @memberof RectangleCoordinates
-    */
+     * 
+     * @type {number}
+     * @memberof RectangleCoordinates
+     */
     bottom: number;
 }

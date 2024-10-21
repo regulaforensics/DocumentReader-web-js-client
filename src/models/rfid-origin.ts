@@ -15,33 +15,33 @@
 
 
 /**
-* Location of data in RFID chip
-* @export
-* @interface RfidOrigin
-*/
+ * Location of data in RFID chip
+ * @export
+ * @interface RfidOrigin
+ */
 export interface RfidOrigin {
     /**
-    * Source data group file
-    * @type {number}
-    * @memberof RfidOrigin
-    */
+     * Source data group file
+     * @type {number}
+     * @memberof RfidOrigin
+     */
     dg: number;
     /**
-    * Index of the source record of the image with biometric information in the information data group
-    * @type {number}
-    * @memberof RfidOrigin
-    */
+     * Index of the source record of the image with biometric information in the information data group
+     * @type {number}
+     * @memberof RfidOrigin
+     */
     dgTag: number;
     /**
-    * Index of the template in the record with biometric data
-    * @type {number}
-    * @memberof RfidOrigin
-    */
+     * Index of the template in the record with biometric data
+     * @type {number}
+     * @memberof RfidOrigin
+     */
     tagEntry: number;
     /**
-    * Index of the variant of the biometric data template
-    * @type {number}
-    * @memberof RfidOrigin
-    */
+     * Index of the variant of the biometric data template
+     * @type {number}
+     * @memberof RfidOrigin
+     */
     entryView: number;
 }

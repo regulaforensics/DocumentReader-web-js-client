@@ -16,21 +16,21 @@
 import type { Source } from './source';
 
 /**
-* 
-* @export
-* @interface ImagesAvailableSource
-*/
+ * 
+ * @export
+ * @interface ImagesAvailableSource
+ */
 export interface ImagesAvailableSource {
     /**
-    * Same as Result type, but used for safe parsing of not-described values. See Result type.
-    * @type {number}
-    * @memberof ImagesAvailableSource
-    */
+     * Same as Result type, but used for safe parsing of not-described values. See Result type.
+     * @type {number}
+     * @memberof ImagesAvailableSource
+     */
     containerType: number;
     /**
-    * 
-    * @type {Source}
-    * @memberof ImagesAvailableSource
-    */
+     * 
+     * @type {Source}
+     * @memberof ImagesAvailableSource
+     */
     source: Source;
 }

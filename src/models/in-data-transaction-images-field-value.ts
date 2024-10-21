@@ -16,33 +16,33 @@
 import type { Light } from './light';
 
 /**
-* 
-* @export
-* @interface InDataTransactionImagesFieldValue
-*/
+ * 
+ * @export
+ * @interface InDataTransactionImagesFieldValue
+ */
 export interface InDataTransactionImagesFieldValue {
     /**
-    * 
-    * @type {Light}
-    * @memberof InDataTransactionImagesFieldValue
-    */
+     * 
+     * @type {Light}
+     * @memberof InDataTransactionImagesFieldValue
+     */
     light?: Light;
     /**
-    * 
-    * @type {number}
-    * @memberof InDataTransactionImagesFieldValue
-    */
+     * 
+     * @type {number}
+     * @memberof InDataTransactionImagesFieldValue
+     */
     listIdx?: number;
     /**
-    * Page index of the image from input list
-    * @type {number}
-    * @memberof InDataTransactionImagesFieldValue
-    */
+     * Page index of the image from input list
+     * @type {number}
+     * @memberof InDataTransactionImagesFieldValue
+     */
     pageIdx?: number;
     /**
-    * Image url
-    * @type {string}
-    * @memberof InDataTransactionImagesFieldValue
-    */
+     * Image url
+     * @type {string}
+     * @memberof InDataTransactionImagesFieldValue
+     */
     url?: string;
 }

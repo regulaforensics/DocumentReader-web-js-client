@@ -17,21 +17,21 @@ import type { DocVisualExtendedFieldRect } from './doc-visual-extended-field-rec
 import type { DocVisualExtendedFieldRfid } from './doc-visual-extended-field-rfid';
 
 /**
-* Container for extracted text fields. Fields are identified by type and language
-* @export
-* @interface DocVisualExtendedInfo
-*/
+ * Container for extracted text fields. Fields are identified by type and language
+ * @export
+ * @interface DocVisualExtendedInfo
+ */
 export interface DocVisualExtendedInfo {
     /**
-    * Number of pArrayFields array elements
-    * @type {number}
-    * @memberof DocVisualExtendedInfo
-    */
+     * Number of pArrayFields array elements
+     * @type {number}
+     * @memberof DocVisualExtendedInfo
+     */
     nFields: number;
     /**
-    * 
-    * @type {Array<DocVisualExtendedFieldRect | DocVisualExtendedFieldRfid>}
-    * @memberof DocVisualExtendedInfo
-    */
+     * 
+     * @type {Array<DocVisualExtendedFieldRect | DocVisualExtendedFieldRfid>}
+     * @memberof DocVisualExtendedInfo
+     */
     pArrayFields: Array<DocVisualExtendedFieldRect | DocVisualExtendedFieldRfid>;
 }

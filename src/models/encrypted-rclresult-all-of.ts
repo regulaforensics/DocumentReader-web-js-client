@@ -15,15 +15,15 @@
 
 
 /**
-* Contains encrypted result container list
-* @export
-* @interface EncryptedRCLResultAllOf
-*/
+ * Contains encrypted result container list
+ * @export
+ * @interface EncryptedRCLResultAllOf
+ */
 export interface EncryptedRCLResultAllOf {
     /**
-    * Base64 encoded data
-    * @type {string}
-    * @memberof EncryptedRCLResultAllOf
-    */
+     * Base64 encoded data
+     * @type {string}
+     * @memberof EncryptedRCLResultAllOf
+     */
     EncryptedRCL: string;
 }

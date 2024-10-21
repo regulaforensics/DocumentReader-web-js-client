@@ -16,39 +16,39 @@
 import type { BarCodeModuleType } from './bar-code-module-type';
 
 /**
-* 
-* @export
-* @interface DataModule
-*/
+ * 
+ * @export
+ * @interface DataModule
+ */
 export interface DataModule {
     /**
-    * 
-    * @type {string}
-    * @memberof DataModule
-    */
+     * 
+     * @type {string}
+     * @memberof DataModule
+     */
     mData: string;
     /**
-    * 
-    * @type {number}
-    * @memberof DataModule
-    */
+     * 
+     * @type {number}
+     * @memberof DataModule
+     */
     mLength: number;
     /**
-    * 
-    * @type {number}
-    * @memberof DataModule
-    */
+     * 
+     * @type {number}
+     * @memberof DataModule
+     */
     mReserved1?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof DataModule
-    */
+     * 
+     * @type {number}
+     * @memberof DataModule
+     */
     mReserver2?: number;
     /**
-    * 
-    * @type {BarCodeModuleType}
-    * @memberof DataModule
-    */
+     * 
+     * @type {BarCodeModuleType}
+     * @memberof DataModule
+     */
     mType: BarCodeModuleType;
 }

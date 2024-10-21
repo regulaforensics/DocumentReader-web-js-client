@@ -16,15 +16,15 @@
 import type { ListVerifiedFields } from './list-verified-fields';
 
 /**
-* 
-* @export
-* @interface LexicalAnalysisResultAllOf
-*/
+ * 
+ * @export
+ * @interface LexicalAnalysisResultAllOf
+ */
 export interface LexicalAnalysisResultAllOf {
     /**
-    * 
-    * @type {ListVerifiedFields}
-    * @memberof LexicalAnalysisResultAllOf
-    */
+     * 
+     * @type {ListVerifiedFields}
+     * @memberof LexicalAnalysisResultAllOf
+     */
     ListVerifiedFields: ListVerifiedFields;
 }

@@ -21,69 +21,69 @@ import type { TextFieldType } from './text-field-type';
 import type { TrfFtBytes } from './trf-ft-bytes';
 
 /**
-* Structure is used to describe the contents of a single file of the LDS of electronic document and the analysis of its contents within the context of the communication session with electronic document
-* @export
-* @interface RfidDataFile
-*/
+ * Structure is used to describe the contents of a single file of the LDS of electronic document and the analysis of its contents within the context of the communication session with electronic document
+ * @export
+ * @interface RfidDataFile
+ */
 export interface RfidDataFile {
     /**
-    * File identifier. Each byte of FileID represented by its hexadecimal value. The individual bytes are separated by spaces (e.g. 01 1E)
-    * @type {string}
-    * @memberof RfidDataFile
-    */
+     * File identifier. Each byte of FileID represented by its hexadecimal value. The individual bytes are separated by spaces (e.g. 01 1E)
+     * @type {string}
+     * @memberof RfidDataFile
+     */
     FileID?: string;
     /**
-    * 
-    * @type {RfidDataFileType}
-    * @memberof RfidDataFile
-    */
+     * 
+     * @type {RfidDataFileType}
+     * @memberof RfidDataFile
+     */
     Type: RfidDataFileType;
     /**
-    * 
-    * @type {TrfFtBytes}
-    * @memberof RfidDataFile
-    */
+     * 
+     * @type {TrfFtBytes}
+     * @memberof RfidDataFile
+     */
     FileData?: TrfFtBytes;
     /**
-    * 
-    * @type {RFIDErrorCodes}
-    * @memberof RfidDataFile
-    */
+     * 
+     * @type {RFIDErrorCodes}
+     * @memberof RfidDataFile
+     */
     ReadingStatus: RFIDErrorCodes;
     /**
-    * Time of reading, milliseconds
-    * @type {number}
-    * @memberof RfidDataFile
-    */
+     * Time of reading, milliseconds
+     * @type {number}
+     * @memberof RfidDataFile
+     */
     ReadingTime: number;
     /**
-    * 
-    * @type {RFIDErrorCodes}
-    * @memberof RfidDataFile
-    */
+     * 
+     * @type {RFIDErrorCodes}
+     * @memberof RfidDataFile
+     */
     PA_Status: RFIDErrorCodes;
     /**
-    * List of remarks arisen when reading data from the memory of the chip and analysing their ASN.1-structure.
-    * @type {Array<ParsingErrorCodes>}
-    * @memberof RfidDataFile
-    */
+     * List of remarks arisen when reading data from the memory of the chip and analysing their ASN.1-structure.
+     * @type {Array<ParsingErrorCodes>}
+     * @memberof RfidDataFile
+     */
     Notifications: Array<ParsingErrorCodes>;
     /**
-    * List of document text fields formed on the basis of the file contents
-    * @type {Array<TextFieldType>}
-    * @memberof RfidDataFile
-    */
+     * List of document text fields formed on the basis of the file contents
+     * @type {Array<TextFieldType>}
+     * @memberof RfidDataFile
+     */
     DocFields_Text: Array<TextFieldType>;
     /**
-    * List of document graphic fields formed on the basis of the file contents
-    * @type {Array<GraphicFieldType>}
-    * @memberof RfidDataFile
-    */
+     * List of document graphic fields formed on the basis of the file contents
+     * @type {Array<GraphicFieldType>}
+     * @memberof RfidDataFile
+     */
     DocFields_Graphics: Array<GraphicFieldType>;
     /**
-    * List of the original binary representation of graphic document fields formed on the basis of the file contents
-    * @type {Array<GraphicFieldType>}
-    * @memberof RfidDataFile
-    */
+     * List of the original binary representation of graphic document fields formed on the basis of the file contents
+     * @type {Array<GraphicFieldType>}
+     * @memberof RfidDataFile
+     */
     DocFields_Originals: Array<GraphicFieldType>;
 }

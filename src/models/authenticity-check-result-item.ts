@@ -17,33 +17,33 @@ import type { CheckDiagnose } from './check-diagnose';
 import type { CheckResult } from './check-result';
 
 /**
-* Common fields for all authenticity result objects
-* @export
-* @interface AuthenticityCheckResultItem
-*/
+ * Common fields for all authenticity result objects
+ * @export
+ * @interface AuthenticityCheckResultItem
+ */
 export interface AuthenticityCheckResultItem {
     /**
-    * Same as authenticity result type, but used for safe parsing of not-described values: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/authenticity-result-type/
-    * @type {number}
-    * @memberof AuthenticityCheckResultItem
-    */
+     * Same as authenticity result type, but used for safe parsing of not-described values: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/authenticity-result-type/
+     * @type {number}
+     * @memberof AuthenticityCheckResultItem
+     */
     Type: number;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof AuthenticityCheckResultItem
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof AuthenticityCheckResultItem
+     */
     ElementResult?: CheckResult;
     /**
-    * 
-    * @type {CheckDiagnose}
-    * @memberof AuthenticityCheckResultItem
-    */
+     * 
+     * @type {CheckDiagnose}
+     * @memberof AuthenticityCheckResultItem
+     */
     ElementDiagnose?: CheckDiagnose;
     /**
-    * 
-    * @type {number}
-    * @memberof AuthenticityCheckResultItem
-    */
+     * 
+     * @type {number}
+     * @memberof AuthenticityCheckResultItem
+     */
     PercentValue?: number;
 }

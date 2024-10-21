@@ -19,51 +19,51 @@ import type { ImageQualityCheckType } from './image-quality-check-type';
 import type { SecurityFeatureType } from './security-feature-type';
 
 /**
-* 
-* @export
-* @interface ImageQualityCheck
-*/
+ * 
+ * @export
+ * @interface ImageQualityCheck
+ */
 export interface ImageQualityCheck {
     /**
-    * 
-    * @type {ImageQualityCheckType}
-    * @memberof ImageQualityCheck
-    */
+     * 
+     * @type {ImageQualityCheckType}
+     * @memberof ImageQualityCheck
+     */
     type: ImageQualityCheckType;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof ImageQualityCheck
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof ImageQualityCheck
+     */
     result: CheckResult;
     /**
-    * 
-    * @type {SecurityFeatureType}
-    * @memberof ImageQualityCheck
-    */
+     * 
+     * @type {SecurityFeatureType}
+     * @memberof ImageQualityCheck
+     */
     featureType: SecurityFeatureType;
     /**
-    * 
-    * @type {AreaArray}
-    * @memberof ImageQualityCheck
-    */
+     * 
+     * @type {AreaArray}
+     * @memberof ImageQualityCheck
+     */
     areas?: AreaArray;
     /**
-    * Check mean value
-    * @type {number}
-    * @memberof ImageQualityCheck
-    */
+     * Check mean value
+     * @type {number}
+     * @memberof ImageQualityCheck
+     */
     mean: number;
     /**
-    * Check deviation value
-    * @type {number}
-    * @memberof ImageQualityCheck
-    */
+     * Check deviation value
+     * @type {number}
+     * @memberof ImageQualityCheck
+     */
     std_dev: number;
     /**
-    * Check probability value
-    * @type {number}
-    * @memberof ImageQualityCheck
-    */
+     * Check probability value
+     * @type {number}
+     * @memberof ImageQualityCheck
+     */
     probability: number;
 }

@@ -15,217 +15,214 @@
 
 
 /**
-* Enumeration contains identifiers determining type of features for a document authenticity checks: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/security-feature-type/
-* @export
-* @enum {string}
-*/
-
-export const SecurityFeatureType = {
+ * Enumeration contains identifiers determining type of features for a document authenticity checks: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/security-feature-type/
+ * @export
+ * @enum {string}
+ */
+export enum SecurityFeatureType {
     /**
     * Blank element
     */
-    BLANK: 0,
+    BLANK = 0,
     /**
     * Personalization element
     */
-    FILL: 1,
+    FILL = 1,
     /**
     * Photo
     */
-    PHOTO: 2,
+    PHOTO = 2,
     /**
     * MRZ
     */
-    MRZ: 3,
+    MRZ = 3,
     /**
     * False luminescence
     */
-    FALSE_LUMINESCENCE: 4,
+    FALSE_LUMINESCENCE = 4,
     /**
     * Hologram (static)
     */
-    HOLO_SIMPLE: 5,
+    HOLO_SIMPLE = 5,
     /**
     * Hologram (static verify)
     */
-    HOLO_VERIFY_STATIC: 6,
+    HOLO_VERIFY_STATIC = 6,
     /**
     * Hologram (static verify multiple)
     */
-    HOLO_VERIFY_MULTI_STATIC: 7,
+    HOLO_VERIFY_MULTI_STATIC = 7,
     /**
     * Hologram (dynamic verify)
     */
-    HOLO_VERIFY_DYNAMIC: 8,
+    HOLO_VERIFY_DYNAMIC = 8,
     /**
     * Pattern (non-interrupted)
     */
-    PATTERN_NOT_INTERRUPTED: 9,
+    PATTERN_NOT_INTERRUPTED = 9,
     /**
     * Pattern (non-shifted)
     */
-    PATTERN_NOT_SHIFTED: 10,
+    PATTERN_NOT_SHIFTED = 10,
     /**
     * Pattern (same colors)
     */
-    PATTERN_SAME_COLORS: 11,
+    PATTERN_SAME_COLORS = 11,
     /**
     * Pattern (IR invisible)
     */
-    PATTERN_IR_INVISIBLE: 12,
+    PATTERN_IR_INVISIBLE = 12,
     /**
     * Photo size
     */
-    PHOTO_SIZE_CHECK: 13,
+    PHOTO_SIZE_CHECK = 13,
     /**
     * Main vs ghost portrait comparison
     */
-    PORTRAIT_COMPARISON_VS_GHOST: 14,
+    PORTRAIT_COMPARISON_VS_GHOST = 14,
     /**
     * Main vs RFID portrait comparison
     */
-    PORTRAIT_COMPARISON_VS_RFID: 15,
+    PORTRAIT_COMPARISON_VS_RFID = 15,
     /**
     * Main vs other page portrait comparison
     */
-    PORTRAIT_COMPARISON_VS_VISUAL: 16,
+    PORTRAIT_COMPARISON_VS_VISUAL = 16,
     /**
     * Barcode
     */
-    BARCODE: 17,
+    BARCODE = 17,
     /**
     * Pattern (different line thickness)
     */
-    PATTERN_DIFFERENT_LINES_THICKNESS: 18,
+    PATTERN_DIFFERENT_LINES_THICKNESS = 18,
     /**
     * Main vs live camera portrait comparison
     */
-    PORTRAIT_COMPARISON_VS_CAMERA: 19,
+    PORTRAIT_COMPARISON_VS_CAMERA = 19,
     /**
     * RFID vs live camera portrait comparison
     */
-    PORTRAIT_COMPARISON_RFID_VS_CAMERA: 20,
+    PORTRAIT_COMPARISON_RFID_VS_CAMERA = 20,
     /**
     * Ghost photo
     */
-    GHOST_PHOTO: 21,
+    GHOST_PHOTO = 21,
     /**
     * Clear ghost photo
     */
-    CLEAR_GHOST_PHOTO: 22,
+    CLEAR_GHOST_PHOTO = 22,
     /**
     * Invisible object
     */
-    INVISIBLE_OBJECT: 23,
+    INVISIBLE_OBJECT = 23,
     /**
     * Low contrast object
     */
-    LOW_CONTRAST_OBJECT: 24,
+    LOW_CONTRAST_OBJECT = 24,
     /**
     * Photo color check
     */
-    PHOTO_COLOR: 25,
+    PHOTO_COLOR = 25,
     /**
     * Photo squareness
     */
-    PHOTO_SHAPE: 26,
+    PHOTO_SHAPE = 26,
     /**
     * Photo corners shape
     */
-    PHOTO_CORNERS: 27,
+    PHOTO_CORNERS = 27,
     /**
     * OCR
     */
-    OCR: 28,
+    OCR = 28,
     /**
     * External vs main portrait comparison
     */
-    PORTRAIT_COMPARISON_EXT_VS_VISUAL: 29,
+    PORTRAIT_COMPARISON_EXT_VS_VISUAL = 29,
     /**
     * External vs RFID portrait comparison
     */
-    PORTRAIT_COMPARISON_EXT_VS_RFID: 30,
+    PORTRAIT_COMPARISON_EXT_VS_RFID = 30,
     /**
     * External vs live camera portrait comparison
     */
-    PORTRAIT_COMPARISON_EXT_VS_CAMERA: 31,
+    PORTRAIT_COMPARISON_EXT_VS_CAMERA = 31,
     /**
     * Portrait Depth
     */
-    LIVENESS_DEPTH: 32,
+    LIVENESS_DEPTH = 32,
     /**
     * Micro text
     */
-    MICRO_TEXT: 33,
+    MICRO_TEXT = 33,
     /**
     * Fluorescent Object
     */
-    FLUORESCENT_OBJECT: 34,
+    FLUORESCENT_OBJECT = 34,
     /**
     * Facial landmarks check
     */
-    LANDMARK_CHECK: 35,
+    LANDMARK_CHECK = 35,
     /**
     * Facial image presence
     */
-    FACE_PRESENCE: 36,
+    FACE_PRESENCE = 36,
     /**
     * Facial image absence
     */
-    FACE_ABSENCE: 38,
+    FACE_ABSENCE = 38,
     /**
     * Liveness screen capture. Deprecated. LIVENESS_ELECTRONIC_DEVICE is used instead.
     */
-    LIVENESS_SCREEN_CAPTURE: 39,
+    LIVENESS_SCREEN_CAPTURE = 39,
     /**
     * Liveness electronic device
     */
-    LIVENESS_ELECTRONIC_DEVICE: 40,
+    LIVENESS_ELECTRONIC_DEVICE = 40,
     /**
     * Liveness OVI
     */
-    LIVENESS_OVI: 41,
+    LIVENESS_OVI = 41,
     /**
     * Barcode size check
     */
-    BARCODE_SIZE_CHECK: 42,
+    BARCODE_SIZE_CHECK = 42,
     /**
     * LASINK
     */
-    LASINK: 43,
+    LASINK = 43,
     /**
     * Liveness MLI
     */
-    LIVENESS_MLI: 44,
+    LIVENESS_MLI = 44,
     /**
     * Liveness barcode background
     */
-    LIVENESS_BARCODE_BACKGROUND: 45,
+    LIVENESS_BARCODE_BACKGROUND = 45,
     /**
     * Visual zone portrait image vs. image from barcode
     */
-    PORTRAIT_COMPARISON_VS_BARCODE: 46,
+    PORTRAIT_COMPARISON_VS_BARCODE = 46,
     /**
     * Image from barcode vs. image from RFID
     */
-    PORTRAIT_COMPARISON_RFID_VS_BARCODE: 47,
+    PORTRAIT_COMPARISON_RFID_VS_BARCODE = 47,
     /**
     * Image from barcode vs. external source image
     */
-    PORTRAIT_COMPARISON_EXT_VS_BARCODE: 48,
+    PORTRAIT_COMPARISON_EXT_VS_BARCODE = 48,
     /**
     * Image from barcode vs. photo from camera
     */
-    PORTRAIT_COMPARISON_BARCODE_VS_CAMERA: 49,
+    PORTRAIT_COMPARISON_BARCODE_VS_CAMERA = 49,
     /**
     * Digital signature check
     */
-    CHECK_DIGITAL_SIGNATURE: 50,
+    CHECK_DIGITAL_SIGNATURE = 50,
     /**
     * Contact chip check
     */
-    CONTACT_CHIP_CLASSIFICATION: 51
-} as const;
-
-export type SecurityFeatureType = typeof SecurityFeatureType[keyof typeof SecurityFeatureType];
+    CONTACT_CHIP_CLASSIFICATION = 51
+}
 

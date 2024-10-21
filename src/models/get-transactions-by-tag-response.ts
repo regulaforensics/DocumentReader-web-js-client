@@ -15,27 +15,27 @@
 
 
 /**
-* 
-* @export
-* @interface GetTransactionsByTagResponse
-*/
+ * 
+ * @export
+ * @interface GetTransactionsByTagResponse
+ */
 export interface GetTransactionsByTagResponse {
     /**
-    * Transaction id
-    * @type {number}
-    * @memberof GetTransactionsByTagResponse
-    */
+     * Transaction id
+     * @type {number}
+     * @memberof GetTransactionsByTagResponse
+     */
     id?: number;
     /**
-    * Transaction status
-    * @type {number}
-    * @memberof GetTransactionsByTagResponse
-    */
+     * Transaction status
+     * @type {number}
+     * @memberof GetTransactionsByTagResponse
+     */
     state?: number;
     /**
-    * Last time updated
-    * @type {string}
-    * @memberof GetTransactionsByTagResponse
-    */
+     * Last time updated
+     * @type {string}
+     * @memberof GetTransactionsByTagResponse
+     */
     updatedAt?: string;
 }

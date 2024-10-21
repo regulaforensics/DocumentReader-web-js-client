@@ -16,21 +16,21 @@
 import type { OneCandidate } from './one-candidate';
 
 /**
-* 
-* @export
-* @interface ChosenDocumentTypeResultAllOf
-*/
+ * 
+ * @export
+ * @interface ChosenDocumentTypeResultAllOf
+ */
 export interface ChosenDocumentTypeResultAllOf {
     /**
-    * 
-    * @type {OneCandidate}
-    * @memberof ChosenDocumentTypeResultAllOf
-    */
+     * 
+     * @type {OneCandidate}
+     * @memberof ChosenDocumentTypeResultAllOf
+     */
     OneCandidate: OneCandidate;
     /**
-    * 
-    * @type {string}
-    * @memberof ChosenDocumentTypeResultAllOf
-    */
+     * 
+     * @type {string}
+     * @memberof ChosenDocumentTypeResultAllOf
+     */
     XML_buffer?: string;
 }

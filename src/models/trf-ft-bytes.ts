@@ -17,33 +17,33 @@ import type { GraphicFieldType } from './graphic-field-type';
 import type { TextFieldType } from './text-field-type';
 
 /**
-* Structure is used to store an array of binary information that is a part of one of the informational data groups
-* @export
-* @interface TrfFtBytes
-*/
+ * Structure is used to store an array of binary information that is a part of one of the informational data groups
+ * @export
+ * @interface TrfFtBytes
+ */
 export interface TrfFtBytes {
     /**
-    * Logical type of the field
-    * @type {GraphicFieldType | TextFieldType}
-    * @memberof TrfFtBytes
-    */
+     * Logical type of the field
+     * @type {GraphicFieldType | TextFieldType}
+     * @memberof TrfFtBytes
+     */
     Type: GraphicFieldType | TextFieldType;
     /**
-    * Result of logical analysis of compliance of the contents of the field with the requirements of the specification
-    * @type {number}
-    * @memberof TrfFtBytes
-    */
+     * Result of logical analysis of compliance of the contents of the field with the requirements of the specification
+     * @type {number}
+     * @memberof TrfFtBytes
+     */
     Status: number;
     /**
-    * Length of Data array
-    * @type {number}
-    * @memberof TrfFtBytes
-    */
+     * Length of Data array
+     * @type {number}
+     * @memberof TrfFtBytes
+     */
     Length: number;
     /**
-    * Binary data array. Base64 encoded.
-    * @type {string}
-    * @memberof TrfFtBytes
-    */
+     * Binary data array. Base64 encoded.
+     * @type {string}
+     * @memberof TrfFtBytes
+     */
     Data: string;
 }

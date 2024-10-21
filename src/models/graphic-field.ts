@@ -17,27 +17,27 @@ import type { GraphicFieldType } from './graphic-field-type';
 import type { ImageData } from './image-data';
 
 /**
-* Information about one graphic field - abstract class
-* @export
-* @interface GraphicField
-*/
+ * Information about one graphic field - abstract class
+ * @export
+ * @interface GraphicField
+ */
 export interface GraphicField {
     /**
-    * 
-    * @type {GraphicFieldType}
-    * @memberof GraphicField
-    */
+     * 
+     * @type {GraphicFieldType}
+     * @memberof GraphicField
+     */
     FieldType: GraphicFieldType;
     /**
-    * Graphic field symbolic name
-    * @type {string}
-    * @memberof GraphicField
-    */
+     * Graphic field symbolic name
+     * @type {string}
+     * @memberof GraphicField
+     */
     FieldName: string;
     /**
-    * 
-    * @type {ImageData}
-    * @memberof GraphicField
-    */
+     * 
+     * @type {ImageData}
+     * @memberof GraphicField
+     */
     image: ImageData;
 }

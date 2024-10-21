@@ -15,41 +15,38 @@
 
 
 /**
-* Enumeration contains a set of constants specifying the rate of data exchange between the reader and the RFID-chip
-* @export
-* @enum {string}
-*/
-
-export const RfidPasswordType = {
+ * Enumeration contains a set of constants specifying the rate of data exchange between the reader and the RFID-chip
+ * @export
+ * @enum {string}
+ */
+export enum RfidPasswordType {
     /**
     * Unknown type
     */
-    UNKNOWN: 0,
+    UNKNOWN = 0,
     /**
     * MRZ
     */
-    MRZ: 1,
+    MRZ = 1,
     /**
     * CAN
     */
-    CAN: 2,
+    CAN = 2,
     /**
     * PIN
     */
-    PIN: 3,
+    PIN = 3,
     /**
     * PUK
     */
-    PUK: 4,
+    PUK = 4,
     /**
     * eSign-PIN
     */
-    PIN_E_SIGN: 5,
+    PIN_E_SIGN = 5,
     /**
     * Scanning Area Identifier (for eDL application)
     */
-    SAI: 6
-} as const;
-
-export type RfidPasswordType = typeof RfidPasswordType[keyof typeof RfidPasswordType];
+    SAI = 6
+}
 

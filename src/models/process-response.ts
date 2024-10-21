@@ -19,63 +19,63 @@ import type { RfidLocation } from './rfid-location';
 import type { TransactionInfo } from './transaction-info';
 
 /**
-* 
-* @export
-* @interface ProcessResponse
-*/
+ * 
+ * @export
+ * @interface ProcessResponse
+ */
 export interface ProcessResponse {
     /**
-    * 
-    * @type {RfidLocation}
-    * @memberof ProcessResponse
-    */
+     * 
+     * @type {RfidLocation}
+     * @memberof ProcessResponse
+     */
     ChipPage: RfidLocation;
     /**
-    * 
-    * @type {ProcessingStatus}
-    * @memberof ProcessResponse
-    */
+     * 
+     * @type {ProcessingStatus}
+     * @memberof ProcessResponse
+     */
     ProcessingFinished: ProcessingStatus;
     /**
-    * 
-    * @type {ContainerList}
-    * @memberof ProcessResponse
-    */
+     * 
+     * @type {ContainerList}
+     * @memberof ProcessResponse
+     */
     ContainerList: ContainerList;
     /**
-    * 
-    * @type {TransactionInfo}
-    * @memberof ProcessResponse
-    */
+     * 
+     * @type {TransactionInfo}
+     * @memberof ProcessResponse
+     */
     TransactionInfo: TransactionInfo;
     /**
-    * Base64 encoded transaction processing log
-    * @type {string}
-    * @memberof ProcessResponse
-    */
+     * Base64 encoded transaction processing log
+     * @type {string}
+     * @memberof ProcessResponse
+     */
     log?: string;
     /**
-    * Free-form object provided in request. See passBackObject property of ProcessRequest.
-    * @type {{ [key: string]: object; }}
-    * @memberof ProcessResponse
-    */
+     * Free-form object provided in request. See passBackObject property of ProcessRequest.
+     * @type {{ [key: string]: object; }}
+     * @memberof ProcessResponse
+     */
     passBackObject?: { [key: string]: object; };
     /**
-    * 
-    * @type {number}
-    * @memberof ProcessResponse
-    */
+     * 
+     * @type {number}
+     * @memberof ProcessResponse
+     */
     morePagesAvailable: number;
     /**
-    * Time the document processing has taken, ms.
-    * @type {number}
-    * @memberof ProcessResponse
-    */
+     * Time the document processing has taken, ms.
+     * @type {number}
+     * @memberof ProcessResponse
+     */
     elapsedTime: number;
     /**
-    * 
-    * @type {{ [key: string]: object; }}
-    * @memberof ProcessResponse
-    */
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof ProcessResponse
+     */
     metadata?: { [key: string]: object; };
 }

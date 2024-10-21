@@ -16,21 +16,21 @@
 import type { TrfFtString } from './trf-ft-string';
 
 /**
-* Structure contains information that serves as the distinguished name (identifier) of an object.
-* @export
-* @interface RfidAttributeName
-*/
+ * Structure contains information that serves as the distinguished name (identifier) of an object.
+ * @export
+ * @interface RfidAttributeName
+ */
 export interface RfidAttributeName {
     /**
-    * Attribute identifier (OID ASCII string); contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
-    * @type {string}
-    * @memberof RfidAttributeName
-    */
+     * Attribute identifier (OID ASCII string); contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
+     * @type {string}
+     * @memberof RfidAttributeName
+     */
     Type: string;
     /**
-    * 
-    * @type {TrfFtString}
-    * @memberof RfidAttributeName
-    */
+     * 
+     * @type {TrfFtString}
+     * @memberof RfidAttributeName
+     */
     Value: TrfFtString;
 }

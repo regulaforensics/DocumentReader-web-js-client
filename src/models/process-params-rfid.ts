@@ -16,15 +16,15 @@
 import type { ParsingNotificationCodes } from './parsing-notification-codes';
 
 /**
-* Params for the RFID chip data reprocessing
-* @export
-* @interface ProcessParamsRfid
-*/
+ * Params for the RFID chip data reprocessing
+ * @export
+ * @interface ProcessParamsRfid
+ */
 export interface ProcessParamsRfid {
     /**
-    * A list of notification codes that should be ignored during passive authentication (PA)
-    * @type {Array<ParsingNotificationCodes>}
-    * @memberof ProcessParamsRfid
-    */
+     * A list of notification codes that should be ignored during passive authentication (PA)
+     * @type {Array<ParsingNotificationCodes>}
+     * @memberof ProcessParamsRfid
+     */
     paSensitiveCodesDisable?: Array<ParsingNotificationCodes>;
 }

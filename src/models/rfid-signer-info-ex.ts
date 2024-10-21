@@ -21,81 +21,81 @@ import type { RfidDistinguishedName } from './rfid-distinguished-name';
 import type { TrfFtBytes } from './trf-ft-bytes';
 
 /**
-* Structure is used to describe the contents of a single copy of digital signature of the document security object and the results of its check within the context of the communication session with electronic document
-* @export
-* @interface RfidSignerInfoEx
-*/
+ * Structure is used to describe the contents of a single copy of digital signature of the document security object and the results of its check within the context of the communication session with electronic document
+ * @export
+ * @interface RfidSignerInfoEx
+ */
 export interface RfidSignerInfoEx {
     /**
-    * Version of SignerInfo ASN.1 structure
-    * @type {number}
-    * @memberof RfidSignerInfoEx
-    */
+     * Version of SignerInfo ASN.1 structure
+     * @type {number}
+     * @memberof RfidSignerInfoEx
+     */
     Version: number;
     /**
-    * 
-    * @type {RfidDistinguishedName}
-    * @memberof RfidSignerInfoEx
-    */
+     * 
+     * @type {RfidDistinguishedName}
+     * @memberof RfidSignerInfoEx
+     */
     Issuer: RfidDistinguishedName;
     /**
-    * 
-    * @type {TrfFtBytes}
-    * @memberof RfidSignerInfoEx
-    */
+     * 
+     * @type {TrfFtBytes}
+     * @memberof RfidSignerInfoEx
+     */
     SerialNumber: TrfFtBytes;
     /**
-    * 
-    * @type {TrfFtBytes}
-    * @memberof RfidSignerInfoEx
-    */
+     * 
+     * @type {TrfFtBytes}
+     * @memberof RfidSignerInfoEx
+     */
     SubjectKeyIdentifier: TrfFtBytes;
     /**
-    * Hash algorithm identifier (OID) for digital signature generation
-    * @type {string}
-    * @memberof RfidSignerInfoEx
-    */
+     * Hash algorithm identifier (OID) for digital signature generation
+     * @type {string}
+     * @memberof RfidSignerInfoEx
+     */
     DigestAlgorithm: string;
     /**
-    * List of the signed attributes
-    * @type {Array<RfidAttributeData>}
-    * @memberof RfidSignerInfoEx
-    */
+     * List of the signed attributes
+     * @type {Array<RfidAttributeData>}
+     * @memberof RfidSignerInfoEx
+     */
     SignedAttributes: Array<RfidAttributeData>;
     /**
-    * Digital signature algorithm identifier (OID)
-    * @type {string}
-    * @memberof RfidSignerInfoEx
-    */
+     * Digital signature algorithm identifier (OID)
+     * @type {string}
+     * @memberof RfidSignerInfoEx
+     */
     SignatureAlgorithm: string;
     /**
-    * 
-    * @type {TrfFtBytes}
-    * @memberof RfidSignerInfoEx
-    */
+     * 
+     * @type {TrfFtBytes}
+     * @memberof RfidSignerInfoEx
+     */
     Signature: TrfFtBytes;
     /**
-    * 
-    * @type {RFIDErrorCodes}
-    * @memberof RfidSignerInfoEx
-    */
+     * 
+     * @type {RFIDErrorCodes}
+     * @memberof RfidSignerInfoEx
+     */
     PA_Status: RFIDErrorCodes;
     /**
-    * Certificate chain, used for the digital signature verification.
-    * @type {Array<RfidCertificateEx>}
-    * @memberof RfidSignerInfoEx
-    */
+     * Certificate chain, used for the digital signature verification.
+     * @type {Array<RfidCertificateEx>}
+     * @memberof RfidSignerInfoEx
+     */
     CertificateChain: Array<RfidCertificateEx>;
     /**
-    * Binary data array used to calculate the hash value for digital signature verification. Base64 encoded.
-    * @type {string}
-    * @memberof RfidSignerInfoEx
-    */
+     * Binary data array used to calculate the hash value for digital signature verification. Base64 encoded.
+     * @type {string}
+     * @memberof RfidSignerInfoEx
+     */
     DataToHash: string;
     /**
-    * 
-    * @type {ParsingErrorCodes}
-    * @memberof RfidSignerInfoEx
-    */
+     * 
+     * @type {ParsingErrorCodes}
+     * @memberof RfidSignerInfoEx
+     */
     Notifications: ParsingErrorCodes;
 }

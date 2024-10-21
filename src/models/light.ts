@@ -15,181 +15,178 @@
 
 
 /**
-* Image light index
-* @export
-* @enum {string}
-*/
-
-export const Light = {
+ * Image light index
+ * @export
+ * @enum {string}
+ */
+export enum Light {
     /**
     * Lighting schemes are off
     */
-    OFF: 0,
+    OFF = 0,
     /**
     * OVI scheme
     */
-    OVI: 1,
+    OVI = 1,
     /**
     * Upper/lower lighters of white light scheme
     */
-    WHITE_TOP: 2,
+    WHITE_TOP = 2,
     /**
     * Side lighters of white light scheme
     */
-    WHITE_SIDE: 4,
+    WHITE_SIDE = 4,
     /**
     * General white light without separate control of side and upper/lower lighters scheme
     */
-    WHITE_FRONT: 8388608,
+    WHITE_FRONT = 8388608,
     /**
     * Upper/lower and side lighters of white light scheme
     */
-    WHITE: 6,
+    WHITE = 6,
     /**
     * Upper/lower lighters of IR light scheme
     */
-    IR_TOP: 8,
+    IR_TOP = 8,
     /**
     * Side lighters of IR light scheme
     */
-    IR_SIDE: 16,
+    IR_SIDE = 16,
     /**
     * General IR light without separate control of side and upper/lower lighters scheme
     */
-    IR_FRONT: 16777216,
+    IR_FRONT = 16777216,
     /**
     * Upper/lower and side lighters of IR light scheme
     */
-    IR: 24,
+    IR = 24,
     /**
     * general white image converted to grayscale
     */
-    WHITE_GRAY: 33554432,
+    WHITE_GRAY = 33554432,
     /**
     * General UV light scheme
     */
-    UV: 128,
+    UV = 128,
     /**
     * OVD light for hologram visualization
     */
-    OVD: 67108864,
+    OVD = 67108864,
     /**
     * Video detection light for internal use only
     */
-    VIDEODETECTION: 134217728,
+    VIDEODETECTION = 134217728,
     /**
     * Light IR 870 oblique
     */
-    IR_870_OBL: 268435456,
+    IR_870_OBL = 268435456,
     /**
     * IR luminescence
     */
-    IR_LUMINESCENCE: 256,
+    IR_LUMINESCENCE = 256,
     /**
     * Left lighter of white coaxial light scheme
     */
-    AXIAL_WHITE_LEFT: 1024,
+    AXIAL_WHITE_LEFT = 1024,
     /**
     * Right lighter of white coaxial light scheme
     */
-    AXIAL_WHITE_RIGHT: 2048,
+    AXIAL_WHITE_RIGHT = 2048,
     /**
     * Coaxial white light without separate control of left and right lighters scheme
     */
-    AXIAL_WHITE_FRONT: 512,
+    AXIAL_WHITE_FRONT = 512,
     /**
     * IR720
     */
-    IR_720: 4096,
+    IR_720 = 4096,
     /**
     * IR940
     */
-    IR_940: 8192,
+    IR_940 = 8192,
     /**
     * Right and left lighters of white coaxial light scheme
     */
-    AXIAL_WHITE_FULL: 3072,
+    AXIAL_WHITE_FULL = 3072,
     /**
     * For internal use
     */
-    RAW_DATA: 2147483648,
+    RAW_DATA = 2147483648,
     /**
     * For internal use
     */
-    RAW_DATA_GRBG: 2415919104,
+    RAW_DATA_GRBG = 2415919104,
     /**
     * For internal use
     */
-    RAW_DATA_GBGR: 2684354560,
+    RAW_DATA_GBGR = 2684354560,
     /**
     * For internal use
     */
-    RAW_DATA_RGGB: 2952790016,
+    RAW_DATA_RGGB = 2952790016,
     /**
     * For internal use
     */
-    RAW_DATA_BGGR: 3221225472,
+    RAW_DATA_BGGR = 3221225472,
     /**
     * Transmitted
     */
-    TRANSMITTED: 32,
+    TRANSMITTED = 32,
     /**
     * Transmitted IR
     */
-    TRANSMITTED_IR: 64,
+    TRANSMITTED_IR = 64,
     /**
     * Transmitted AntiStokes
     */
-    ANTI_STOKES: 65536,
+    ANTI_STOKES = 65536,
     /**
     * Transmitted IR940
     */
-    TRANSMITTED_IR940: 16384,
+    TRANSMITTED_IR940 = 16384,
     /**
     * OVD right
     */
-    OVD_RIGHT: 262144,
+    OVD_RIGHT = 262144,
     /**
     * OVD left
     */
-    OVD_LEFT: 131072,
+    OVD_LEFT = 131072,
     /**
     * IR 700
     */
-    IR_700: 32768,
+    IR_700 = 32768,
     /**
     * Front IR870 (mod. 8803)
     */
-    IR_870: 16777216,
+    IR_870 = 16777216,
     /**
     * OVD light (hologram visualization) (mod. 8850)
     */
-    HOLO: 67108864,
+    HOLO = 67108864,
     /**
     * For internal use
     */
-    IR_BOTTOM: 64,
+    IR_BOTTOM = 64,
     /**
     * For internal use
     */
-    WHITE_BOTTOM: 32,
+    WHITE_BOTTOM = 32,
     /**
     * UVС 254 (mod. 88X0)
     */
-    UVC: 524288,
+    UVC = 524288,
     /**
     * UVB 313 (mod. 88X0)
     */
-    UVB: 1048576,
+    UVB = 1048576,
     /**
     * White oblique light
     */
-    WHITE_OBL: 2097152,
+    WHITE_OBL = 2097152,
     /**
     * For internal use
     */
-    WHITE_SPECIAL: 4194304
-} as const;
-
-export type Light = typeof Light[keyof typeof Light];
+    WHITE_SPECIAL = 4194304
+}
 

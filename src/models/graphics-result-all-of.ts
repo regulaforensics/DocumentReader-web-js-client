@@ -16,15 +16,15 @@
 import type { GraphicFieldsList } from './graphic-fields-list';
 
 /**
-* 
-* @export
-* @interface GraphicsResultAllOf
-*/
+ * 
+ * @export
+ * @interface GraphicsResultAllOf
+ */
 export interface GraphicsResultAllOf {
     /**
-    * 
-    * @type {GraphicFieldsList}
-    * @memberof GraphicsResultAllOf
-    */
+     * 
+     * @type {GraphicFieldsList}
+     * @memberof GraphicsResultAllOf
+     */
     DocGraphicsInfo?: GraphicFieldsList;
 }

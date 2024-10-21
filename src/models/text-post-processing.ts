@@ -15,29 +15,26 @@
 
 
 /**
-* 
-* @export
-* @enum {string}
-*/
-
-export const TextPostProcessing = {
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum TextPostProcessing {
     /**
     * Do not change
     */
-    NO_CHANGE: 0,
+    NO_CHANGE = 0,
     /**
     * Uppercase
     */
-    UPPERCASE: 1,
+    UPPERCASE = 1,
     /**
     * Lowercase
     */
-    LOWERCASE: 2,
+    LOWERCASE = 2,
     /**
     * Capital
     */
-    CAPITAL: 3
-} as const;
-
-export type TextPostProcessing = typeof TextPostProcessing[keyof typeof TextPostProcessing];
+    CAPITAL = 3
+}
 

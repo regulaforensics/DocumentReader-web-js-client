@@ -15,45 +15,42 @@
 
 
 /**
-* Enumeration contains a set of constants that define the type of authentication or secure data access procedure
-* @export
-* @enum {string}
-*/
-
-export const RfidAccessControlProcedureType = {
+ * Enumeration contains a set of constants that define the type of authentication or secure data access procedure
+ * @export
+ * @enum {string}
+ */
+export enum RfidAccessControlProcedureType {
     /**
     * Type is not defined
     */
-    UNDEFINED: 0,
+    UNDEFINED = 0,
     /**
     * BAC/BAP
     */
-    BAC: 1,
+    BAC = 1,
     /**
     * PACE
     */
-    PACE: 2,
+    PACE = 2,
     /**
     * CA
     */
-    CA: 3,
+    CA = 3,
     /**
     * TA
     */
-    TA: 4,
+    TA = 4,
     /**
     * AA
     */
-    AA: 5,
+    AA = 5,
     /**
     * RI
     */
-    RI: 6,
+    RI = 6,
     /**
     * Card info
     */
-    CARD_INFO: 10
-} as const;
-
-export type RfidAccessControlProcedureType = typeof RfidAccessControlProcedureType[keyof typeof RfidAccessControlProcedureType];
+    CARD_INFO = 10
+}
 

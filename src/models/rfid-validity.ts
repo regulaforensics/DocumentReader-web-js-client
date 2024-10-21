@@ -16,21 +16,21 @@
 import type { TrfFtString } from './trf-ft-string';
 
 /**
-* Structure contains information on a certificate validity.
-* @export
-* @interface RfidValidity
-*/
+ * Structure contains information on a certificate validity.
+ * @export
+ * @interface RfidValidity
+ */
 export interface RfidValidity {
     /**
-    * 
-    * @type {TrfFtString}
-    * @memberof RfidValidity
-    */
+     * 
+     * @type {TrfFtString}
+     * @memberof RfidValidity
+     */
     NotBefore: TrfFtString;
     /**
-    * 
-    * @type {TrfFtString}
-    * @memberof RfidValidity
-    */
+     * 
+     * @type {TrfFtString}
+     * @memberof RfidValidity
+     */
     NotAfter: TrfFtString;
 }

@@ -17,33 +17,33 @@ import type { RectangleCoordinates } from './rectangle-coordinates';
 import type { SymbolCandidate } from './symbol-candidate';
 
 /**
-* Describes a single character recognition results in the text field line
-* @export
-* @interface SymbolRecognitionResult
-*/
+ * Describes a single character recognition results in the text field line
+ * @export
+ * @interface SymbolRecognitionResult
+ */
 export interface SymbolRecognitionResult {
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof SymbolRecognitionResult
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof SymbolRecognitionResult
+     */
     SymbolRect: RectangleCoordinates;
     /**
-    * Number of significant elements of ListOfCandidates array
-    * @type {number}
-    * @memberof SymbolRecognitionResult
-    */
+     * Number of significant elements of ListOfCandidates array
+     * @type {number}
+     * @memberof SymbolRecognitionResult
+     */
     CandidatesCount: number;
     /**
-    * Array of candidate characters. Sorted in descending order of recognition probabilities (the first element has highest probability)
-    * @type {Array<SymbolCandidate>}
-    * @memberof SymbolRecognitionResult
-    */
+     * Array of candidate characters. Sorted in descending order of recognition probabilities (the first element has highest probability)
+     * @type {Array<SymbolCandidate>}
+     * @memberof SymbolRecognitionResult
+     */
     ListOfCandidates: Array<SymbolCandidate>;
     /**
-    * 
-    * @type {any}
-    * @memberof SymbolRecognitionResult
-    */
+     * 
+     * @type {any}
+     * @memberof SymbolRecognitionResult
+     */
     Reserved?: any | null;
 }

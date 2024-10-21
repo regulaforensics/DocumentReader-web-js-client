@@ -16,27 +16,27 @@
 import type { RfidTerminalType } from './rfid-terminal-type';
 
 /**
-* Structure is used to describe the terminal type within the context of the communication session with electronic document
-* @export
-* @interface RfidTerminal
-*/
+ * Structure is used to describe the terminal type within the context of the communication session with electronic document
+ * @export
+ * @interface RfidTerminal
+ */
 export interface RfidTerminal {
     /**
-    * 
-    * @type {RfidTerminalType}
-    * @memberof RfidTerminal
-    */
+     * 
+     * @type {RfidTerminalType}
+     * @memberof RfidTerminal
+     */
     TermType: RfidTerminalType;
     /**
-    * Declared (set) combination of flags of access rights to the functionality of the document (combination of eRfidTerminalAuthorizationRequirement values)
-    * @type {number}
-    * @memberof RfidTerminal
-    */
+     * Declared (set) combination of flags of access rights to the functionality of the document (combination of eRfidTerminalAuthorizationRequirement values)
+     * @type {number}
+     * @memberof RfidTerminal
+     */
     AuthReq: number;
     /**
-    * Declared (set) combination of flags of access rights to the functionality of the document (combination of RfidTerminalAuthorizationRequirement values)
-    * @type {number}
-    * @memberof RfidTerminal
-    */
+     * Declared (set) combination of flags of access rights to the functionality of the document (combination of RfidTerminalAuthorizationRequirement values)
+     * @type {number}
+     * @memberof RfidTerminal
+     */
     AuthReq2: number;
 }

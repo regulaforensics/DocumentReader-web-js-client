@@ -17,27 +17,27 @@ import type { CheckResult } from './check-result';
 import type { Source } from './source';
 
 /**
-* 
-* @export
-* @interface CrossSourceValueComparison
-*/
+ * 
+ * @export
+ * @interface CrossSourceValueComparison
+ */
 export interface CrossSourceValueComparison {
     /**
-    * 
-    * @type {Source}
-    * @memberof CrossSourceValueComparison
-    */
+     * 
+     * @type {Source}
+     * @memberof CrossSourceValueComparison
+     */
     sourceLeft: Source;
     /**
-    * 
-    * @type {Source}
-    * @memberof CrossSourceValueComparison
-    */
+     * 
+     * @type {Source}
+     * @memberof CrossSourceValueComparison
+     */
     sourceRight: Source;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof CrossSourceValueComparison
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof CrossSourceValueComparison
+     */
     status: CheckResult;
 }

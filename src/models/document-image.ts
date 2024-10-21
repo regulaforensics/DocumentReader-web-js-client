@@ -15,15 +15,15 @@
 
 
 /**
-* 
-* @export
-* @interface DocumentImage
-*/
+ * 
+ * @export
+ * @interface DocumentImage
+ */
 export interface DocumentImage {
     /**
-    * Base64 encoded image
-    * @type {string}
-    * @memberof DocumentImage
-    */
+     * Base64 encoded image
+     * @type {string}
+     * @memberof DocumentImage
+     */
     image: string;
 }

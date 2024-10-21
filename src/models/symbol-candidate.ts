@@ -15,27 +15,27 @@
 
 
 /**
-* Describes an individual character recognition candidate
-* @export
-* @interface SymbolCandidate
-*/
+ * Describes an individual character recognition candidate
+ * @export
+ * @interface SymbolCandidate
+ */
 export interface SymbolCandidate {
     /**
-    * Unicode symbol code
-    * @type {number}
-    * @memberof SymbolCandidate
-    */
+     * Unicode symbol code
+     * @type {number}
+     * @memberof SymbolCandidate
+     */
     SymbolCode: number;
     /**
-    * character recognition probability (0–100,%)
-    * @type {number}
-    * @memberof SymbolCandidate
-    */
+     * character recognition probability (0–100,%)
+     * @type {number}
+     * @memberof SymbolCandidate
+     */
     SymbolProbability: number;
     /**
-    * 
-    * @type {any}
-    * @memberof SymbolCandidate
-    */
+     * 
+     * @type {any}
+     * @memberof SymbolCandidate
+     */
     Reserved?: any | null;
 }

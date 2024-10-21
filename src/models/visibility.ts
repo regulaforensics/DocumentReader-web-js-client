@@ -15,33 +15,30 @@
 
 
 /**
-* Enumeration contains visibility status of the security element
-* @export
-* @enum {string}
-*/
-
-export const Visibility = {
+ * Enumeration contains visibility status of the security element
+ * @export
+ * @enum {string}
+ */
+export enum Visibility {
     /**
     * Invisible
     */
-    INVISIBLE: 0,
+    INVISIBLE = 0,
     /**
     * Visible
     */
-    VISIBLE: 1,
+    VISIBLE = 1,
     /**
     * Colored
     */
-    COLORED: 2,
+    COLORED = 2,
     /**
     * Grayscale
     */
-    GRAYSCALE: 4,
+    GRAYSCALE = 4,
     /**
     * Visible vs IR match
     */
-    WHITE_IR_MATCHING: 8
-} as const;
-
-export type Visibility = typeof Visibility[keyof typeof Visibility];
+    WHITE_IR_MATCHING = 8
+}
 

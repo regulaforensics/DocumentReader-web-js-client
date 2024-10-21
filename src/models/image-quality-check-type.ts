@@ -15,45 +15,42 @@
 
 
 /**
-* Image quality check type
-* @export
-* @enum {string}
-*/
-
-export const ImageQualityCheckType = {
+ * Image quality check type
+ * @export
+ * @enum {string}
+ */
+export enum ImageQualityCheckType {
     /**
     * Signals glare presence on the image
     */
-    ImageGlares: 0,
+    ImageGlares = 0,
     /**
     * Signals whether image is in focus
     */
-    ImageFocus: 1,
+    ImageFocus = 1,
     /**
     * Signals if image resolution is below threshold
     */
-    ImageResolution: 2,
+    ImageResolution = 2,
     /**
     * Signals if image is colorless
     */
-    ImageColorness: 3,
+    ImageColorness = 3,
     /**
     * Signals if document in the image has prespective distortion above threshold
     */
-    Perspective: 4,
+    Perspective = 4,
     /**
     * Signals if document is not fully present in the image
     */
-    Bounds: 5,
+    Bounds = 5,
     /**
     * Signals if the portrait is present
     */
-    Portrait: 7,
+    Portrait = 7,
     /**
     * Signals if the document image is bright enough
     */
-    Brightness: 9
-} as const;
-
-export type ImageQualityCheckType = typeof ImageQualityCheckType[keyof typeof ImageQualityCheckType];
+    Brightness = 9
+}
 

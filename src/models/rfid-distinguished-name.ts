@@ -17,27 +17,27 @@ import type { RfidAttributeName } from './rfid-attribute-name';
 import type { TrfFtString } from './trf-ft-string';
 
 /**
-* Contents of the identifier in binary form. Base64 encoded.
-* @export
-* @interface RfidDistinguishedName
-*/
+ * Contents of the identifier in binary form. Base64 encoded.
+ * @export
+ * @interface RfidDistinguishedName
+ */
 export interface RfidDistinguishedName {
     /**
-    * Contents of the identifier in binary form. Base64 encoded.
-    * @type {string}
-    * @memberof RfidDistinguishedName
-    */
+     * Contents of the identifier in binary form. Base64 encoded.
+     * @type {string}
+     * @memberof RfidDistinguishedName
+     */
     Data: string;
     /**
-    * 
-    * @type {TrfFtString}
-    * @memberof RfidDistinguishedName
-    */
+     * 
+     * @type {TrfFtString}
+     * @memberof RfidDistinguishedName
+     */
     FriendlyName: TrfFtString;
     /**
-    * List of individual attributes contained in the identifier
-    * @type {Array<RfidAttributeName>}
-    * @memberof RfidDistinguishedName
-    */
+     * List of individual attributes contained in the identifier
+     * @type {Array<RfidAttributeName>}
+     * @memberof RfidDistinguishedName
+     */
     Attributes: Array<RfidAttributeName>;
 }

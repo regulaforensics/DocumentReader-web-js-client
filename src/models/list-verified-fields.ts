@@ -16,21 +16,21 @@
 import type { VerifiedFieldMap } from './verified-field-map';
 
 /**
-* 
-* @export
-* @interface ListVerifiedFields
-*/
+ * 
+ * @export
+ * @interface ListVerifiedFields
+ */
 export interface ListVerifiedFields {
     /**
-    * Number of pFieldMaps array elements
-    * @type {number}
-    * @memberof ListVerifiedFields
-    */
+     * Number of pFieldMaps array elements
+     * @type {number}
+     * @memberof ListVerifiedFields
+     */
     Count: number;
     /**
-    * 
-    * @type {Array<VerifiedFieldMap>}
-    * @memberof ListVerifiedFields
-    */
+     * 
+     * @type {Array<VerifiedFieldMap>}
+     * @memberof ListVerifiedFields
+     */
     pFieldMaps: Array<VerifiedFieldMap>;
 }

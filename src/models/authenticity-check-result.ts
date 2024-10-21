@@ -22,33 +22,33 @@ import type { PhotoIdentResult } from './photo-ident-result';
 import type { SecurityFeatureResult } from './security-feature-result';
 
 /**
-* 
-* @export
-* @interface AuthenticityCheckResult
-*/
+ * 
+ * @export
+ * @interface AuthenticityCheckResult
+ */
 export interface AuthenticityCheckResult {
     /**
-    * 
-    * @type {AuthenticityResultType}
-    * @memberof AuthenticityCheckResult
-    */
+     * 
+     * @type {AuthenticityResultType}
+     * @memberof AuthenticityCheckResult
+     */
     Type: AuthenticityResultType;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof AuthenticityCheckResult
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof AuthenticityCheckResult
+     */
     Result: CheckResult;
     /**
-    * Count of items in List
-    * @type {number}
-    * @memberof AuthenticityCheckResult
-    */
+     * Count of items in List
+     * @type {number}
+     * @memberof AuthenticityCheckResult
+     */
     Count?: number;
     /**
-    * 
-    * @type {Array<SecurityFeatureResult | IdentResult | FiberResult | OCRSecurityTextResult | PhotoIdentResult>}
-    * @memberof AuthenticityCheckResult
-    */
+     * 
+     * @type {Array<SecurityFeatureResult | IdentResult | FiberResult | OCRSecurityTextResult | PhotoIdentResult>}
+     * @memberof AuthenticityCheckResult
+     */
     List: Array<SecurityFeatureResult | IdentResult | FiberResult | OCRSecurityTextResult | PhotoIdentResult>;
 }

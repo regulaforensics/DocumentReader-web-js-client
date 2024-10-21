@@ -20,63 +20,63 @@ import type { RfidOrigin } from './rfid-origin';
 import type { Source } from './source';
 
 /**
-* 
-* @export
-* @interface TextFieldValue
-*/
+ * 
+ * @export
+ * @interface TextFieldValue
+ */
 export interface TextFieldValue {
     /**
-    * 
-    * @type {Source}
-    * @memberof TextFieldValue
-    */
+     * 
+     * @type {Source}
+     * @memberof TextFieldValue
+     */
     source: Source;
     /**
-    * Parsed/processed value. Date format converted for output, delimiters removed
-    * @type {string}
-    * @memberof TextFieldValue
-    */
+     * Parsed/processed value. Date format converted for output, delimiters removed
+     * @type {string}
+     * @memberof TextFieldValue
+     */
     value: string;
     /**
-    * Original value as seen in the document
-    * @type {string}
-    * @memberof TextFieldValue
-    */
+     * Original value as seen in the document
+     * @type {string}
+     * @memberof TextFieldValue
+     */
     originalValue?: string;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof TextFieldValue
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof TextFieldValue
+     */
     originalValidity: CheckResult;
     /**
-    * 
-    * @type {Array<OriginalSymbol>}
-    * @memberof TextFieldValue
-    */
+     * 
+     * @type {Array<OriginalSymbol>}
+     * @memberof TextFieldValue
+     */
     originalSymbols?: Array<OriginalSymbol>;
     /**
-    * Page index of the image from input list
-    * @type {number}
-    * @memberof TextFieldValue
-    */
+     * Page index of the image from input list
+     * @type {number}
+     * @memberof TextFieldValue
+     */
     pageIndex: number;
     /**
-    * Min recognition probability. Combined minimum probability from single characters probabilities
-    * @type {number}
-    * @memberof TextFieldValue
-    */
+     * Min recognition probability. Combined minimum probability from single characters probabilities
+     * @type {number}
+     * @memberof TextFieldValue
+     */
     probability: number;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof TextFieldValue
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof TextFieldValue
+     */
     fieldRect?: RectangleCoordinates;
     /**
-    * 
-    * @type {RfidOrigin}
-    * @memberof TextFieldValue
-    */
+     * 
+     * @type {RfidOrigin}
+     * @memberof TextFieldValue
+     */
     rfidOrigin?: RfidOrigin;
 }

@@ -16,15 +16,15 @@
 import type { ImageQualityCheckList } from './image-quality-check-list';
 
 /**
-* 
-* @export
-* @interface ImageQualityResultAllOf
-*/
+ * 
+ * @export
+ * @interface ImageQualityResultAllOf
+ */
 export interface ImageQualityResultAllOf {
     /**
-    * 
-    * @type {ImageQualityCheckList}
-    * @memberof ImageQualityResultAllOf
-    */
+     * 
+     * @type {ImageQualityCheckList}
+     * @memberof ImageQualityResultAllOf
+     */
     ImageQualityCheckList: ImageQualityCheckList;
 }

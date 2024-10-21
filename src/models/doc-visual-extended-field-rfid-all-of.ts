@@ -16,33 +16,33 @@
 import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
-* 
-* @export
-* @interface DocVisualExtendedFieldRfidAllOf
-*/
+ * 
+ * @export
+ * @interface DocVisualExtendedFieldRfidAllOf
+ */
 export interface DocVisualExtendedFieldRfidAllOf {
     /**
-    * 
-    * @type {RfidDataGroupTypeTag}
-    * @memberof DocVisualExtendedFieldRfidAllOf
-    */
+     * 
+     * @type {RfidDataGroupTypeTag}
+     * @memberof DocVisualExtendedFieldRfidAllOf
+     */
     RFID_OriginDG: RfidDataGroupTypeTag;
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedFieldRfidAllOf
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedFieldRfidAllOf
+     */
     RFID_OriginDGTag?: any | null;
     /**
-    * Record index of the text field source in the data group
-    * @type {number}
-    * @memberof DocVisualExtendedFieldRfidAllOf
-    */
+     * Record index of the text field source in the data group
+     * @type {number}
+     * @memberof DocVisualExtendedFieldRfidAllOf
+     */
     RFID_OriginTagEntry: number;
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedFieldRfidAllOf
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedFieldRfidAllOf
+     */
     RFID_OriginEntryView?: any | null;
 }

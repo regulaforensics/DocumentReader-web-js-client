@@ -17,28 +17,43 @@
 /**
  * 
  * @export
- * @enum {string}
+ * @interface DeviceInfoDeprecated
  */
-export enum VerificationResult {
+export interface DeviceInfoDeprecated {
     /**
-    * Comparison result unknown
-    */
-    DISABLED = 0,
+     * 
+     * @type {string}
+     * @memberof DeviceInfoDeprecated
+     */
+    app_name?: string;
     /**
-    * Verification passed
-    */
-    VERIFIED = 1,
+     * 
+     * @type {string}
+     * @memberof DeviceInfoDeprecated
+     */
+    version?: string;
     /**
-    * Verification failed
-    */
-    NOT_VERIFIED = 2,
+     * 
+     * @type {string}
+     * @memberof DeviceInfoDeprecated
+     */
+    license_id?: string;
     /**
-    * Positive comparison result
-    */
-    COMPARE_MATCH = 3,
+     * 
+     * @type {string}
+     * @memberof DeviceInfoDeprecated
+     */
+    license_serial?: string;
     /**
-    * Negative comparison result
-    */
-    COMPARE_NOT_MATCH = 4
+     * 
+     * @type {string}
+     * @memberof DeviceInfoDeprecated
+     */
+    valid_until?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceInfoDeprecated
+     */
+    server_time?: string;
 }
-

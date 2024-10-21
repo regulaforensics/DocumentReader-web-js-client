@@ -16,15 +16,15 @@
 import type { Images } from './images';
 
 /**
-* 
-* @export
-* @interface ImagesResultAllOf
-*/
+ * 
+ * @export
+ * @interface ImagesResultAllOf
+ */
 export interface ImagesResultAllOf {
     /**
-    * 
-    * @type {Images}
-    * @memberof ImagesResultAllOf
-    */
+     * 
+     * @type {Images}
+     * @memberof ImagesResultAllOf
+     */
     Images: Images;
 }

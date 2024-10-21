@@ -19,75 +19,75 @@ import type { RawImageContainerList } from './raw-image-container-list';
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
-* 
-* @export
-* @interface PhotoIdentResultAllOf
-*/
+ * 
+ * @export
+ * @interface PhotoIdentResultAllOf
+ */
 export interface PhotoIdentResultAllOf {
     /**
-    * 
-    * @type {Light}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {Light}
+     * @memberof PhotoIdentResultAllOf
+     */
     LightIndex: Light;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof PhotoIdentResultAllOf
+     */
     Area: RectangleCoordinates;
     /**
-    * 
-    * @type {ImageData}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {ImageData}
+     * @memberof PhotoIdentResultAllOf
+     */
     SourceImage: ImageData;
     /**
-    * 
-    * @type {RawImageContainerList}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {RawImageContainerList}
+     * @memberof PhotoIdentResultAllOf
+     */
     ResultImages: RawImageContainerList;
     /**
-    * 
-    * @type {number}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof PhotoIdentResultAllOf
+     */
     FieldTypesCount?: number;
     /**
-    * 
-    * @type {Array<number>}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {Array<number>}
+     * @memberof PhotoIdentResultAllOf
+     */
     FieldTypesList?: Array<number>;
     /**
-    * 
-    * @type {number}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof PhotoIdentResultAllOf
+     */
     Step?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof PhotoIdentResultAllOf
+     */
     Angle?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof PhotoIdentResultAllOf
+     */
     Reserved1?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof PhotoIdentResultAllOf
+     */
     Reserved2?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof PhotoIdentResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof PhotoIdentResultAllOf
+     */
     Reserved3?: number;
 }

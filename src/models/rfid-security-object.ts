@@ -17,39 +17,39 @@ import type { ParsingErrorCodes } from './parsing-error-codes';
 import type { RfidSignerInfoEx } from './rfid-signer-info-ex';
 
 /**
-* Structure is used to describe the contents of a single document security object (SO) and the results of its check within the context of the communication session with electronic document
-* @export
-* @interface RfidSecurityObject
-*/
+ * Structure is used to describe the contents of a single document security object (SO) and the results of its check within the context of the communication session with electronic document
+ * @export
+ * @interface RfidSecurityObject
+ */
 export interface RfidSecurityObject {
     /**
-    * Security object version
-    * @type {number}
-    * @memberof RfidSecurityObject
-    */
+     * Security object version
+     * @type {number}
+     * @memberof RfidSecurityObject
+     */
     Version: number;
     /**
-    * Identifier of the security object
-    * @type {string}
-    * @memberof RfidSecurityObject
-    */
+     * Identifier of the security object
+     * @type {string}
+     * @memberof RfidSecurityObject
+     */
     ObjectType: string;
     /**
-    * Reference to the source file of the security object data
-    * @type {number}
-    * @memberof RfidSecurityObject
-    */
+     * Reference to the source file of the security object data
+     * @type {number}
+     * @memberof RfidSecurityObject
+     */
     FileReference: number;
     /**
-    * List of remarks arisen during the analysis of SO data structure.
-    * @type {Array<ParsingErrorCodes>}
-    * @memberof RfidSecurityObject
-    */
+     * List of remarks arisen during the analysis of SO data structure.
+     * @type {Array<ParsingErrorCodes>}
+     * @memberof RfidSecurityObject
+     */
     Notifications: Array<ParsingErrorCodes>;
     /**
-    * List of containers to store information about digital signature objects contained in the SO
-    * @type {Array<RfidSignerInfoEx>}
-    * @memberof RfidSecurityObject
-    */
+     * List of containers to store information about digital signature objects contained in the SO
+     * @type {Array<RfidSignerInfoEx>}
+     * @memberof RfidSecurityObject
+     */
     SignerInfos: Array<RfidSignerInfoEx>;
 }

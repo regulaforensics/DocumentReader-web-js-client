@@ -17,21 +17,21 @@ import type { InDataTransactionImagesFieldValue } from './in-data-transaction-im
 import type { InDataVideo } from './in-data-video';
 
 /**
-* 
-* @export
-* @interface InData
-*/
+ * 
+ * @export
+ * @interface InData
+ */
 export interface InData {
     /**
-    * 
-    * @type {InDataVideo}
-    * @memberof InData
-    */
+     * 
+     * @type {InDataVideo}
+     * @memberof InData
+     */
     video?: InDataVideo;
     /**
-    * 
-    * @type {Array<InDataTransactionImagesFieldValue>}
-    * @memberof InData
-    */
+     * 
+     * @type {Array<InDataTransactionImagesFieldValue>}
+     * @memberof InData
+     */
     images?: Array<InDataTransactionImagesFieldValue>;
 }

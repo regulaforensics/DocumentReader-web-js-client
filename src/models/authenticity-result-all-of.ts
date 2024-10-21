@@ -16,15 +16,15 @@
 import type { AuthenticityCheckList } from './authenticity-check-list';
 
 /**
-* 
-* @export
-* @interface AuthenticityResultAllOf
-*/
+ * 
+ * @export
+ * @interface AuthenticityResultAllOf
+ */
 export interface AuthenticityResultAllOf {
     /**
-    * 
-    * @type {AuthenticityCheckList}
-    * @memberof AuthenticityResultAllOf
-    */
+     * 
+     * @type {AuthenticityCheckList}
+     * @memberof AuthenticityResultAllOf
+     */
     AuthenticityCheckList: AuthenticityCheckList;
 }

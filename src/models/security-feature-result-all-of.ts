@@ -20,45 +20,45 @@ import type { SecurityFeatureType } from './security-feature-type';
 import type { Visibility } from './visibility';
 
 /**
-* 
-* @export
-* @interface SecurityFeatureResultAllOf
-*/
+ * 
+ * @export
+ * @interface SecurityFeatureResultAllOf
+ */
 export interface SecurityFeatureResultAllOf {
     /**
-    * 
-    * @type {SecurityFeatureType}
-    * @memberof SecurityFeatureResultAllOf
-    */
+     * 
+     * @type {SecurityFeatureType}
+     * @memberof SecurityFeatureResultAllOf
+     */
     ElementType: SecurityFeatureType;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof SecurityFeatureResultAllOf
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof SecurityFeatureResultAllOf
+     */
     ElementRect: RectangleCoordinates;
     /**
-    * 
-    * @type {Visibility}
-    * @memberof SecurityFeatureResultAllOf
-    */
+     * 
+     * @type {Visibility}
+     * @memberof SecurityFeatureResultAllOf
+     */
     Visibility: Visibility;
     /**
-    * 
-    * @type {Critical}
-    * @memberof SecurityFeatureResultAllOf
-    */
+     * 
+     * @type {Critical}
+     * @memberof SecurityFeatureResultAllOf
+     */
     CriticalFlag: Critical;
     /**
-    * 
-    * @type {AreaContainer}
-    * @memberof SecurityFeatureResultAllOf
-    */
+     * 
+     * @type {AreaContainer}
+     * @memberof SecurityFeatureResultAllOf
+     */
     AreaList?: AreaContainer;
     /**
-    * 
-    * @type {number}
-    * @memberof SecurityFeatureResultAllOf
-    */
+     * 
+     * @type {number}
+     * @memberof SecurityFeatureResultAllOf
+     */
     Reserved2?: number;
 }

@@ -17,33 +17,33 @@ import type { GraphicFieldType } from './graphic-field-type';
 import type { ImagesFieldValue } from './images-field-value';
 
 /**
-* 
-* @export
-* @interface ImagesField
-*/
+ * 
+ * @export
+ * @interface ImagesField
+ */
 export interface ImagesField {
     /**
-    * Human readable field name. Do not bind to this name - use GraphicFieldType instead.
-    * @type {string}
-    * @memberof ImagesField
-    */
+     * Human readable field name. Do not bind to this name - use GraphicFieldType instead.
+     * @type {string}
+     * @memberof ImagesField
+     */
     fieldName: string;
     /**
-    * 
-    * @type {GraphicFieldType}
-    * @memberof ImagesField
-    */
+     * 
+     * @type {GraphicFieldType}
+     * @memberof ImagesField
+     */
     fieldType: GraphicFieldType;
     /**
-    * 
-    * @type {Array<ImagesFieldValue>}
-    * @memberof ImagesField
-    */
+     * 
+     * @type {Array<ImagesFieldValue>}
+     * @memberof ImagesField
+     */
     valueList: Array<ImagesFieldValue>;
     /**
-    * Field value count
-    * @type {number}
-    * @memberof ImagesField
-    */
+     * Field value count
+     * @type {number}
+     * @memberof ImagesField
+     */
     valueCount: number;
 }

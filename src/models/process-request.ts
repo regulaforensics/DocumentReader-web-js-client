@@ -20,75 +20,75 @@ import type { ProcessRequestImage } from './process-request-image';
 import type { ProcessSystemInfo } from './process-system-info';
 
 /**
-* 
-* @export
-* @interface ProcessRequest
-*/
+ * 
+ * @export
+ * @interface ProcessRequest
+ */
 export interface ProcessRequest {
     /**
-    * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
-    * @type {Array<LCID>}
-    * @memberof ProcessRequest
-    */
+     * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
+     * @type {Array<LCID>}
+     * @memberof ProcessRequest
+     */
     lcidFilter?: Array<LCID>;
     /**
-    * 
-    * @type {ProcessParams}
-    * @memberof ProcessRequest
-    */
+     * 
+     * @type {ProcessParams}
+     * @memberof ProcessRequest
+     */
     processParam: ProcessParams;
     /**
-    * 
-    * @type {Array<ProcessRequestImage>}
-    * @memberof ProcessRequest
-    */
+     * 
+     * @type {Array<ProcessRequestImage>}
+     * @memberof ProcessRequest
+     */
     List?: Array<ProcessRequestImage>;
     /**
-    * Session ID
-    * @type {string}
-    * @memberof ProcessRequest
-    */
+     * Session ID
+     * @type {string}
+     * @memberof ProcessRequest
+     */
     tag?: string;
     /**
-    * Customer name
-    * @type {string}
-    * @memberof ProcessRequest
-    */
+     * Customer name
+     * @type {string}
+     * @memberof ProcessRequest
+     */
     tenant?: string;
     /**
-    * Environment type
-    * @type {string}
-    * @memberof ProcessRequest
-    */
+     * Environment type
+     * @type {string}
+     * @memberof ProcessRequest
+     */
     env?: string;
     /**
-    * Live portrait photo
-    * @type {string}
-    * @memberof ProcessRequest
-    */
+     * Live portrait photo
+     * @type {string}
+     * @memberof ProcessRequest
+     */
     livePortrait?: string;
     /**
-    * Portrait photo from an external source
-    * @type {string}
-    * @memberof ProcessRequest
-    */
+     * Portrait photo from an external source
+     * @type {string}
+     * @memberof ProcessRequest
+     */
     extPortrait?: string;
     /**
-    * 
-    * @type {ContainerList}
-    * @memberof ProcessRequest
-    */
+     * 
+     * @type {ContainerList}
+     * @memberof ProcessRequest
+     */
     ContainerList?: ContainerList;
     /**
-    * 
-    * @type {ProcessSystemInfo}
-    * @memberof ProcessRequest
-    */
+     * 
+     * @type {ProcessSystemInfo}
+     * @memberof ProcessRequest
+     */
     systemInfo?: ProcessSystemInfo;
     /**
-    * Free-form object to be included in response. Must be object, not list or simple value. Do not affect document processing. Use it freely to pass your app params. Stored in process logs.
-    * @type {{ [key: string]: object; }}
-    * @memberof ProcessRequest
-    */
+     * Free-form object to be included in response. Must be object, not list or simple value. Do not affect document processing. Use it freely to pass your app params. Stored in process logs.
+     * @type {{ [key: string]: object; }}
+     * @memberof ProcessRequest
+     */
     passBackObject?: { [key: string]: object; };
 }

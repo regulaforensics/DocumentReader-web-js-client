@@ -16,21 +16,21 @@
 import type { PArrayField } from './parray-field';
 
 /**
-* 
-* @export
-* @interface DocBarCodeInfoFieldsList
-*/
+ * 
+ * @export
+ * @interface DocBarCodeInfoFieldsList
+ */
 export interface DocBarCodeInfoFieldsList {
     /**
-    * Count of array fields
-    * @type {number}
-    * @memberof DocBarCodeInfoFieldsList
-    */
+     * Count of array fields
+     * @type {number}
+     * @memberof DocBarCodeInfoFieldsList
+     */
     nFields: number;
     /**
-    * Data from barcode
-    * @type {Array<PArrayField>}
-    * @memberof DocBarCodeInfoFieldsList
-    */
+     * Data from barcode
+     * @type {Array<PArrayField>}
+     * @memberof DocBarCodeInfoFieldsList
+     */
     pArrayFields: Array<PArrayField>;
 }

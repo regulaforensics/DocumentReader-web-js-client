@@ -15,33 +15,33 @@
 
 
 /**
-* 
-* @export
-* @interface LivenessParams
-*/
+ * 
+ * @export
+ * @interface LivenessParams
+ */
 export interface LivenessParams {
     /**
-    * This parameter is used to enable OVI check
-    * @type {boolean}
-    * @memberof LivenessParams
-    */
+     * This parameter is used to enable OVI check
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
     checkOVI?: boolean;
     /**
-    * This parameter is used to enable MLI check
-    * @type {boolean}
-    * @memberof LivenessParams
-    */
+     * This parameter is used to enable MLI check
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
     checkMLI?: boolean;
     /**
-    * This parameter is used to enable Hologram detection
-    * @type {boolean}
-    * @memberof LivenessParams
-    */
+     * This parameter is used to enable Hologram detection
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
     checkHolo?: boolean;
     /**
-    * This parameter is used to enable Electronic device detection
-    * @type {boolean}
-    * @memberof LivenessParams
-    */
+     * This parameter is used to enable Electronic device detection
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
     checkED?: boolean;
 }

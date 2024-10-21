@@ -16,15 +16,15 @@
 import type { DocVisualExtendedInfo } from './doc-visual-extended-info';
 
 /**
-* 
-* @export
-* @interface TextDataResultAllOf
-*/
+ * 
+ * @export
+ * @interface TextDataResultAllOf
+ */
 export interface TextDataResultAllOf {
     /**
-    * 
-    * @type {DocVisualExtendedInfo}
-    * @memberof TextDataResultAllOf
-    */
+     * 
+     * @type {DocVisualExtendedInfo}
+     * @memberof TextDataResultAllOf
+     */
     DocVisualExtendedInfo: DocVisualExtendedInfo;
 }

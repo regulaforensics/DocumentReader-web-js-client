@@ -17,21 +17,21 @@ import type { GraphicFieldRect } from './graphic-field-rect';
 import type { GraphicFieldRfid } from './graphic-field-rfid';
 
 /**
-* 
-* @export
-* @interface GraphicFieldsList
-*/
+ * 
+ * @export
+ * @interface GraphicFieldsList
+ */
 export interface GraphicFieldsList {
     /**
-    * 
-    * @type {Array<GraphicFieldRect | GraphicFieldRfid>}
-    * @memberof GraphicFieldsList
-    */
+     * 
+     * @type {Array<GraphicFieldRect | GraphicFieldRfid>}
+     * @memberof GraphicFieldsList
+     */
     pArrayFields: Array<GraphicFieldRect | GraphicFieldRfid>;
     /**
-    * Number of pArrayFields array elements
-    * @type {number}
-    * @memberof GraphicFieldsList
-    */
+     * Number of pArrayFields array elements
+     * @type {number}
+     * @memberof GraphicFieldsList
+     */
     nFields: number;
 }

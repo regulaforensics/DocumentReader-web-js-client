@@ -21,75 +21,75 @@ import type { TextFieldType } from './text-field-type';
 import type { TextFieldValue } from './text-field-value';
 
 /**
-* 
-* @export
-* @interface TextField
-*/
+ * 
+ * @export
+ * @interface TextField
+ */
 export interface TextField {
     /**
-    * 
-    * @type {TextFieldType}
-    * @memberof TextField
-    */
+     * 
+     * @type {TextFieldType}
+     * @memberof TextField
+     */
     fieldType: TextFieldType;
     /**
-    * Field name. Only use to search values for fields with fieldType=50(other). In general, use fieldType for lookup.
-    * @type {string}
-    * @memberof TextField
-    */
+     * Field name. Only use to search values for fields with fieldType=50(other). In general, use fieldType for lookup.
+     * @type {string}
+     * @memberof TextField
+     */
     fieldName: string;
     /**
-    * 
-    * @type {LCID}
-    * @memberof TextField
-    */
+     * 
+     * @type {LCID}
+     * @memberof TextField
+     */
     lcid: LCID;
     /**
-    * LCID name
-    * @type {string}
-    * @memberof TextField
-    */
+     * LCID name
+     * @type {string}
+     * @memberof TextField
+     */
     lcidName: string;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof TextField
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof TextField
+     */
     status: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof TextField
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof TextField
+     */
     validityStatus: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof TextField
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof TextField
+     */
     comparisonStatus: CheckResult;
     /**
-    * The most confidence value, selected from valueList
-    * @type {string}
-    * @memberof TextField
-    */
+     * The most confidence value, selected from valueList
+     * @type {string}
+     * @memberof TextField
+     */
     value: string;
     /**
-    * 
-    * @type {Array<TextFieldValue>}
-    * @memberof TextField
-    */
+     * 
+     * @type {Array<TextFieldValue>}
+     * @memberof TextField
+     */
     valueList: Array<TextFieldValue>;
     /**
-    * Validity of all field values for given source. If there are two values on different pages for one field-source pair, then validity also will include logical match checking. If such values do not match, validity will return error.
-    * @type {Array<SourceValidity>}
-    * @memberof TextField
-    */
+     * Validity of all field values for given source. If there are two values on different pages for one field-source pair, then validity also will include logical match checking. If such values do not match, validity will return error.
+     * @type {Array<SourceValidity>}
+     * @memberof TextField
+     */
     validityList: Array<SourceValidity>;
     /**
-    * 
-    * @type {Array<CrossSourceValueComparison>}
-    * @memberof TextField
-    */
+     * 
+     * @type {Array<CrossSourceValueComparison>}
+     * @memberof TextField
+     */
     comparisonList: Array<CrossSourceValueComparison>;
 }

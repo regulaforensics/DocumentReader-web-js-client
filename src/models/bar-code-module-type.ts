@@ -15,33 +15,30 @@
 
 
 /**
-* 
-* @export
-* @enum {string}
-*/
-
-export const BarCodeModuleType = {
+ * 
+ * @export
+ * @enum {string}
+ */
+export enum BarCodeModuleType {
     /**
     * Module contains text data
     */
-    TEXT: 0,
+    TEXT = 0,
     /**
     * Module contains byte data
     */
-    BYTE: 1,
+    BYTE = 1,
     /**
     * Module contains numeric data
     */
-    NUM: 2,
+    NUM = 2,
     /**
     * Shifts in byte compaction mode (for PDF417)
     */
-    SHIFT: 3,
+    SHIFT = 3,
     /**
     * Module contains any data
     */
-    ALL: 4
-} as const;
-
-export type BarCodeModuleType = typeof BarCodeModuleType[keyof typeof BarCodeModuleType];
+    ALL = 4
+}
 

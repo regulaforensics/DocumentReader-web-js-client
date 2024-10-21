@@ -15,33 +15,33 @@
 
 
 /**
-* 
-* @export
-* @interface BcROIDETECT
-*/
+ * 
+ * @export
+ * @interface BcROIDETECT
+ */
 export interface BcROIDETECT {
     /**
-    * 
-    * @type {number}
-    * @memberof BcROIDETECT
-    */
+     * 
+     * @type {number}
+     * @memberof BcROIDETECT
+     */
     bottom: number;
     /**
-    * 
-    * @type {number}
-    * @memberof BcROIDETECT
-    */
+     * 
+     * @type {number}
+     * @memberof BcROIDETECT
+     */
     left: number;
     /**
-    * 
-    * @type {number}
-    * @memberof BcROIDETECT
-    */
+     * 
+     * @type {number}
+     * @memberof BcROIDETECT
+     */
     right: number;
     /**
-    * 
-    * @type {number}
-    * @memberof BcROIDETECT
-    */
+     * 
+     * @type {number}
+     * @memberof BcROIDETECT
+     */
     top: number;
 }

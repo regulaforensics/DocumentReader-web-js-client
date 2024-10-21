@@ -17,33 +17,33 @@ import type { ImagesAvailableSource } from './images-available-source';
 import type { ImagesField } from './images-field';
 
 /**
-* 
-* @export
-* @interface Images
-*/
+ * 
+ * @export
+ * @interface Images
+ */
 export interface Images {
     /**
-    * Fields count
-    * @type {number}
-    * @memberof Images
-    */
+     * Fields count
+     * @type {number}
+     * @memberof Images
+     */
     fieldCount: number;
     /**
-    * Available sources count
-    * @type {number}
-    * @memberof Images
-    */
+     * Available sources count
+     * @type {number}
+     * @memberof Images
+     */
     availableSourceCount: number;
     /**
-    * 
-    * @type {Array<ImagesAvailableSource>}
-    * @memberof Images
-    */
+     * 
+     * @type {Array<ImagesAvailableSource>}
+     * @memberof Images
+     */
     availableSourceList: Array<ImagesAvailableSource>;
     /**
-    * 
-    * @type {Array<ImagesField>}
-    * @memberof Images
-    */
+     * 
+     * @type {Array<ImagesField>}
+     * @memberof Images
+     */
     fieldList: Array<ImagesField>;
 }

@@ -15,29 +15,26 @@
 
 
 /**
-* Enumeration contains a set of constants that define the type of performed procedure of document authentication within the current session
-* @export
-* @enum {string}
-*/
-
-export const RfidAuthenticationProcedureType = {
+ * Enumeration contains a set of constants that define the type of performed procedure of document authentication within the current session
+ * @export
+ * @enum {string}
+ */
+export enum RfidAuthenticationProcedureType {
     /**
     * Not defined
     */
-    UNDEFINED: 0,
+    UNDEFINED = 0,
     /**
     * Standard authentication procedure
     */
-    STANDARD: 1,
+    STANDARD = 1,
     /**
     * Advanced authentication procedure
     */
-    ADVANCED: 2,
+    ADVANCED = 2,
     /**
     * General authentication procedure
     */
-    GENERAL: 3
-} as const;
-
-export type RfidAuthenticationProcedureType = typeof RfidAuthenticationProcedureType[keyof typeof RfidAuthenticationProcedureType];
+    GENERAL = 3
+}
 

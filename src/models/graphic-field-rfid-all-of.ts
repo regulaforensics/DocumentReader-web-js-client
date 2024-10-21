@@ -16,33 +16,33 @@
 import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
-* 
-* @export
-* @interface GraphicFieldRfidAllOf
-*/
+ * 
+ * @export
+ * @interface GraphicFieldRfidAllOf
+ */
 export interface GraphicFieldRfidAllOf {
     /**
-    * 
-    * @type {RfidDataGroupTypeTag}
-    * @memberof GraphicFieldRfidAllOf
-    */
+     * 
+     * @type {RfidDataGroupTypeTag}
+     * @memberof GraphicFieldRfidAllOf
+     */
     RFID_OriginDG?: RfidDataGroupTypeTag;
     /**
-    * Index of the source record of the image with biometric information in the information data group. Only for Result.RFID_GRAPHICS result.
-    * @type {number}
-    * @memberof GraphicFieldRfidAllOf
-    */
+     * Index of the source record of the image with biometric information in the information data group. Only for Result.RFID_GRAPHICS result.
+     * @type {number}
+     * @memberof GraphicFieldRfidAllOf
+     */
     RFID_OriginDGTag?: number;
     /**
-    * Index of the template in the record with biometric data. Only for Result.RFID_GRAPHICS result.
-    * @type {number}
-    * @memberof GraphicFieldRfidAllOf
-    */
+     * Index of the template in the record with biometric data. Only for Result.RFID_GRAPHICS result.
+     * @type {number}
+     * @memberof GraphicFieldRfidAllOf
+     */
     RFID_OriginTagEntry?: number;
     /**
-    * Index of the variant of the biometric data template. Only for Result.RFID_GRAPHICS result.
-    * @type {number}
-    * @memberof GraphicFieldRfidAllOf
-    */
+     * Index of the variant of the biometric data template. Only for Result.RFID_GRAPHICS result.
+     * @type {number}
+     * @memberof GraphicFieldRfidAllOf
+     */
     RFID_OriginEntryView?: number;
 }

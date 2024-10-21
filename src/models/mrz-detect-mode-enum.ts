@@ -15,16 +15,13 @@
 
 
 /**
-* Make better MRZ detection on complex noisy backgrounds, like BW photocopy of some documents.
-* @export
-* @enum {string}
-*/
-
-export const MrzDetectModeEnum = {
-    eMDM_Default: 0,
-    eMDM_ResizeBinarizeWindow: 1,
-    eMDM_BlurBeforeBinarization: 2
-} as const;
-
-export type MrzDetectModeEnum = typeof MrzDetectModeEnum[keyof typeof MrzDetectModeEnum];
+ * Make better MRZ detection on complex noisy backgrounds, like BW photocopy of some documents.
+ * @export
+ * @enum {string}
+ */
+export enum MrzDetectModeEnum {
+    eMDM_Default = 0,
+    eMDM_ResizeBinarizeWindow = 1,
+    eMDM_BlurBeforeBinarization = 2
+}
 

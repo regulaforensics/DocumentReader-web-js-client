@@ -19,63 +19,63 @@ import type { RfidOrigin } from './rfid-origin';
 import type { Source } from './source';
 
 /**
-* 
-* @export
-* @interface ImagesFieldValue
-*/
+ * 
+ * @export
+ * @interface ImagesFieldValue
+ */
 export interface ImagesFieldValue {
     /**
-    * 
-    * @type {Source}
-    * @memberof ImagesFieldValue
-    */
+     * 
+     * @type {Source}
+     * @memberof ImagesFieldValue
+     */
     source: Source;
     /**
-    * Base64 encoded image
-    * @type {string}
-    * @memberof ImagesFieldValue
-    */
+     * Base64 encoded image
+     * @type {string}
+     * @memberof ImagesFieldValue
+     */
     value?: string;
     /**
-    * Base64 encoded image
-    * @type {string}
-    * @memberof ImagesFieldValue
-    */
+     * Base64 encoded image
+     * @type {string}
+     * @memberof ImagesFieldValue
+     */
     originalValue?: string;
     /**
-    * Original page index
-    * @type {number}
-    * @memberof ImagesFieldValue
-    */
+     * Original page index
+     * @type {number}
+     * @memberof ImagesFieldValue
+     */
     originalPageIndex?: number;
     /**
-    * Page index of the image from input list
-    * @type {number}
-    * @memberof ImagesFieldValue
-    */
+     * Page index of the image from input list
+     * @type {number}
+     * @memberof ImagesFieldValue
+     */
     pageIndex: number;
     /**
-    * 
-    * @type {Light}
-    * @memberof ImagesFieldValue
-    */
+     * 
+     * @type {Light}
+     * @memberof ImagesFieldValue
+     */
     lightIndex: Light;
     /**
-    * Same as Result type, but used for safe parsing of not-described values. See Result type.
-    * @type {number}
-    * @memberof ImagesFieldValue
-    */
+     * Same as Result type, but used for safe parsing of not-described values. See Result type.
+     * @type {number}
+     * @memberof ImagesFieldValue
+     */
     containerType: number;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof ImagesFieldValue
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof ImagesFieldValue
+     */
     fieldRect?: RectangleCoordinates;
     /**
-    * 
-    * @type {RfidOrigin}
-    * @memberof ImagesFieldValue
-    */
+     * 
+     * @type {RfidOrigin}
+     * @memberof ImagesFieldValue
+     */
     rfidOrigin?: RfidOrigin;
 }

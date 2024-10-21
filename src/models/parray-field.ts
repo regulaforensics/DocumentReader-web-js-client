@@ -19,69 +19,69 @@ import type { BcROIDETECT } from './bc-roidetect';
 import type { DataModule } from './data-module';
 
 /**
-* 
-* @export
-* @interface PArrayField
-*/
+ * 
+ * @export
+ * @interface PArrayField
+ */
 export interface PArrayField {
     /**
-    * 
-    * @type {number}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {number}
+     * @memberof PArrayField
+     */
     bcAngle_DETECT: number;
     /**
-    * 
-    * @type {number}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {number}
+     * @memberof PArrayField
+     */
     bcCodeResult: number;
     /**
-    * 
-    * @type {number}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {number}
+     * @memberof PArrayField
+     */
     bcCountModule: number;
     /**
-    * 
-    * @type {Array<DataModule>}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {Array<DataModule>}
+     * @memberof PArrayField
+     */
     bcDataModule: Array<DataModule>;
     /**
-    * 
-    * @type {BcPDF417INFO}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {BcPDF417INFO}
+     * @memberof PArrayField
+     */
     bcPDF417INFO?: BcPDF417INFO;
     /**
-    * 
-    * @type {BcROIDETECT}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {BcROIDETECT}
+     * @memberof PArrayField
+     */
     bcROI_DETECT: BcROIDETECT;
     /**
-    * 
-    * @type {number}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {number}
+     * @memberof PArrayField
+     */
     bcTextDecoderTypes?: number;
     /**
-    * 
-    * @type {number}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {number}
+     * @memberof PArrayField
+     */
     bcTextFieldType?: number;
     /**
-    * 
-    * @type {BarcodeType}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {BarcodeType}
+     * @memberof PArrayField
+     */
     bcType_DECODE: BarcodeType;
     /**
-    * 
-    * @type {number}
-    * @memberof PArrayField
-    */
+     * 
+     * @type {number}
+     * @memberof PArrayField
+     */
     bcType_DETECT: number;
 }

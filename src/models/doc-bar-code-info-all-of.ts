@@ -16,15 +16,15 @@
 import type { DocBarCodeInfoFieldsList } from './doc-bar-code-info-fields-list';
 
 /**
-* 
-* @export
-* @interface DocBarCodeInfoAllOf
-*/
+ * 
+ * @export
+ * @interface DocBarCodeInfoAllOf
+ */
 export interface DocBarCodeInfoAllOf {
     /**
-    * 
-    * @type {DocBarCodeInfoFieldsList}
-    * @memberof DocBarCodeInfoAllOf
-    */
+     * 
+     * @type {DocBarCodeInfoFieldsList}
+     * @memberof DocBarCodeInfoAllOf
+     */
     DocBarCodeInfo: DocBarCodeInfoFieldsList;
 }

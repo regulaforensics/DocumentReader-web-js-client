@@ -16,21 +16,21 @@
 import type { OutDataTransactionImagesFieldValue } from './out-data-transaction-images-field-value';
 
 /**
-* 
-* @export
-* @interface OutData
-*/
+ * 
+ * @export
+ * @interface OutData
+ */
 export interface OutData {
     /**
-    * Response url
-    * @type {string}
-    * @memberof OutData
-    */
+     * Response url
+     * @type {string}
+     * @memberof OutData
+     */
     url?: string;
     /**
-    * 
-    * @type {Array<OutDataTransactionImagesFieldValue>}
-    * @memberof OutData
-    */
+     * 
+     * @type {Array<OutDataTransactionImagesFieldValue>}
+     * @memberof OutData
+     */
     images?: Array<OutDataTransactionImagesFieldValue>;
 }

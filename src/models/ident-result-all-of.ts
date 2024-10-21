@@ -20,45 +20,45 @@ import type { RectangleCoordinates } from './rectangle-coordinates';
 import type { SecurityFeatureType } from './security-feature-type';
 
 /**
-* 
-* @export
-* @interface IdentResultAllOf
-*/
+ * 
+ * @export
+ * @interface IdentResultAllOf
+ */
 export interface IdentResultAllOf {
     /**
-    * 
-    * @type {SecurityFeatureType}
-    * @memberof IdentResultAllOf
-    */
+     * 
+     * @type {SecurityFeatureType}
+     * @memberof IdentResultAllOf
+     */
     ElementType: SecurityFeatureType;
     /**
-    * 
-    * @type {Light}
-    * @memberof IdentResultAllOf
-    */
+     * 
+     * @type {Light}
+     * @memberof IdentResultAllOf
+     */
     LightIndex: Light;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof IdentResultAllOf
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof IdentResultAllOf
+     */
     Area: RectangleCoordinates;
     /**
-    * 
-    * @type {ImageData}
-    * @memberof IdentResultAllOf
-    */
+     * 
+     * @type {ImageData}
+     * @memberof IdentResultAllOf
+     */
     Image: ImageData;
     /**
-    * 
-    * @type {ImageData}
-    * @memberof IdentResultAllOf
-    */
+     * 
+     * @type {ImageData}
+     * @memberof IdentResultAllOf
+     */
     EtalonImage: ImageData;
     /**
-    * 
-    * @type {AreaContainer}
-    * @memberof IdentResultAllOf
-    */
+     * 
+     * @type {AreaContainer}
+     * @memberof IdentResultAllOf
+     */
     AreaList?: AreaContainer;
 }

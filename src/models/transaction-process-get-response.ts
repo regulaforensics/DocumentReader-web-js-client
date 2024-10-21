@@ -17,33 +17,33 @@ import type { InData } from './in-data';
 import type { OutData } from './out-data';
 
 /**
-* 
-* @export
-* @interface TransactionProcessGetResponse
-*/
+ * 
+ * @export
+ * @interface TransactionProcessGetResponse
+ */
 export interface TransactionProcessGetResponse {
     /**
-    * 
-    * @type {number}
-    * @memberof TransactionProcessGetResponse
-    */
+     * 
+     * @type {number}
+     * @memberof TransactionProcessGetResponse
+     */
     transactionId?: number;
     /**
-    * 
-    * @type {string}
-    * @memberof TransactionProcessGetResponse
-    */
+     * 
+     * @type {string}
+     * @memberof TransactionProcessGetResponse
+     */
     tag?: string;
     /**
-    * 
-    * @type {OutData}
-    * @memberof TransactionProcessGetResponse
-    */
+     * 
+     * @type {OutData}
+     * @memberof TransactionProcessGetResponse
+     */
     outData?: OutData;
     /**
-    * 
-    * @type {InData}
-    * @memberof TransactionProcessGetResponse
-    */
+     * 
+     * @type {InData}
+     * @memberof TransactionProcessGetResponse
+     */
     inData?: InData;
 }

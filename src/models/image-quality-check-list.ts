@@ -17,27 +17,27 @@ import type { CheckResult } from './check-result';
 import type { ImageQualityCheck } from './image-quality-check';
 
 /**
-* 
-* @export
-* @interface ImageQualityCheckList
-*/
+ * 
+ * @export
+ * @interface ImageQualityCheckList
+ */
 export interface ImageQualityCheckList {
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof ImageQualityCheckList
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof ImageQualityCheckList
+     */
     result: CheckResult;
     /**
-    * 
-    * @type {Array<ImageQualityCheck>}
-    * @memberof ImageQualityCheckList
-    */
+     * 
+     * @type {Array<ImageQualityCheck>}
+     * @memberof ImageQualityCheckList
+     */
     List: Array<ImageQualityCheck>;
     /**
-    * Number of List array elements
-    * @type {number}
-    * @memberof ImageQualityCheckList
-    */
+     * Number of List array elements
+     * @type {number}
+     * @memberof ImageQualityCheckList
+     */
     Count: number;
 }

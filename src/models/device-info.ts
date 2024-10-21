@@ -15,45 +15,51 @@
 
 
 /**
-* 
-* @export
-* @interface DeviceInfo
-*/
+ * 
+ * @export
+ * @interface DeviceInfo
+ */
 export interface DeviceInfo {
     /**
-    * 
-    * @type {string}
-    * @memberof DeviceInfo
-    */
-    app_name?: string;
+     * 
+     * @type {string}
+     * @memberof DeviceInfo
+     */
+    app?: string;
     /**
-    * 
-    * @type {string}
-    * @memberof DeviceInfo
-    */
+     * 
+     * @type {string}
+     * @memberof DeviceInfo
+     */
+    licenseId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceInfo
+     */
+    licenseType?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceInfo
+     */
+    licenseSerial?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceInfo
+     */
+    licenseValidUntil?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof DeviceInfo
+     */
+    scenarios?: Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeviceInfo
+     */
     version?: string;
-    /**
-    * 
-    * @type {string}
-    * @memberof DeviceInfo
-    */
-    license_id?: string;
-    /**
-    * 
-    * @type {string}
-    * @memberof DeviceInfo
-    */
-    license_serial?: string;
-    /**
-    * 
-    * @type {string}
-    * @memberof DeviceInfo
-    */
-    valid_until?: string;
-    /**
-    * 
-    * @type {string}
-    * @memberof DeviceInfo
-    */
-    server_time?: string;
 }

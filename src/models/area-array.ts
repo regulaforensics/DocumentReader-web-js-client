@@ -17,27 +17,27 @@ import type { PointArray } from './point-array';
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
-* 
-* @export
-* @interface AreaArray
-*/
+ * 
+ * @export
+ * @interface AreaArray
+ */
 export interface AreaArray {
     /**
-    * Number of elements in List and Points
-    * @type {number}
-    * @memberof AreaArray
-    */
+     * Number of elements in List and Points
+     * @type {number}
+     * @memberof AreaArray
+     */
     Count: number;
     /**
-    * 
-    * @type {Array<RectangleCoordinates>}
-    * @memberof AreaArray
-    */
+     * 
+     * @type {Array<RectangleCoordinates>}
+     * @memberof AreaArray
+     */
     List: Array<RectangleCoordinates>;
     /**
-    * 
-    * @type {Array<PointArray>}
-    * @memberof AreaArray
-    */
+     * 
+     * @type {Array<PointArray>}
+     * @memberof AreaArray
+     */
     Points: Array<PointArray>;
 }

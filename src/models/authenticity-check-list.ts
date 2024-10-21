@@ -16,21 +16,21 @@
 import type { AuthenticityCheckResult } from './authenticity-check-result';
 
 /**
-* 
-* @export
-* @interface AuthenticityCheckList
-*/
+ * 
+ * @export
+ * @interface AuthenticityCheckList
+ */
 export interface AuthenticityCheckList {
     /**
-    * Count of items in List
-    * @type {number}
-    * @memberof AuthenticityCheckList
-    */
+     * Count of items in List
+     * @type {number}
+     * @memberof AuthenticityCheckList
+     */
     Count: number;
     /**
-    * Authenticity Check
-    * @type {Array<AuthenticityCheckResult>}
-    * @memberof AuthenticityCheckList
-    */
+     * Authenticity Check
+     * @type {Array<AuthenticityCheckResult>}
+     * @memberof AuthenticityCheckList
+     */
     List: Array<AuthenticityCheckResult>;
 }

@@ -16,21 +16,21 @@
 import type { ImageData } from './image-data';
 
 /**
-* 
-* @export
-* @interface RawImageContainerList
-*/
+ * 
+ * @export
+ * @interface RawImageContainerList
+ */
 export interface RawImageContainerList {
     /**
-    * 
-    * @type {number}
-    * @memberof RawImageContainerList
-    */
+     * 
+     * @type {number}
+     * @memberof RawImageContainerList
+     */
     Count: number;
     /**
-    * 
-    * @type {Array<ImageData>}
-    * @memberof RawImageContainerList
-    */
+     * 
+     * @type {Array<ImageData>}
+     * @memberof RawImageContainerList
+     */
     Images: Array<ImageData>;
 }

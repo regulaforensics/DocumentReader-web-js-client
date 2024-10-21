@@ -16,15 +16,15 @@
 import type { Text } from './text';
 
 /**
-* 
-* @export
-* @interface TextResultAllOf
-*/
+ * 
+ * @export
+ * @interface TextResultAllOf
+ */
 export interface TextResultAllOf {
     /**
-    * 
-    * @type {Text}
-    * @memberof TextResultAllOf
-    */
+     * 
+     * @type {Text}
+     * @memberof TextResultAllOf
+     */
     Text: Text;
 }

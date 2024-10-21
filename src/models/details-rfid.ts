@@ -16,51 +16,51 @@
 import type { CheckResult } from './check-result';
 
 /**
-* 
-* @export
-* @interface DetailsRFID
-*/
+ * 
+ * @export
+ * @interface DetailsRFID
+ */
 export interface DetailsRFID {
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof DetailsRFID
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof DetailsRFID
+     */
     overallStatus: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof DetailsRFID
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof DetailsRFID
+     */
     AA: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof DetailsRFID
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof DetailsRFID
+     */
     BAC: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof DetailsRFID
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof DetailsRFID
+     */
     CA: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof DetailsRFID
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof DetailsRFID
+     */
     PA: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof DetailsRFID
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof DetailsRFID
+     */
     PACE: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof DetailsRFID
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof DetailsRFID
+     */
     TA: CheckResult;
 }

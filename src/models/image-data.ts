@@ -15,15 +15,15 @@
 
 
 /**
-* 
-* @export
-* @interface ImageData
-*/
+ * 
+ * @export
+ * @interface ImageData
+ */
 export interface ImageData {
     /**
-    * Base64 encoded image
-    * @type {string}
-    * @memberof ImageData
-    */
+     * Base64 encoded image
+     * @type {string}
+     * @memberof ImageData
+     */
     image: string;
 }

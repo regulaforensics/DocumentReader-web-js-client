@@ -17,27 +17,27 @@ import type { PointsContainer } from './points-container';
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
-* Checked fragment coordinates
-* @export
-* @interface AreaContainer
-*/
+ * Checked fragment coordinates
+ * @export
+ * @interface AreaContainer
+ */
 export interface AreaContainer {
     /**
-    * 
-    * @type {number}
-    * @memberof AreaContainer
-    */
+     * 
+     * @type {number}
+     * @memberof AreaContainer
+     */
     Count: number;
     /**
-    * 
-    * @type {Array<RectangleCoordinates>}
-    * @memberof AreaContainer
-    */
+     * 
+     * @type {Array<RectangleCoordinates>}
+     * @memberof AreaContainer
+     */
     List: Array<RectangleCoordinates>;
     /**
-    * 
-    * @type {Array<PointsContainer>}
-    * @memberof AreaContainer
-    */
+     * 
+     * @type {Array<PointsContainer>}
+     * @memberof AreaContainer
+     */
     Points: Array<PointsContainer>;
 }

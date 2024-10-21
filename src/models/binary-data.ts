@@ -13,31 +13,399 @@
  */
 
 
+import type { DetailsRFID } from './details-rfid';
 import type { RfidDG1 } from './rfid-dg1';
+import type { RfidDataFileType } from './rfid-data-file-type';
 import type { RfidSessionData } from './rfid-session-data';
 
 /**
-* Structure is used for storing the results of one bar-code module reading.
-* @export
-* @interface BinaryData
-*/
+ * Structure is used for storing the results of one bar-code module reading.
+ * @export
+ * @interface BinaryData
+ */
 export interface BinaryData {
     /**
-    * 
-    * @type {RfidDG1}
-    * @memberof BinaryData
-    */
-    RFID_DG1: RfidDG1;
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_Authentication_Info?: { [key: string]: object; };
     /**
-    * 
-    * @type {RfidSessionData}
-    * @memberof BinaryData
-    */
-    RFID_Session_Data: RfidSessionData;
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_MIFARE_Data_Validity?: { [key: string]: object; };
     /**
-    * Indexes of groups that aren\'t read
-    * @type {Array<number>}
-    * @memberof BinaryData
-    */
-    RFID_ePassp_Directory: Array<number>;
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_MIFARE_Data?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_EF_COM?: { [key: string]: object; };
+    /**
+     * 
+     * @type {RfidDG1}
+     * @memberof BinaryData
+     */
+    RFID_DG1?: RfidDG1;
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG2?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG3?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG4?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG5?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG6?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG7?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG8?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG9?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG10?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG11?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG12?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG13?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG14?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG15?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_DG16?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    RFID_EF_SOD?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG1?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG2?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG3?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG4?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG5?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG6?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG7?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG8?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG9?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG10?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG11?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG12?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG13?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG14?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG15?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG16?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG17?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG18?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG19?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG20?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eID_DG21?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_COM?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_SOD?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG1?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG2?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG3?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG4?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG5?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG6?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG7?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG8?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG9?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG10?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG11?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG12?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG13?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    eDL_DG14?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    Visible_Digital_Seal?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    Visible_Digital_Seal_NC?: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: object; }}
+     * @memberof BinaryData
+     */
+    Digital_Signature?: { [key: string]: object; };
+    /**
+     * 
+     * @type {RfidSessionData}
+     * @memberof BinaryData
+     */
+    RFID_Session_Data?: RfidSessionData;
+    /**
+     * 
+     * @type {DetailsRFID}
+     * @memberof BinaryData
+     */
+    RFID_Session_Data_Status?: DetailsRFID;
+    /**
+     * Indexes of groups that aren\'t read
+     * @type {Array<RfidDataFileType>}
+     * @memberof BinaryData
+     */
+    RFID_ePassp_Directory?: Array<RfidDataFileType>;
 }

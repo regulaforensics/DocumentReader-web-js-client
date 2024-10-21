@@ -15,21 +15,21 @@
 
 
 /**
-* Video
-* @export
-* @interface InDataVideo
-*/
+ * Video
+ * @export
+ * @interface InDataVideo
+ */
 export interface InDataVideo {
     /**
-    * A free-form object containing video\'s extended attributes.
-    * @type {{ [key: string]: object; }}
-    * @memberof InDataVideo
-    */
+     * A free-form object containing video\'s extended attributes.
+     * @type {{ [key: string]: object; }}
+     * @memberof InDataVideo
+     */
     metadata?: { [key: string]: object; };
     /**
-    * Video url
-    * @type {string}
-    * @memberof InDataVideo
-    */
+     * Video url
+     * @type {string}
+     * @memberof InDataVideo
+     */
     url?: string;
 }

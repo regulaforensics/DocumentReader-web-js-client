@@ -16,15 +16,15 @@
 import type { Point } from './point';
 
 /**
-* 
-* @export
-* @interface PointArray
-*/
+ * 
+ * @export
+ * @interface PointArray
+ */
 export interface PointArray {
     /**
-    * 
-    * @type {Array<Point>}
-    * @memberof PointArray
-    */
+     * 
+     * @type {Array<Point>}
+     * @memberof PointArray
+     */
     PointsList: Array<Point>;
 }

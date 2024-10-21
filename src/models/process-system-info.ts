@@ -15,21 +15,21 @@
 
 
 /**
-* 
-* @export
-* @interface ProcessSystemInfo
-*/
+ * 
+ * @export
+ * @interface ProcessSystemInfo
+ */
 export interface ProcessSystemInfo {
     /**
-    * Base64 encoded license file
-    * @type {string}
-    * @memberof ProcessSystemInfo
-    */
+     * Base64 encoded license file
+     * @type {string}
+     * @memberof ProcessSystemInfo
+     */
     license?: string;
     /**
-    * For internal use. Demo-sites recaptcha token.
-    * @type {string}
-    * @memberof ProcessSystemInfo
-    */
+     * For internal use. Demo-sites recaptcha token.
+     * @type {string}
+     * @memberof ProcessSystemInfo
+     */
     recaptcha_token?: string;
 }

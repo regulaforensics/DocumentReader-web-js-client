@@ -15,27 +15,27 @@
 
 
 /**
-* A search filter that can be applied if the \"match+search\" mode is enabled. May include limit, threshold, group_ids. If the group_ids are specified, the search is performed only in these groups. Find more information in the <a href=\"https://dev.regulaforensics.com/FaceSDK-web-openapi/#tag/search/operation/search\" target=\"_blank\">OpenAPI documentation</a>.
-* @export
-* @interface FaceApiSearch
-*/
+ * A search filter that can be applied if the \"match+search\" mode is enabled. May include limit, threshold, group_ids. If the group_ids are specified, the search is performed only in these groups. Find more information in the <a href=\"https://dev.regulaforensics.com/FaceSDK-web-openapi/#tag/search/operation/search\" target=\"_blank\">OpenAPI documentation</a>.
+ * @export
+ * @interface FaceApiSearch
+ */
 export interface FaceApiSearch {
     /**
-    * The maximum number of results to be returned.
-    * @type {number}
-    * @memberof FaceApiSearch
-    */
+     * The maximum number of results to be returned.
+     * @type {number}
+     * @memberof FaceApiSearch
+     */
     limit?: number;
     /**
-    * The similarity threshold.
-    * @type {number}
-    * @memberof FaceApiSearch
-    */
+     * The similarity threshold.
+     * @type {number}
+     * @memberof FaceApiSearch
+     */
     threshold?: number;
     /**
-    *  The groups where to conduct the search.
-    * @type {Array<number>}
-    * @memberof FaceApiSearch
-    */
+     *  The groups where to conduct the search.
+     * @type {Array<number>}
+     * @memberof FaceApiSearch
+     */
     group_ids?: Array<number>;
 }

@@ -17,81 +17,81 @@ import type { StringRecognitionResult } from './string-recognition-result';
 import type { TextFieldType } from './text-field-type';
 
 /**
-* 
-* @export
-* @interface DocVisualExtendedField
-*/
+ * 
+ * @export
+ * @interface DocVisualExtendedField
+ */
 export interface DocVisualExtendedField {
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedField
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedField
+     */
     FieldType: any | null;
     /**
-    * 
-    * @type {TextFieldType}
-    * @memberof DocVisualExtendedField
-    */
+     * 
+     * @type {TextFieldType}
+     * @memberof DocVisualExtendedField
+     */
     wFieldType: TextFieldType;
     /**
-    * Field symbolic name (null-terminated string)
-    * @type {string}
-    * @memberof DocVisualExtendedField
-    */
+     * Field symbolic name (null-terminated string)
+     * @type {string}
+     * @memberof DocVisualExtendedField
+     */
     FieldName: string;
     /**
-    * Number of StringsResult array elements
-    * @type {number}
-    * @memberof DocVisualExtendedField
-    */
+     * Number of StringsResult array elements
+     * @type {number}
+     * @memberof DocVisualExtendedField
+     */
     StringsCount: number;
     /**
-    * Array of recognizing probabilities for a each line of text field. Only for Result.VISUAL_TEXT and Result.MRZ_TEXT results.
-    * @type {Array<StringRecognitionResult>}
-    * @memberof DocVisualExtendedField
-    */
+     * Array of recognizing probabilities for a each line of text field. Only for Result.VISUAL_TEXT and Result.MRZ_TEXT results.
+     * @type {Array<StringRecognitionResult>}
+     * @memberof DocVisualExtendedField
+     */
     StringsResult: Array<StringRecognitionResult>;
     /**
-    * Buf_Text text string length
-    * @type {number}
-    * @memberof DocVisualExtendedField
-    */
+     * Buf_Text text string length
+     * @type {number}
+     * @memberof DocVisualExtendedField
+     */
     Buf_Length: number;
     /**
-    * Text field data in UTF8 format. Results of reading different lines of a multi-line field are separated by \'^\'
-    * @type {string}
-    * @memberof DocVisualExtendedField
-    */
+     * Text field data in UTF8 format. Results of reading different lines of a multi-line field are separated by \'^\'
+     * @type {string}
+     * @memberof DocVisualExtendedField
+     */
     Buf_Text: string;
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedField
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedField
+     */
     FieldMask?: any | null;
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedField
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedField
+     */
     Validity?: any | null;
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedField
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedField
+     */
     InComparison?: any | null;
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedField
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedField
+     */
     Reserved2?: any | null;
     /**
-    * 
-    * @type {any}
-    * @memberof DocVisualExtendedField
-    */
+     * 
+     * @type {any}
+     * @memberof DocVisualExtendedField
+     */
     Reserved3?: any | null;
 }

@@ -23,105 +23,105 @@ import type { RfidSecurityObject } from './rfid-security-object';
 import type { RfidTerminal } from './rfid-terminal';
 
 /**
-* Structure is used to describe the results of work with the SDK within the context of the current communication session with electronic document
-* @export
-* @interface RfidSessionData
-*/
+ * Structure is used to describe the results of work with the SDK within the context of the current communication session with electronic document
+ * @export
+ * @interface RfidSessionData
+ */
 export interface RfidSessionData {
     /**
-    * Sign of virtual session when working with loaded data from a previous communication session with the electronic document
-    * @type {any}
-    * @memberof RfidSessionData
-    */
+     * Sign of virtual session when working with loaded data from a previous communication session with the electronic document
+     * @type {any}
+     * @memberof RfidSessionData
+     */
     VirtualMode: any | null;
     /**
-    * Text SDKVersion value in format A.B (e.g. 3.1)
-    * @type {any}
-    * @memberof RfidSessionData
-    */
+     * Text SDKVersion value in format A.B (e.g. 3.1)
+     * @type {any}
+     * @memberof RfidSessionData
+     */
     SDKVersion: any | null;
     /**
-    * Text DriverVersion value in format A.B.C.D (e.g. 6.2.5.4)
-    * @type {any}
-    * @memberof RfidSessionData
-    */
+     * Text DriverVersion value in format A.B.C.D (e.g. 6.2.5.4)
+     * @type {any}
+     * @memberof RfidSessionData
+     */
     DriverVersion: any | null;
     /**
-    * Text FirmwareVersion value in format A.B (e.g. 5.19)
-    * @type {any}
-    * @memberof RfidSessionData
-    */
+     * Text FirmwareVersion value in format A.B (e.g. 5.19)
+     * @type {any}
+     * @memberof RfidSessionData
+     */
     FirmwareVersion: any | null;
     /**
-    * List of containers to store information about the involved applications of electronic document
-    * @type {Array<RfidApplication>}
-    * @memberof RfidSessionData
-    */
+     * List of containers to store information about the involved applications of electronic document
+     * @type {Array<RfidApplication>}
+     * @memberof RfidSessionData
+     */
     Applications: Array<RfidApplication>;
     /**
-    * List of containers to store information about the supported procedures of authentication and secure data access within the context of the session
-    * @type {Array<RfidAccessControlInfo>}
-    * @memberof RfidSessionData
-    */
+     * List of containers to store information about the supported procedures of authentication and secure data access within the context of the session
+     * @type {Array<RfidAccessControlInfo>}
+     * @memberof RfidSessionData
+     */
     AccessControls: Array<RfidAccessControlInfo>;
     /**
-    * 
-    * @type {RfidCardPropertiesExt}
-    * @memberof RfidSessionData
-    */
+     * 
+     * @type {RfidCardPropertiesExt}
+     * @memberof RfidSessionData
+     */
     CardProperties: RfidCardPropertiesExt;
     /**
-    * 
-    * @type {RFIDErrorCodes}
-    * @memberof RfidSessionData
-    */
+     * 
+     * @type {RFIDErrorCodes}
+     * @memberof RfidSessionData
+     */
     ExtLeSupport: RFIDErrorCodes;
     /**
-    * Time of processing, milliseconds
-    * @type {number}
-    * @memberof RfidSessionData
-    */
+     * Time of processing, milliseconds
+     * @type {number}
+     * @memberof RfidSessionData
+     */
     ProcessTime: number;
     /**
-    * List of containers to store information about the read files of the root Master File
-    * @type {Array<any>}
-    * @memberof RfidSessionData
-    */
+     * List of containers to store information about the read files of the root Master File
+     * @type {Array<any>}
+     * @memberof RfidSessionData
+     */
     RootFiles: Array<any>;
     /**
-    * Total number of bytes transmitted to the RFID-chip during the whole session
-    * @type {number}
-    * @memberof RfidSessionData
-    */
+     * Total number of bytes transmitted to the RFID-chip during the whole session
+     * @type {number}
+     * @memberof RfidSessionData
+     */
     TotalBytesSent: number;
     /**
-    * Total number of bytes received from the RFID-chip during the whole session
-    * @type {number}
-    * @memberof RfidSessionData
-    */
+     * Total number of bytes received from the RFID-chip during the whole session
+     * @type {number}
+     * @memberof RfidSessionData
+     */
     TotalBytesReceived: number;
     /**
-    * 
-    * @type {RfidAccessKey}
-    * @memberof RfidSessionData
-    */
+     * 
+     * @type {RfidAccessKey}
+     * @memberof RfidSessionData
+     */
     Session_key: RfidAccessKey;
     /**
-    * 
-    * @type {RfidTerminal}
-    * @memberof RfidSessionData
-    */
+     * 
+     * @type {RfidTerminal}
+     * @memberof RfidSessionData
+     */
     Session_terminal: RfidTerminal;
     /**
-    * 
-    * @type {RfidAuthenticationProcedureType}
-    * @memberof RfidSessionData
-    */
+     * 
+     * @type {RfidAuthenticationProcedureType}
+     * @memberof RfidSessionData
+     */
     Session_procedure: RfidAuthenticationProcedureType;
     /**
-    * List of containers to store information about the detected document security objects
-    * @type {Array<RfidSecurityObject>}
-    * @memberof RfidSessionData
-    */
+     * List of containers to store information about the detected document security objects
+     * @type {Array<RfidSecurityObject>}
+     * @memberof RfidSessionData
+     */
     SecurityObjects: Array<RfidSecurityObject>;
 }

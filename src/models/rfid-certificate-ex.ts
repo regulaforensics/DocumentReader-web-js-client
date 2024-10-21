@@ -23,87 +23,87 @@ import type { RfidValidity } from './rfid-validity';
 import type { TrfFtString } from './trf-ft-string';
 
 /**
-* Structure is used to describe the certificate contents used for the digital signature verification of the document security object within the context of the communication session with electronic document.
-* @export
-* @interface RfidCertificateEx
-*/
+ * Structure is used to describe the certificate contents used for the digital signature verification of the document security object within the context of the communication session with electronic document.
+ * @export
+ * @interface RfidCertificateEx
+ */
 export interface RfidCertificateEx {
     /**
-    * Version of Certificate ASN.1 structure
-    * @type {number}
-    * @memberof RfidCertificateEx
-    */
+     * Version of Certificate ASN.1 structure
+     * @type {number}
+     * @memberof RfidCertificateEx
+     */
     Version: number;
     /**
-    * Certificate serial number. Base64 encoded.
-    * @type {string}
-    * @memberof RfidCertificateEx
-    */
+     * Certificate serial number. Base64 encoded.
+     * @type {string}
+     * @memberof RfidCertificateEx
+     */
     SerialNumber: string;
     /**
-    * Certificate digital signature algorithm identifier (OID); String in the format S1 (S2), where S1 – algorithm name, S2 – identifier (OID string).
-    * @type {string}
-    * @memberof RfidCertificateEx
-    */
+     * Certificate digital signature algorithm identifier (OID); String in the format S1 (S2), where S1 – algorithm name, S2 – identifier (OID string).
+     * @type {string}
+     * @memberof RfidCertificateEx
+     */
     SignatureAlgorithm: string;
     /**
-    * 
-    * @type {RfidDistinguishedName}
-    * @memberof RfidCertificateEx
-    */
+     * 
+     * @type {RfidDistinguishedName}
+     * @memberof RfidCertificateEx
+     */
     Issuer: RfidDistinguishedName;
     /**
-    * 
-    * @type {RfidValidity}
-    * @memberof RfidCertificateEx
-    */
+     * 
+     * @type {RfidValidity}
+     * @memberof RfidCertificateEx
+     */
     Validity: RfidValidity;
     /**
-    * 
-    * @type {RfidDistinguishedName}
-    * @memberof RfidCertificateEx
-    */
+     * 
+     * @type {RfidDistinguishedName}
+     * @memberof RfidCertificateEx
+     */
     Subject: RfidDistinguishedName;
     /**
-    * Certificate public key algorithm identifier (OID); String in the format S1 (S2), where S1 – algorithm name, S2 – identifier (OID string).
-    * @type {string}
-    * @memberof RfidCertificateEx
-    */
+     * Certificate public key algorithm identifier (OID); String in the format S1 (S2), where S1 – algorithm name, S2 – identifier (OID string).
+     * @type {string}
+     * @memberof RfidCertificateEx
+     */
     SubjectPKAlgorithm: string;
     /**
-    * List of the certificate extensions
-    * @type {Array<RfidPkiExtension>}
-    * @memberof RfidCertificateEx
-    */
+     * List of the certificate extensions
+     * @type {Array<RfidPkiExtension>}
+     * @memberof RfidCertificateEx
+     */
     Extensions: Array<RfidPkiExtension>;
     /**
-    * List of remarks arisen during the analysis of the certificate data structure and its validity verification.
-    * @type {Array<ParsingErrorCodes>}
-    * @memberof RfidCertificateEx
-    */
+     * List of remarks arisen during the analysis of the certificate data structure and its validity verification.
+     * @type {Array<ParsingErrorCodes>}
+     * @memberof RfidCertificateEx
+     */
     Notifications: Array<ParsingErrorCodes>;
     /**
-    * 
-    * @type {RfidCertificateOrigin}
-    * @memberof RfidCertificateEx
-    */
+     * 
+     * @type {RfidCertificateOrigin}
+     * @memberof RfidCertificateEx
+     */
     Origin: RfidCertificateOrigin;
     /**
-    * 
-    * @type {RfidCertificateType}
-    * @memberof RfidCertificateEx
-    */
+     * 
+     * @type {RfidCertificateType}
+     * @memberof RfidCertificateEx
+     */
     Type: RfidCertificateType;
     /**
-    * 
-    * @type {TrfFtString}
-    * @memberof RfidCertificateEx
-    */
+     * 
+     * @type {TrfFtString}
+     * @memberof RfidCertificateEx
+     */
     FileName: TrfFtString;
     /**
-    * 
-    * @type {RFIDErrorCodes}
-    * @memberof RfidCertificateEx
-    */
+     * 
+     * @type {RFIDErrorCodes}
+     * @memberof RfidCertificateEx
+     */
     PA_Status: RFIDErrorCodes;
 }

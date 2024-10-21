@@ -18,39 +18,39 @@ import type { RFIDErrorCodes } from './rfiderror-codes';
 import type { RfidAccessControlProcedureType } from './rfid-access-control-procedure-type';
 
 /**
-* Structure is used to describe the results of a single authentication procedure or a procedure of secure data access within the context of the communication session with electronic document
-* @export
-* @interface RfidAccessControlInfo
-*/
+ * Structure is used to describe the results of a single authentication procedure or a procedure of secure data access within the context of the communication session with electronic document
+ * @export
+ * @interface RfidAccessControlInfo
+ */
 export interface RfidAccessControlInfo {
     /**
-    * 
-    * @type {RfidAccessControlProcedureType}
-    * @memberof RfidAccessControlInfo
-    */
+     * 
+     * @type {RfidAccessControlProcedureType}
+     * @memberof RfidAccessControlInfo
+     */
     Type: RfidAccessControlProcedureType;
     /**
-    * 
-    * @type {RFIDErrorCodes}
-    * @memberof RfidAccessControlInfo
-    */
+     * 
+     * @type {RFIDErrorCodes}
+     * @memberof RfidAccessControlInfo
+     */
     Status: RFIDErrorCodes;
     /**
-    * Index of the active variant of the procedure
-    * @type {number}
-    * @memberof RfidAccessControlInfo
-    */
+     * Index of the active variant of the procedure
+     * @type {number}
+     * @memberof RfidAccessControlInfo
+     */
     ActiveOptionIdx?: number;
     /**
-    * List of remarks arisen during the procedure.
-    * @type {Array<ParsingErrorCodes>}
-    * @memberof RfidAccessControlInfo
-    */
+     * List of remarks arisen during the procedure.
+     * @type {Array<ParsingErrorCodes>}
+     * @memberof RfidAccessControlInfo
+     */
     Notifications: Array<ParsingErrorCodes>;
     /**
-    * List of structures with are used to describe the variants of the authentication or secure data access procedure performance within the context of the communication session with electronic document
-    * @type {Array<any>}
-    * @memberof RfidAccessControlInfo
-    */
+     * List of structures with are used to describe the variants of the authentication or secure data access procedure performance within the context of the communication session with electronic document
+     * @type {Array<any>}
+     * @memberof RfidAccessControlInfo
+     */
     AccessControlOptions?: Array<any>;
 }

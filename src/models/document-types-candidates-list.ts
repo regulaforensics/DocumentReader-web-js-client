@@ -17,21 +17,21 @@ import type { DocumentTypeRecognitionResult } from './document-type-recognition-
 import type { OneCandidate } from './one-candidate';
 
 /**
-* 
-* @export
-* @interface DocumentTypesCandidatesList
-*/
+ * 
+ * @export
+ * @interface DocumentTypesCandidatesList
+ */
 export interface DocumentTypesCandidatesList {
     /**
-    * 
-    * @type {DocumentTypeRecognitionResult}
-    * @memberof DocumentTypesCandidatesList
-    */
+     * 
+     * @type {DocumentTypeRecognitionResult}
+     * @memberof DocumentTypesCandidatesList
+     */
     RecResult?: DocumentTypeRecognitionResult;
     /**
-    * 
-    * @type {Array<OneCandidate>}
-    * @memberof DocumentTypesCandidatesList
-    */
+     * 
+     * @type {Array<OneCandidate>}
+     * @memberof DocumentTypesCandidatesList
+     */
     Candidates?: Array<OneCandidate>;
 }

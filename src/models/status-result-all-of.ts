@@ -16,15 +16,15 @@
 import type { Status } from './status';
 
 /**
-* 
-* @export
-* @interface StatusResultAllOf
-*/
+ * 
+ * @export
+ * @interface StatusResultAllOf
+ */
 export interface StatusResultAllOf {
     /**
-    * 
-    * @type {Status}
-    * @memberof StatusResultAllOf
-    */
+     * 
+     * @type {Status}
+     * @memberof StatusResultAllOf
+     */
     Status: Status;
 }

@@ -18,51 +18,51 @@ import type { DetailsOptical } from './details-optical';
 import type { DetailsRFID } from './details-rfid';
 
 /**
-* 
-* @export
-* @interface Status
-*/
+ * 
+ * @export
+ * @interface Status
+ */
 export interface Status {
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Status
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Status
+     */
     overallStatus: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Status
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Status
+     */
     optical: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Status
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Status
+     */
     portrait: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Status
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Status
+     */
     rfid: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Status
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Status
+     */
     stopList: CheckResult;
     /**
-    * 
-    * @type {DetailsRFID}
-    * @memberof Status
-    */
+     * 
+     * @type {DetailsRFID}
+     * @memberof Status
+     */
     detailsRFID?: DetailsRFID;
     /**
-    * 
-    * @type {DetailsOptical}
-    * @memberof Status
-    */
+     * 
+     * @type {DetailsOptical}
+     * @memberof Status
+     */
     detailsOptical: DetailsOptical;
 }

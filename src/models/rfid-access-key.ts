@@ -17,33 +17,33 @@ import type { RfidAccessControlProcedureType } from './rfid-access-control-proce
 import type { RfidPasswordType } from './rfid-password-type';
 
 /**
-* Structure is used to describe the contents of secure data access key within the context of the communication session with electronic document
-* @export
-* @interface RfidAccessKey
-*/
+ * Structure is used to describe the contents of secure data access key within the context of the communication session with electronic document
+ * @export
+ * @interface RfidAccessKey
+ */
 export interface RfidAccessKey {
     /**
-    * Key contents
-    * @type {string}
-    * @memberof RfidAccessKey
-    */
+     * Key contents
+     * @type {string}
+     * @memberof RfidAccessKey
+     */
     AccessKey: string;
     /**
-    * 
-    * @type {RfidPasswordType}
-    * @memberof RfidAccessKey
-    */
+     * 
+     * @type {RfidPasswordType}
+     * @memberof RfidAccessKey
+     */
     KeyType: RfidPasswordType;
     /**
-    * 
-    * @type {RfidAccessControlProcedureType}
-    * @memberof RfidAccessKey
-    */
+     * 
+     * @type {RfidAccessControlProcedureType}
+     * @memberof RfidAccessKey
+     */
     AccessType: RfidAccessControlProcedureType;
     /**
-    * Logical sign of the need for a full comparison of AccessKey contents with the contents of DG1 (MRZ) data group
-    * @type {boolean}
-    * @memberof RfidAccessKey
-    */
+     * Logical sign of the need for a full comparison of AccessKey contents with the contents of DG1 (MRZ) data group
+     * @type {boolean}
+     * @memberof RfidAccessKey
+     */
     CheckFullKeyMatching: boolean;
 }

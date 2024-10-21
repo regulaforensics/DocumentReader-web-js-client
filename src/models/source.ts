@@ -15,37 +15,34 @@
 
 
 /**
-* Document data sources
-* @export
-* @enum {string}
-*/
-
-export const Source = {
+ * Document data sources
+ * @export
+ * @enum {string}
+ */
+export enum Source {
     /**
     * Machine readable zone (MRZ)
     */
-    MRZ: 'MRZ',
+    MRZ = 'MRZ',
     /**
     * Visual zone
     */
-    VISUAL: 'VISUAL',
+    VISUAL = 'VISUAL',
     /**
     * Barcode
     */
-    BARCODE: 'BARCODE',
+    BARCODE = 'BARCODE',
     /**
     * RFID
     */
-    RFID: 'RFID',
+    RFID = 'RFID',
     /**
     * Magnetic
     */
-    MAGNETIC: 'MAGNETIC',
+    MAGNETIC = 'MAGNETIC',
     /**
     * External
     */
-    EXTERNAL: 'EXTERNAL'
-} as const;
-
-export type Source = typeof Source[keyof typeof Source];
+    EXTERNAL = 'EXTERNAL'
+}
 

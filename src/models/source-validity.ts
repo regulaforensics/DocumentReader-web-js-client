@@ -17,21 +17,21 @@ import type { CheckResult } from './check-result';
 import type { Source } from './source';
 
 /**
-* 
-* @export
-* @interface SourceValidity
-*/
+ * 
+ * @export
+ * @interface SourceValidity
+ */
 export interface SourceValidity {
     /**
-    * 
-    * @type {Source}
-    * @memberof SourceValidity
-    */
+     * 
+     * @type {Source}
+     * @memberof SourceValidity
+     */
     source: Source;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof SourceValidity
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof SourceValidity
+     */
     status: CheckResult;
 }

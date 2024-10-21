@@ -31,21 +31,21 @@ import type { TextDataResult } from './text-data-result';
 import type { TextResult } from './text-result';
 
 /**
-* List with various objects, containing processing results
-* @export
-* @interface ContainerList
-*/
+ * List with various objects, containing processing results
+ * @export
+ * @interface ContainerList
+ */
 export interface ContainerList {
     /**
-    * Length of list (Count for items)
-    * @type {number}
-    * @memberof ContainerList
-    */
+     * Length of list (Count for items)
+     * @type {number}
+     * @memberof ContainerList
+     */
     Count: number;
     /**
-    * 
-    * @type {Array<StatusResult | TextResult | DocumentImageResult | ImagesResult | ChosenDocumentTypeResult | DocumentTypesCandidatesResult | TextDataResult | GraphicsResult | LexicalAnalysisResult | AuthenticityResult | ImageQualityResult | DocumentPositionResult | DocBarCodeInfo | LicenseResult | EncryptedRCLResult | DocumentBinaryInfoResult>}
-    * @memberof ContainerList
-    */
+     * 
+     * @type {Array<StatusResult | TextResult | DocumentImageResult | ImagesResult | ChosenDocumentTypeResult | DocumentTypesCandidatesResult | TextDataResult | GraphicsResult | LexicalAnalysisResult | AuthenticityResult | ImageQualityResult | DocumentPositionResult | DocBarCodeInfo | LicenseResult | EncryptedRCLResult | DocumentBinaryInfoResult>}
+     * @memberof ContainerList
+     */
     List: Array<StatusResult | TextResult | DocumentImageResult | ImagesResult | ChosenDocumentTypeResult | DocumentTypesCandidatesResult | TextDataResult | GraphicsResult | LexicalAnalysisResult | AuthenticityResult | ImageQualityResult | DocumentPositionResult | DocBarCodeInfo | LicenseResult | EncryptedRCLResult | DocumentBinaryInfoResult>;
 }

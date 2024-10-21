@@ -16,27 +16,27 @@
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
-* 
-* @export
-* @interface OriginalSymbol
-*/
+ * 
+ * @export
+ * @interface OriginalSymbol
+ */
 export interface OriginalSymbol {
     /**
-    * Unicode symbol code
-    * @type {number}
-    * @memberof OriginalSymbol
-    */
+     * Unicode symbol code
+     * @type {number}
+     * @memberof OriginalSymbol
+     */
     code: number;
     /**
-    * Probability of correctness reading of a single character
-    * @type {number}
-    * @memberof OriginalSymbol
-    */
+     * Probability of correctness reading of a single character
+     * @type {number}
+     * @memberof OriginalSymbol
+     */
     probability: number;
     /**
-    * 
-    * @type {RectangleCoordinates}
-    * @memberof OriginalSymbol
-    */
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof OriginalSymbol
+     */
     rect?: RectangleCoordinates;
 }

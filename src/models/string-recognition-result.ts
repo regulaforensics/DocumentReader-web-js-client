@@ -16,39 +16,39 @@
 import type { SymbolRecognitionResult } from './symbol-recognition-result';
 
 /**
-* Describes single row recognition results in multi-line text field of a document
-* @export
-* @interface StringRecognitionResult
-*/
+ * Describes single row recognition results in multi-line text field of a document
+ * @export
+ * @interface StringRecognitionResult
+ */
 export interface StringRecognitionResult {
     /**
-    * Number of StringResult array elements
-    * @type {number}
-    * @memberof StringRecognitionResult
-    */
+     * Number of StringResult array elements
+     * @type {number}
+     * @memberof StringRecognitionResult
+     */
     SymbolsCount: number;
     /**
-    * 
-    * @type {any}
-    * @memberof StringRecognitionResult
-    */
+     * 
+     * @type {any}
+     * @memberof StringRecognitionResult
+     */
     Reserved?: any | null;
     /**
-    * Array of recognition results for individual characters of a string
-    * @type {Array<SymbolRecognitionResult>}
-    * @memberof StringRecognitionResult
-    */
+     * Array of recognition results for individual characters of a string
+     * @type {Array<SymbolRecognitionResult>}
+     * @memberof StringRecognitionResult
+     */
     StringResult: Array<SymbolRecognitionResult>;
     /**
-    * Buf_Text text string length
-    * @type {number}
-    * @memberof StringRecognitionResult
-    */
+     * Buf_Text text string length
+     * @type {number}
+     * @memberof StringRecognitionResult
+     */
     Buf_Length?: number;
     /**
-    * Text field data in UTF8 format. Results of reading different lines of a multi-line field are separated by \'^\'
-    * @type {string}
-    * @memberof StringRecognitionResult
-    */
+     * Text field data in UTF8 format. Results of reading different lines of a multi-line field are separated by \'^\'
+     * @type {string}
+     * @memberof StringRecognitionResult
+     */
     Buf_Text?: string;
 }

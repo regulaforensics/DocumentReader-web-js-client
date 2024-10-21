@@ -15,15 +15,15 @@
 
 
 /**
-* Contains license
-* @export
-* @interface LicenseResultAllOf
-*/
+ * Contains license
+ * @export
+ * @interface LicenseResultAllOf
+ */
 export interface LicenseResultAllOf {
     /**
-    * Base64 encoded data
-    * @type {string}
-    * @memberof LicenseResultAllOf
-    */
+     * Base64 encoded data
+     * @type {string}
+     * @memberof LicenseResultAllOf
+     */
     License: string;
 }

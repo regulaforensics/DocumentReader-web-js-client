@@ -15,37 +15,34 @@
 
 
 /**
-* Enumeration contains a set of constants that define the type of application within the context of the communication session with electronic document
-* @export
-* @enum {string}
-*/
-
-export const RfidApplicationType = {
+ * Enumeration contains a set of constants that define the type of application within the context of the communication session with electronic document
+ * @export
+ * @enum {string}
+ */
+export enum RfidApplicationType {
     /**
     * Not defined
     */
-    UNSPECIFIED: 0,
+    UNSPECIFIED = 0,
     /**
     * ePassport application
     */
-    E_PASSPORT: 1,
+    E_PASSPORT = 1,
     /**
     * eID application
     */
-    E_ID: 2,
+    E_ID = 2,
     /**
     * eSign application
     */
-    E_SIGN: 3,
+    E_SIGN = 3,
     /**
     * eDL application
     */
-    E_DL: 4,
+    E_DL = 4,
     /**
     * Master File
     */
-    ROOT_FILES: 0
-} as const;
-
-export type RfidApplicationType = typeof RfidApplicationType[keyof typeof RfidApplicationType];
+    ROOT_FILES = 0
+}
 

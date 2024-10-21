@@ -17,27 +17,27 @@ import type { ImageData } from './image-data';
 import type { Light } from './light';
 
 /**
-* 
-* @export
-* @interface ProcessRequestImage
-*/
+ * 
+ * @export
+ * @interface ProcessRequestImage
+ */
 export interface ProcessRequestImage {
     /**
-    * 
-    * @type {ImageData}
-    * @memberof ProcessRequestImage
-    */
+     * 
+     * @type {ImageData}
+     * @memberof ProcessRequestImage
+     */
     ImageData: ImageData;
     /**
-    * 
-    * @type {Light}
-    * @memberof ProcessRequestImage
-    */
+     * 
+     * @type {Light}
+     * @memberof ProcessRequestImage
+     */
     light?: Light;
     /**
-    * page/image number
-    * @type {number}
-    * @memberof ProcessRequestImage
-    */
+     * page/image number
+     * @type {number}
+     * @memberof ProcessRequestImage
+     */
     page_idx?: number;
 }

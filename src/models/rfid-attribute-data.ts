@@ -15,21 +15,21 @@
 
 
 /**
-* Structure contains the data of one attribute of the digital signature object.
-* @export
-* @interface RfidAttributeData
-*/
+ * Structure contains the data of one attribute of the digital signature object.
+ * @export
+ * @interface RfidAttributeData
+ */
 export interface RfidAttributeData {
     /**
-    * Contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
-    * @type {string}
-    * @memberof RfidAttributeData
-    */
+     * Contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
+     * @type {string}
+     * @memberof RfidAttributeData
+     */
     Type: string;
     /**
-    * Attribute binary data. Base64 encoded.
-    * @type {string}
-    * @memberof RfidAttributeData
-    */
+     * Attribute binary data. Base64 encoded.
+     * @type {string}
+     * @memberof RfidAttributeData
+     */
     Data: string;
 }

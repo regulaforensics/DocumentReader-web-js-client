@@ -17,81 +17,81 @@ import type { DocumentFormat } from './document-format';
 import type { DocumentType } from './document-type';
 
 /**
-* Extended document type info and Regula\'s \'Information Reference Systems\' links
-* @export
-* @interface FDSIDList
-*/
+ * Extended document type info and Regula\'s \'Information Reference Systems\' links
+ * @export
+ * @interface FDSIDList
+ */
 export interface FDSIDList {
     /**
-    * ICAO code of the issuing country
-    * @type {string}
-    * @memberof FDSIDList
-    */
+     * ICAO code of the issuing country
+     * @type {string}
+     * @memberof FDSIDList
+     */
     ICAOCode: string;
     /**
-    * Number of elements in the List
-    * @type {number}
-    * @memberof FDSIDList
-    */
+     * Number of elements in the List
+     * @type {number}
+     * @memberof FDSIDList
+     */
     Count: number;
     /**
-    * Document identifiers in \'Information Reference Systems\'
-    * @type {Array<number>}
-    * @memberof FDSIDList
-    */
+     * Document identifiers in \'Information Reference Systems\'
+     * @type {Array<number>}
+     * @memberof FDSIDList
+     */
     List: Array<number>;
     /**
-    * 
-    * @type {DocumentType}
-    * @memberof FDSIDList
-    */
+     * 
+     * @type {DocumentType}
+     * @memberof FDSIDList
+     */
     dType: DocumentType;
     /**
-    * 
-    * @type {DocumentFormat}
-    * @memberof FDSIDList
-    */
+     * 
+     * @type {DocumentFormat}
+     * @memberof FDSIDList
+     */
     dFormat: DocumentFormat;
     /**
-    * Flag indicating the presence of MRZ on the document
-    * @type {boolean}
-    * @memberof FDSIDList
-    */
+     * Flag indicating the presence of MRZ on the document
+     * @type {boolean}
+     * @memberof FDSIDList
+     */
     dMRZ: boolean;
     /**
-    * Document description
-    * @type {string}
-    * @memberof FDSIDList
-    */
+     * Document description
+     * @type {string}
+     * @memberof FDSIDList
+     */
     dDescription?: string;
     /**
-    * Year of publication of the document
-    * @type {string}
-    * @memberof FDSIDList
-    */
+     * Year of publication of the document
+     * @type {string}
+     * @memberof FDSIDList
+     */
     dYear: string;
     /**
-    * Issuing country name
-    * @type {string}
-    * @memberof FDSIDList
-    */
+     * Issuing country name
+     * @type {string}
+     * @memberof FDSIDList
+     */
     dCountryName: string;
     /**
-    * Issuing state code
-    * @type {string}
-    * @memberof FDSIDList
-    */
+     * Issuing state code
+     * @type {string}
+     * @memberof FDSIDList
+     */
     dStateCode?: string;
     /**
-    * Issuing state name
-    * @type {string}
-    * @memberof FDSIDList
-    */
+     * Issuing state name
+     * @type {string}
+     * @memberof FDSIDList
+     */
     dStateName?: string;
     /**
-    * Whether the document is deprecated
-    * @type {boolean}
-    * @memberof FDSIDList
-    */
+     * Whether the document is deprecated
+     * @type {boolean}
+     * @memberof FDSIDList
+     */
     isDeprecated: boolean;
 }

@@ -15,21 +15,21 @@
 
 
 /**
-* Extension identifier (OID, ASCII string); Contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
-* @export
-* @interface RfidPkiExtension
-*/
+ * Extension identifier (OID, ASCII string); Contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
+ * @export
+ * @interface RfidPkiExtension
+ */
 export interface RfidPkiExtension {
     /**
-    * Extension identifier (OID, ASCII string); Contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
-    * @type {string}
-    * @memberof RfidPkiExtension
-    */
+     * Extension identifier (OID, ASCII string); Contents of the identifier in the format S1 (S2), where S1 – attribute name, S2 – identifier (OID string)
+     * @type {string}
+     * @memberof RfidPkiExtension
+     */
     Type: string;
     /**
-    * Extension binary data. Base64 encoded.
-    * @type {string}
-    * @memberof RfidPkiExtension
-    */
+     * Extension binary data. Base64 encoded.
+     * @type {string}
+     * @memberof RfidPkiExtension
+     */
     Data: string;
 }

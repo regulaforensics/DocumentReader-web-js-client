@@ -16,15 +16,15 @@
 import type { DocumentPosition } from './document-position';
 
 /**
-* 
-* @export
-* @interface DocumentPositionResultAllOf
-*/
+ * 
+ * @export
+ * @interface DocumentPositionResultAllOf
+ */
 export interface DocumentPositionResultAllOf {
     /**
-    * 
-    * @type {DocumentPosition}
-    * @memberof DocumentPositionResultAllOf
-    */
+     * 
+     * @type {DocumentPosition}
+     * @memberof DocumentPositionResultAllOf
+     */
     DocumentPosition: DocumentPosition;
 }

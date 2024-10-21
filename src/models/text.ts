@@ -18,45 +18,45 @@ import type { TextAvailableSource } from './text-available-source';
 import type { TextField } from './text-field';
 
 /**
-* Contains all document text fields data with validity and cross-source compare checks
-* @export
-* @interface Text
-*/
+ * Contains all document text fields data with validity and cross-source compare checks
+ * @export
+ * @interface Text
+ */
 export interface Text {
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Text
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Text
+     */
     status: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Text
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Text
+     */
     validityStatus: CheckResult;
     /**
-    * 
-    * @type {CheckResult}
-    * @memberof Text
-    */
+     * 
+     * @type {CheckResult}
+     * @memberof Text
+     */
     comparisonStatus: CheckResult;
     /**
-    * Date format
-    * @type {string}
-    * @memberof Text
-    */
+     * Date format
+     * @type {string}
+     * @memberof Text
+     */
     dateFormat: string;
     /**
-    * 
-    * @type {Array<TextField>}
-    * @memberof Text
-    */
+     * 
+     * @type {Array<TextField>}
+     * @memberof Text
+     */
     fieldList: Array<TextField>;
     /**
-    * 
-    * @type {Array<TextAvailableSource>}
-    * @memberof Text
-    */
+     * 
+     * @type {Array<TextAvailableSource>}
+     * @memberof Text
+     */
     availableSourceList: Array<TextAvailableSource>;
 }

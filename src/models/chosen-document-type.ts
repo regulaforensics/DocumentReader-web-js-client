@@ -17,75 +17,75 @@ import type { FDSIDList } from './fdsidlist';
 import type { RfidLocation } from './rfid-location';
 
 /**
-* Contains information about one document type candidate
-* @export
-* @interface ChosenDocumentType
-*/
+ * Contains information about one document type candidate
+ * @export
+ * @interface ChosenDocumentType
+ */
 export interface ChosenDocumentType {
     /**
-    * Document name
-    * @type {string}
-    * @memberof ChosenDocumentType
-    */
+     * Document name
+     * @type {string}
+     * @memberof ChosenDocumentType
+     */
     DocumentName: string;
     /**
-    * Unique document type template identifier (Regula\'s internal numeric code)
-    * @type {number}
-    * @memberof ChosenDocumentType
-    */
+     * Unique document type template identifier (Regula\'s internal numeric code)
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
     ID: number;
     /**
-    * A measure of the likelihood of correct recognition in the analysis of this type of document
-    * @type {number}
-    * @memberof ChosenDocumentType
-    */
+     * A measure of the likelihood of correct recognition in the analysis of this type of document
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
     P: number;
     /**
-    * true if the document of the given type is rotated by 180 degrees
-    * @type {boolean}
-    * @memberof ChosenDocumentType
-    */
+     * true if the document of the given type is rotated by 180 degrees
+     * @type {boolean}
+     * @memberof ChosenDocumentType
+     */
     Rotated180: boolean;
     /**
-    * 
-    * @type {RfidLocation}
-    * @memberof ChosenDocumentType
-    */
+     * 
+     * @type {RfidLocation}
+     * @memberof ChosenDocumentType
+     */
     RFID_Presence: RfidLocation;
     /**
-    * 
-    * @type {FDSIDList}
-    * @memberof ChosenDocumentType
-    */
+     * 
+     * @type {FDSIDList}
+     * @memberof ChosenDocumentType
+     */
     FDSIDList: FDSIDList;
     /**
-    * Combination of lighting scheme identifiers (Light enum) required to conduct OCR for this type of document
-    * @type {number}
-    * @memberof ChosenDocumentType
-    */
+     * Combination of lighting scheme identifiers (Light enum) required to conduct OCR for this type of document
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
     NecessaryLights: number;
     /**
-    * Set of authentication options provided for this type of document (combination of Authenticity enum)
-    * @type {number}
-    * @memberof ChosenDocumentType
-    */
+     * Set of authentication options provided for this type of document (combination of Authenticity enum)
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
     CheckAuthenticity: number;
     /**
-    * The required exposure value of the camera when receiving images of a document of this type for a UV lighting scheme
-    * @type {number}
-    * @memberof ChosenDocumentType
-    */
+     * The required exposure value of the camera when receiving images of a document of this type for a UV lighting scheme
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
     UVExp: number;
     /**
-    * Combination of lighting scheme identifiers (combination of Light enum) needed to perform all authenticity checks specified in CheckAuthenticity
-    * @type {number}
-    * @memberof ChosenDocumentType
-    */
+     * Combination of lighting scheme identifiers (combination of Light enum) needed to perform all authenticity checks specified in CheckAuthenticity
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
     AuthenticityNecessaryLights: number;
     /**
-    * Camera exposure value necessary when obtaining document images of the given type for AXIAL lighting scheme
-    * @type {number}
-    * @memberof ChosenDocumentType
-    */
+     * Camera exposure value necessary when obtaining document images of the given type for AXIAL lighting scheme
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
     OVIExp: number;
 }
