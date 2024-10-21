@@ -57,11 +57,11 @@ export enum AuthenticityResultType {
     */
     PHOTO_EMBED_TYPE = 512,
     /**
-    * OVI check
+    * OVI check. Deprecated, use Document liveness check instead
     */
     OVI = 1024,
     /**
-    * Hologram presence check
+    * Hologram presence check. Deprecated
     */
     HOLOGRAMS = 4096,
     /**
