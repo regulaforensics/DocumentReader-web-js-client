@@ -266,6 +266,12 @@ export interface ProcessParams {
      */
     forceReadMrzBeforeLocate?: boolean;
     /**
+     * Allows you to bypass the minimum conditions that should be met to perform the barcode format check
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    forceBarcodeChecks?: boolean;
+    /**
      * This option can be disabled to stop parsing after barcode is read. Enabled by default.
      * @type {boolean}
      * @memberof ProcessParams

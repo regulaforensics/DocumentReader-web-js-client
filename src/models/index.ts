@@ -21,6 +21,7 @@ export * from './data-module';
 export * from './details-optical';
 export * from './details-rfid';
 export * from './device-info';
+export * from './device-info2';
 export * from './doc-bar-code-info';
 export * from './doc-bar-code-info-all-of';
 export * from './doc-bar-code-info-fields-list';
