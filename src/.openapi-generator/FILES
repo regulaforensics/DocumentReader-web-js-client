@@ -163,6 +163,7 @@ models/rfid-terminal.ts
 models/rfid-type.ts
 models/rfid-validity.ts
 models/rfiderror-codes.ts
+models/rfidpkdresource-type.ts
 models/scenario.ts
 models/security-feature-result-all-of.ts
 models/security-feature-result.ts

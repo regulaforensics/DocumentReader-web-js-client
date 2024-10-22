@@ -121,6 +121,7 @@ export * from './process-response';
 export * from './process-system-info';
 export * from './processing-status';
 export * from './rfiderror-codes';
+export * from './rfidpkdresource-type';
 export * from './raw-image-container-field-list';
 export * from './raw-image-container-field-list-all-of';
 export * from './raw-image-container-list';
