@@ -4,10 +4,14 @@ import * as converter from 'base64-arraybuffer';
 export class ImagesExt implements Images {
     availableSourceList: Array<ImagesAvailableSource>;
     fieldList: Array<ImagesFieldWrapper>;
+    fieldCount: number;
+    availableSourceCount: number;
 
     constructor(origin: Images) {
         this.availableSourceList = origin.availableSourceList;
         this.fieldList = origin.fieldList.map((field) => new ImagesFieldWrapper(field));
+        this.fieldCount = origin.fieldCount;
+        this.availableSourceCount = origin.availableSourceCount;
     }
 
     public getField(type: GraphicFieldType): ImagesFieldWrapper | undefined {
@@ -27,31 +31,27 @@ export class ImagesFieldWrapper implements ImagesField {
     fieldName: string;
     fieldType: GraphicFieldType;
     valueList: Array<ImagesFieldValue>;
+    valueCount: number;
 
     constructor(origin: ImagesField) {
         this.fieldName = origin.fieldName;
         this.fieldType = origin.fieldType;
         this.valueList = origin.valueList;
+        this.valueCount = origin.valueCount;
     }
 
     public getValue(source?: Source, original = false) {
-        let fieldValue;
-        if (!source) {
-            // rfid -> visual -> barcode
-            fieldValue =
-                this.getValueBySource(Source.RFID) ||
-                this.getValueBySource(Source.VISUAL) ||
-                this.getValueBySource(Source.BARCODE);
-        } else {
-            fieldValue = this.getValueBySource(source);
-        }
+        const fieldValue = source
+            ? this.getValueBySource(source)
+            : this.getValueBySource(Source.RFID) ||
+              this.getValueBySource(Source.VISUAL) ||
+              this.getValueBySource(Source.BARCODE);
 
         if (!fieldValue) return;
 
-        if (original && fieldValue.originalValue) {
-            return base64ToBuffer(fieldValue.originalValue);
-        }
-        return base64ToBuffer(fieldValue.value);
+        const valueToConvert = original && fieldValue.originalValue ? fieldValue.originalValue : fieldValue.value;
+
+        return valueToConvert ? base64ToBuffer(valueToConvert) : undefined;
     }
 
     private getValueBySource(source: Source): ImagesFieldValue | undefined {
