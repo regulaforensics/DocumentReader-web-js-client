@@ -266,6 +266,12 @@ export interface ProcessParams {
      */
     forceReadMrzBeforeLocate?: boolean;
     /**
+     * Allows you to fail both the Barcode format check and overall statuses of the document if the Digital signature check is not performed
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    forceBarcodeChecks?: boolean;
+    /**
      * This option can be disabled to stop parsing after barcode is read. Enabled by default.
      * @type {boolean}
      * @memberof ProcessParams
