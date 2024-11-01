@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * Regula Document Reader Web API
- * Documents recognition as easy as reading two bytes.  # Clients: * [JavaScript](https://github.com/regulaforensics/DocumentReader-web-js-client) client for the browser and node.js based on axios * [Java](https://github.com/regulaforensics/DocumentReader-web-java-client) client compatible with jvm and android * [Python](https://github.com/regulaforensics/DocumentReader-web-python-client) 3.5+ client * [C#](https://github.com/regulaforensics/DocumentReader-web-csharp-client) client for .NET & .NET Core 
+ * Documents recognition as easy as reading two bytes.   # Clients: * [JavaScript](https://github.com/regulaforensics/DocumentReader-web-js-client) client for the browser and node.js based on axios * [Java](https://github.com/regulaforensics/DocumentReader-web-java-client) client compatible with jvm and android * [Python](https://github.com/regulaforensics/DocumentReader-web-python-client) 3.5+ client * [C#](https://github.com/regulaforensics/DocumentReader-web-csharp-client) client for .NET & .NET Core 
  *
  * The version of the OpenAPI document: 7.4.0
  * 
@@ -272,12 +272,6 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     forceReadMrzBeforeLocate?: boolean;
-    /**
-     * Allows you to bypass the minimum conditions that should be met to perform the barcode format check
-     * @type {boolean}
-     * @memberof ProcessParams
-     */
-    forceBarcodeChecks?: boolean;
     /**
      * This option can be disabled to stop parsing after barcode is read. Enabled by default.
      * @type {boolean}

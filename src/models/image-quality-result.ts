@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * Regula Document Reader Web API
- * Documents recognition as easy as reading two bytes.  # Clients: * [JavaScript](https://github.com/regulaforensics/DocumentReader-web-js-client) client for the browser and node.js based on axios * [Java](https://github.com/regulaforensics/DocumentReader-web-java-client) client compatible with jvm and android * [Python](https://github.com/regulaforensics/DocumentReader-web-python-client) 3.5+ client * [C#](https://github.com/regulaforensics/DocumentReader-web-csharp-client) client for .NET & .NET Core 
+ * Documents recognition as easy as reading two bytes.   # Clients: * [JavaScript](https://github.com/regulaforensics/DocumentReader-web-js-client) client for the browser and node.js based on axios * [Java](https://github.com/regulaforensics/DocumentReader-web-java-client) client compatible with jvm and android * [Python](https://github.com/regulaforensics/DocumentReader-web-python-client) 3.5+ client * [C#](https://github.com/regulaforensics/DocumentReader-web-csharp-client) client for .NET & .NET Core 
  *
  * The version of the OpenAPI document: 7.4.0
  * 
@@ -13,9 +13,24 @@
  */
 
 
+import type { AuthenticityResult } from './authenticity-result';
+import type { ChosenDocumentTypeResult } from './chosen-document-type-result';
+import type { DocBarCodeInfo } from './doc-bar-code-info';
+import type { DocumentBinaryInfoResult } from './document-binary-info-result';
+import type { DocumentImageResult } from './document-image-result';
+import type { DocumentPositionResult } from './document-position-result';
+import type { DocumentTypesCandidatesResult } from './document-types-candidates-result';
+import type { EncryptedRCLResult } from './encrypted-rclresult';
+import type { GraphicsResult } from './graphics-result';
 import type { ImageQualityCheckList } from './image-quality-check-list';
 import type { ImageQualityResultAllOf } from './image-quality-result-all-of';
+import type { ImagesResult } from './images-result';
+import type { LexicalAnalysisResult } from './lexical-analysis-result';
+import type { LicenseResult } from './license-result';
 import type { ResultItem } from './result-item';
+import type { StatusResult } from './status-result';
+import type { TextDataResult } from './text-data-result';
+import type { TextResult } from './text-result';
 
 /**
  * @type ImageQualityResult

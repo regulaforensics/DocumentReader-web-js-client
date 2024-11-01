@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * Regula Document Reader Web API
- * Documents recognition as easy as reading two bytes.  # Clients: * [JavaScript](https://github.com/regulaforensics/DocumentReader-web-js-client) client for the browser and node.js based on axios * [Java](https://github.com/regulaforensics/DocumentReader-web-java-client) client compatible with jvm and android * [Python](https://github.com/regulaforensics/DocumentReader-web-python-client) 3.5+ client * [C#](https://github.com/regulaforensics/DocumentReader-web-csharp-client) client for .NET & .NET Core 
+ * Documents recognition as easy as reading two bytes.   # Clients: * [JavaScript](https://github.com/regulaforensics/DocumentReader-web-js-client) client for the browser and node.js based on axios * [Java](https://github.com/regulaforensics/DocumentReader-web-java-client) client compatible with jvm and android * [Python](https://github.com/regulaforensics/DocumentReader-web-python-client) 3.5+ client * [C#](https://github.com/regulaforensics/DocumentReader-web-csharp-client) client for .NET & .NET Core 
  *
  * The version of the OpenAPI document: 7.4.0
  * 
@@ -44,6 +44,11 @@ export enum RfidDataFileType {
     PASSPORT_SOD = 21,
     PASSPORT_CVCA = 22,
     PASSPORT_COM = 23,
+    DTC_DG17 = 57,
+    DTC_DG18 = 58,
+    DTC_DG22 = 62,
+    DTC_DG23 = 63,
+    DTC_DG24 = 64,
     ID_DG1 = 101,
     ID_DG2 = 102,
     ID_DG3 = 103,
