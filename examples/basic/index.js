@@ -42,20 +42,32 @@ const response = await api.process(request);
 // images example
 const documentImage = response.images.getField(GraphicFieldType.DOCUMENT_FRONT).getValue();
 const portraitField = response.images.getField(GraphicFieldType.PORTRAIT);
-const portraitFromVisual = portraitField.getValue(Source.VISUAL);
-fs.appendFileSync('portrait.jpg', Buffer.from(portraitFromVisual));
-fs.appendFileSync('document-image.jpg', Buffer.from(documentImage));
+
+if (documentImage) {
+    fs.appendFileSync('document-image.jpg', Buffer.from(documentImage));
+}
+
+if (portraitField) {
+    const portraitFromVisual = portraitField.getValue(Source.VISUAL);
+    fs.appendFileSync('portrait.jpg', Buffer.from(portraitFromVisual));
+}
 
 console.log('---------------------------------------------------------------');
-console.log(`Document name: ${response.documentType().DocumentName}`);
+console.log(`Document name: ${response.documentType()?.DocumentName || 'UNKNOWN'}`);
 console.log('---------------------------------------------------------------');
 
-response.text.fieldList.forEach((field) => {
-    console.log(`\n[${field.fieldName}]`);
-    field.valueList.forEach(({ source, value }) => {
-        console.log(`  - Source: ${source}`);
-        console.log(`    Value : ${value}`);
+if (response.text) {
+    response.text.fieldList.forEach((field) => {
+        console.log(`\n[${field.fieldName}]`);
+        field.valueList.forEach(({ source, value }) => {
+            console.log(`  - Source: ${source}`);
+            console.log(`    Value : ${value}`);
+        });
+        console.log('---------------------------------------------------------------');
     });
+} else {
+    console.log('                       NO TEXT DATA');
     console.log('---------------------------------------------------------------');
-});
+}
+
 console.log(`          -Web API version: ${serverInfo.version}-`);
