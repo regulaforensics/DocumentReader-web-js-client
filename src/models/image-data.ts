@@ -26,6 +26,12 @@ export interface ImageData {
      * @memberof ImageData
      */
     image: string;
+    /**
+     * Image format
+     * @type {string}
+     * @memberof ImageData
+     */
+    format?: string;
 }
 
 

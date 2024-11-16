@@ -26,6 +26,12 @@ export interface DocumentImage {
      * @memberof DocumentImage
      */
     image: string;
+    /**
+     * Image format
+     * @type {string}
+     * @memberof DocumentImage
+     */
+    format?: string;
 }
 
 

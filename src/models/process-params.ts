@@ -206,9 +206,16 @@ export interface ProcessParams {
      */
     imageQa?: ImageQA;
     /**
-     * When enabled, image quality checks status affects document optical and overall status. Disabled by default.
+     * When enabled, the image quality check status affects the document optical and overall status. Disabled by default.
      * @type {boolean}
      * @memberof ProcessParams
+     */
+    strictImageQuality?: boolean;
+    /**
+     * Deprecated. Please use strictImageQuality instead. When enabled, image quality checks status affects document optical and overall status. Disabled by default.
+     * @type {boolean}
+     * @memberof ProcessParams
+     * @deprecated
      */
     respectImageQuality?: boolean;
     /**
@@ -361,6 +368,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     generateNumericCodes?: boolean;
+    /**
+     * This parameter if enabled will require all necessary certificates to verify digital signature in barcode data to be present in order for the Barcode format check to succeed.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    strictBarcodeDigitalSignatureCheck?: boolean;
 }
 
 

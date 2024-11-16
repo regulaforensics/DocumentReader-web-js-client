@@ -1,4 +1,4 @@
-api/default-api.ts
+api/healthcheck-api.ts
 api/process-api.ts
 api/transaction-api.ts
 base.ts
@@ -57,6 +57,8 @@ models/graphic-field.ts
 models/graphic-fields-list.ts
 models/graphics-result-all-of.ts
 models/graphics-result.ts
+models/healthcheck-documents-database.ts
+models/healthcheck.ts
 models/ident-result-all-of.ts
 models/ident-result.ts
 models/image-data.ts

@@ -52,6 +52,8 @@ export * from './graphic-field-type';
 export * from './graphic-fields-list';
 export * from './graphics-result';
 export * from './graphics-result-all-of';
+export * from './healthcheck';
+export * from './healthcheck-documents-database';
 export * from './ident-result';
 export * from './ident-result-all-of';
 export * from './image-data';

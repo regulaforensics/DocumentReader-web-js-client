@@ -92,13 +92,13 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Reprocess
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {TransactionProcessRequest} transactionProcessRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     public reprocessTransaction(
-        transactionId: number,
+        transactionId: string,
         transactionProcessRequest: TransactionProcessRequest,
         options?: any,
     ): Promise<AxiosResponse<InlineResponse200, any>> {
@@ -112,12 +112,12 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Get Reprocess transaction result
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {boolean} [withImages] With base64 images or url
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getReprocessTransactionResult(transactionId: number, withImages?: boolean, options?: any): Promise<Response> {
+    async getReprocessTransactionResult(transactionId: string, withImages?: boolean, options?: any): Promise<Response> {
         const axiosResult = await this.transactionApi.apiV2TransactionTransactionIdResultsGet(
             transactionId,
             withImages,
@@ -129,7 +129,7 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Get transactions by tag
-     * @param {number} tagId Tag id
+     * @param {string} tagId Tag id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -140,24 +140,24 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Delete Reprocess transactions by tag
-     * @param {number} tagId Tag id
+     * @param {string} tagId Tag id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async deleteReprocessTransactionsByTag(tagId: number, options?: any): Promise<AxiosResponse<object, any>> {
+    async deleteReprocessTransactionsByTag(tagId: string, options?: any): Promise<AxiosResponse<object, any>> {
         return this.transactionApi.apiV2TagTagIdDelete(tagId, options);
     }
 
     /**
      *
      * @summary Get Reprocess transaction file
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {string} name File name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async getReprocessTransactionFile(
-        transactionId: number,
+        transactionId: string,
         name: string,
         options?: any,
     ): Promise<AxiosResponse<any, any>> {
@@ -167,12 +167,12 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Get Reprocess transaction data
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async getReprocessTransactionData(
-        transactionId: number,
+        transactionId: string,
         options?: any,
     ): Promise<AxiosResponse<TransactionProcessGetResponse, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdGet(transactionId, options);
