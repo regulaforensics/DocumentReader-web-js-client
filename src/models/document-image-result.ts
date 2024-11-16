@@ -33,6 +33,7 @@ import { TextResult } from './text-result';
 
 /**
  * @type DocumentImageResult
+ * Contains document image.
  * @export
  */
 export type DocumentImageResult = DocumentImageResultAllOf & ResultItem;

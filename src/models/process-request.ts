@@ -84,6 +84,12 @@ export interface ProcessRequest {
      * @memberof ProcessRequest
      */
     passBackObject?: { [key: string]: object; };
+    /**
+     * URLs to the document images for processing.
+     * @type {Array<string>}
+     * @memberof ProcessRequest
+     */
+    ImageUrls?: Array<string>;
 }
 
 

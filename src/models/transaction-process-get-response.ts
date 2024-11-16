@@ -24,10 +24,10 @@ import { OutData } from './out-data';
 export interface TransactionProcessGetResponse {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof TransactionProcessGetResponse
      */
-    transactionId?: number;
+    transactionId?: string;
     /**
      * 
      * @type {string}
