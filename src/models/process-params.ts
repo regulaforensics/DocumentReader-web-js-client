@@ -36,6 +36,12 @@ import { TextPostProcessing } from './text-post-processing';
  */
 export interface ProcessParams {
     /**
+     * This parameter is used to generate separate DTC-VC data container from RFID session data.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    generateDTCVC?: boolean;
+    /**
      * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
      * @type {Array<number>}
      * @memberof ProcessParams

@@ -123,7 +123,11 @@ export enum Result {
     /**
     * Contains RFID original graphics data
     */
-    RFID_ORIGINAL_GRAPHICS = 105
+    RFID_ORIGINAL_GRAPHICS = 105,
+    /**
+    * Digital Travel Credential data
+    */
+    DTC_VC = 109
 }
 
 
