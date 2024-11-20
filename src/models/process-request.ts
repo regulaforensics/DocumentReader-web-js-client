@@ -85,6 +85,12 @@ export interface ProcessRequest {
      */
     passBackObject?: { [key: string]: object; };
     /**
+     * Digital Travel Credential (DTC-VC) data in base64 format for processing
+     * @type {string}
+     * @memberof ProcessRequest
+     */
+    dtc?: string;
+    /**
      * URLs to the document images for processing.
      * @type {Array<string>}
      * @memberof ProcessRequest

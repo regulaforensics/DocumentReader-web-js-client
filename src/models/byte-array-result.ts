@@ -14,15 +14,14 @@
 
 
 import { AuthenticityResult } from './authenticity-result';
-import { ByteArrayResult } from './byte-array-result';
+import { ByteArrayResultAllOf } from './byte-array-result-all-of';
 import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocBarCodeInfo } from './doc-bar-code-info';
-import { DocumentImageResultAllOf } from './document-image-result-all-of';
+import { DocumentImageResult } from './document-image-result';
 import { DocumentPositionResult } from './document-position-result';
 import { DocumentTypesCandidatesResult } from './document-types-candidates-result';
 import { EncryptedRCLResult } from './encrypted-rclresult';
 import { GraphicsResult } from './graphics-result';
-import { ImageData } from './image-data';
 import { ImageQualityResult } from './image-quality-result';
 import { ImagesResult } from './images-result';
 import { LexicalAnalysisResult } from './lexical-analysis-result';
@@ -33,11 +32,10 @@ import { TextDataResult } from './text-data-result';
 import { TextResult } from './text-result';
 
 /**
- * @type DocumentImageResult
- * Contains document image.
+ * @type ByteArrayResult
  * @export
  */
-export type DocumentImageResult = DocumentImageResultAllOf & ResultItem;
+export type ByteArrayResult = ByteArrayResultAllOf & ResultItem;
 
 
 

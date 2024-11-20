@@ -14,6 +14,8 @@ models/authenticity-result-type.ts
 models/authenticity-result.ts
 models/bc-pdf417-info.ts
 models/bc-roidetect.ts
+models/byte-array-result-all-of.ts
+models/byte-array-result.ts
 models/check-diagnose.ts
 models/check-result.ts
 models/chosen-document-type-result-all-of.ts

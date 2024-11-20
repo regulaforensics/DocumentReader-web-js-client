@@ -9,6 +9,8 @@ export * from './authenticity-result-all-of';
 export * from './authenticity-result-type';
 export * from './bc-pdf417-info';
 export * from './bc-roidetect';
+export * from './byte-array-result';
+export * from './byte-array-result-all-of';
 export * from './check-diagnose';
 export * from './check-result';
 export * from './chosen-document-type';

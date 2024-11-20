@@ -32,6 +32,7 @@ if [ "$(uname)" = "Darwin" ]; then
   sed -i '' '/import { OCRSecurityTextResult } /d' ./src/models/ocrsecurity-text-result.ts
   sed -i '' '/import { PhotoIdentResult } /d' ./src/models/photo-ident-result.ts
   sed -i '' '/import { SecurityFeatureResult } /d' ./src/models/security-feature-result.ts
+  sed -i '' '/import { ByteArrayResult } /d' ./src/models/byte-array-result.ts
 else
   sed -i '/import { TextResult } /d' ./src/models/text-result.ts
   sed -i '/import { AuthenticityResult } /d' ./src/models/authenticity-result.ts
@@ -53,6 +54,7 @@ else
   sed -i '/import { OCRSecurityTextResult } /d' ./src/models/ocrsecurity-text-result.ts
   sed -i '/import { PhotoIdentResult } /d' ./src/models/photo-ident-result.ts
   sed -i '/import { SecurityFeatureResult } /d' ./src/models/security-feature-result.ts
+  sed -i '/import { ByteArrayResult } /d' ./src/models/byte-array-result.ts
 fi
 
 npm run format || exit 0
