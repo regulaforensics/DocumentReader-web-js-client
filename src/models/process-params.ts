@@ -380,6 +380,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     strictBarcodeDigitalSignatureCheck?: boolean;
+    /**
+     * Select the longest value from the different value sources and write it to the value field if comparison is done successfully. The parameter applies this logic to the personal names, such as given name, surname, surname and given name, middle name and etc.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    selectLongestNames?: boolean;
 }
 
 

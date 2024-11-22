@@ -41,6 +41,7 @@ export * from './document-types-candidates';
 export * from './document-types-candidates-list';
 export * from './document-types-candidates-result';
 export * from './document-types-candidates-result-all-of';
+export * from './documents-database';
 export * from './encrypted-rclresult';
 export * from './encrypted-rclresult-all-of';
 export * from './fdsidlist';
