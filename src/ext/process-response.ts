@@ -30,21 +30,27 @@ export class Response {
     status?: Status;
     text?: TextExt;
     images?: ImagesExt;
+    TransactionInfo: TransactionInfo;
 
     lowLvlResponse: LowLvlResponse;
     rawResponse: ProcessResponse | InlineResponse2001;
 
     constructor(original: ProcessResponse | InlineResponse2001) {
         const lowLvlResponse = new LowLvlResponse(original);
+        const statusResult = lowLvlResponse.statusResult()?.Status;
+        const textResult = lowLvlResponse.textResult();
+        const imagesResult = lowLvlResponse.imagesResult();
+
         this.lowLvlResponse = lowLvlResponse;
         this.rawResponse = original;
+        this.TransactionInfo = original.TransactionInfo || {};
 
-        this.status = lowLvlResponse.statusResult()?.Status;
-        const textResult = lowLvlResponse.textResult();
+        if (statusResult) {
+            this.status = statusResult;
+        }
         if (textResult) {
             this.text = new TextExt(textResult.Text);
         }
-        const imagesResult = lowLvlResponse.imagesResult();
         if (imagesResult) {
             this.images = new ImagesExt(imagesResult.Images);
         }

@@ -66,6 +66,12 @@ export interface TransactionProcessRequest {
      * @memberof TransactionProcessRequest
      */
     passBackObject?: { [key: string]: object; };
+    /**
+     * Digital Travel Credential (DTC-VC) data in base64 format for processing
+     * @type {string}
+     * @memberof TransactionProcessRequest
+     */
+    dtc?: string;
 }
 
 

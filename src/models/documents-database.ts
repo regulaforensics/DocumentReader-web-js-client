@@ -13,60 +13,35 @@
  */
 
 
-import { DocumentsDatabase } from './documents-database';
 
 /**
- * 
+ * Document database information
  * @export
- * @interface TransactionInfo
+ * @interface DocumentsDatabase
  */
-export interface TransactionInfo {
+export interface DocumentsDatabase {
     /**
-     * Computer name
+     * Document database description
      * @type {string}
-     * @memberof TransactionInfo
+     * @memberof DocumentsDatabase
      */
-    ComputerName?: string;
+    Description?: string;
     /**
-     * Date and time
+     * Date the document database was created
      * @type {string}
-     * @memberof TransactionInfo
+     * @memberof DocumentsDatabase
      */
-    DateTime?: string;
+    ExportDate?: string;
     /**
-     * 
-     * @type {DocumentsDatabase}
-     * @memberof TransactionInfo
-     */
-    DocumentsDatabase?: DocumentsDatabase;
-    /**
-     * System information
+     * Document database identifier
      * @type {string}
-     * @memberof TransactionInfo
+     * @memberof DocumentsDatabase
      */
-    SystemInfo?: string;
+    ID?: string;
     /**
-     * Transaction tag
+     * Document database version
      * @type {string}
-     * @memberof TransactionInfo
-     */
-    Tag?: string;
-    /**
-     * Transaction identifier
-     * @type {string}
-     * @memberof TransactionInfo
-     */
-    TransactionID?: string;
-    /**
-     * User name
-     * @type {string}
-     * @memberof TransactionInfo
-     */
-    UserName?: string;
-    /**
-     * SDK version
-     * @type {string}
-     * @memberof TransactionInfo
+     * @memberof DocumentsDatabase
      */
     Version?: string;
 }

@@ -46,6 +46,7 @@ models/document-types-candidates-list.ts
 models/document-types-candidates-result-all-of.ts
 models/document-types-candidates-result.ts
 models/document-types-candidates.ts
+models/documents-database.ts
 models/encrypted-rclresult-all-of.ts
 models/encrypted-rclresult.ts
 models/face-api-search.ts
