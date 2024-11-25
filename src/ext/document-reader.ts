@@ -13,7 +13,7 @@ import {
     Result,
     DeviceInfo,
     TransactionProcessRequest,
-    InlineResponse200,
+    TransactionProcessResult,
     ListTransactionsByTagResponse,
     TransactionProcessGetResponse,
 } from '../models';
@@ -101,7 +101,7 @@ export class DocumentReaderApi {
         transactionId: string,
         transactionProcessRequest: TransactionProcessRequest,
         options?: any,
-    ): Promise<AxiosResponse<InlineResponse200, any>> {
+    ): Promise<AxiosResponse<TransactionProcessResult, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdProcessPost(
             transactionId,
             transactionProcessRequest,
