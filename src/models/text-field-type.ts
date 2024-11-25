@@ -1165,6 +1165,18 @@ export enum TextFieldType {
     */
     ISO_ISSUER_ID_NUMBER = 336,
     /**
+    * DTC version
+    */
+    DTC_VERSION = 337,
+    /**
+    * DTC ID
+    */
+    DTC_ID = 338,
+    /**
+    * DTC date of expiry
+    */
+    DTC_DATE_OF_EXPIRY = 339,
+    /**
     * GNIB number
     */
     GNIB_NUMBER = 340,
@@ -2571,7 +2583,11 @@ export enum TextFieldType {
     /**
     * Date of First Positive Test Result
     */
-    FT_DATE_OF_FIRST_POSITIVE_TEST_RESULT = 691
+    FT_DATE_OF_FIRST_POSITIVE_TEST_RESULT = 691,
+    /**
+    * EF.CardAccess
+    */
+    EF_CARD_ACCESS = 692
 }
 
 
