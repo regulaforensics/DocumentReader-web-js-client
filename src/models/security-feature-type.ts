@@ -223,7 +223,15 @@ export enum SecurityFeatureType {
     /**
     * Contact chip check
     */
-    CONTACT_CHIP_CLASSIFICATION = 51
+    CONTACT_CHIP_CLASSIFICATION = 51,
+    /**
+    * Head position check
+    */
+    HEAD_POSITION_CHECK = 52,
+    /**
+    * Black and white copy check
+    */
+    LIVENESS_BLACK_AND_WHITE_COPY_CHECK = 53
 }
 
 

@@ -91,7 +91,11 @@ export enum Scenario {
     /**
     * Scenario for obtaining an original image without any processing
     */
-    CAPTURE = 'Capture'
+    CAPTURE = 'Capture',
+    /**
+    * Processing scenario for Digital Travel Credentials (DTC-VC) data processing
+    */
+    DTC = 'DTC'
 }
 
 
