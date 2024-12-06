@@ -13,6 +13,7 @@
  */
 
 
+import { InputImageQualityChecks } from './input-image-quality-checks';
 
 /**
  * 
@@ -62,6 +63,12 @@ export interface ImageQA {
      * @memberof ImageQA
      */
     documentPositionIndent?: number;
+    /**
+     * This parameter controls the quality checks that the image should pass to be considered a valid input during the scanning process.
+     * @type {Array<InputImageQualityChecks>}
+     * @memberof ImageQA
+     */
+    expectedPass?: Array<InputImageQualityChecks>;
 }
 
 
