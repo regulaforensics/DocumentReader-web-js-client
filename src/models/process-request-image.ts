@@ -27,7 +27,7 @@ export interface ProcessRequestImage {
      * @type {ImageData}
      * @memberof ProcessRequestImage
      */
-    ImageData: ImageData;
+    ImageData?: ImageData;
     /**
      * 
      * @type {Light}
