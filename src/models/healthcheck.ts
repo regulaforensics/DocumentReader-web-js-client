@@ -13,62 +13,62 @@
  */
 
 
-import { DocumentsDatabase } from './documents-database';
+import { HealthcheckDocumentsDatabase } from './healthcheck-documents-database';
 
 /**
  * 
  * @export
- * @interface TransactionInfo
+ * @interface Healthcheck
  */
-export interface TransactionInfo {
+export interface Healthcheck {
     /**
-     * Computer name
+     * Application name.
      * @type {string}
-     * @memberof TransactionInfo
+     * @memberof Healthcheck
      */
-    ComputerName?: string;
+    app: string;
     /**
-     * Date and time
+     * Unique license identifier.
      * @type {string}
-     * @memberof TransactionInfo
+     * @memberof Healthcheck
      */
-    DateTime?: string;
+    licenseId: string | null;
+    /**
+     * License type.
+     * @type {string}
+     * @memberof Healthcheck
+     */
+    licenseType: string | null;
+    /**
+     * License serial number.
+     * @type {string}
+     * @memberof Healthcheck
+     */
+    licenseSerial: string | null;
+    /**
+     * License validity date.
+     * @type {string}
+     * @memberof Healthcheck
+     */
+    licenseValidUntil: string | null;
+    /**
+     * List of supported scenarios.
+     * @type {Array<string>}
+     * @memberof Healthcheck
+     */
+    scenarios: Array<string> | null;
+    /**
+     * Product version.
+     * @type {string}
+     * @memberof Healthcheck
+     */
+    version: string | null;
     /**
      * 
-     * @type {DocumentsDatabase}
-     * @memberof TransactionInfo
+     * @type {HealthcheckDocumentsDatabase}
+     * @memberof Healthcheck
      */
-    DocumentsDatabase?: DocumentsDatabase;
-    /**
-     * System information
-     * @type {string}
-     * @memberof TransactionInfo
-     */
-    SystemInfo?: string;
-    /**
-     * Transaction tag
-     * @type {string}
-     * @memberof TransactionInfo
-     */
-    Tag?: string;
-    /**
-     * Transaction identifier
-     * @type {string}
-     * @memberof TransactionInfo
-     */
-    TransactionID?: string;
-    /**
-     * User name
-     * @type {string}
-     * @memberof TransactionInfo
-     */
-    UserName?: string;
-    /**
-     * SDK version
-     * @type {string}
-     * @memberof TransactionInfo
-     */
-    Version?: string;
+    documentsDatabase?: HealthcheckDocumentsDatabase;
 }
 
 

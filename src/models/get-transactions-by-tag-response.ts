@@ -22,10 +22,10 @@
 export interface GetTransactionsByTagResponse {
     /**
      * Transaction id
-     * @type {number}
+     * @type {string}
      * @memberof GetTransactionsByTagResponse
      */
-    id?: number;
+    id?: string;
     /**
      * Transaction status
      * @type {number}

@@ -13,20 +13,37 @@
  */
 
 
-import { Scenario } from './scenario';
 
 /**
- * 
+ * Document database information
  * @export
- * @interface TransactionScenarioRequest
+ * @interface DocumentsDatabase
  */
-export interface TransactionScenarioRequest {
+export interface DocumentsDatabase {
     /**
-     * 
-     * @type {Scenario}
-     * @memberof TransactionScenarioRequest
+     * Document database description
+     * @type {string}
+     * @memberof DocumentsDatabase
      */
-    scenario?: Scenario;
+    Description?: string;
+    /**
+     * Date the document database was created
+     * @type {string}
+     * @memberof DocumentsDatabase
+     */
+    ExportDate?: string;
+    /**
+     * Document database identifier
+     * @type {string}
+     * @memberof DocumentsDatabase
+     */
+    ID?: string;
+    /**
+     * Document database version
+     * @type {string}
+     * @memberof DocumentsDatabase
+     */
+    Version?: string;
 }
 
 

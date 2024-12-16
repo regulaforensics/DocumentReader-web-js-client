@@ -37,11 +37,11 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
         /**
          * 
          * @summary Delete Reprocess transactions by tag
-         * @param {number} tagId Tag id
+         * @param {string} tagId Tag id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TagTagIdDelete: async (tagId: number, options: any = {}): Promise<RequestArgs> => {
+        apiV2TagTagIdDelete: async (tagId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'tagId' is not null or undefined
             if (tagId === null || tagId === undefined) {
                 throw new RequiredError('tagId','Required parameter tagId was null or undefined when calling apiV2TagTagIdDelete.');
@@ -123,12 +123,12 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
         /**
          * 
          * @summary Get Reprocess transaction file
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {string} name File name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdFileGet: async (transactionId: number, name: string, options: any = {}): Promise<RequestArgs> => {
+        apiV2TransactionTransactionIdFileGet: async (transactionId: string, name: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'transactionId' is not null or undefined
             if (transactionId === null || transactionId === undefined) {
                 throw new RequiredError('transactionId','Required parameter transactionId was null or undefined when calling apiV2TransactionTransactionIdFileGet.');
@@ -175,11 +175,11 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
         /**
          * 
          * @summary Get Reprocess transaction data
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdGet: async (transactionId: number, options: any = {}): Promise<RequestArgs> => {
+        apiV2TransactionTransactionIdGet: async (transactionId: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'transactionId' is not null or undefined
             if (transactionId === null || transactionId === undefined) {
                 throw new RequiredError('transactionId','Required parameter transactionId was null or undefined when calling apiV2TransactionTransactionIdGet.');
@@ -218,12 +218,12 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
         /**
          * 
          * @summary Reprocess
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {TransactionProcessRequest} transactionProcessRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdProcessPost: async (transactionId: number, transactionProcessRequest: TransactionProcessRequest, options: any = {}): Promise<RequestArgs> => {
+        apiV2TransactionTransactionIdProcessPost: async (transactionId: string, transactionProcessRequest: TransactionProcessRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'transactionId' is not null or undefined
             if (transactionId === null || transactionId === undefined) {
                 throw new RequiredError('transactionId','Required parameter transactionId was null or undefined when calling apiV2TransactionTransactionIdProcessPost.');
@@ -275,12 +275,12 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
         /**
          * 
          * @summary Get Reprocess transaction result
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {boolean} [withImages] With base64 images or url
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdResultsGet: async (transactionId: number, withImages?: boolean, options: any = {}): Promise<RequestArgs> => {
+        apiV2TransactionTransactionIdResultsGet: async (transactionId: string, withImages?: boolean, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'transactionId' is not null or undefined
             if (transactionId === null || transactionId === undefined) {
                 throw new RequiredError('transactionId','Required parameter transactionId was null or undefined when calling apiV2TransactionTransactionIdResultsGet.');
@@ -332,11 +332,11 @@ export const TransactionApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Delete Reprocess transactions by tag
-         * @param {number} tagId Tag id
+         * @param {string} tagId Tag id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TagTagIdDelete(tagId: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+        async apiV2TagTagIdDelete(tagId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TagTagIdDelete(tagId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
@@ -360,12 +360,12 @@ export const TransactionApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Get Reprocess transaction file
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {string} name File name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdFileGet(transactionId: number, name: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+        async apiV2TransactionTransactionIdFileGet(transactionId: string, name: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
             const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TransactionTransactionIdFileGet(transactionId, name, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
@@ -375,11 +375,11 @@ export const TransactionApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Get Reprocess transaction data
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdGet(transactionId: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TransactionProcessGetResponse>> {
+        async apiV2TransactionTransactionIdGet(transactionId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TransactionProcessGetResponse>> {
             const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TransactionTransactionIdGet(transactionId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
@@ -389,12 +389,12 @@ export const TransactionApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Reprocess
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {TransactionProcessRequest} transactionProcessRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdProcessPost(transactionId: number, transactionProcessRequest: TransactionProcessRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
+        async apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
             const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
@@ -404,12 +404,12 @@ export const TransactionApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Get Reprocess transaction result
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {boolean} [withImages] With base64 images or url
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdResultsGet(transactionId: number, withImages?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>> {
+        async apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>> {
             const localVarAxiosArgs = await TransactionApiAxiosParamCreator(configuration).apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: (configuration?.basePath || basePath) + localVarAxiosArgs.url};
@@ -428,11 +428,11 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
         /**
          * 
          * @summary Delete Reprocess transactions by tag
-         * @param {number} tagId Tag id
+         * @param {string} tagId Tag id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TagTagIdDelete(tagId: number, options?: any): AxiosPromise<object> {
+        apiV2TagTagIdDelete(tagId: string, options?: any): AxiosPromise<object> {
             return TransactionApiFp(configuration).apiV2TagTagIdDelete(tagId, options).then((request) => request(axios, basePath));
         },
         /**
@@ -448,44 +448,44 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
         /**
          * 
          * @summary Get Reprocess transaction file
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {string} name File name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdFileGet(transactionId: number, name: string, options?: any): AxiosPromise<any> {
+        apiV2TransactionTransactionIdFileGet(transactionId: string, name: string, options?: any): AxiosPromise<any> {
             return TransactionApiFp(configuration).apiV2TransactionTransactionIdFileGet(transactionId, name, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @summary Get Reprocess transaction data
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdGet(transactionId: number, options?: any): AxiosPromise<TransactionProcessGetResponse> {
+        apiV2TransactionTransactionIdGet(transactionId: string, options?: any): AxiosPromise<TransactionProcessGetResponse> {
             return TransactionApiFp(configuration).apiV2TransactionTransactionIdGet(transactionId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @summary Reprocess
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {TransactionProcessRequest} transactionProcessRequest 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdProcessPost(transactionId: number, transactionProcessRequest: TransactionProcessRequest, options?: any): AxiosPromise<InlineResponse200> {
+        apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, options?: any): AxiosPromise<InlineResponse200> {
             return TransactionApiFp(configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @summary Get Reprocess transaction result
-         * @param {number} transactionId Transaction id
+         * @param {string} transactionId Transaction id
          * @param {boolean} [withImages] With base64 images or url
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdResultsGet(transactionId: number, withImages?: boolean, options?: any): AxiosPromise<InlineResponse2001> {
+        apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: any): AxiosPromise<InlineResponse2001> {
             return TransactionApiFp(configuration).apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options).then((request) => request(axios, basePath));
         },
     };
@@ -501,12 +501,12 @@ export class TransactionApi extends BaseAPI {
     /**
      * 
      * @summary Delete Reprocess transactions by tag
-     * @param {number} tagId Tag id
+     * @param {string} tagId Tag id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TagTagIdDelete(tagId: number, options?: any) {
+    public apiV2TagTagIdDelete(tagId: string, options?: any) {
         return TransactionApiFp(this.configuration).apiV2TagTagIdDelete(tagId, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -525,51 +525,51 @@ export class TransactionApi extends BaseAPI {
     /**
      * 
      * @summary Get Reprocess transaction file
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {string} name File name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TransactionTransactionIdFileGet(transactionId: number, name: string, options?: any) {
+    public apiV2TransactionTransactionIdFileGet(transactionId: string, name: string, options?: any) {
         return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdFileGet(transactionId, name, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @summary Get Reprocess transaction data
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TransactionTransactionIdGet(transactionId: number, options?: any) {
+    public apiV2TransactionTransactionIdGet(transactionId: string, options?: any) {
         return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdGet(transactionId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @summary Reprocess
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {TransactionProcessRequest} transactionProcessRequest 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TransactionTransactionIdProcessPost(transactionId: number, transactionProcessRequest: TransactionProcessRequest, options?: any) {
+    public apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, options?: any) {
         return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @summary Get Reprocess transaction result
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {boolean} [withImages] With base64 images or url
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TransactionTransactionIdResultsGet(transactionId: number, withImages?: boolean, options?: any) {
+    public apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: any) {
         return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options).then((request) => request(this.axios, this.basePath));
     }
 }

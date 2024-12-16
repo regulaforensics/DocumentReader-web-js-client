@@ -36,6 +36,12 @@ import { TextPostProcessing } from './text-post-processing';
  */
 export interface ProcessParams {
     /**
+     * This parameter is used to generate separate DTC-VC data container from RFID session data.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    generateDTCVC?: boolean;
+    /**
      * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
      * @type {Array<number>}
      * @memberof ProcessParams
@@ -206,9 +212,16 @@ export interface ProcessParams {
      */
     imageQa?: ImageQA;
     /**
-     * When enabled, image quality checks status affects document optical and overall status. Disabled by default.
+     * When enabled, the image quality check status affects the document optical and overall status. Disabled by default.
      * @type {boolean}
      * @memberof ProcessParams
+     */
+    strictImageQuality?: boolean;
+    /**
+     * Deprecated. Please use strictImageQuality instead. When enabled, image quality checks status affects document optical and overall status. Disabled by default.
+     * @type {boolean}
+     * @memberof ProcessParams
+     * @deprecated
      */
     respectImageQuality?: boolean;
     /**
@@ -361,6 +374,18 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     generateNumericCodes?: boolean;
+    /**
+     * This parameter if enabled will require all necessary certificates to verify digital signature in barcode data to be present in order for the Barcode format check to succeed.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    strictBarcodeDigitalSignatureCheck?: boolean;
+    /**
+     * Select the longest value from the different value sources and write it to the value field if comparison is done successfully. The parameter applies this logic to the personal names, such as given name, surname, surname and given name, middle name and etc.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    selectLongestNames?: boolean;
 }
 
 

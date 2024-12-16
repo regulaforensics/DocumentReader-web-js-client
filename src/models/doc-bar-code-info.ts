@@ -14,6 +14,7 @@
 
 
 import { AuthenticityResult } from './authenticity-result';
+import { ByteArrayResult } from './byte-array-result';
 import { ChosenDocumentTypeResult } from './chosen-document-type-result';
 import { DocBarCodeInfoAllOf } from './doc-bar-code-info-all-of';
 import { DocBarCodeInfoFieldsList } from './doc-bar-code-info-fields-list';

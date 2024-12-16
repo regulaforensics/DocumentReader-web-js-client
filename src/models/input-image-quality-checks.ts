@@ -15,31 +15,43 @@
 
 
 /**
- * 
+ * Input image quality checks for the document processing
  * @export
  * @enum {string}
  */
-export enum VerificationResult {
+export enum InputImageQualityChecks {
     /**
-    * Comparison result unknown
+    * Signals glare presence on the image
     */
-    DISABLED = 0,
+    Glares = 'glaresCheck',
     /**
-    * Verification passed
+    * Signals whether image is in focus
     */
-    VERIFIED = 1,
+    Focus = 'focusCheck',
     /**
-    * Verification failed
+    * Signals if image resolution is below threshold
     */
-    NOT_VERIFIED = 2,
+    Resolution = 'dpiThreshold',
     /**
-    * Positive comparison result
+    * Signals if image is colorless
     */
-    COMPARE_MATCH = 3,
+    Colorness = 'colornessCheck',
     /**
-    * Negative comparison result
+    * Signals if document in the image has prespective distortion above threshold
     */
-    COMPARE_NOT_MATCH = 4
+    Perspective = 'perspectiveCheck',
+    /**
+    * Signals if document is not fully present in the image
+    */
+    Bounds = 'documentPosition',
+    /**
+    * Signals if the portrait is present
+    */
+    Portrait = 'portraitCheck',
+    /**
+    * Signals if the document image is bright enough
+    */
+    Brightness = 'brightnessCheck'
 }
 
 
