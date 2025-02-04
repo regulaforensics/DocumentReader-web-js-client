@@ -6,7 +6,7 @@ import {
     ImageQualityCheckList,
     ImageQualityResult,
     ImagesResult,
-    InlineResponse2001,
+    TransactionProcessResponse,
     OneCandidate,
     ProcessingStatus,
     ProcessResponse,
@@ -33,24 +33,20 @@ export class Response {
     TransactionInfo: TransactionInfo;
 
     lowLvlResponse: LowLvlResponse;
-    rawResponse: ProcessResponse | InlineResponse2001;
+    rawResponse: ProcessResponse | TransactionProcessResponse;
 
-    constructor(original: ProcessResponse | InlineResponse2001) {
+    constructor(original: ProcessResponse | TransactionProcessResponse) {
         const lowLvlResponse = new LowLvlResponse(original);
-        const statusResult = lowLvlResponse.statusResult()?.Status;
-        const textResult = lowLvlResponse.textResult();
-        const imagesResult = lowLvlResponse.imagesResult();
-
         this.lowLvlResponse = lowLvlResponse;
         this.rawResponse = original;
         this.TransactionInfo = original.TransactionInfo || {};
 
-        if (statusResult) {
-            this.status = statusResult;
-        }
+        this.status = lowLvlResponse.statusResult()?.Status;
+        const textResult = lowLvlResponse.textResult();
         if (textResult) {
             this.text = new TextExt(textResult.Text);
         }
+        const imagesResult = lowLvlResponse.imagesResult();
         if (imagesResult) {
             this.images = new ImagesExt(imagesResult.Images);
         }
@@ -128,19 +124,34 @@ export class LowLvlResponse implements ProcessResponse {
     ContainerList: ContainerList;
     ProcessingFinished: ProcessingStatus;
     TransactionInfo: TransactionInfo;
-    ChipPage?: RfidLocation;
+    ChipPage: RfidLocation;
     log?: string;
     passBackObject?: { [key: string]: any };
-    morePagesAvailable?: number;
+    morePagesAvailable: number;
+    elapsedTime: number;
+    metadata?: { [key: string]: object };
+    CoreLibResultCode?: number;
 
-    constructor(original: ProcessResponse | InlineResponse2001) {
+    constructor(original: ProcessResponse | TransactionProcessResponse) {
         this.ContainerList = original.ContainerList || { Count: 0, List: [] };
         this.ProcessingFinished = original.ProcessingFinished || ProcessingStatus.NOT_FINISHED;
         this.TransactionInfo = original.TransactionInfo || {};
         this.ChipPage = original.ChipPage;
-        this.log = original.log;
-        this.passBackObject = original.passBackObject;
         this.morePagesAvailable = original.morePagesAvailable;
+        this.elapsedTime = original.elapsedTime;
+
+        if ('log' in original) {
+            this.log = original.log;
+        }
+        if ('passBackObject' in original) {
+            this.passBackObject = original.passBackObject;
+        }
+        if ('metadata' in original) {
+            this.metadata = original.metadata;
+        }
+        if ('CoreLibResultCode' in original) {
+            this.CoreLibResultCode = original.CoreLibResultCode;
+        }
     }
 
     public statusResult(): StatusResult | undefined {
