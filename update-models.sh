@@ -9,6 +9,7 @@ openapitools/openapi-generator-cli:v7.11.0 generate \
 -g typescript-axios \
 -i /definitions/index.yml \
 -o /client/src --inline-schema-options RESOLVE_INLINE_ENUMS=true \
--c /client/ts-generator-config.json || exit 1
+-c /client/ts-generator-config.json \
+-t /client/generator-templates/ || exit 1
 
 npm run format || exit 0
