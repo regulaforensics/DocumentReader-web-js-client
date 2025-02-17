@@ -37,10 +37,10 @@ export interface DocVisualExtendedFieldRfid {
     'RFID_OriginDG': RfidDataGroupTypeTag;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRfid
      */
-    'RFID_OriginDGTag'?: any;
+    'RFID_OriginDGTag'?: number;
     /**
      * Record index of the text field source in the data group
      * @type {number}
@@ -49,16 +49,16 @@ export interface DocVisualExtendedFieldRfid {
     'RFID_OriginTagEntry': number;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRfid
      */
-    'RFID_OriginEntryView'?: any;
+    'RFID_OriginEntryView'?: number;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRfid
      */
-    'FieldType': any;
+    'FieldType': number;
     /**
      * 
      * @type {TextFieldType}
@@ -97,34 +97,22 @@ export interface DocVisualExtendedFieldRfid {
     'Buf_Text': string;
     /**
      * 
-     * @type {any}
+     * @type {string}
      * @memberof DocVisualExtendedFieldRfid
      */
-    'FieldMask'?: any;
+    'FieldMask'?: string;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRfid
      */
-    'Validity'?: any;
+    'Validity'?: number;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRfid
      */
-    'InComparison'?: any;
-    /**
-     * 
-     * @type {any}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'Reserved2'?: any;
-    /**
-     * 
-     * @type {any}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'Reserved3'?: any;
+    'InComparison'?: number;
 }
 
 

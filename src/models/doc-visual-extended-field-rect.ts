@@ -37,10 +37,10 @@ export interface DocVisualExtendedFieldRect {
     'FieldRect'?: RectangleCoordinates;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRect
      */
-    'FieldType': any;
+    'FieldType': number;
     /**
      * 
      * @type {TextFieldType}
@@ -79,34 +79,22 @@ export interface DocVisualExtendedFieldRect {
     'Buf_Text': string;
     /**
      * 
-     * @type {any}
+     * @type {string}
      * @memberof DocVisualExtendedFieldRect
      */
-    'FieldMask'?: any;
+    'FieldMask'?: string;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRect
      */
-    'Validity'?: any;
+    'Validity'?: number;
     /**
      * 
-     * @type {any}
+     * @type {number}
      * @memberof DocVisualExtendedFieldRect
      */
-    'InComparison'?: any;
-    /**
-     * 
-     * @type {any}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'Reserved2'?: any;
-    /**
-     * 
-     * @type {any}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'Reserved3'?: any;
+    'InComparison'?: number;
 }
 
 

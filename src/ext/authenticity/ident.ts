@@ -6,7 +6,7 @@ import {
     SecurityFeatureType,
 } from '../../models';
 
-export class IdentChecks implements AuthenticityCheckResult {
+export class IdentChecks {
     List: Array<IdentResult>;
     Result: CheckResult;
     Type: AuthenticityResultType;

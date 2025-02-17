@@ -1,6 +1,6 @@
 import { AuthenticityCheckResult, AuthenticityResultType, CheckResult, OCRSecurityTextResult } from '../../models';
 
-export class OCRSecurityTextChecks implements AuthenticityCheckResult {
+export class OCRSecurityTextChecks {
     List: Array<OCRSecurityTextResult>;
     Result: CheckResult;
     Type: AuthenticityResultType;

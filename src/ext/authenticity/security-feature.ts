@@ -6,7 +6,7 @@ import {
     SecurityFeatureType,
 } from '../../models';
 
-export class SecurityFeatureChecks implements AuthenticityCheckResult {
+export class SecurityFeatureChecks {
     List: Array<SecurityFeatureResult>;
     Result: CheckResult;
     Type: AuthenticityResultType;

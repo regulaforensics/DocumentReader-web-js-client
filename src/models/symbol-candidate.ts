@@ -32,11 +32,5 @@ export interface SymbolCandidate {
      * @memberof SymbolCandidate
      */
     'SymbolProbability': number;
-    /**
-     * 
-     * @type {any}
-     * @memberof SymbolCandidate
-     */
-    'Reserved'?: any;
 }
 

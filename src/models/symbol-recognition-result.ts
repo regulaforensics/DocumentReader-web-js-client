@@ -44,11 +44,5 @@ export interface SymbolRecognitionResult {
      * @memberof SymbolRecognitionResult
      */
     'ListOfCandidates': Array<SymbolCandidate>;
-    /**
-     * 
-     * @type {any}
-     * @memberof SymbolRecognitionResult
-     */
-    'Reserved'?: any;
 }
 

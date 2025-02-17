@@ -30,12 +30,6 @@ export interface StringRecognitionResult {
      */
     'SymbolsCount': number;
     /**
-     * 
-     * @type {any}
-     * @memberof StringRecognitionResult
-     */
-    'Reserved'?: any;
-    /**
      * Array of recognition results for individual characters of a string
      * @type {Array<SymbolRecognitionResult>}
      * @memberof StringRecognitionResult
