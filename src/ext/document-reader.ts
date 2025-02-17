@@ -1,4 +1,4 @@
-import { DefaultApi } from '../api/default-api';
+import { HealthcheckApi } from '../api/healthcheck-api';
 import { ProcessApi } from '../api/process-api';
 import { TransactionApi } from '../api/transaction-api';
 import { Response } from './process-response';
@@ -22,7 +22,7 @@ import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
 import * as converter from 'base64-arraybuffer';
 
 export class DocumentReaderApi {
-    private readonly defaultApi: DefaultApi;
+    private readonly healthcheckApi: HealthcheckApi;
     private readonly processApi: ProcessApi;
     private readonly transactionApi: TransactionApi;
 
@@ -33,13 +33,13 @@ export class DocumentReaderApi {
         basePath: string = BASE_PATH,
         axios: AxiosInstance = globalAxios,
     ) {
-        this.defaultApi = new DefaultApi(new Configuration(configuration), basePath, axios);
+        this.healthcheckApi = new HealthcheckApi(new Configuration(configuration), basePath, axios);
         this.processApi = new ProcessApi(new Configuration(configuration), basePath, axios);
         this.transactionApi = new TransactionApi(new Configuration(configuration), basePath, axios);
     }
 
     async ping(xRequestID?: string): Promise<DeviceInfo> {
-        const axiosResult = await this.defaultApi.ping(xRequestID);
+        const axiosResult = await this.healthcheckApi.ping(xRequestID);
         return axiosResult.data;
     }
 
