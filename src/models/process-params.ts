@@ -48,6 +48,9 @@ import type { MrzDetectModeEnum } from './mrz-detect-mode-enum';
 import type { PerDocumentConfig } from './per-document-config';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ProcessParamsDoBarcodesInner } from './process-params-do-barcodes-inner';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ProcessParamsRfid } from './process-params-rfid';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -425,6 +428,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'selectLongestNames'?: boolean;
+    /**
+     * Set the types of barcodes to process.
+     * @type {Array<ProcessParamsDoBarcodesInner>}
+     * @memberof ProcessParams
+     */
+    'doBarcodes'?: Array<ProcessParamsDoBarcodesInner>;
 }
 
 

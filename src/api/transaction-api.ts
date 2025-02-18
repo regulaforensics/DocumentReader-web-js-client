@@ -22,8 +22,6 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import type { ApiV2TransactionTransactionIdResultsGetWithImagesParameter } from '../models';
-// @ts-ignore
 import type { ListTransactionsByTagResponse } from '../models';
 // @ts-ignore
 import type { TransactionProcessGetResponse } from '../models';
@@ -226,11 +224,11 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
          * 
          * @summary Get Reprocess transaction result
          * @param {string} transactionId Transaction id
-         * @param {ApiV2TransactionTransactionIdResultsGetWithImagesParameter} [withImages] With base64 images or url
+         * @param {boolean} [withImages] With base64 images or url
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdResultsGet: async (transactionId: string, withImages?: ApiV2TransactionTransactionIdResultsGetWithImagesParameter, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiV2TransactionTransactionIdResultsGet: async (transactionId: string, withImages?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'transactionId' is not null or undefined
             assertParamExists('apiV2TransactionTransactionIdResultsGet', 'transactionId', transactionId)
             const localVarPath = `/api/v2/transaction/{transactionId}/results`
@@ -342,11 +340,11 @@ export const TransactionApiFp = function(configuration?: Configuration) {
          * 
          * @summary Get Reprocess transaction result
          * @param {string} transactionId Transaction id
-         * @param {ApiV2TransactionTransactionIdResultsGetWithImagesParameter} [withImages] With base64 images or url
+         * @param {boolean} [withImages] With base64 images or url
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: ApiV2TransactionTransactionIdResultsGetWithImagesParameter, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TransactionProcessResponse>> {
+        async apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TransactionProcessResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['TransactionApi.apiV2TransactionTransactionIdResultsGet']?.[localVarOperationServerIndex]?.url;
@@ -418,11 +416,11 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
          * 
          * @summary Get Reprocess transaction result
          * @param {string} transactionId Transaction id
-         * @param {ApiV2TransactionTransactionIdResultsGetWithImagesParameter} [withImages] With base64 images or url
+         * @param {boolean} [withImages] With base64 images or url
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: ApiV2TransactionTransactionIdResultsGetWithImagesParameter, options?: RawAxiosRequestConfig): AxiosPromise<TransactionProcessResponse> {
+        apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: RawAxiosRequestConfig): AxiosPromise<TransactionProcessResponse> {
             return localVarFp.apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options).then((request) => request(axios, basePath));
         },
     };
@@ -501,12 +499,12 @@ export class TransactionApi extends BaseAPI {
      * 
      * @summary Get Reprocess transaction result
      * @param {string} transactionId Transaction id
-     * @param {ApiV2TransactionTransactionIdResultsGetWithImagesParameter} [withImages] With base64 images or url
+     * @param {boolean} [withImages] With base64 images or url
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: ApiV2TransactionTransactionIdResultsGetWithImagesParameter, options?: RawAxiosRequestConfig) {
+    public apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: RawAxiosRequestConfig) {
         return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options).then((request) => request(this.axios, this.basePath));
     }
 }

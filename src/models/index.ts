@@ -1,4 +1,3 @@
-export * from './api-v2-transaction-transaction-id-results-get-with-images-parameter';
 export * from './area-array';
 export * from './area-container';
 export * from './auth-params';
@@ -97,6 +96,7 @@ export * from './point';
 export * from './point-array';
 export * from './points-container';
 export * from './process-params';
+export * from './process-params-do-barcodes-inner';
 export * from './process-params-rfid';
 export * from './process-request';
 export * from './process-request-image';
