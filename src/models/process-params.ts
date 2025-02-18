@@ -18,6 +18,7 @@ import { DocumentFormat } from './document-format';
 import { DocumentType } from './document-type';
 import { FaceApi } from './face-api';
 import { ImageQA } from './image-qa';
+import { InputBarcodeType } from './input-barcode-type';
 import { LogLevel } from './log-level';
 import { MRZFormat } from './mrzformat';
 import { MeasureSystem } from './measure-system';
@@ -386,6 +387,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     selectLongestNames?: boolean;
+    /**
+     * Set the types of barcodes to process.
+     * @type {Array<InputBarcodeType>}
+     * @memberof ProcessParams
+     */
+    doBarcodes?: Array<InputBarcodeType>;
 }
 
 
