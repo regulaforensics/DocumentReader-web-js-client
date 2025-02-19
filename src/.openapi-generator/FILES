@@ -84,6 +84,7 @@ models/in-data.ts
 models/index.ts
 models/inline-response200.ts
 models/inline-response2001.ts
+models/input-barcode-type.ts
 models/input-image-quality-checks.ts
 models/lcid.ts
 models/lexical-analysis-result-all-of.ts
