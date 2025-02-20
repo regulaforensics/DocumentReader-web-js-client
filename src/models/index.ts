@@ -78,6 +78,7 @@ export * from './in-data-transaction-images-field-value';
 export * from './in-data-video';
 export * from './inline-response200';
 export * from './inline-response2001';
+export * from './input-barcode-type';
 export * from './input-image-quality-checks';
 export * from './lcid';
 export * from './lexical-analysis-result';

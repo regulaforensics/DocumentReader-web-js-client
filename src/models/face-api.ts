@@ -69,6 +69,18 @@ export interface FaceApi {
      * @memberof FaceApi
      */
     proxy_type?: number;
+    /**
+     * Minimum age of a child, at which portrait comparison result will be effective. Default: 13.
+     * @type {number}
+     * @memberof FaceApi
+     */
+    childAgeThreshold?: number;
+    /**
+     * Estimated duration of validity for a child\'s passport, years. Default: 5.
+     * @type {number}
+     * @memberof FaceApi
+     */
+    childDocValidityYears?: number;
 }
 
 
