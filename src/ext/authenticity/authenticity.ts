@@ -82,6 +82,10 @@ export class Authenticity implements AuthenticityCheckList {
         return this.securityFeatureOrUndefined(AuthenticityResultType.EXTENDED_MRZ_CHECK);
     }
 
+    public livenessChecks(): IdentChecks | undefined {
+        return this.identOrUndefined(AuthenticityResultType.LIVENESS);
+    }
+
     public resultByType(authenticityType: number): AuthenticityCheckResult | undefined {
         for (const result of this.List) {
             if (result.Type == authenticityType) {
