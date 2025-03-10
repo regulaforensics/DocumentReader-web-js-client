@@ -15,10 +15,16 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AuthenticityCheckResultItem } from './authenticity-check-result-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { CheckDiagnose } from './check-diagnose';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { CheckResult } from './check-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { FiberItem } from './fiber-item';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { Light } from './light';
@@ -27,90 +33,9 @@ import type { Light } from './light';
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
- * 
+ * @type FiberResult
  * @export
- * @interface FiberResult
  */
-export interface FiberResult {
-    /**
-     * Same as authenticity result type, but used for safe parsing of not-described values: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/authenticity-result-type/
-     * @type {number}
-     * @memberof FiberResult
-     */
-    'Type': number;
-    /**
-     * 
-     * @type {CheckResult}
-     * @memberof FiberResult
-     */
-    'ElementResult'?: CheckResult;
-    /**
-     * 
-     * @type {CheckDiagnose}
-     * @memberof FiberResult
-     */
-    'ElementDiagnose'?: CheckDiagnose;
-    /**
-     * 
-     * @type {number}
-     * @memberof FiberResult
-     */
-    'PercentValue'?: number;
-    /**
-     * For UV_Fibers authenticity result type
-     * @type {number}
-     * @memberof FiberResult
-     */
-    'RectCount': number;
-    /**
-     * Expected fibers number. For UV_Fibers authentication result type
-     * @type {number}
-     * @memberof FiberResult
-     */
-    'ExpectedCount': number;
-    /**
-     * 
-     * @type {Light}
-     * @memberof FiberResult
-     */
-    'LightValue'?: Light;
-    /**
-     * For UV_Background authentication result type
-     * @type {number}
-     * @memberof FiberResult
-     */
-    'LightDisp'?: number;
-    /**
-     * Coordinates of located areas for defined fibers type
-     * @type {Array<RectangleCoordinates>}
-     * @memberof FiberResult
-     */
-    'RectArray': Array<RectangleCoordinates>;
-    /**
-     * Fibers width value for located areas (in pixels)
-     * @type {Array<number>}
-     * @memberof FiberResult
-     */
-    'Width': Array<number>;
-    /**
-     * Fibers length value for located areas (in pixels)
-     * @type {Array<number>}
-     * @memberof FiberResult
-     */
-    'Length': Array<number>;
-    /**
-     * Fibers value for areas (in pixels)
-     * @type {Array<number>}
-     * @memberof FiberResult
-     */
-    'Area': Array<number>;
-    /**
-     * Fibers color value
-     * @type {Array<number>}
-     * @memberof FiberResult
-     */
-    'ColorValues': Array<number>;
-}
-
+export type FiberResult = AuthenticityCheckResultItem & FiberItem;
 
 

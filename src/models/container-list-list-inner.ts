@@ -57,6 +57,12 @@ import type { DocumentTypesCandidatesResult } from './document-types-candidates-
 import type { EncryptedRCLResult } from './encrypted-rclresult';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { FaceDetection } from './face-detection';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { FaceDetectionResult } from './face-detection-result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { GraphicFieldsList } from './graphic-fields-list';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -87,7 +93,28 @@ import type { LicenseResult } from './license-result';
 import type { ListVerifiedFields } from './list-verified-fields';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { MRZDetectorResult } from './mrzdetector-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MRZPositionResult } from './mrzposition-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MRZTestQuality } from './mrztest-quality';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MRZTestQualityResult } from './mrztest-quality-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { MrzPosition } from './mrz-position';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { OneCandidate } from './one-candidate';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { RFIDGraphicsInfoResult } from './rfidgraphics-info-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultMRZDetector } from './result-mrzdetector';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { Status } from './status';
@@ -97,6 +124,9 @@ import type { StatusResult } from './status-result';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { TDocBinaryInfo } from './tdoc-binary-info';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TOriginalRFIDGraphicsInfo } from './toriginal-rfidgraphics-info';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { Text } from './text';
@@ -111,6 +141,6 @@ import type { TextResult } from './text-result';
  * @type ContainerListListInner
  * @export
  */
-export type ContainerListListInner = { result_type: 1 } & DocumentImageResult | { result_type: 102 } & TextDataResult | { result_type: 103 } & GraphicsResult | { result_type: 104 } & DocumentBinaryInfoResult | { result_type: 109 } & ByteArrayResult | { result_type: 15 } & LexicalAnalysisResult | { result_type: 16 } & DocumentImageResult | { result_type: 17 } & TextDataResult | { result_type: 18 } & TextDataResult | { result_type: 19 } & GraphicsResult | { result_type: 20 } & AuthenticityResult | { result_type: 26 } & TextDataResult | { result_type: 3 } & TextDataResult | { result_type: 30 } & ImageQualityResult | { result_type: 32 } & GraphicsResult | { result_type: 33 } & StatusResult | { result_type: 34 } & AuthenticityResult | { result_type: 35 } & GraphicsResult | { result_type: 36 } & TextResult | { result_type: 37 } & ImagesResult | { result_type: 38 } & GraphicsResult | { result_type: 39 } & AuthenticityResult | { result_type: 49 } & EncryptedRCLResult | { result_type: 5 } & DocBarCodeInfo | { result_type: 50 } & LicenseResult | { result_type: 6 } & GraphicsResult | { result_type: 61 } & DocumentPositionResult | { result_type: 62 } & DocumentPositionResult | { result_type: 8 } & DocumentTypesCandidatesResult | { result_type: 85 } & DocumentPositionResult | { result_type: 9 } & ChosenDocumentTypeResult;
+export type ContainerListListInner = { result_type: 1 } & DocumentImageResult | { result_type: 101 } & DocumentBinaryInfoResult | { result_type: 102 } & TextDataResult | { result_type: 103 } & GraphicsResult | { result_type: 104 } & DocumentBinaryInfoResult | { result_type: 105 } & RFIDGraphicsInfoResult | { result_type: 109 } & ByteArrayResult | { result_type: 15 } & LexicalAnalysisResult | { result_type: 16 } & DocumentImageResult | { result_type: 17 } & TextDataResult | { result_type: 18 } & TextDataResult | { result_type: 19 } & GraphicsResult | { result_type: 20 } & AuthenticityResult | { result_type: 26 } & TextDataResult | { result_type: 3 } & TextDataResult | { result_type: 30 } & ImageQualityResult | { result_type: 32 } & GraphicsResult | { result_type: 33 } & StatusResult | { result_type: 34 } & AuthenticityResult | { result_type: 35 } & GraphicsResult | { result_type: 36 } & TextResult | { result_type: 37 } & ImagesResult | { result_type: 38 } & GraphicsResult | { result_type: 39 } & AuthenticityResult | { result_type: 49 } & EncryptedRCLResult | { result_type: 5 } & DocBarCodeInfo | { result_type: 50 } & LicenseResult | { result_type: 6 } & GraphicsResult | { result_type: 61 } & MRZPositionResult | { result_type: 62 } & DocumentPositionResult | { result_type: 7 } & MRZTestQualityResult | { result_type: 8 } & DocumentTypesCandidatesResult | { result_type: 85 } & DocumentPositionResult | { result_type: 87 } & MRZDetectorResult | { result_type: 9 } & ChosenDocumentTypeResult | { result_type: 97 } & FaceDetectionResult | { result_type: AuthenticityResult } & AuthenticityResult | { result_type: ByteArrayResult } & ByteArrayResult | { result_type: ChosenDocumentTypeResult } & ChosenDocumentTypeResult | { result_type: DocBarCodeInfo } & DocBarCodeInfo | { result_type: DocumentBinaryInfoResult } & DocumentBinaryInfoResult | { result_type: DocumentImageResult } & DocumentImageResult | { result_type: DocumentPositionResult } & DocumentPositionResult | { result_type: DocumentTypesCandidatesResult } & DocumentTypesCandidatesResult | { result_type: EncryptedRCLResult } & EncryptedRCLResult | { result_type: FaceDetectionResult } & FaceDetectionResult | { result_type: GraphicsResult } & GraphicsResult | { result_type: ImageQualityResult } & ImageQualityResult | { result_type: ImagesResult } & ImagesResult | { result_type: LexicalAnalysisResult } & LexicalAnalysisResult | { result_type: LicenseResult } & LicenseResult | { result_type: MRZDetectorResult } & MRZDetectorResult | { result_type: MRZPositionResult } & MRZPositionResult | { result_type: MRZTestQualityResult } & MRZTestQualityResult | { result_type: RFIDGraphicsInfoResult } & RFIDGraphicsInfoResult | { result_type: StatusResult } & StatusResult | { result_type: TextDataResult } & TextDataResult | { result_type: TextResult } & TextResult;
 
 

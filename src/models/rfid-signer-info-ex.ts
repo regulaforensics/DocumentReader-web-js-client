@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ParsingErrorCodes } from './parsing-error-codes';
+import type { ParsingNotificationCodes } from './parsing-notification-codes';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { RFIDErrorCodes } from './rfiderror-codes';
@@ -106,10 +106,10 @@ export interface RfidSignerInfoEx {
     'DataToHash': string;
     /**
      * 
-     * @type {ParsingErrorCodes}
+     * @type {Array<ParsingNotificationCodes>}
      * @memberof RfidSignerInfoEx
      */
-    'Notifications': ParsingErrorCodes;
+    'Notifications': Array<ParsingNotificationCodes>;
 }
 
 

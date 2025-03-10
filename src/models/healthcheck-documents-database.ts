@@ -25,24 +25,24 @@ export interface HealthcheckDocumentsDatabase {
      * @type {string}
      * @memberof HealthcheckDocumentsDatabase
      */
-    'id': string;
+    'id': string | null;
     /**
      * Database version.
      * @type {string}
      * @memberof HealthcheckDocumentsDatabase
      */
-    'version': string;
+    'version': string | null;
     /**
      * Date of database creation.
      * @type {string}
      * @memberof HealthcheckDocumentsDatabase
      */
-    'exportDate': string;
+    'exportDate': string | null;
     /**
      * Description of the database contents, such as the list of supported countries and documents.
      * @type {string}
      * @memberof HealthcheckDocumentsDatabase
      */
-    'description': string;
+    'description': string | null;
 }
 

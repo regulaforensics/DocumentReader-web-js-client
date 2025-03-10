@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AuthenticityCheckResultItem } from './authenticity-check-result-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { CheckDiagnose } from './check-diagnose';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -27,108 +30,18 @@ import type { ImageData } from './image-data';
 import type { Light } from './light';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { PhotoIdentItem } from './photo-ident-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { RawImageContainerList } from './raw-image-container-list';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
- * 
+ * @type PhotoIdentResult
  * @export
- * @interface PhotoIdentResult
  */
-export interface PhotoIdentResult {
-    /**
-     * Same as authenticity result type, but used for safe parsing of not-described values: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/authenticity-result-type/
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'Type': number;
-    /**
-     * 
-     * @type {CheckResult}
-     * @memberof PhotoIdentResult
-     */
-    'ElementResult'?: CheckResult;
-    /**
-     * 
-     * @type {CheckDiagnose}
-     * @memberof PhotoIdentResult
-     */
-    'ElementDiagnose'?: CheckDiagnose;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'PercentValue'?: number;
-    /**
-     * 
-     * @type {Light}
-     * @memberof PhotoIdentResult
-     */
-    'LightIndex': Light;
-    /**
-     * 
-     * @type {RectangleCoordinates}
-     * @memberof PhotoIdentResult
-     */
-    'Area': RectangleCoordinates;
-    /**
-     * 
-     * @type {ImageData}
-     * @memberof PhotoIdentResult
-     */
-    'SourceImage': ImageData;
-    /**
-     * 
-     * @type {RawImageContainerList}
-     * @memberof PhotoIdentResult
-     */
-    'ResultImages': RawImageContainerList;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'FieldTypesCount'?: number;
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof PhotoIdentResult
-     */
-    'FieldTypesList'?: Array<number>;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'Step'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'Angle'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'Reserved1'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'Reserved2'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentResult
-     */
-    'Reserved3'?: number;
-}
-
+export type PhotoIdentResult = AuthenticityCheckResultItem & PhotoIdentItem;
 
 

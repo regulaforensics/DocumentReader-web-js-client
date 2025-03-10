@@ -18,6 +18,9 @@
 import type { ContainerList } from './container-list';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ProcessResponse } from './process-response';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ProcessingStatus } from './processing-status';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -27,72 +30,9 @@ import type { RfidLocation } from './rfid-location';
 import type { TransactionInfo } from './transaction-info';
 
 /**
- * 
+ * @type TransactionProcessResponse
  * @export
- * @interface TransactionProcessResponse
  */
-export interface TransactionProcessResponse {
-    /**
-     * 
-     * @type {number}
-     * @memberof TransactionProcessResponse
-     */
-    'CoreLibResultCode': number;
-    /**
-     * 
-     * @type {RfidLocation}
-     * @memberof TransactionProcessResponse
-     */
-    'ChipPage': RfidLocation;
-    /**
-     * 
-     * @type {ProcessingStatus}
-     * @memberof TransactionProcessResponse
-     */
-    'ProcessingFinished': ProcessingStatus;
-    /**
-     * 
-     * @type {ContainerList}
-     * @memberof TransactionProcessResponse
-     */
-    'ContainerList': ContainerList;
-    /**
-     * 
-     * @type {TransactionInfo}
-     * @memberof TransactionProcessResponse
-     */
-    'TransactionInfo': TransactionInfo;
-    /**
-     * Base64 encoded transaction processing log
-     * @type {string}
-     * @memberof TransactionProcessResponse
-     */
-    'log'?: string;
-    /**
-     * Free-form object provided in request. See passBackObject property of ProcessRequest.
-     * @type {{ [key: string]: any; }}
-     * @memberof TransactionProcessResponse
-     */
-    'passBackObject'?: { [key: string]: any; };
-    /**
-     * 
-     * @type {number}
-     * @memberof TransactionProcessResponse
-     */
-    'morePagesAvailable': number;
-    /**
-     * Time the document processing has taken, ms.
-     * @type {number}
-     * @memberof TransactionProcessResponse
-     */
-    'elapsedTime': number;
-    /**
-     * 
-     * @type {{ [key: string]: any; }}
-     * @memberof TransactionProcessResponse
-     */
-    'metadata'?: { [key: string]: any; };
-}
-
+export type TransactionProcessResponse = ProcessResponse;
 
 

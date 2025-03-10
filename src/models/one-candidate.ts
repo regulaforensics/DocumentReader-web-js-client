@@ -46,10 +46,10 @@ export interface OneCandidate {
     'P': number;
     /**
      * true if the document of the given type is rotated by 180 degrees
-     * @type {boolean}
+     * @type {number}
      * @memberof OneCandidate
      */
-    'Rotated180': boolean;
+    'Rotated180': number;
     /**
      * 
      * @type {RfidLocation}
@@ -92,6 +92,12 @@ export interface OneCandidate {
      * @memberof OneCandidate
      */
     'OVIExp': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof OneCandidate
+     */
+    'RotationAngle'?: number;
 }
 
 

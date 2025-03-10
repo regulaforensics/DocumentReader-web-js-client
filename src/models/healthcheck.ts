@@ -34,37 +34,43 @@ export interface Healthcheck {
      * @type {string}
      * @memberof Healthcheck
      */
-    'licenseId': string;
+    'licenseId': string | null;
     /**
      * License type.
      * @type {string}
      * @memberof Healthcheck
      */
-    'licenseType': string;
+    'licenseType': string | null;
     /**
      * License serial number.
      * @type {string}
      * @memberof Healthcheck
      */
-    'licenseSerial': string;
+    'licenseSerial': string | null;
     /**
      * License validity date.
      * @type {string}
      * @memberof Healthcheck
      */
-    'licenseValidUntil': string;
+    'licenseValidUntil': string | null;
     /**
      * List of supported scenarios.
      * @type {Array<string>}
      * @memberof Healthcheck
      */
-    'scenarios': Array<string>;
+    'scenarios': Array<string> | null;
     /**
      * Product version.
      * @type {string}
      * @memberof Healthcheck
      */
-    'version': string;
+    'version': string | null;
+    /**
+     * 
+     * @type {{ [key: string]: any; }}
+     * @memberof Healthcheck
+     */
+    'metadata'?: { [key: string]: any; };
     /**
      * 
      * @type {HealthcheckDocumentsDatabase}

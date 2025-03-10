@@ -16,48 +16,18 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ListVerifiedFields } from './list-verified-fields';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ListVerifiedFieldsItem } from './list-verified-fields-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
+ * @type LexicalAnalysisResult
  * Lexical data analysis allows you to compare the results of reading the text data of the MRZ, the document filling area, barcodes and data from the memory of the RFID chip for an additional assessment of the authenticity of the document. Single result for all pages. Consider using Result.TEXT type for more simplicity. 
  * @export
- * @interface LexicalAnalysisResult
  */
-export interface LexicalAnalysisResult {
-    /**
-     * 
-     * @type {ListVerifiedFields}
-     * @memberof LexicalAnalysisResult
-     */
-    'ListVerifiedFields': ListVerifiedFields;
-    /**
-     * 
-     * @type {number}
-     * @memberof LexicalAnalysisResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof LexicalAnalysisResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof LexicalAnalysisResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof LexicalAnalysisResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof LexicalAnalysisResult
-     */
-    'result_type': number;
-}
+export type LexicalAnalysisResult = ListVerifiedFieldsItem & ResultItem;
+
 

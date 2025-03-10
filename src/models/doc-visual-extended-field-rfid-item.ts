@@ -15,15 +15,39 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { GraphicFieldType } from './graphic-field-type';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { TextFieldType } from './text-field-type';
+import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
- * @type TrfFtStringType
+ * 
  * @export
+ * @interface DocVisualExtendedFieldRfidItem
  */
-export type TrfFtStringType = GraphicFieldType | TextFieldType;
+export interface DocVisualExtendedFieldRfidItem {
+    /**
+     * 
+     * @type {RfidDataGroupTypeTag}
+     * @memberof DocVisualExtendedFieldRfidItem
+     */
+    'RFID_OriginDG': RfidDataGroupTypeTag;
+    /**
+     * 
+     * @type {number}
+     * @memberof DocVisualExtendedFieldRfidItem
+     */
+    'RFID_OriginDGTag'?: number;
+    /**
+     * Record index of the text field source in the data group
+     * @type {number}
+     * @memberof DocVisualExtendedFieldRfidItem
+     */
+    'RFID_OriginTagEntry': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DocVisualExtendedFieldRfidItem
+     */
+    'RFID_OriginEntryView'?: number;
+}
+
 
 

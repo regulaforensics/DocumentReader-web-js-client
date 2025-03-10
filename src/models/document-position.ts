@@ -86,6 +86,36 @@ export interface DocumentPosition {
      * @memberof DocumentPosition
      */
     'Dpi': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DocumentPosition
+     */
+    'Inverse'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DocumentPosition
+     */
+    'ObjArea'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DocumentPosition
+     */
+    'ObjIntAngleDev'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DocumentPosition
+     */
+    'PerspectiveTr'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DocumentPosition
+     */
+    'ResultStatus'?: number;
 }
 
 

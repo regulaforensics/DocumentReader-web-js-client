@@ -158,7 +158,7 @@ export class TextFieldExt implements TextField {
     fieldType: TextFieldType;
     fieldName: string;
     lcid: LCID;
-    lcidName: string;
+    lcidName?: string;
 
     status: CheckResult;
     validityStatus: CheckResult;

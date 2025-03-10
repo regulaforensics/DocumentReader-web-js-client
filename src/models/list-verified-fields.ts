@@ -35,5 +35,11 @@ export interface ListVerifiedFields {
      * @memberof ListVerifiedFields
      */
     'pFieldMaps': Array<VerifiedFieldMap>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListVerifiedFields
+     */
+    'pDateFormat'?: string;
 }
 

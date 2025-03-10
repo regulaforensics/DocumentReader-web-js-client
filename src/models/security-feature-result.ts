@@ -18,6 +18,9 @@
 import type { AreaContainer } from './area-container';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AuthenticityCheckResultItem } from './authenticity-check-result-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { CheckDiagnose } from './check-diagnose';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -30,78 +33,18 @@ import type { Critical } from './critical';
 import type { RectangleCoordinates } from './rectangle-coordinates';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { SecurityFeatureItem } from './security-feature-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { SecurityFeatureType } from './security-feature-type';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { Visibility } from './visibility';
 
 /**
- * 
+ * @type SecurityFeatureResult
  * @export
- * @interface SecurityFeatureResult
  */
-export interface SecurityFeatureResult {
-    /**
-     * Same as authenticity result type, but used for safe parsing of not-described values: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/authenticity-result-type/
-     * @type {number}
-     * @memberof SecurityFeatureResult
-     */
-    'Type': number;
-    /**
-     * 
-     * @type {CheckResult}
-     * @memberof SecurityFeatureResult
-     */
-    'ElementResult'?: CheckResult;
-    /**
-     * 
-     * @type {CheckDiagnose}
-     * @memberof SecurityFeatureResult
-     */
-    'ElementDiagnose'?: CheckDiagnose;
-    /**
-     * 
-     * @type {number}
-     * @memberof SecurityFeatureResult
-     */
-    'PercentValue'?: number;
-    /**
-     * 
-     * @type {SecurityFeatureType}
-     * @memberof SecurityFeatureResult
-     */
-    'ElementType': SecurityFeatureType;
-    /**
-     * 
-     * @type {RectangleCoordinates}
-     * @memberof SecurityFeatureResult
-     */
-    'ElementRect': RectangleCoordinates;
-    /**
-     * 
-     * @type {Visibility}
-     * @memberof SecurityFeatureResult
-     */
-    'Visibility': Visibility;
-    /**
-     * 
-     * @type {Critical}
-     * @memberof SecurityFeatureResult
-     */
-    'CriticalFlag': Critical;
-    /**
-     * 
-     * @type {AreaContainer}
-     * @memberof SecurityFeatureResult
-     */
-    'AreaList'?: AreaContainer;
-    /**
-     * 
-     * @type {number}
-     * @memberof SecurityFeatureResult
-     */
-    'Reserved2'?: number;
-}
-
+export type SecurityFeatureResult = AuthenticityCheckResultItem & SecurityFeatureItem;
 
 

@@ -78,19 +78,19 @@ export interface RfidCardPropertiesExt {
      */
     'UID': string;
     /**
-     * 
+     * Reply of the «A» type chip to «REQA» command of ISO/IEC 14443-3 protocol (Answer To Request, Type A – ATQA) – for the internal use by the main control library
      * @type {any}
      * @memberof RfidCardPropertiesExt
      */
     'ATQ_A': any;
     /**
-     * 
+     * Response of type-A RFID-chip to SELECT command of ISO/IEC 14443-3 protocol (Select Acknowledge, SAK).
      * @type {any}
      * @memberof RfidCardPropertiesExt
      */
     'SAK': any;
     /**
-     * 
+     * ATQ_B contents in text format. Each byte is represented by its hexadecimal value. The individual bytes are separated by spaces (e.g. 50 F9 4F 41 60 00 00 00 00 77 81 81)
      * @type {any}
      * @memberof RfidCardPropertiesExt
      */

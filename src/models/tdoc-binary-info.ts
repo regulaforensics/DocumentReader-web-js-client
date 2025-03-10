@@ -16,6 +16,9 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BinaryData } from './binary-data';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { RfidRawData } from './rfid-raw-data';
 
 /**
  * 
@@ -28,6 +31,12 @@ export interface TDocBinaryInfo {
      * @type {BinaryData}
      * @memberof TDocBinaryInfo
      */
-    'RFID_BINARY_DATA': BinaryData;
+    'RFID_BINARY_DATA'?: BinaryData;
+    /**
+     * 
+     * @type {Array<RfidRawData>}
+     * @memberof TDocBinaryInfo
+     */
+    'RFID_RAW_DATA'?: Array<RfidRawData>;
 }
 

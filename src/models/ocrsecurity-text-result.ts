@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AuthenticityCheckResultItem } from './authenticity-check-result-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { CheckDiagnose } from './check-diagnose';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -27,105 +30,15 @@ import type { Critical } from './critical';
 import type { Light } from './light';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { OCRSecurityTextItem } from './ocrsecurity-text-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
- * 
+ * @type OCRSecurityTextResult
  * @export
- * @interface OCRSecurityTextResult
  */
-export interface OCRSecurityTextResult {
-    /**
-     * Same as authenticity result type, but used for safe parsing of not-described values: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/authenticity-result-type/
-     * @type {number}
-     * @memberof OCRSecurityTextResult
-     */
-    'Type': number;
-    /**
-     * 
-     * @type {CheckResult}
-     * @memberof OCRSecurityTextResult
-     */
-    'ElementResult'?: CheckResult;
-    /**
-     * 
-     * @type {CheckDiagnose}
-     * @memberof OCRSecurityTextResult
-     */
-    'ElementDiagnose'?: CheckDiagnose;
-    /**
-     * 
-     * @type {number}
-     * @memberof OCRSecurityTextResult
-     */
-    'PercentValue'?: number;
-    /**
-     * 
-     * @type {Critical}
-     * @memberof OCRSecurityTextResult
-     */
-    'CriticalFlag': Critical;
-    /**
-     * 
-     * @type {Light}
-     * @memberof OCRSecurityTextResult
-     */
-    'LightType': Light;
-    /**
-     * 
-     * @type {RectangleCoordinates}
-     * @memberof OCRSecurityTextResult
-     */
-    'FieldRect': RectangleCoordinates;
-    /**
-     * 
-     * @type {number}
-     * @memberof OCRSecurityTextResult
-     */
-    'EtalonResultType': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof OCRSecurityTextResult
-     */
-    'EtalonFieldType': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof OCRSecurityTextResult
-     */
-    'EtalonLightType': number;
-    /**
-     * 
-     * @type {RectangleCoordinates}
-     * @memberof OCRSecurityTextResult
-     */
-    'EtalonFieldRect': RectangleCoordinates;
-    /**
-     * 
-     * @type {string}
-     * @memberof OCRSecurityTextResult
-     */
-    'SecurityTextResultOCR': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof OCRSecurityTextResult
-     */
-    'EtalonResultOCR': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof OCRSecurityTextResult
-     */
-    'Reserved1'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof OCRSecurityTextResult
-     */
-    'Reserved2'?: number;
-}
-
+export type OCRSecurityTextResult = AuthenticityCheckResultItem & OCRSecurityTextItem;
 
 

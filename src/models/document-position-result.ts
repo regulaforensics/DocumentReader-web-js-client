@@ -16,48 +16,18 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DocumentPosition } from './document-position';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { DocumentPositionItem } from './document-position-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
+ * @type DocumentPositionResult
  * Contains information about document position on the input image, its center, angle, etc
  * @export
- * @interface DocumentPositionResult
  */
-export interface DocumentPositionResult {
-    /**
-     * 
-     * @type {DocumentPosition}
-     * @memberof DocumentPositionResult
-     */
-    'DocumentPosition': DocumentPosition;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentPositionResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentPositionResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentPositionResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentPositionResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof DocumentPositionResult
-     */
-    'result_type': number;
-}
+export type DocumentPositionResult = DocumentPositionItem & ResultItem;
+
 

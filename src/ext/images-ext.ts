@@ -4,8 +4,8 @@ import * as converter from 'base64-arraybuffer';
 export class ImagesExt implements Images {
     availableSourceList: Array<ImagesAvailableSource>;
     fieldList: Array<ImagesFieldWrapper>;
-    fieldCount: number;
-    availableSourceCount: number;
+    fieldCount?: number;
+    availableSourceCount?: number;
 
     constructor(origin: Images) {
         this.availableSourceList = origin.availableSourceList;
@@ -31,7 +31,7 @@ export class ImagesFieldWrapper implements ImagesField {
     fieldName: string;
     fieldType: GraphicFieldType;
     valueList: Array<ImagesFieldValue>;
-    valueCount: number;
+    valueCount?: number;
 
     constructor(origin: ImagesField) {
         this.fieldName = origin.fieldName;

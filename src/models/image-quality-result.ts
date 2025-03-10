@@ -16,48 +16,17 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ImageQualityCheckList } from './image-quality-check-list';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ImageQualityCheckListItem } from './image-quality-check-list-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
- * 
+ * @type ImageQualityResult
  * @export
- * @interface ImageQualityResult
  */
-export interface ImageQualityResult {
-    /**
-     * 
-     * @type {ImageQualityCheckList}
-     * @memberof ImageQualityResult
-     */
-    'ImageQualityCheckList': ImageQualityCheckList;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImageQualityResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImageQualityResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImageQualityResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImageQualityResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof ImageQualityResult
-     */
-    'result_type': number;
-}
+export type ImageQualityResult = ImageQualityCheckListItem & ResultItem;
+
 

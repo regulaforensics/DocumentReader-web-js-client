@@ -16,48 +16,18 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DocVisualExtendedInfo } from './doc-visual-extended-info';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { DocVisualExtendedInfoItem } from './doc-visual-extended-info-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
+ * @type TextDataResult
  * Text fields extracted from one document source. Contains results of specific source for each provided page.
  * @export
- * @interface TextDataResult
  */
-export interface TextDataResult {
-    /**
-     * 
-     * @type {DocVisualExtendedInfo}
-     * @memberof TextDataResult
-     */
-    'DocVisualExtendedInfo': DocVisualExtendedInfo;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextDataResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextDataResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextDataResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextDataResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof TextDataResult
-     */
-    'result_type': number;
-}
+export type TextDataResult = DocVisualExtendedInfoItem & ResultItem;
+
 

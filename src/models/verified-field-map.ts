@@ -71,6 +71,12 @@ export interface VerifiedFieldMap {
      * @memberof VerifiedFieldMap
      */
     'Matrix': Array<VerificationResult>;
+    /**
+     * 
+     * @type {number}
+     * @memberof VerifiedFieldMap
+     */
+    'FieldType'?: number;
 }
 
 

@@ -13,18 +13,24 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ParsingErrorCodes } from './parsing-error-codes';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ParsingNotificationCodes } from './parsing-notification-codes';
 
 /**
- * @type TrfFtStringStatus
- * Result of logical analysis of compliance of the contents of the field with the requirements of the specification
+ * 
  * @export
+ * @interface FileImage
  */
-export type TrfFtStringStatus = ParsingErrorCodes | ParsingNotificationCodes;
-
+export interface FileImage {
+    /**
+     * 
+     * @type {string}
+     * @memberof FileImage
+     */
+    'Data': string;
+    /**
+     * 
+     * @type {number}
+     * @memberof FileImage
+     */
+    'Length': number;
+}
 

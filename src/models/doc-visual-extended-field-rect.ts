@@ -15,6 +15,12 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { DocVisualExtendedField } from './doc-visual-extended-field';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { DocVisualExtendedFieldRectItem } from './doc-visual-extended-field-rect-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { RectangleCoordinates } from './rectangle-coordinates';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -24,78 +30,10 @@ import type { StringRecognitionResult } from './string-recognition-result';
 import type { TextFieldType } from './text-field-type';
 
 /**
+ * @type DocVisualExtendedFieldRect
  * Structure and serves for storing information from one text data field. Variant with field logical type and field rectangular area coordinates on the image.
  * @export
- * @interface DocVisualExtendedFieldRect
  */
-export interface DocVisualExtendedFieldRect {
-    /**
-     * 
-     * @type {RectangleCoordinates}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'FieldRect'?: RectangleCoordinates;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'FieldType': number;
-    /**
-     * 
-     * @type {TextFieldType}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'wFieldType': TextFieldType;
-    /**
-     * Field symbolic name (null-terminated string)
-     * @type {string}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'FieldName': string;
-    /**
-     * Number of StringsResult array elements
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'StringsCount': number;
-    /**
-     * Array of recognizing probabilities for a each line of text field. Only for Result.VISUAL_TEXT and Result.MRZ_TEXT results.
-     * @type {Array<StringRecognitionResult>}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'StringsResult': Array<StringRecognitionResult>;
-    /**
-     * Buf_Text text string length
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'Buf_Length': number;
-    /**
-     * Text field data in UTF8 format. Results of reading different lines of a multi-line field are separated by \'^\'
-     * @type {string}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'Buf_Text': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'FieldMask'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'Validity'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRect
-     */
-    'InComparison'?: number;
-}
-
+export type DocVisualExtendedFieldRect = DocVisualExtendedField & DocVisualExtendedFieldRectItem;
 
 

@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { CheckResult } from './check-result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { RFIDErrorCodes } from './rfiderror-codes';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -45,29 +48,29 @@ import type { RfidTerminal } from './rfid-terminal';
  */
 export interface RfidSessionData {
     /**
-     * 
-     * @type {any}
+     * Sign of virtual session when working with loaded data from a previous communication session with the electronic document
+     * @type {string}
      * @memberof RfidSessionData
      */
-    'VirtualMode': any;
+    'VirtualMode'?: string;
     /**
-     * 
-     * @type {any}
+     * Text SDKVersion value in format A.B (e.g. 3.1)
+     * @type {string}
      * @memberof RfidSessionData
      */
-    'SDKVersion': any;
+    'SDKVersion'?: string;
     /**
-     * 
-     * @type {any}
+     * Text DriverVersion value in format A.B.C.D (e.g. 6.2.5.4)
+     * @type {string}
      * @memberof RfidSessionData
      */
-    'DriverVersion': any;
+    'DriverVersion'?: string;
     /**
-     * 
-     * @type {any}
+     * Text FirmwareVersion value in format A.B (e.g. 5.19)
+     * @type {string}
      * @memberof RfidSessionData
      */
-    'FirmwareVersion': any;
+    'FirmwareVersion'?: string;
     /**
      * List of containers to store information about the involved applications of electronic document
      * @type {Array<RfidApplication>}
@@ -140,6 +143,12 @@ export interface RfidSessionData {
      * @memberof RfidSessionData
      */
     'SecurityObjects': Array<RfidSecurityObject>;
+    /**
+     * 
+     * @type {CheckResult}
+     * @memberof RfidSessionData
+     */
+    'Status'?: CheckResult;
 }
 
 

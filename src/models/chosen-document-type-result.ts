@@ -16,54 +16,18 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { OneCandidate } from './one-candidate';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { OneCandidateItem } from './one-candidate-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
+ * @type ChosenDocumentTypeResult
  * Contains information about the type of document that was determined based on the analysis of the provided image
  * @export
- * @interface ChosenDocumentTypeResult
  */
-export interface ChosenDocumentTypeResult {
-    /**
-     * 
-     * @type {OneCandidate}
-     * @memberof ChosenDocumentTypeResult
-     */
-    'OneCandidate': OneCandidate;
-    /**
-     * 
-     * @type {string}
-     * @memberof ChosenDocumentTypeResult
-     */
-    'XML_buffer'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ChosenDocumentTypeResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ChosenDocumentTypeResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ChosenDocumentTypeResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ChosenDocumentTypeResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof ChosenDocumentTypeResult
-     */
-    'result_type': number;
-}
+export type ChosenDocumentTypeResult = OneCandidateItem & ResultItem;
+
 

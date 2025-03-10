@@ -15,6 +15,12 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { DocVisualExtendedField } from './doc-visual-extended-field';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { DocVisualExtendedFieldRfidItem } from './doc-visual-extended-field-rfid-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -24,96 +30,10 @@ import type { StringRecognitionResult } from './string-recognition-result';
 import type { TextFieldType } from './text-field-type';
 
 /**
+ * @type DocVisualExtendedFieldRfid
  * Structure and serves for storing information from one text data field. Variant with field logical type and RFID data.
  * @export
- * @interface DocVisualExtendedFieldRfid
  */
-export interface DocVisualExtendedFieldRfid {
-    /**
-     * 
-     * @type {RfidDataGroupTypeTag}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'RFID_OriginDG': RfidDataGroupTypeTag;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'RFID_OriginDGTag'?: number;
-    /**
-     * Record index of the text field source in the data group
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'RFID_OriginTagEntry': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'RFID_OriginEntryView'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'FieldType': number;
-    /**
-     * 
-     * @type {TextFieldType}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'wFieldType': TextFieldType;
-    /**
-     * Field symbolic name (null-terminated string)
-     * @type {string}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'FieldName': string;
-    /**
-     * Number of StringsResult array elements
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'StringsCount': number;
-    /**
-     * Array of recognizing probabilities for a each line of text field. Only for Result.VISUAL_TEXT and Result.MRZ_TEXT results.
-     * @type {Array<StringRecognitionResult>}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'StringsResult': Array<StringRecognitionResult>;
-    /**
-     * Buf_Text text string length
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'Buf_Length': number;
-    /**
-     * Text field data in UTF8 format. Results of reading different lines of a multi-line field are separated by \'^\'
-     * @type {string}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'Buf_Text': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'FieldMask'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'Validity'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfid
-     */
-    'InComparison'?: number;
-}
-
+export type DocVisualExtendedFieldRfid = DocVisualExtendedField & DocVisualExtendedFieldRfidItem;
 
 

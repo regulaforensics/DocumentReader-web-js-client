@@ -16,48 +16,17 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { AuthenticityCheckList } from './authenticity-check-list';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { AuthenticityCheckListItem } from './authenticity-check-list-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
- * 
+ * @type AuthenticityResult
  * @export
- * @interface AuthenticityResult
  */
-export interface AuthenticityResult {
-    /**
-     * 
-     * @type {AuthenticityCheckList}
-     * @memberof AuthenticityResult
-     */
-    'AuthenticityCheckList': AuthenticityCheckList;
-    /**
-     * 
-     * @type {number}
-     * @memberof AuthenticityResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof AuthenticityResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof AuthenticityResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof AuthenticityResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof AuthenticityResult
-     */
-    'result_type': number;
-}
+export type AuthenticityResult = AuthenticityCheckListItem & ResultItem;
+
 

@@ -47,5 +47,11 @@ export interface StringRecognitionResult {
      * @memberof StringRecognitionResult
      */
     'Buf_Text'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof StringRecognitionResult
+     */
+    'Reserved'?: number;
 }
 

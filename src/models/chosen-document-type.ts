@@ -46,10 +46,10 @@ export interface ChosenDocumentType {
     'P': number;
     /**
      * true if the document of the given type is rotated by 180 degrees
-     * @type {boolean}
+     * @type {number}
      * @memberof ChosenDocumentType
      */
-    'Rotated180': boolean;
+    'Rotated180': number;
     /**
      * 
      * @type {RfidLocation}
@@ -92,6 +92,12 @@ export interface ChosenDocumentType {
      * @memberof ChosenDocumentType
      */
     'OVIExp': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof ChosenDocumentType
+     */
+    'RotationAngle'?: number;
 }
 
 

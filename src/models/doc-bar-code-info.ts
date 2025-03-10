@@ -16,48 +16,18 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DocBarCodeInfoFieldsList } from './doc-bar-code-info-fields-list';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { DocBarCodeInfoItem } from './doc-bar-code-info-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
+ * @type DocBarCodeInfo
  * Raw data from BarCodes
  * @export
- * @interface DocBarCodeInfo
  */
-export interface DocBarCodeInfo {
-    /**
-     * 
-     * @type {DocBarCodeInfoFieldsList}
-     * @memberof DocBarCodeInfo
-     */
-    'DocBarCodeInfo': DocBarCodeInfoFieldsList;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocBarCodeInfo
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocBarCodeInfo
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocBarCodeInfo
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocBarCodeInfo
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof DocBarCodeInfo
-     */
-    'result_type': number;
-}
+export type DocBarCodeInfo = DocBarCodeInfoItem & ResultItem;
+
 

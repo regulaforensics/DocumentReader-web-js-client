@@ -13,48 +13,18 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { EncryptedRCLItem } from './encrypted-rclitem';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
- * 
+ * @type EncryptedRCLResult
+ * Contains encrypted result container list
  * @export
- * @interface EncryptedRCLResult
  */
-export interface EncryptedRCLResult {
-    /**
-     * Base64 encoded data
-     * @type {string}
-     * @memberof EncryptedRCLResult
-     */
-    'EncryptedRCL': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof EncryptedRCLResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof EncryptedRCLResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof EncryptedRCLResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof EncryptedRCLResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof EncryptedRCLResult
-     */
-    'result_type': number;
-}
+export type EncryptedRCLResult = EncryptedRCLItem & ResultItem;
+
 

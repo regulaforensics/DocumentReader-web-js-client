@@ -15,49 +15,19 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ResultItem } from './result-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { TDocBinaryInfo } from './tdoc-binary-info';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TDocBinaryInfoItem } from './tdoc-binary-info-item';
 
 /**
- * 
+ * @type DocumentBinaryInfoResult
+ * Structure is used to store the data reading results from the RFID-chip in a form of a list of the logically separated data groups.
  * @export
- * @interface DocumentBinaryInfoResult
  */
-export interface DocumentBinaryInfoResult {
-    /**
-     * 
-     * @type {TDocBinaryInfo}
-     * @memberof DocumentBinaryInfoResult
-     */
-    'TDocBinaryInfo': TDocBinaryInfo;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentBinaryInfoResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentBinaryInfoResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentBinaryInfoResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentBinaryInfoResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof DocumentBinaryInfoResult
-     */
-    'result_type': number;
-}
+export type DocumentBinaryInfoResult = ResultItem & TDocBinaryInfoItem;
+
 

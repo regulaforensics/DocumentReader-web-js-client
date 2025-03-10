@@ -40,6 +40,12 @@ export interface ProcessResponse {
     'ChipPage': RfidLocation;
     /**
      * 
+     * @type {number}
+     * @memberof ProcessResponse
+     */
+    'CoreLibResultCode'?: number;
+    /**
+     * 
      * @type {ProcessingStatus}
      * @memberof ProcessResponse
      */

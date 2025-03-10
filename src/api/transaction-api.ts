@@ -276,7 +276,7 @@ export const TransactionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TagTagIdDelete(tagId: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+        async apiV2TagTagIdDelete(tagId: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiV2TagTagIdDelete(tagId, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['TransactionApi.apiV2TagTagIdDelete']?.[localVarOperationServerIndex]?.url;
@@ -367,7 +367,7 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TagTagIdDelete(tagId: string, options?: RawAxiosRequestConfig): AxiosPromise<any> {
+        apiV2TagTagIdDelete(tagId: string, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.apiV2TagTagIdDelete(tagId, options).then((request) => request(axios, basePath));
         },
         /**

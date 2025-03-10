@@ -13,12 +13,6 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { TrfFtStringStatus } from './trf-ft-string-status';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { TrfFtStringType } from './trf-ft-string-type';
 
 /**
  * Structure is used to store information about the numeric field (4 bytes) that is a part of one of the informational data groups.
@@ -28,22 +22,22 @@ import type { TrfFtStringType } from './trf-ft-string-type';
 export interface TrfFtString {
     /**
      * 
-     * @type {TrfFtStringType}
+     * @type {number}
      * @memberof TrfFtString
      */
-    'Type': TrfFtStringType;
+    'Type'?: number;
     /**
-     * 
-     * @type {TrfFtStringStatus}
+     * Result of logical analysis of compliance of the contents of the field with the requirements of the specification
+     * @type {number}
      * @memberof TrfFtString
      */
-    'Status': TrfFtStringStatus;
+    'Status'?: number;
     /**
      * Mask of format of text information (for example, «YYMMDD» for date of birth)
      * @type {string}
      * @memberof TrfFtString
      */
-    'Format': string;
+    'Format'?: string;
     /**
      * Numeric value.
      * @type {string}

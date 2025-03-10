@@ -13,9 +13,6 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { TrfFtBytesType } from './trf-ft-bytes-type';
 
 /**
  * Structure is used to store an array of binary information that is a part of one of the informational data groups
@@ -24,11 +21,11 @@ import type { TrfFtBytesType } from './trf-ft-bytes-type';
  */
 export interface TrfFtBytes {
     /**
-     * 
-     * @type {TrfFtBytesType}
+     * Logical type of the field
+     * @type {number}
      * @memberof TrfFtBytes
      */
-    'Type': TrfFtBytesType;
+    'Type': number;
     /**
      * Result of logical analysis of compliance of the contents of the field with the requirements of the specification
      * @type {number}
@@ -46,6 +43,6 @@ export interface TrfFtBytes {
      * @type {string}
      * @memberof TrfFtBytes
      */
-    'Data': string;
+    'Data': string | null;
 }
 

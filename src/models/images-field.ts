@@ -49,7 +49,7 @@ export interface ImagesField {
      * @type {number}
      * @memberof ImagesField
      */
-    'valueCount': number;
+    'valueCount'?: number;
 }
 
 

@@ -16,48 +16,18 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ImageData } from './image-data';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { RawImageContainerItem } from './raw-image-container-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
+ * @type DocumentImageResult
  * Contains document image.
  * @export
- * @interface DocumentImageResult
  */
-export interface DocumentImageResult {
-    /**
-     * 
-     * @type {ImageData}
-     * @memberof DocumentImageResult
-     */
-    'RawImageContainer': ImageData;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentImageResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentImageResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentImageResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentImageResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof DocumentImageResult
-     */
-    'result_type': number;
-}
+export type DocumentImageResult = RawImageContainerItem & ResultItem;
+
 

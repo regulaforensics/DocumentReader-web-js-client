@@ -13,36 +13,33 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { Symbol } from './symbol';
 
 /**
- * Document database information
+ * 
  * @export
- * @interface TransactionInfoDocumentsDatabase
+ * @interface MRZRowsItem
  */
-export interface TransactionInfoDocumentsDatabase {
+export interface MRZRowsItem {
     /**
-     * Document database description
-     * @type {string}
-     * @memberof TransactionInfoDocumentsDatabase
+     * 
+     * @type {number}
+     * @memberof MRZRowsItem
      */
-    'Description'?: string;
+    'length': number;
     /**
-     * Date the document database was created
-     * @type {string}
-     * @memberof TransactionInfoDocumentsDatabase
+     * 
+     * @type {number}
+     * @memberof MRZRowsItem
      */
-    'ExportDate'?: string;
+    'maxLength': number;
     /**
-     * Document database identifier
-     * @type {string}
-     * @memberof TransactionInfoDocumentsDatabase
+     * 
+     * @type {Array<Symbol>}
+     * @memberof MRZRowsItem
      */
-    'ID'?: string;
-    /**
-     * Document database version
-     * @type {string}
-     * @memberof TransactionInfoDocumentsDatabase
-     */
-    'Version'?: string;
+    'symbols': Array<Symbol>;
 }
 

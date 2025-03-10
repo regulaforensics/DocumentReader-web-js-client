@@ -44,5 +44,23 @@ export interface SymbolRecognitionResult {
      * @memberof SymbolRecognitionResult
      */
     'ListOfCandidates': Array<SymbolCandidate>;
+    /**
+     * 
+     * @type {number}
+     * @memberof SymbolRecognitionResult
+     */
+    'BaseLineBottom'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SymbolRecognitionResult
+     */
+    'BaseLineTop'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SymbolRecognitionResult
+     */
+    'Reserved'?: number;
 }
 

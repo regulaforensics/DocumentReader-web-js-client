@@ -89,6 +89,12 @@ export interface TextFieldValue {
      * @memberof TextFieldValue
      */
     'rfidOrigin'?: RfidOrigin;
+    /**
+     * Same as Result type, but used for safe parsing of not-described values. See Result type.
+     * @type {number}
+     * @memberof TextFieldValue
+     */
+    'containerType'?: number;
 }
 
 

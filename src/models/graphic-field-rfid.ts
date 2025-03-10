@@ -15,6 +15,12 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { GraphicField } from './graphic-field';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { GraphicFieldRfidItem } from './graphic-field-rfid-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { GraphicFieldType } from './graphic-field-type';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -24,54 +30,10 @@ import type { ImageData } from './image-data';
 import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
+ * @type GraphicFieldRfid
  * Information about one graphic field, which is a RFID
  * @export
- * @interface GraphicFieldRfid
  */
-export interface GraphicFieldRfid {
-    /**
-     * 
-     * @type {RfidDataGroupTypeTag}
-     * @memberof GraphicFieldRfid
-     */
-    'RFID_OriginDG': RfidDataGroupTypeTag;
-    /**
-     * Index of the source record of the image with biometric information in the information data group. Only for Result.RFID_GRAPHICS result.
-     * @type {number}
-     * @memberof GraphicFieldRfid
-     */
-    'RFID_OriginDGTag': number;
-    /**
-     * Index of the template in the record with biometric data. Only for Result.RFID_GRAPHICS result.
-     * @type {number}
-     * @memberof GraphicFieldRfid
-     */
-    'RFID_OriginTagEntry': number;
-    /**
-     * Index of the variant of the biometric data template. Only for Result.RFID_GRAPHICS result.
-     * @type {number}
-     * @memberof GraphicFieldRfid
-     */
-    'RFID_OriginEntryView': number;
-    /**
-     * 
-     * @type {GraphicFieldType}
-     * @memberof GraphicFieldRfid
-     */
-    'FieldType': GraphicFieldType;
-    /**
-     * Graphic field symbolic name
-     * @type {string}
-     * @memberof GraphicFieldRfid
-     */
-    'FieldName': string;
-    /**
-     * 
-     * @type {ImageData}
-     * @memberof GraphicFieldRfid
-     */
-    'image': ImageData;
-}
-
+export type GraphicFieldRfid = GraphicField & GraphicFieldRfidItem;
 
 

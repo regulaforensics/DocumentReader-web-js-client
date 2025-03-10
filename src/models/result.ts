@@ -38,6 +38,10 @@ export enum Result {
     */
     VISUAL_GRAPHICS = 6,
     /**
+    * Contains result of MRZTestQuality
+    */
+    MRZ_TEST_QUALITY = 7,
+    /**
     * Contains list of document type candidates with their probabilities and descriptions
     */
     DOCUMENT_TYPE_CANDIDATES = 8,
@@ -129,6 +133,14 @@ export enum Result {
     * Contains information about document position on the input image, its center, angle, etc
     */
     DOCUMENT_POSITION = 85,
+    /**
+    * Contains result of MRZDetectorResult
+    */
+    MRZ_DETECTOR = 87,
+    /**
+    * Contains result of FaceDetection
+    */
+    FACE_DETECTION = 97,
     /**
     * Contains RFID raw data
     */

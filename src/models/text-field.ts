@@ -61,7 +61,7 @@ export interface TextField {
      * @type {string}
      * @memberof TextField
      */
-    'lcidName': string;
+    'lcidName'?: string;
     /**
      * 
      * @type {CheckResult}

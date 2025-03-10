@@ -2,5 +2,6 @@
   "withSeparateModelsAndApi": true,
   "apiPackage": "api",
   "modelPackage": "models",
-  "stringEnums": true
+  "stringEnums": true,
+  "legacyDiscriminatorBehavior": false
 }

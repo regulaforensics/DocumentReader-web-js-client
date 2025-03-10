@@ -32,5 +32,17 @@ export interface SymbolCandidate {
      * @memberof SymbolCandidate
      */
     'SymbolProbability': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SymbolCandidate
+     */
+    'Class'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SymbolCandidate
+     */
+    'SubClass'?: number;
 }
 

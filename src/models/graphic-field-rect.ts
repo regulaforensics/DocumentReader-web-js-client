@@ -15,6 +15,12 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { GraphicField } from './graphic-field';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { GraphicFieldRectItem } from './graphic-field-rect-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { GraphicFieldType } from './graphic-field-type';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -24,36 +30,10 @@ import type { ImageData } from './image-data';
 import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
+ * @type GraphicFieldRect
  * Information about one graphic field, which is a rectangle
  * @export
- * @interface GraphicFieldRect
  */
-export interface GraphicFieldRect {
-    /**
-     * 
-     * @type {RectangleCoordinates}
-     * @memberof GraphicFieldRect
-     */
-    'FieldRect': RectangleCoordinates;
-    /**
-     * 
-     * @type {GraphicFieldType}
-     * @memberof GraphicFieldRect
-     */
-    'FieldType': GraphicFieldType;
-    /**
-     * Graphic field symbolic name
-     * @type {string}
-     * @memberof GraphicFieldRect
-     */
-    'FieldName': string;
-    /**
-     * 
-     * @type {ImageData}
-     * @memberof GraphicFieldRect
-     */
-    'image': ImageData;
-}
-
+export type GraphicFieldRect = GraphicField & GraphicFieldRectItem;
 
 

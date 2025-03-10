@@ -15,49 +15,18 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ResultItem } from './result-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { Status } from './status';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { StatusItem } from './status-item';
 
 /**
- * 
+ * @type StatusResult
  * @export
- * @interface StatusResult
  */
-export interface StatusResult {
-    /**
-     * 
-     * @type {Status}
-     * @memberof StatusResult
-     */
-    'Status': Status;
-    /**
-     * 
-     * @type {number}
-     * @memberof StatusResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof StatusResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof StatusResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof StatusResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof StatusResult
-     */
-    'result_type': number;
-}
+export type StatusResult = ResultItem & StatusItem;
+
 

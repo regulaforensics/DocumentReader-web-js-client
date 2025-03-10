@@ -15,49 +15,18 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { CandidatesListItem } from './candidates-list-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { DocumentTypesCandidatesList } from './document-types-candidates-list';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
- * 
+ * @type DocumentTypesCandidatesResult
  * @export
- * @interface DocumentTypesCandidatesResult
  */
-export interface DocumentTypesCandidatesResult {
-    /**
-     * 
-     * @type {DocumentTypesCandidatesList}
-     * @memberof DocumentTypesCandidatesResult
-     */
-    'CandidatesList'?: DocumentTypesCandidatesList;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentTypesCandidatesResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentTypesCandidatesResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentTypesCandidatesResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocumentTypesCandidatesResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof DocumentTypesCandidatesResult
-     */
-    'result_type': number;
-}
+export type DocumentTypesCandidatesResult = CandidatesListItem & ResultItem;
+
 

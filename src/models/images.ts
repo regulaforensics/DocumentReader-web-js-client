@@ -31,13 +31,13 @@ export interface Images {
      * @type {number}
      * @memberof Images
      */
-    'fieldCount': number;
+    'fieldCount'?: number;
     /**
      * Available sources count
      * @type {number}
      * @memberof Images
      */
-    'availableSourceCount': number;
+    'availableSourceCount'?: number;
     /**
      * 
      * @type {Array<ImagesAvailableSource>}

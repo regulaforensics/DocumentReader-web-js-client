@@ -16,48 +16,17 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { Images } from './images';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ImagesItem } from './images-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
- * 
+ * @type ImagesResult
  * @export
- * @interface ImagesResult
  */
-export interface ImagesResult {
-    /**
-     * 
-     * @type {Images}
-     * @memberof ImagesResult
-     */
-    'Images': Images;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImagesResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImagesResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImagesResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImagesResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof ImagesResult
-     */
-    'result_type': number;
-}
+export type ImagesResult = ImagesItem & ResultItem;
+
 

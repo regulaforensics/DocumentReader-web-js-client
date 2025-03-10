@@ -30,6 +30,9 @@ import type { FaceApi } from './face-api';
 import type { ImageQA } from './image-qa';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { InputBarcodeType } from './input-barcode-type';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { LCID } from './lcid';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -46,9 +49,6 @@ import type { MrzDetectModeEnum } from './mrz-detect-mode-enum';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { PerDocumentConfig } from './per-document-config';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ProcessParamsDoBarcodesInner } from './process-params-do-barcodes-inner';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ProcessParamsRfid } from './process-params-rfid';
@@ -430,10 +430,10 @@ export interface ProcessParams {
     'selectLongestNames'?: boolean;
     /**
      * Set the types of barcodes to process.
-     * @type {Array<ProcessParamsDoBarcodesInner>}
+     * @type {Array<InputBarcodeType>}
      * @memberof ProcessParams
      */
-    'doBarcodes'?: Array<ProcessParamsDoBarcodesInner>;
+    'doBarcodes'?: Array<InputBarcodeType>;
 }
 
 

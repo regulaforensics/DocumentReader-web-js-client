@@ -71,6 +71,12 @@ export interface DetailsOptical {
      * @memberof DetailsOptical
      */
     'text': CheckResult;
+    /**
+     * 
+     * @type {number}
+     * @memberof DetailsOptical
+     */
+    'vds'?: number;
 }
 
 

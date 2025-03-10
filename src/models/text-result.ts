@@ -15,49 +15,18 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { ResultItem } from './result-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { Text } from './text';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TextItem } from './text-item';
 
 /**
- * 
+ * @type TextResult
  * @export
- * @interface TextResult
  */
-export interface TextResult {
-    /**
-     * 
-     * @type {Text}
-     * @memberof TextResult
-     */
-    'Text': Text;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof TextResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof TextResult
-     */
-    'result_type': number;
-}
+export type TextResult = ResultItem & TextItem;
+
 

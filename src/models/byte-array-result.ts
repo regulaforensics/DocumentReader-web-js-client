@@ -13,48 +13,17 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ByteArrayItem } from './byte-array-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
- * 
+ * @type ByteArrayResult
  * @export
- * @interface ByteArrayResult
  */
-export interface ByteArrayResult {
-    /**
-     * Byte array in base64
-     * @type {string}
-     * @memberof ByteArrayResult
-     */
-    'ByteArray': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ByteArrayResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ByteArrayResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ByteArrayResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ByteArrayResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof ByteArrayResult
-     */
-    'result_type': number;
-}
+export type ByteArrayResult = ByteArrayItem & ResultItem;
+
 

@@ -15,16 +15,19 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { GraphicFieldType } from './graphic-field-type';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { TextFieldType } from './text-field-type';
+import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
- * @type TrfFtBytesType
- * Logical type of the field
+ * 
  * @export
+ * @interface GraphicFieldRectItem
  */
-export type TrfFtBytesType = GraphicFieldType | TextFieldType;
-
+export interface GraphicFieldRectItem {
+    /**
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof GraphicFieldRectItem
+     */
+    'FieldRect': RectangleCoordinates;
+}
 

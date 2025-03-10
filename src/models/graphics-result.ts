@@ -15,49 +15,19 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { DocGraphicsInfoItem } from './doc-graphics-info-item';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { GraphicFieldsList } from './graphic-fields-list';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
+ * @type GraphicsResult
  * Graphic fields extracted from one of the document sources. Returns separate results for each provided page.
  * @export
- * @interface GraphicsResult
  */
-export interface GraphicsResult {
-    /**
-     * 
-     * @type {GraphicFieldsList}
-     * @memberof GraphicsResult
-     */
-    'DocGraphicsInfo': GraphicFieldsList;
-    /**
-     * 
-     * @type {number}
-     * @memberof GraphicsResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GraphicsResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GraphicsResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GraphicsResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof GraphicsResult
-     */
-    'result_type': number;
-}
+export type GraphicsResult = DocGraphicsInfoItem & ResultItem;
+
 

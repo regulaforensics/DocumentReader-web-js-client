@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { TransactionInfoDocumentsDatabase } from './transaction-info-documents-database';
+import type { DocumentsDatabase } from './documents-database';
 
 /**
  * 
@@ -37,10 +37,10 @@ export interface TransactionInfo {
     'DateTime'?: string;
     /**
      * 
-     * @type {TransactionInfoDocumentsDatabase}
+     * @type {DocumentsDatabase}
      * @memberof TransactionInfo
      */
-    'DocumentsDatabase'?: TransactionInfoDocumentsDatabase;
+    'DocumentsDatabase'?: DocumentsDatabase;
     /**
      * System information
      * @type {string}

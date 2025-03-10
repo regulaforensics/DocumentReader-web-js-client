@@ -13,48 +13,18 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { LicenseItem } from './license-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ResultItem } from './result-item';
 
 /**
- * 
+ * @type LicenseResult
+ * Contains license
  * @export
- * @interface LicenseResult
  */
-export interface LicenseResult {
-    /**
-     * Base64 encoded data
-     * @type {string}
-     * @memberof LicenseResult
-     */
-    'License': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof LicenseResult
-     */
-    'buf_length'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof LicenseResult
-     */
-    'light'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof LicenseResult
-     */
-    'list_idx'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof LicenseResult
-     */
-    'page_idx'?: number;
-    /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
-     * @memberof LicenseResult
-     */
-    'result_type': number;
-}
+export type LicenseResult = LicenseItem & ResultItem;
+
 
