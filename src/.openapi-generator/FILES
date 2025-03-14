@@ -39,13 +39,9 @@ models/doc-bar-code-info-fields-list.ts
 models/doc-bar-code-info-item.ts
 models/doc-bar-code-info.ts
 models/doc-graphics-info-item.ts
-models/doc-visual-extended-field-rect-item.ts
-models/doc-visual-extended-field-rect.ts
-models/doc-visual-extended-field-rfid-item.ts
-models/doc-visual-extended-field-rfid.ts
+models/doc-visual-extended-field-item.ts
 models/doc-visual-extended-field.ts
 models/doc-visual-extended-info-item.ts
-models/doc-visual-extended-info-parray-fields-inner.ts
 models/doc-visual-extended-info.ts
 models/document-binary-info-result.ts
 models/document-format.ts
@@ -76,13 +72,8 @@ models/field-item.ts
 models/file-image.ts
 models/get-transactions-by-tag-response.ts
 models/graph-data.ts
-models/graphic-field-rect-item.ts
-models/graphic-field-rect.ts
-models/graphic-field-rfid-item.ts
-models/graphic-field-rfid.ts
 models/graphic-field-type.ts
 models/graphic-field.ts
-models/graphic-fields-list-parray-fields-inner.ts
 models/graphic-fields-list.ts
 models/graphics-result.ts
 models/healthcheck-documents-database.ts
@@ -191,9 +182,14 @@ models/rfid-terminal-type.ts
 models/rfid-terminal.ts
 models/rfid-type.ts
 models/rfid-validity.ts
+models/rfiddoc-visual-extended-field-item.ts
+models/rfiddoc-visual-extended-field.ts
+models/rfiddoc-visual-extended-info-item.ts
+models/rfiddoc-visual-extended-info.ts
 models/rfiderror-codes.ts
 models/rfidgraphics-info-result.ts
 models/rfidpkdresource-type.ts
+models/rfidtext-data-result.ts
 models/scenario.ts
 models/security-feature-item.ts
 models/security-feature-result.ts
@@ -227,6 +223,7 @@ models/transaction-image.ts
 models/transaction-info.ts
 models/transaction-process-get-response.ts
 models/transaction-process-request.ts
+models/transaction-process-response-item.ts
 models/transaction-process-response.ts
 models/transaction-process-result.ts
 models/trf-ft-bytes.ts
@@ -234,3 +231,4 @@ models/trf-ft-string.ts
 models/verification-result.ts
 models/verified-field-map.ts
 models/visibility.ts
+models/visual-extended-field-item.ts

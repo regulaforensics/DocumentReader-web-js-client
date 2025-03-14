@@ -13,27 +13,36 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { GraphicField } from './graphic-field';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { GraphicFieldRfidItem } from './graphic-field-rfid-item';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { GraphicFieldType } from './graphic-field-type';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ImageData } from './image-data';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
- * @type GraphicFieldRfid
- * Information about one graphic field, which is a RFID
+ * 
  * @export
+ * @interface RFIDDocVisualExtendedFieldItem
  */
-export type GraphicFieldRfid = GraphicField & GraphicFieldRfidItem;
-
+export interface RFIDDocVisualExtendedFieldItem {
+    /**
+     * 
+     * @type {number}
+     * @memberof RFIDDocVisualExtendedFieldItem
+     */
+    'OriginDG': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof RFIDDocVisualExtendedFieldItem
+     */
+    'OriginDGTag'?: number;
+    /**
+     * Record index of the text field source in the data group
+     * @type {number}
+     * @memberof RFIDDocVisualExtendedFieldItem
+     */
+    'OriginTagEntry': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof RFIDDocVisualExtendedFieldItem
+     */
+    'OriginEntryView'?: number;
+}
 

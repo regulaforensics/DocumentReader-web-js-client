@@ -15,96 +15,24 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { DocVisualExtendedFieldItem } from './doc-visual-extended-field-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { RectangleCoordinates } from './rectangle-coordinates';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { StringRecognitionResult } from './string-recognition-result';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { TextFieldType } from './text-field-type';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { VisualExtendedFieldItem } from './visual-extended-field-item';
 
 /**
- * 
+ * @type DocVisualExtendedField
  * @export
- * @interface DocVisualExtendedField
  */
-export interface DocVisualExtendedField {
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'FieldType': number;
-    /**
-     * 
-     * @type {TextFieldType}
-     * @memberof DocVisualExtendedField
-     */
-    'wFieldType': TextFieldType;
-    /**
-     * Field symbolic name (null-terminated string)
-     * @type {string}
-     * @memberof DocVisualExtendedField
-     */
-    'FieldName': string;
-    /**
-     * Number of StringsResult array elements
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'StringsCount': number;
-    /**
-     * Array of recognizing probabilities for a each line of text field. Only for Result.VISUAL_TEXT and Result.MRZ_TEXT results.
-     * @type {Array<StringRecognitionResult>}
-     * @memberof DocVisualExtendedField
-     */
-    'StringsResult': Array<StringRecognitionResult>;
-    /**
-     * Buf_Text text string length
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'Buf_Length': number;
-    /**
-     * Text field data in UTF8 format. Results of reading different lines of a multi-line field are separated by \'^\'
-     * @type {string}
-     * @memberof DocVisualExtendedField
-     */
-    'Buf_Text': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DocVisualExtendedField
-     */
-    'FieldMask'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'Validity'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'InComparison'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'wLCID'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'Reserved2'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedField
-     */
-    'Reserved3'?: number;
-}
-
+export type DocVisualExtendedField = DocVisualExtendedFieldItem & VisualExtendedFieldItem;
 
 

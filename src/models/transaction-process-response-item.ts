@@ -13,41 +13,18 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
  * 
  * @export
- * @interface DocVisualExtendedFieldRfidItem
+ * @interface TransactionProcessResponseItem
  */
-export interface DocVisualExtendedFieldRfidItem {
-    /**
-     * 
-     * @type {RfidDataGroupTypeTag}
-     * @memberof DocVisualExtendedFieldRfidItem
-     */
-    'RFID_OriginDG': RfidDataGroupTypeTag;
+export interface TransactionProcessResponseItem {
     /**
      * 
      * @type {number}
-     * @memberof DocVisualExtendedFieldRfidItem
+     * @memberof TransactionProcessResponseItem
      */
-    'RFID_OriginDGTag'?: number;
-    /**
-     * Record index of the text field source in the data group
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfidItem
-     */
-    'RFID_OriginTagEntry': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof DocVisualExtendedFieldRfidItem
-     */
-    'RFID_OriginEntryView'?: number;
+    'CoreLibResultCode': number;
 }
-
-
 

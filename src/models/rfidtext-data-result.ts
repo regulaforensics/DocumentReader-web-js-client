@@ -15,27 +15,18 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { GraphicFieldRect } from './graphic-field-rect';
+import type { RFIDDocVisualExtendedInfo } from './rfiddoc-visual-extended-info';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { GraphicFieldRfid } from './graphic-field-rfid';
+import type { RFIDDocVisualExtendedInfoItem } from './rfiddoc-visual-extended-info-item';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { GraphicFieldType } from './graphic-field-type';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ImageData } from './image-data';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RectangleCoordinates } from './rectangle-coordinates';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
+import type { ResultItem } from './result-item';
 
 /**
- * @type GraphicFieldsListPArrayFieldsInner
+ * @type RFIDTextDataResult
  * @export
  */
-export type GraphicFieldsListPArrayFieldsInner = GraphicFieldRect | GraphicFieldRfid;
+export type RFIDTextDataResult = RFIDDocVisualExtendedInfoItem & ResultItem;
 
 

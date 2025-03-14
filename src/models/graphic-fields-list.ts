@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { GraphicFieldsListPArrayFieldsInner } from './graphic-fields-list-parray-fields-inner';
+import type { GraphicField } from './graphic-field';
 
 /**
  * 
@@ -25,10 +25,10 @@ import type { GraphicFieldsListPArrayFieldsInner } from './graphic-fields-list-p
 export interface GraphicFieldsList {
     /**
      * 
-     * @type {Array<GraphicFieldsListPArrayFieldsInner>}
+     * @type {Array<GraphicField>}
      * @memberof GraphicFieldsList
      */
-    'pArrayFields': Array<GraphicFieldsListPArrayFieldsInner>;
+    'pArrayFields': Array<GraphicField>;
     /**
      * Number of pArrayFields array elements
      * @type {number}

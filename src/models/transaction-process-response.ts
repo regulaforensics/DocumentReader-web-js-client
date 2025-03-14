@@ -28,11 +28,14 @@ import type { RfidLocation } from './rfid-location';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { TransactionInfo } from './transaction-info';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TransactionProcessResponseItem } from './transaction-process-response-item';
 
 /**
  * @type TransactionProcessResponse
  * @export
  */
-export type TransactionProcessResponse = ProcessResponse;
+export type TransactionProcessResponse = ProcessResponse & TransactionProcessResponseItem;
 
 

@@ -15,27 +15,19 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DocVisualExtendedFieldRect } from './doc-visual-extended-field-rect';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { DocVisualExtendedFieldRfid } from './doc-visual-extended-field-rfid';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RectangleCoordinates } from './rectangle-coordinates';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { StringRecognitionResult } from './string-recognition-result';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { TextFieldType } from './text-field-type';
+import type { RFIDDocVisualExtendedInfo } from './rfiddoc-visual-extended-info';
 
 /**
- * @type DocVisualExtendedInfoPArrayFieldsInner
+ * 
  * @export
+ * @interface RFIDDocVisualExtendedInfoItem
  */
-export type DocVisualExtendedInfoPArrayFieldsInner = DocVisualExtendedFieldRect | DocVisualExtendedFieldRfid;
-
+export interface RFIDDocVisualExtendedInfoItem {
+    /**
+     * 
+     * @type {RFIDDocVisualExtendedInfo}
+     * @memberof RFIDDocVisualExtendedInfoItem
+     */
+    'DocVisualExtendedInfo': RFIDDocVisualExtendedInfo;
+}
 

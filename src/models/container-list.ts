@@ -28,7 +28,7 @@ export interface ContainerList {
      * @type {number}
      * @memberof ContainerList
      */
-    'Count': number;
+    'Count'?: number;
     /**
      * 
      * @type {Array<ContainerListListInner>}

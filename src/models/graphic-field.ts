@@ -19,6 +19,9 @@ import type { GraphicFieldType } from './graphic-field-type';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { ImageData } from './image-data';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
  * Information about one graphic field - abstract class
@@ -26,6 +29,12 @@ import type { ImageData } from './image-data';
  * @interface GraphicField
  */
 export interface GraphicField {
+    /**
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof GraphicField
+     */
+    'FieldRect': RectangleCoordinates;
     /**
      * 
      * @type {GraphicFieldType}

@@ -15,25 +15,25 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { GraphicField } from './graphic-field';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { GraphicFieldRectItem } from './graphic-field-rect-item';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { GraphicFieldType } from './graphic-field-type';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ImageData } from './image-data';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RectangleCoordinates } from './rectangle-coordinates';
+import type { RFIDDocVisualExtendedField } from './rfiddoc-visual-extended-field';
 
 /**
- * @type GraphicFieldRect
- * Information about one graphic field, which is a rectangle
+ * Container for extracted text fields. Fields are identified by type and language
  * @export
+ * @interface RFIDDocVisualExtendedInfo
  */
-export type GraphicFieldRect = GraphicField & GraphicFieldRectItem;
-
+export interface RFIDDocVisualExtendedInfo {
+    /**
+     * Number of pArrayFields array elements
+     * @type {number}
+     * @memberof RFIDDocVisualExtendedInfo
+     */
+    'nFields': number;
+    /**
+     * 
+     * @type {Array<RFIDDocVisualExtendedField>}
+     * @memberof RFIDDocVisualExtendedInfo
+     */
+    'pArrayFields': Array<RFIDDocVisualExtendedField>;
+}
 

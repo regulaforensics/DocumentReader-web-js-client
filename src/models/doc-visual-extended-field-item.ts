@@ -15,25 +15,19 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DocVisualExtendedField } from './doc-visual-extended-field';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { DocVisualExtendedFieldRfidItem } from './doc-visual-extended-field-rfid-item';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { StringRecognitionResult } from './string-recognition-result';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { TextFieldType } from './text-field-type';
+import type { RectangleCoordinates } from './rectangle-coordinates';
 
 /**
- * @type DocVisualExtendedFieldRfid
- * Structure and serves for storing information from one text data field. Variant with field logical type and RFID data.
+ * 
  * @export
+ * @interface DocVisualExtendedFieldItem
  */
-export type DocVisualExtendedFieldRfid = DocVisualExtendedField & DocVisualExtendedFieldRfidItem;
-
+export interface DocVisualExtendedFieldItem {
+    /**
+     * 
+     * @type {RectangleCoordinates}
+     * @memberof DocVisualExtendedFieldItem
+     */
+    'FieldRect'?: RectangleCoordinates;
+}
 

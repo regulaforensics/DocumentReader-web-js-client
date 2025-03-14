@@ -15,19 +15,21 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { RectangleCoordinates } from './rectangle-coordinates';
+import type { RFIDDocVisualExtendedFieldItem } from './rfiddoc-visual-extended-field-item';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { StringRecognitionResult } from './string-recognition-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TextFieldType } from './text-field-type';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { VisualExtendedFieldItem } from './visual-extended-field-item';
 
 /**
- * 
+ * @type RFIDDocVisualExtendedField
  * @export
- * @interface GraphicFieldRectItem
  */
-export interface GraphicFieldRectItem {
-    /**
-     * 
-     * @type {RectangleCoordinates}
-     * @memberof GraphicFieldRectItem
-     */
-    'FieldRect': RectangleCoordinates;
-}
+export type RFIDDocVisualExtendedField = RFIDDocVisualExtendedFieldItem & VisualExtendedFieldItem;
+
 

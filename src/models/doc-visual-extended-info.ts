@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { DocVisualExtendedInfoPArrayFieldsInner } from './doc-visual-extended-info-parray-fields-inner';
+import type { DocVisualExtendedField } from './doc-visual-extended-field';
 
 /**
  * Container for extracted text fields. Fields are identified by type and language
@@ -31,9 +31,9 @@ export interface DocVisualExtendedInfo {
     'nFields': number;
     /**
      * 
-     * @type {Array<DocVisualExtendedInfoPArrayFieldsInner>}
+     * @type {Array<DocVisualExtendedField>}
      * @memberof DocVisualExtendedInfo
      */
-    'pArrayFields': Array<DocVisualExtendedInfoPArrayFieldsInner>;
+    'pArrayFields': Array<DocVisualExtendedField>;
 }
 
