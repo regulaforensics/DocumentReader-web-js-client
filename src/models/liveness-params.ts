@@ -44,6 +44,12 @@ export interface LivenessParams {
      * @memberof LivenessParams
      */
     checkED?: boolean;
+    /**
+     * This parameter is used to enable Black and white copy check
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
+    checkBlackAndWhiteCopy?: boolean;
 }
 
 
