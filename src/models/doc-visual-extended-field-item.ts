@@ -28,6 +28,6 @@ export interface DocVisualExtendedFieldItem {
      * @type {RectangleCoordinates}
      * @memberof DocVisualExtendedFieldItem
      */
-    'FieldRect'?: RectangleCoordinates;
+    'FieldRect': RectangleCoordinates;
 }
 
