@@ -1,6 +1,6 @@
 import { AuthenticityCheckResult, AuthenticityResultType, CheckResult, FiberResult } from '../../models';
 
-export class FiberChecks {
+export class FiberChecks implements AuthenticityCheckResult {
     List: Array<FiberResult>;
     Result: CheckResult;
     Type: AuthenticityResultType;

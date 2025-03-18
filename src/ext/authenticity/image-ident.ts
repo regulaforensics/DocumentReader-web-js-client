@@ -1,6 +1,6 @@
 import { AuthenticityCheckResult, AuthenticityResultType, CheckResult, PhotoIdentResult } from '../../models';
 
-export class ImageIdentChecks {
+export class ImageIdentChecks implements AuthenticityCheckResult {
     List: Array<PhotoIdentResult>;
     Result: CheckResult;
     Type: AuthenticityResultType;
