@@ -50,5 +50,11 @@ export interface LivenessParams {
      * @memberof LivenessParams
      */
     'checkBlackAndWhiteCopy'?: boolean;
+    /**
+     * This parameter is used to enable Dynaprint check
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
+    'checkDynaprint'?: boolean;
 }
 

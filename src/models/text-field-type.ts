@@ -2588,7 +2588,15 @@ export enum TextFieldType {
     /**
     * EF.CardAccess
     */
-    EF_CARD_ACCESS = 692
+    EF_CARD_ACCESS = 692,
+    /**
+    * Short flight number
+    */
+    SHORT_FLIGHT_NUMBER = 693,
+    /**
+    * Airline code
+    */
+    AIRLINE_CODE = 694
 }
 
 

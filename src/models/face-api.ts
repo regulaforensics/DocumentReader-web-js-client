@@ -72,7 +72,7 @@ export interface FaceApi {
      */
     'proxy_type'?: number;
     /**
-     * Minimum age of a child, at which portrait comparison result will be effective. Default: 13.
+     * The age threshold for the portrait comparison. Default: 13.
      * @type {number}
      * @memberof FaceApi
      */
