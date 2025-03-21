@@ -216,8 +216,6 @@ export * from './transaction-image';
 export * from './transaction-info';
 export * from './transaction-process-get-response';
 export * from './transaction-process-request';
-export * from './transaction-process-response';
-export * from './transaction-process-response-item';
 export * from './transaction-process-result';
 export * from './trf-ft-bytes';
 export * from './trf-ft-string';

@@ -24,11 +24,11 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 // @ts-ignore
 import type { ListTransactionsByTagResponse } from '../models';
 // @ts-ignore
+import type { ProcessResponse } from '../models';
+// @ts-ignore
 import type { TransactionProcessGetResponse } from '../models';
 // @ts-ignore
 import type { TransactionProcessRequest } from '../models';
-// @ts-ignore
-import type { TransactionProcessResponse } from '../models';
 // @ts-ignore
 import type { TransactionProcessResult } from '../models';
 /**
@@ -344,7 +344,7 @@ export const TransactionApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TransactionProcessResponse>> {
+        async apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProcessResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['TransactionApi.apiV2TransactionTransactionIdResultsGet']?.[localVarOperationServerIndex]?.url;
@@ -420,7 +420,7 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: RawAxiosRequestConfig): AxiosPromise<TransactionProcessResponse> {
+        apiV2TransactionTransactionIdResultsGet(transactionId: string, withImages?: boolean, options?: RawAxiosRequestConfig): AxiosPromise<ProcessResponse> {
             return localVarFp.apiV2TransactionTransactionIdResultsGet(transactionId, withImages, options).then((request) => request(axios, basePath));
         },
     };

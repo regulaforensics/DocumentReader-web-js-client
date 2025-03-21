@@ -223,8 +223,6 @@ models/transaction-image.ts
 models/transaction-info.ts
 models/transaction-process-get-response.ts
 models/transaction-process-request.ts
-models/transaction-process-response-item.ts
-models/transaction-process-response.ts
 models/transaction-process-result.ts
 models/trf-ft-bytes.ts
 models/trf-ft-string.ts

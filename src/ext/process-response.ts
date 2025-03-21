@@ -6,7 +6,6 @@ import {
     ImageQualityCheckList,
     ImageQualityResult,
     ImagesResult,
-    TransactionProcessResponse,
     OneCandidate,
     ProcessingStatus,
     ProcessResponse,
@@ -33,9 +32,9 @@ export class Response {
     TransactionInfo: TransactionInfo;
 
     lowLvlResponse: LowLvlResponse;
-    rawResponse: ProcessResponse | TransactionProcessResponse;
+    rawResponse: ProcessResponse;
 
-    constructor(original: ProcessResponse | TransactionProcessResponse) {
+    constructor(original: ProcessResponse) {
         const lowLvlResponse = new LowLvlResponse(original);
         this.lowLvlResponse = lowLvlResponse;
         this.rawResponse = original;
@@ -132,7 +131,7 @@ export class LowLvlResponse implements ProcessResponse {
     metadata?: { [key: string]: object };
     CoreLibResultCode?: number;
 
-    constructor(original: ProcessResponse | TransactionProcessResponse) {
+    constructor(original: ProcessResponse) {
         this.ContainerList = original.ContainerList || { Count: 0, List: [] };
         this.ProcessingFinished = original.ProcessingFinished || ProcessingStatus.NOT_FINISHED;
         this.TransactionInfo = original.TransactionInfo || {};
