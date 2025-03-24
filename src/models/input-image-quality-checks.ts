@@ -51,7 +51,11 @@ export enum InputImageQualityChecks {
     /**
     * Signals if the document image is bright enough
     */
-    Brightness = 'brightnessCheck'
+    Brightness = 'brightnessCheck',
+    /**
+    * Signals if the document image has occlusion
+    */
+    Occlusion = 'occlusionCheck'
 }
 
 
