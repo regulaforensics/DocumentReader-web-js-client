@@ -16,6 +16,7 @@ import {
     TransactionProcessResult,
     ListTransactionsByTagResponse,
     TransactionProcessGetResponse,
+    Healthcheck,
 } from '../models';
 import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
 import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
@@ -40,6 +41,11 @@ export class DocumentReaderApi {
 
     async ping(xRequestID?: string): Promise<DeviceInfo> {
         const axiosResult = await this.healthcheckApi.ping(xRequestID);
+        return axiosResult.data;
+    }
+
+    async health(xRequestID?: string): Promise<Healthcheck> {
+        const axiosResult = await this.healthcheckApi.healthz(xRequestID);
         return axiosResult.data;
     }
 
