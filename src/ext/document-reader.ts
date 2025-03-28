@@ -1,5 +1,6 @@
 import { DefaultApi } from '../api/default-api';
 import { ProcessApi } from '../api/process-api';
+import { HealthcheckApi } from '../api/healthcheck-api';
 import { TransactionApi } from '../api/transaction-api';
 import { Response } from './process-response';
 import { Configuration, ConfigurationParameters } from '../configuration';
@@ -16,6 +17,7 @@ import {
     InlineResponse200,
     ListTransactionsByTagResponse,
     TransactionProcessGetResponse,
+    Healthcheck,
 } from '../models';
 import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
 import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
@@ -23,6 +25,7 @@ import * as converter from 'base64-arraybuffer';
 
 export class DocumentReaderApi {
     private readonly defaultApi: DefaultApi;
+    private readonly healthcheckApi: HealthcheckApi;
     private readonly processApi: ProcessApi;
     private readonly transactionApi: TransactionApi;
 
@@ -34,12 +37,18 @@ export class DocumentReaderApi {
         axios: AxiosInstance = globalAxios,
     ) {
         this.defaultApi = new DefaultApi(new Configuration(configuration), basePath, axios);
+        this.healthcheckApi = new HealthcheckApi(new Configuration(configuration), basePath, axios);
         this.processApi = new ProcessApi(new Configuration(configuration), basePath, axios);
         this.transactionApi = new TransactionApi(new Configuration(configuration), basePath, axios);
     }
 
     async ping(xRequestID?: string): Promise<DeviceInfo> {
         const axiosResult = await this.defaultApi.ping(xRequestID);
+        return axiosResult.data;
+    }
+
+    async health(xRequestID?: string): Promise<Healthcheck> {
+        const axiosResult = await this.healthcheckApi.healthz(xRequestID);
         return axiosResult.data;
     }
 

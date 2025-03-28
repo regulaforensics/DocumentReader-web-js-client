@@ -22,7 +22,7 @@ const { DOCUMENT_NUMBER } = TextFieldType;
 
     api.setLicense(license);
 
-    const serverInfo = await api.ping();
+    const serverInfo = await api.health();
 
     const license_file = fs.readFileSync('license.txt', 'utf8');
     const encrypted_rcl = fs.readFileSync('encrypted-rcl.txt', 'utf8');

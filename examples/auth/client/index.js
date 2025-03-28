@@ -55,7 +55,7 @@ const api = new DocumentReaderApi({
 // Uncomment the line below if you want to transfer the license with each request
 // api.setLicense(license);
 
-const serverInfo = await api.ping();
+const serverInfo = await api.health();
 
 const white_page_0 = fs.readFileSync('WHITE.jpg').buffer;
 

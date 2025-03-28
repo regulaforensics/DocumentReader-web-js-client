@@ -111,6 +111,12 @@ export interface AuthParams {
      * @memberof AuthParams
      */
     checkLetterScreen?: boolean;
+    /**
+     * This parameter is used to enable Security text check
+     * @type {boolean}
+     * @memberof AuthParams
+     */
+    checkSecurityText?: boolean;
 }
 
 
