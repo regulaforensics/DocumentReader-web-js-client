@@ -117,6 +117,9 @@ import type { RFIDGraphicsInfoResult } from './rfidgraphics-info-result';
 import type { RFIDTextDataResult } from './rfidtext-data-result';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultMRZDetector } from './result-mrzdetector';
 // May contain unused imports in some cases
 // @ts-ignore

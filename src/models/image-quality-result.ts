@@ -21,6 +21,9 @@ import type { ImageQualityCheckList } from './image-quality-check-list';
 import type { ImageQualityCheckListItem } from './image-quality-check-list-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

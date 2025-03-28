@@ -21,6 +21,9 @@ import type { MrzPosition } from './mrz-position';
 import type { MrzPositionItem } from './mrz-position-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

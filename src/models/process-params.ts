@@ -18,6 +18,9 @@
 import type { AuthParams } from './auth-params';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AuthenticityResultType } from './authenticity-result-type';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { DocumentFormat } from './document-format';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -351,11 +354,11 @@ export interface ProcessParams {
      */
     'documentGroupFilter'?: Array<DocumentType>;
     /**
-     * Authenticity checks that should be performed regardless of the document type. The available checks are listed in the eRPRM_Authenticity enum. Note that only supported by your license checks can be added. 
-     * @type {number}
+     * 
+     * @type {AuthenticityResultType}
      * @memberof ProcessParams
      */
-    'processAuth'?: number;
+    'processAuth'?: AuthenticityResultType;
     /**
      * This parameter is used to specify the document reader device type from which input images were captured. Default 0.
      * @type {number}
@@ -434,6 +437,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'doBarcodes'?: Array<InputBarcodeType>;
+    /**
+     * Set to force DL categories expiry date to affect the overall status or not. As documents usually have their own date of expiry, which might be less or greater than category expiry date, this might be handy for specific cases.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'strictDLCategoryExpiry'?: boolean;
 }
 
 

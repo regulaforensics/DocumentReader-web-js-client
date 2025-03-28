@@ -21,6 +21,9 @@ import type { OneCandidate } from './one-candidate';
 import type { OneCandidateItem } from './one-candidate-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

@@ -13,6 +13,9 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { Result } from './result';
 
 /**
  * Common fields for all result objects
@@ -45,10 +48,12 @@ export interface ResultItem {
      */
     'page_idx'?: number;
     /**
-     * Same as Result type, but used for safe parsing of not-described values. See Result type.
-     * @type {number}
+     * 
+     * @type {Result}
      * @memberof ResultItem
      */
-    'result_type': number;
+    'result_type': Result;
 }
+
+
 

@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AuthenticityResultType } from './authenticity-result-type';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { CheckDiagnose } from './check-diagnose';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -27,11 +30,11 @@ import type { CheckResult } from './check-result';
  */
 export interface AuthenticityCheckResultItem {
     /**
-     * Same as authenticity result type, but used for safe parsing of not-described values: https://docs.regulaforensics.com/develop/doc-reader-sdk/web-service/development/enums/authenticity-result-type/
-     * @type {number}
+     * 
+     * @type {AuthenticityResultType}
      * @memberof AuthenticityCheckResultItem
      */
-    'Type': number;
+    'Type': AuthenticityResultType;
     /**
      * 
      * @type {CheckResult}

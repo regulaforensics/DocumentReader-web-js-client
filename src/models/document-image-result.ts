@@ -21,6 +21,9 @@ import type { ImageData } from './image-data';
 import type { RawImageContainerItem } from './raw-image-container-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

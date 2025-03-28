@@ -21,6 +21,9 @@ import type { DocVisualExtendedInfo } from './doc-visual-extended-info';
 import type { DocVisualExtendedInfoItem } from './doc-visual-extended-info-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

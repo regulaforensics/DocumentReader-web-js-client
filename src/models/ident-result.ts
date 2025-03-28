@@ -21,6 +21,9 @@ import type { AreaContainer } from './area-container';
 import type { AuthenticityCheckResultItem } from './authenticity-check-result-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { AuthenticityResultType } from './authenticity-result-type';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { CheckDiagnose } from './check-diagnose';
 // May contain unused imports in some cases
 // @ts-ignore

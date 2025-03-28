@@ -21,6 +21,9 @@ import type { DocGraphicsInfoItem } from './doc-graphics-info-item';
 import type { GraphicFieldsList } from './graphic-fields-list';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

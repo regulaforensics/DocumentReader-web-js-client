@@ -36,12 +36,6 @@ import type { ProcessSystemInfo } from './process-system-info';
  */
 export interface ProcessRequest {
     /**
-     * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
-     * @type {Array<LCID>}
-     * @memberof ProcessRequest
-     */
-    'lcidFilter'?: Array<LCID>;
-    /**
      * 
      * @type {ProcessParams}
      * @memberof ProcessRequest
@@ -113,5 +107,11 @@ export interface ProcessRequest {
      * @memberof ProcessRequest
      */
     'ImageUrls'?: Array<string>;
+    /**
+     * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
+     * @type {Array<LCID>}
+     * @memberof ProcessRequest
+     */
+    'lcidFilter'?: Array<LCID>;
 }
 

@@ -21,6 +21,9 @@ import type { AuthenticityCheckList } from './authenticity-check-list';
 import type { AuthenticityCheckListItem } from './authenticity-check-list-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

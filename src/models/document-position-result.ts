@@ -21,6 +21,9 @@ import type { DocumentPosition } from './document-position';
 import type { DocumentPositionItem } from './document-position-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

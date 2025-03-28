@@ -54,20 +54,6 @@ If the instance has been launched successfully, use the following line command t
 API_BASE_PATH="http://127.0.0.1:8080" node .
 ```
 
-
-
-### Output 
-This sample generates the following text output:
-```text
-    ---------------------------------------------------------------------------
-                   Document Overall Status: 0
-                    Document Number Visual: OO0000000
-                       Document Number MRZ: OO0000000
-        Validity Of Document Number Visual: 0
-           Validity Of Document Number MRZ: 0
-              MRZ-Visual values comparison: 1
-    ---------------------------------------------------------------------------
-```
 Also, it stores [portrait](portrait.jpg) and [document image](document-image.jpg) images in the current folder.
-You can modify [this example](/index.js)
+You can modify [this example](./index.js)
 and re-run it to get your own results.

@@ -21,6 +21,9 @@ import type { DocBarCodeInfoFieldsList } from './doc-bar-code-info-fields-list';
 import type { DocBarCodeInfoItem } from './doc-bar-code-info-item';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**

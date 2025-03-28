@@ -21,6 +21,9 @@ import type { CandidatesListItem } from './candidates-list-item';
 import type { DocumentTypesCandidatesList } from './document-types-candidates-list';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { Result } from './result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ResultItem } from './result-item';
 
 /**
