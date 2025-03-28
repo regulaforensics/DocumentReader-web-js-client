@@ -18,6 +18,7 @@ import { DocumentFormat } from './document-format';
 import { DocumentType } from './document-type';
 import { FaceApi } from './face-api';
 import { ImageQA } from './image-qa';
+import { InputBarcodeType } from './input-barcode-type';
 import { LogLevel } from './log-level';
 import { MRZFormat } from './mrzformat';
 import { MeasureSystem } from './measure-system';
@@ -386,6 +387,18 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     selectLongestNames?: boolean;
+    /**
+     * Set the types of barcodes to process.
+     * @type {Array<InputBarcodeType>}
+     * @memberof ProcessParams
+     */
+    doBarcodes?: Array<InputBarcodeType>;
+    /**
+     * Set to force DL categories expiry date to affect the overall status or not. As documents usually have their own date of expiry, which might be less or greater than category expiry date, this might be handy for specific cases.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    strictDLCategoryExpiry?: boolean;
 }
 
 
