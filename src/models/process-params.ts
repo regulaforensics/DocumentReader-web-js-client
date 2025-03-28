@@ -393,6 +393,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     doBarcodes?: Array<InputBarcodeType>;
+    /**
+     * Set to force DL categories expiry date to affect the overall status or not. As documents usually have their own date of expiry, which might be less or greater than category expiry date, this might be handy for specific cases.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    strictDLCategoryExpiry?: boolean;
 }
 
 
