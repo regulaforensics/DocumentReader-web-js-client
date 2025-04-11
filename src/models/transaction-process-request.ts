@@ -45,6 +45,24 @@ export interface TransactionProcessRequest {
      */
     'List'?: Array<ProcessRequestImage>;
     /**
+     * Session ID
+     * @type {string}
+     * @memberof TransactionProcessRequest
+     */
+    'tag'?: string;
+    /**
+     * Customer name
+     * @type {string}
+     * @memberof TransactionProcessRequest
+     */
+    'tenant'?: string;
+    /**
+     * Environment type
+     * @type {string}
+     * @memberof TransactionProcessRequest
+     */
+    'env'?: string;
+    /**
      * Live portrait photo
      * @type {string}
      * @memberof TransactionProcessRequest

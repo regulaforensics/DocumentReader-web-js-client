@@ -25,7 +25,7 @@ export interface ImageData {
      * @type {string}
      * @memberof ImageData
      */
-    'image': string;
+    'image'?: string;
     /**
      * Image format
      * @type {string}

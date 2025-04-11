@@ -123,6 +123,7 @@ export * from './out-data';
 export * from './out-data-transaction-images-field-value';
 export * from './parray-field';
 export * from './parsed-data';
+export * from './parsing-error-codes';
 export * from './parsing-notification-codes';
 export * from './per-document-config';
 export * from './photo-ident-item';
