@@ -22,10 +22,6 @@
 
 export enum AuthenticityResultType {
     /**
-    * No authenticity control procedure
-    */
-    NONE = 0,
-    /**
     * Document luminescence check in UV light
     */
     UV_LUMINESCENCE = 1,
@@ -58,10 +54,6 @@ export enum AuthenticityResultType {
     */
     IPI = 128,
     /**
-    * Document photo check in IR light
-    */
-    IR_PHOTO = 256,
-    /**
     * Owner&#39;s photo embedding check (is photo printed or sticked)
     */
     PHOTO_EMBED_TYPE = 512,
@@ -70,10 +62,6 @@ export enum AuthenticityResultType {
     */
     OVI = 1024,
     /**
-    * IR luminescence check
-    */
-    IR_LUMINESCENCE = 2048,
-    /**
     * Hologram presence check. Deprecated
     */
     HOLOGRAMS = 4096,
@@ -81,10 +69,6 @@ export enum AuthenticityResultType {
     * Owner&#39;s photo area advanced check (photo shape, size, position, etc.)
     */
     PHOTO_AREA = 8192,
-    /**
-    * UV background check
-    */
-    UV_BACKGROUND = 16384,
     /**
     * Portrait comparison check (document printed vs chip vs live)
     */
@@ -124,11 +108,7 @@ export enum AuthenticityResultType {
     /**
     * Encrypted IPI
     */
-    ENCRYPTED_IPI = 16777216,
-    /**
-    * Flag for status-only authenticity
-    */
-    STATUS_ONLY = 2147483648
+    ENCRYPTED_IPI = 16777216
 }
 
 

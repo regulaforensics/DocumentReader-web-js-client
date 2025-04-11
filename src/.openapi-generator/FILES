@@ -130,6 +130,7 @@ models/out-data-transaction-images-field-value.ts
 models/out-data.ts
 models/parray-field.ts
 models/parsed-data.ts
+models/parsing-error-codes.ts
 models/parsing-notification-codes.ts
 models/per-document-config.ts
 models/photo-ident-item.ts
