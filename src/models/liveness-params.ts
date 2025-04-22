@@ -56,5 +56,11 @@ export interface LivenessParams {
      * @memberof LivenessParams
      */
     'checkDynaprint'?: boolean;
+    /**
+     * This parameter is used to enable Geometry check
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
+    'checkGeometry'?: boolean;
 }
 
