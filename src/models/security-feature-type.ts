@@ -232,7 +232,15 @@ export enum SecurityFeatureType {
     /**
     * Black and white copy check
     */
-    LIVENESS_BLACK_AND_WHITE_COPY_CHECK = 53
+    LIVENESS_BLACK_AND_WHITE_COPY_CHECK = 53,
+    /**
+    * Liveness dynaprint
+    */
+    LIVENESS_DYNAPRINT = 54,
+    /**
+    * Liveness geometry check
+    */
+    LIVENESS_GEOMETRY_CHECK = 55
 }
 
 

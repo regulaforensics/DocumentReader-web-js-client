@@ -188,7 +188,31 @@ export enum Light {
     /**
     * For internal use
     */
-    WHITE_SPECIAL = 4194304
+    WHITE_SPECIAL = 4194304,
+    /**
+    * White UV
+    */
+    WHITE_UV = 134,
+    /**
+    * White full hologram
+    */
+    WHITE_FULL_HOLO = 67108870,
+    /**
+    * HR light
+    */
+    HR_LIGHT = 1073741824,
+    /**
+    * HR white
+    */
+    HR_WHITE = 1073741830,
+    /**
+    * HR UV
+    */
+    HR_UV = 1073741952,
+    /**
+    * HR IR
+    */
+    HR_IR = 1073741848
 }
 
 
