@@ -28,6 +28,6 @@ export interface FaceDetectionItem {
      * @type {FaceDetection}
      * @memberof FaceDetectionItem
      */
-    'FaceDetection': FaceDetection;
+    'FaceDetection'?: FaceDetection;
 }
 
