@@ -8,16 +8,8 @@ import {
 } from '@regulaforensics/document-reader-webclient';
 
 const apiBasePath = process.env.API_BASE_PATH || 'https://api.regulaforensics.com';
-let license = process.env.TEST_LICENSE;
-
-if (fs.existsSync('regula.license')) {
-    license = fs.readFileSync('regula.license');
-}
 
 const api = new DocumentReaderApi({ basePath: apiBasePath });
-
-// Uncomment the line below if you want to transfer the license with each request
-// api.setLicense(license);
 
 const serverInfo = await api.health();
 

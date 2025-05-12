@@ -449,6 +449,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'generateAlpha2Codes'?: boolean;
+    /**
+     * Limits the number of pages to be processed from a PDF file.
+     * @type {number}
+     * @memberof ProcessParams
+     */
+    'pdfPagesLimit'?: number;
 }
 
 

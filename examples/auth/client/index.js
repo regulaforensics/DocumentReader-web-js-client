@@ -40,20 +40,13 @@ async function get_authorization_token() {
 }
 
 const apiBasePath = process.env.API_BASE_PATH || 'http://localhost:4333';
-let license = process.env.TEST_LICENSE;
 
-if (fs.existsSync('regula.license')) {
-    license = fs.readFileSync('regula.license');
-}
 const token = await get_authorization_token();
 
 const api = new DocumentReaderApi({
     basePath: apiBasePath,
     baseOptions: { headers: { Authorization: `Bearer ${token}` } },
 });
-
-// Uncomment the line below if you want to transfer the license with each request
-// api.setLicense(license);
 
 const serverInfo = await api.health();
 

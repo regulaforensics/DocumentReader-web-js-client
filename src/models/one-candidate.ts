@@ -31,7 +31,7 @@ export interface OneCandidate {
      * @type {string}
      * @memberof OneCandidate
      */
-    'DocumentName': string;
+    'DocumentName'?: string;
     /**
      * Unique document type template identifier (Regula\'s internal numeric code)
      * @type {number}
@@ -61,7 +61,7 @@ export interface OneCandidate {
      * @type {FDSIDList}
      * @memberof OneCandidate
      */
-    'FDSIDList': FDSIDList;
+    'FDSIDList'?: FDSIDList;
     /**
      * Combination of lighting scheme identifiers (Light enum) required to conduct OCR for this type of document
      * @type {number}
