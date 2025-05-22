@@ -2602,11 +2602,11 @@ export enum TextFieldType {
     */
     FT_MVC_AGENCY = 695,
     /**
-    * Issuing state code alpha
+    * Issuing state code (Alpha-2)
     */
     FT_ISSUING_STATE_CODE_ALPHA2 = 696,
     /**
-    * Nationality code alpha
+    * Nationality code (Alpha-2)
     */
     FT_NATIONALITY_CODE_ALPHA2 = 697
 }
