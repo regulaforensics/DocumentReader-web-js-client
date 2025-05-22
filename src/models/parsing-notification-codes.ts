@@ -908,7 +908,15 @@ export enum ParsingNotificationCodes {
     /**
     * Country Codes from certificate and DG1 MRZ don&#39;t match
     */
-    ntfLDS_ICAO_Certificate_MRZ_Country_NonMatching = 2415919698
+    ntfLDS_ICAO_Certificate_MRZ_Country_NonMatching = 2415919698,
+    /**
+    * ICAO certificate: Issuer country non upper case
+    */
+    ntfLDS_ICAO_Certificate_Issuer_CountryNonUpperCase = 2415919699,
+    /**
+    * ICAO certificate: Subject country non upper case
+    */
+    ntfLDS_ICAO_Certificate_Subject_CountryNonUpperCase = 2415919700
 }
 
 
