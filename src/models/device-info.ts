@@ -13,6 +13,9 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { DeviceInfoDocumentsDatabase } from './device-info-documents-database';
 
 /**
  * 
@@ -21,31 +24,37 @@
  */
 export interface DeviceInfo {
     /**
-     * 
+     * Application name.
      * @type {string}
      * @memberof DeviceInfo
      */
     'app-name'?: string;
     /**
-     * 
+     * Product version.
      * @type {string}
      * @memberof DeviceInfo
      */
     'version'?: string;
     /**
-     * 
+     * Unique license identifier.
      * @type {string}
      * @memberof DeviceInfo
      */
     'license-id'?: string;
     /**
-     * 
+     * License serial number.
      * @type {string}
      * @memberof DeviceInfo
      */
     'license-serial'?: string;
     /**
      * 
+     * @type {string}
+     * @memberof DeviceInfo
+     */
+    'license-type'?: string;
+    /**
+     * License validity date.
      * @type {string}
      * @memberof DeviceInfo
      */
@@ -56,5 +65,23 @@ export interface DeviceInfo {
      * @memberof DeviceInfo
      */
     'server-time'?: string;
+    /**
+     * List of supported scenarios.
+     * @type {Array<string>}
+     * @memberof DeviceInfo
+     */
+    'supported-scenarios'?: Array<string>;
+    /**
+     * 
+     * @type {{ [key: string]: any; }}
+     * @memberof DeviceInfo
+     */
+    'metadata'?: { [key: string]: any; };
+    /**
+     * 
+     * @type {DeviceInfoDocumentsDatabase}
+     * @memberof DeviceInfo
+     */
+    'documents-database'?: DeviceInfoDocumentsDatabase;
 }
 

@@ -29,6 +29,7 @@ export * from './data-module';
 export * from './details-optical';
 export * from './details-rfid';
 export * from './device-info';
+export * from './device-info-documents-database';
 export * from './doc-bar-code-info';
 export * from './doc-bar-code-info-fields-list';
 export * from './doc-bar-code-info-item';
