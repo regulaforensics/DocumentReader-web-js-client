@@ -13,21 +13,36 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { ParsingNotificationCodes } from './parsing-notification-codes';
 
 /**
- * Params for the RFID chip data reprocessing
+ * Database information.
  * @export
- * @interface ProcessParamsRfid
+ * @interface DeviceInfoDocumentsDatabase
  */
-export interface ProcessParamsRfid {
+export interface DeviceInfoDocumentsDatabase {
     /**
-     * A list of notification codes that should be ignored during passive authentication (PA)
-     * @type {Array<ParsingNotificationCodes>}
-     * @memberof ProcessParamsRfid
+     * Database identifier.
+     * @type {string}
+     * @memberof DeviceInfoDocumentsDatabase
      */
-    'paIgnoreNotificationCodes'?: Array<ParsingNotificationCodes>;
+    'id': string | null;
+    /**
+     * Database version.
+     * @type {string}
+     * @memberof DeviceInfoDocumentsDatabase
+     */
+    'version': string | null;
+    /**
+     * Date of database creation.
+     * @type {string}
+     * @memberof DeviceInfoDocumentsDatabase
+     */
+    'export-date': string | null;
+    /**
+     * Description of the database contents, such as the list of supported countries and documents.
+     * @type {string}
+     * @memberof DeviceInfoDocumentsDatabase
+     */
+    'description': string | null;
 }
 

@@ -34,6 +34,7 @@ models/cross-source-value-comparison.ts
 models/data-module.ts
 models/details-optical.ts
 models/details-rfid.ts
+models/device-info-documents-database.ts
 models/device-info.ts
 models/doc-bar-code-info-fields-list.ts
 models/doc-bar-code-info-item.ts
