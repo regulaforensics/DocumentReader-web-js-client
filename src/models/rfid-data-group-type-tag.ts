@@ -22,7 +22,7 @@
 
 export enum RfidDataGroupTypeTag {
     /**
-    * Common Data Group Type
+    * Common Data Element
     */
     COM = 96,
     /**
@@ -90,155 +90,155 @@ export enum RfidDataGroupTypeTag {
     */
     DG16 = 112,
     /**
-    * Start of Data
+    * Security Object Document
     */
     SOD = 119,
     /**
-    * Extended Interoperable Data, Data Group 1
+    * eID, Data Group 1
     */
     EID_DG1 = 97,
     /**
-    * Extended Interoperable Data, Data Group 2
+    * eID, Data Group 2
     */
     EID_DG2 = 98,
     /**
-    * Extended Interoperable Data, Data Group 3
+    * eID, Data Group 3
     */
     EID_DG3 = 99,
     /**
-    * Extended Interoperable Data, Data Group 4
+    * eID, Data Group 4
     */
     EID_DG4 = 100,
     /**
-    * Extended Interoperable Data, Data Group 5
+    * eID, Data Group 5
     */
     EID_DG5 = 101,
     /**
-    * Extended Interoperable Data, Data Group 6
+    * eID, Data Group 6
     */
     EID_DG6 = 102,
     /**
-    * Extended Interoperable Data, Data Group 7
+    * eID, Data Group 7
     */
     EID_DG7 = 103,
     /**
-    * Extended Interoperable Data, Data Group 8
+    * eID, Data Group 8
     */
     EID_DG8 = 104,
     /**
-    * Extended Interoperable Data, Data Group 9
+    * eID, Data Group 9
     */
     EID_DG9 = 105,
     /**
-    * Extended Interoperable Data, Data Group 10
+    * eID, Data Group 10
     */
     EID_DG10 = 106,
     /**
-    * Extended Interoperable Data, Data Group 11
+    * eID, Data Group 11
     */
     EID_DG11 = 107,
     /**
-    * Extended Interoperable Data, Data Group 12
+    * eID, Data Group 12
     */
     EID_DG12 = 108,
     /**
-    * Extended Interoperable Data, Data Group 13
+    * eID, Data Group 13
     */
     EID_DG13 = 109,
     /**
-    * Extended Interoperable Data, Data Group 14
+    * eID, Data Group 14
     */
     EID_DG14 = 110,
     /**
-    * Extended Interoperable Data, Data Group 15
+    * eID, Data Group 15
     */
     EID_DG15 = 111,
     /**
-    * Extended Interoperable Data, Data Group 16
+    * eID, Data Group 16
     */
     EID_DG16 = 112,
     /**
-    * Extended Interoperable Data, Data Group 17
+    * eID, Data Group 17
     */
     EID_DG17 = 113,
     /**
-    * Extended Interoperable Data, Data Group 18
+    * eID, Data Group 18
     */
     EID_DG18 = 114,
     /**
-    * Extended Interoperable Data, Data Group 19
+    * eID, Data Group 19
     */
     EID_DG19 = 115,
     /**
-    * Extended Interoperable Data, Data Group 20
+    * eID, Data Group 20
     */
     EID_DG20 = 116,
     /**
-    * Extended Interoperable Data, Data Group 21
+    * eID, Data Group 21
     */
     EID_DG21 = 117,
     /**
-    * Extended Length Data, Common Data Group Type
+    * eDL, Common Data Element
     */
     EDL_COM = 96,
     /**
-    * Extended Length Data, Start of Data
+    * eDL, Security Object Document
     */
     EDL_SOD = 119,
     /**
-    * Extended Length Data, Certificate Holder Authorization
+    * eDL, Card Entitlement
     */
     EDL_CE = 119,
     /**
-    * Extended Length Data, Data Group 1
+    * eDL, Data Group 1
     */
     EDL_DG1 = 97,
     /**
-    * Extended Length Data, Data Group 2
+    * eDL, Data Group 2
     */
     EDL_DG2 = 107,
     /**
-    * Extended Length Data, Data Group 3
+    * eDL, Data Group 3
     */
     EDL_DG3 = 108,
     /**
-    * Extended Length Data, Data Group 4
+    * eDL, Data Group 4
     */
     EDL_DG4 = 101,
     /**
-    * Extended Length Data, Data Group 5
+    * eDL, Data Group 5
     */
     EDL_DG5 = 103,
     /**
-    * Extended Length Data, Data Group 6
+    * eDL, Data Group 6
     */
     EDL_DG6 = 117,
     /**
-    * Extended Length Data, Data Group 7
+    * eDL, Data Group 7
     */
     EDL_DG7 = 99,
     /**
-    * Extended Length Data, Data Group 8
+    * eDL, Data Group 8
     */
     EDL_DG8 = 118,
     /**
-    * Extended Length Data, Data Group 9
+    * eDL, Data Group 9
     */
     EDL_DG9 = 112,
     /**
-    * Extended Length Data, Data Group 11
+    * eDL, Data Group 11
     */
     EDL_DG11 = 109,
     /**
-    * Extended Length Data, Data Group 12
+    * eDL, Data Group 12
     */
     EDL_DG12 = 113,
     /**
-    * Extended Length Data, Data Group 13
+    * eDL, Data Group 13
     */
     EDL_DG13 = 111,
     /**
-    * Extended Length Data, Data Group 14
+    * eDL, Data Group 14
     */
     EDL_DG14 = 110
 }
