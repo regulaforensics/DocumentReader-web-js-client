@@ -18,9 +18,6 @@
 import type { AuthParams } from './auth-params';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { AuthenticityResultType } from './authenticity-result-type';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { DocumentFormat } from './document-format';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -355,10 +352,10 @@ export interface ProcessParams {
     'documentGroupFilter'?: Array<DocumentType>;
     /**
      * 
-     * @type {AuthenticityResultType}
+     * @type {number}
      * @memberof ProcessParams
      */
-    'processAuth'?: AuthenticityResultType;
+    'processAuth'?: number;
     /**
      * This parameter is used to specify the document reader device type from which input images were captured. Default 0.
      * @type {number}

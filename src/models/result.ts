@@ -122,11 +122,11 @@ export enum Result {
     */
     LICENSE = 50,
     /**
-    * Contains result of DocumentPosition
+    * Contains result of MRZ position
     */
     MRZ_POSITION = 61,
     /**
-    * Contains result of DocumentPosition
+    * Contains result of barcode position
     */
     BARCODE_POSITION = 62,
     /**

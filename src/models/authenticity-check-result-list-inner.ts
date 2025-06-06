@@ -60,6 +60,9 @@ import type { SecurityFeatureResult } from './security-feature-result';
 import type { SecurityFeatureType } from './security-feature-type';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { TextFieldType } from './text-field-type';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { Visibility } from './visibility';
 
 /**

@@ -22,6 +22,9 @@ import type { Light } from './light';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { RectangleCoordinates } from './rectangle-coordinates';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TextFieldType } from './text-field-type';
 
 /**
  * 
@@ -48,23 +51,23 @@ export interface OCRSecurityTextItem {
      */
     'FieldRect': RectangleCoordinates;
     /**
-     * 
+     * Same as Result type, but used for safe parsing of not-described values. See Result type.
      * @type {number}
      * @memberof OCRSecurityTextItem
      */
     'EtalonResultType': number;
     /**
      * 
-     * @type {number}
+     * @type {TextFieldType}
      * @memberof OCRSecurityTextItem
      */
-    'EtalonFieldType': number;
+    'EtalonFieldType': TextFieldType;
     /**
      * 
-     * @type {number}
+     * @type {Light}
      * @memberof OCRSecurityTextItem
      */
-    'EtalonLightType': number;
+    'EtalonLightType': Light;
     /**
      * 
      * @type {RectangleCoordinates}

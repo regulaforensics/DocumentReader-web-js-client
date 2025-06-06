@@ -37,6 +37,9 @@ import type { OCRSecurityTextItem } from './ocrsecurity-text-item';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { RectangleCoordinates } from './rectangle-coordinates';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TextFieldType } from './text-field-type';
 
 /**
  * @type OCRSecurityTextResult

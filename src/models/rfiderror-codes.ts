@@ -468,7 +468,7 @@ export enum RFIDErrorCodes {
     /**
     * RFID: Failed
     */
-    RFID_ERROR_FAILED = 4294967295,
+    RFID_ERROR_FAILED = -1,
     /**
     * RFID: No error
     */
