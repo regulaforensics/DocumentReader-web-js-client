@@ -54,7 +54,7 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_ASN_Certificate_ForcedDefaultCSCARole = 2415919118,
     /**
-    * ASN certificate: Forced Default DS role
+    * ASN certificate: Forced default DS role
     */
     ntfLDS_ASN_Certificate_ForcedDefaultDSRole = 2415919119,
     /**
@@ -178,11 +178,11 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_ICAO_Certificate_Ext_AuthKeyID_Missed = 2415919643,
     /**
-    * ICAO certificate extension Auth key: Incorrect data
+    * ICAO certificate extension Auth key: ID incorrect data
     */
     ntfLDS_ICAO_Certificate_Ext_AuthKeyID_IncorrectData = 2415919644,
     /**
-    * ICAO certificate extension Auth key: Key ID missed
+    * ICAO certificate extension Auth key: ID key ID missed
     */
     ntfLDS_ICAO_Certificate_Ext_AuthKeyID_KeyID_Missed = 2415919645,
     /**
@@ -290,7 +290,7 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_ICAO_Certificate_Ext_DocTypeList_DocTypes_Empty = 2415919673,
     /**
-    * ICAO certificate extension: Dert policies incorrect data
+    * ICAO certificate extension: Cert policies incorrect data
     */
     ntfLDS_ICAO_Certificate_Ext_CertPolicies_IncorrectData = 2415919674,
     /**
@@ -358,7 +358,7 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_ICAO_Certificate_Ext_NameChange_Critical = 2415919690,
     /**
-    * ICAO certificate extension Doc type list: non-compliant
+    * ICAO certificate extension Doc type list: Non-compliant
     */
     ntfLDS_ICAO_Certificate_Ext_DocTypeList_NonCompliant = 2415919691,
     /**
@@ -377,6 +377,26 @@ export enum ParsingNotificationCodes {
     * ICAO certificate: Subject common name non-compliant
     */
     ntfLDS_ICAO_Certificate_Subject_CommonNameNonCompliant = 2415919695,
+    /**
+    * ICAO certificate: Chain country non-matching
+    */
+    ntfLDS_ICAO_Certificate_Chain_Country_NonMatching = 2415919696,
+    /**
+    * ICAO certificate: Visual MRZ country non-matching
+    */
+    ntfLDS_ICAO_Certificate_VisualMrz_Country_NonMatching = 2415919697,
+    /**
+    * ICAO certificate: MRZ country non-matching
+    */
+    ntfLDS_ICAO_Certificate_MRZ_Country_NonMatching = 2415919698,
+    /**
+    * ICAO certificate: Issuer country non-uppercase
+    */
+    ntfLDS_ICAO_Certificate_Issuer_CountryNonUpperCase = 2415919699,
+    /**
+    * ICAO certificate: Subject country non-uppercase
+    */
+    ntfLDS_ICAO_Certificate_Subject_CountryNonUpperCase = 2415919700,
     /**
     * ICAO COM: LDS version incorrect
     */
@@ -486,11 +506,11 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_ICAO_MasterList_Version_Incorrect = 2415919552,
     /**
-    * ICAO Deviation list: Version incorrect
+    * ICAO deviation list: Version incorrect
     */
     ntfLDS_ICAO_DeviationList_Version_Incorrect = 2415919560,
     /**
-    * BSI: Defect  list version incorrect
+    * BSI: Defect list version incorrect
     */
     ntfLDS_BSI_DefectList_Version_Incorrect = 2415919568,
     /**
@@ -638,6 +658,10 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_MRZ_Incorrect = 139288,
     /**
+    * MRZ: Country code visual MRZ non-matching
+    */
+    ntfLDS_MRZ_CountryCode_VisualMrz_NonMatching = 139289,
+    /**
     * Biometrics: Format owner missing
     */
     ntfLDS_Biometrics_FormatOwner_Missing = 2415984640,
@@ -682,87 +706,483 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_Biometrics_BDB_DataLength_Incorrect = 2416640000,
     /**
-    * Biometrics: BDB Data Gender
+    * Biometrics: BDB data incorrect
+    */
+    ntfLDS_Biometrics_BDB_Data_Incorrect = 2416705536,
+    /**
+    * Biometrics: BDB data gender
     */
     ntfLDS_Biometrics_BDB_Data_Gender = 2416967680,
     /**
-    * Biometrics: BDB Data Eye Color
+    * Biometrics: BDB data eye color
     */
     ntfLDS_Biometrics_BDB_Data_EyeColor = 2417033216,
     /**
-    * Biometrics: BDB Data Hair Color
+    * Biometrics: BDB data hair color
     */
     ntfLDS_Biometrics_BDB_Data_HairColor = 2417098752,
     /**
-    * Biometrics: BDB Data Pose Angle Yaw
+    * Biometrics: BDB data pose angle yaw
     */
     ntfLDS_Biometrics_BDB_Data_PoseAngle_Yaw = 2417164288,
     /**
-    * Biometrics: BDB Data Pose Angle Pitch
+    * Biometrics: BDB data pose angle pitch
     */
     ntfLDS_Biometrics_BDB_Data_PoseAngle_Pitch = 2417229824,
     /**
-    * Biometrics: BDB Data Pose Angle Roll
+    * Biometrics: BDB data pose angle roll
     */
     ntfLDS_Biometrics_BDB_Data_PoseAngle_Roll = 2417295360,
     /**
-    * Biometrics: BDB Data Pose Angle U Yaw
+    * Biometrics: BDB data pose angle U yaw
     */
     ntfLDS_Biometrics_BDB_Data_PoseAngleU_Yaw = 2417360896,
     /**
-    * Biometrics: BDB Data Pose Angle U Pitch
+    * Biometrics: BDB data pose angle U pitch
     */
     ntfLDS_Biometrics_BDB_Data_PoseAngleU_Pitch = 2417426432,
     /**
-    * Biometrics: BDB Data Pose Angle U Roll
+    * Biometrics: BDB data pose angle U roll
     */
     ntfLDS_Biometrics_BDB_Data_PoseAngleU_Roll = 2417491968,
     /**
-    * Biometrics: BDB Data Face Image Type
+    * Biometrics: BDB data face image type
     */
     ntfLDS_Biometrics_BDB_Data_FaceImageType = 2417557504,
     /**
-    * Biometrics: BDB Data Image Data Type
+    * Biometrics: BDB data image data type
     */
     ntfLDS_Biometrics_BDB_Data_ImageDataType = 2417623040,
     /**
-    * SI: PACE Info Unsupported Std Parameters
+    * Biometrics: RB data incorrect
+    */
+    ntfLDS_Biometrics_RB_Data_Incorrect = 2449539072,
+    /**
+    * Biometrics: RB item incorrect
+    */
+    ntfLDS_Biometrics_RB_Item_Incorrect = 2449604608,
+    /**
+    * Biometrics: RB item missing
+    */
+    ntfLDS_Biometrics_RB_Item_Missing = 2449670144,
+    /**
+    * Biometrics: RB item unexpected
+    */
+    ntfLDS_Biometrics_RB_Item_Unexpected = 2449735680,
+    /**
+    * Biometrics: RB RID incorrect
+    */
+    ntfLDS_Biometrics_RB_RID_Incorrect = 2449801232,
+    /**
+    * Biometrics: RB image R incorrect
+    */
+    ntfLDS_Biometrics_RB_ImageR_Incorrect = 2449801248,
+    /**
+    * Biometrics: RB image item incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Item_Incorrect = 2449801264,
+    /**
+    * Biometrics: RB image item missing
+    */
+    ntfLDS_Biometrics_RB_Image_Item_Missing = 2449801265,
+    /**
+    * Biometrics: RB image item unexpected
+    */
+    ntfLDS_Biometrics_RB_Image_Item_Unexpected = 2449801266,
+    /**
+    * Biometrics: RB image info item incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Item_Incorrect = 2449801280,
+    /**
+    * Biometrics: RB image info item missing
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Item_Missing = 2449801281,
+    /**
+    * Biometrics: RB image info item unexpected
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Item_Unexpected = 2449801282,
+    /**
+    * Biometrics: RB image info format incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Format_Incorrect = 2449801283,
+    /**
+    * Biometrics: RB image info format unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Format_Unsupported = 2449801284,
+    /**
+    * Biometrics: RB image info kind incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Kind_Incorrect = 2449801285,
+    /**
+    * Biometrics: RB image info kind unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Kind_Unsupported = 2449801286,
+    /**
+    * Biometrics: RB image info post APB incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_PostAPB_Incorrect = 2449801287,
+    /**
+    * Biometrics: RB image info lossy TA incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_LossyTA_Incorrect = 2449801288,
+    /**
+    * Biometrics: RB image info lossy TA unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_LossyTA_Unsupported = 2449801289,
+    /**
+    * Biometrics: RB image info cam 2 subj unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Cam2Subj_Unsupported = 2449801290,
+    /**
+    * Biometrics: RB image info sens diag unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_SensDiag_Unsupported = 2449801291,
+    /**
+    * Biometrics: RB image info lens F unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_LensF_Unsupported = 2449801292,
+    /**
+    * Biometrics: RB image info im size incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_ImSize_Incorrect = 2449801293,
+    /**
+    * Biometrics: RB image info im size unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_ImSize_Unsupported = 2449801294,
+    /**
+    * Biometrics: RB image info im meas incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_ImMeas_Incorrect = 2449801295,
+    /**
+    * Biometrics: RB image info color incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Color_Incorrect = 2449801296,
+    /**
+    * Biometrics: RB image info color unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Info_Color_Unsupported = 2449801297,
+    /**
+    * Biometrics: RB image info color map incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Info_ColorMap_Incorrect = 2449801298,
+    /**
+    * Biometrics: RB image capt item incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Capt_Item_Incorrect = 2449801312,
+    /**
+    * Biometrics: RB image capt item unexpected
+    */
+    ntfLDS_Biometrics_RB_Image_Capt_Item_Unexpected = 2449801313,
+    /**
+    * Biometrics: RB image capt spectral unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Capt_Spectral_Unsupported = 2449801314,
+    /**
+    * Biometrics: RB image capt tech code incorrect
+    */
+    ntfLDS_Biometrics_RB_Image_Capt_TechCode_Incorrect = 2449801315,
+    /**
+    * Biometrics: RB image capt tech code unsupported
+    */
+    ntfLDS_Biometrics_RB_Image_Capt_TechCode_Unsupported = 2449801316,
+    /**
+    * Biometrics: RB date item incorrect
+    */
+    ntfLDS_Biometrics_RB_Date_Item_Incorrect = 2449801328,
+    /**
+    * Biometrics: RB date item missing
+    */
+    ntfLDS_Biometrics_RB_Date_Item_Missing = 2449801329,
+    /**
+    * Biometrics: RB date item unexpected
+    */
+    ntfLDS_Biometrics_RB_Date_Item_Unexpected = 2449801330,
+    /**
+    * Biometrics: RB date incorrect
+    */
+    ntfLDS_Biometrics_RB_Date_Incorrect = 2449801331,
+    /**
+    * Biometrics: RB quality item incorrect
+    */
+    ntfLDS_Biometrics_RB_Quality_Item_Incorrect = 2449801344,
+    /**
+    * Biometrics: RB quality item missing
+    */
+    ntfLDS_Biometrics_RB_Quality_Item_Missing = 2449801345,
+    /**
+    * Biometrics: RB quality item unexpected
+    */
+    ntfLDS_Biometrics_RB_Quality_Item_Unexpected = 2449801346,
+    /**
+    * Biometrics: RB quality alg ID item incorrect
+    */
+    ntfLDS_Biometrics_RB_Quality_AlgID_Item_Incorrect = 2449801347,
+    /**
+    * Biometrics: RB quality SoE item incorrect
+    */
+    ntfLDS_Biometrics_RB_Quality_SoE_Item_Incorrect = 2449801348,
+    /**
+    * Biometrics: RB quality score item incorrect
+    */
+    ntfLDS_Biometrics_RB_Quality_Score_Item_Incorrect = 2449801349,
+    /**
+    * Biometrics: RB quality error item incorrect
+    */
+    ntfLDS_Biometrics_RB_Quality_Error_Item_Incorrect = 2449801350,
+    /**
+    * Biometrics: RB quality error item unsupported
+    */
+    ntfLDS_Biometrics_RB_Quality_Error_Item_Unsupported = 2449801351,
+    /**
+    * Biometrics: RB PAD item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Item_Incorrect = 2449801360,
+    /**
+    * Biometrics: RB PAD item unexpected
+    */
+    ntfLDS_Biometrics_RB_PAD_Item_Unexpected = 2449801361,
+    /**
+    * Biometrics: RB PAD decision item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Decision_Item_Incorrect = 2449801362,
+    /**
+    * Biometrics: RB PAD decision item unsupported
+    */
+    ntfLDS_Biometrics_RB_PAD_Decision_Item_Unsupported = 2449801363,
+    /**
+    * Biometrics: RB PAD score item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Score_Item_Incorrect = 2449801364,
+    /**
+    * Biometrics: RB PAD score reg ID item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Score_RegID_Item_Incorrect = 2449801365,
+    /**
+    * Biometrics: RB PAD SoE item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_SoE_Item_Incorrect = 2449801366,
+    /**
+    * Biometrics: RB PAD SoE score item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_SoE_Score_Item_Incorrect = 2449801367,
+    /**
+    * Biometrics: RB PAD SoE error item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_SoE_Error_Item_Incorrect = 2449801368,
+    /**
+    * Biometrics: RB PAD SoE error item unsupported
+    */
+    ntfLDS_Biometrics_RB_PAD_SoE_Error_Item_Unsupported = 2449801369,
+    /**
+    * Biometrics: RB PAD external data item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_ExtData_Item_Incorrect = 2449801370,
+    /**
+    * Biometrics: RB PAD external data type item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_ExtData_Type_Item_Incorrect = 2449801371,
+    /**
+    * Biometrics: RB PAD context item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Context_Item_Incorrect = 2449801372,
+    /**
+    * Biometrics: RB PAD context item unsupported
+    */
+    ntfLDS_Biometrics_RB_PAD_Context_Item_Unsupported = 2449801373,
+    /**
+    * Biometrics: RB PAD S level item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_SLevel_Item_Incorrect = 2449801374,
+    /**
+    * Biometrics: RB PAD S level item unsupported
+    */
+    ntfLDS_Biometrics_RB_PAD_SLevel_Item_Unsupported = 2449801375,
+    /**
+    * Biometrics: RB PAD risk level item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_RiskLevel_Item_Incorrect = 2449801376,
+    /**
+    * Biometrics: RB PAD criteria item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Criteria_Item_Incorrect = 2449801377,
+    /**
+    * Biometrics: RB PAD criteria item unsupported
+    */
+    ntfLDS_Biometrics_RB_PAD_Criteria_Item_Unsupported = 2449801378,
+    /**
+    * Biometrics: RB PAD date item incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Date_Item_Incorrect = 2449801379,
+    /**
+    * Biometrics: RB PAD date item missing
+    */
+    ntfLDS_Biometrics_RB_PAD_Date_Item_Missing = 2449801380,
+    /**
+    * Biometrics: RB PAD date item unexpected
+    */
+    ntfLDS_Biometrics_RB_PAD_Date_Item_Unexpected = 2449801381,
+    /**
+    * Biometrics: RB PAD date incorrect
+    */
+    ntfLDS_Biometrics_RB_PAD_Date_Incorrect = 2449801382,
+    /**
+    * Biometrics: RB session ID incorrect
+    */
+    ntfLDS_Biometrics_RB_SessionID_Incorrect = 2449801392,
+    /**
+    * Biometrics: RB derived incorrect
+    */
+    ntfLDS_Biometrics_RB_Derived_Incorrect = 2449801408,
+    /**
+    * Biometrics: RB device incorrect
+    */
+    ntfLDS_Biometrics_RB_Device_Incorrect = 2449801424,
+    /**
+    * Biometrics: RB device item unexpected
+    */
+    ntfLDS_Biometrics_RB_Device_Item_Unexpected = 2449801425,
+    /**
+    * Biometrics: RB device model ID item incorrect
+    */
+    ntfLDS_Biometrics_RB_Device_ModelID_Item_Incorrect = 2449801426,
+    /**
+    * Biometrics: RB device cert ID item incorrect
+    */
+    ntfLDS_Biometrics_RB_Device_CertID_Item_Incorrect = 2449801427,
+    /**
+    * Biometrics: RB metadata item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Item_Incorrect = 2449801440,
+    /**
+    * Biometrics: RB metadata item unexpected
+    */
+    ntfLDS_Biometrics_RB_Metadata_Item_Unexpected = 2449801441,
+    /**
+    * Biometrics: RB metadata gender item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Gender_Item_Incorrect = 2449801442,
+    /**
+    * Biometrics: RB metadata gender item unsupported
+    */
+    ntfLDS_Biometrics_RB_Metadata_Gender_Item_Unsupported = 2449801443,
+    /**
+    * Biometrics: RB metadata eye item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Eye_Item_Incorrect = 2449801444,
+    /**
+    * Biometrics: RB metadata eye item unsupported
+    */
+    ntfLDS_Biometrics_RB_Metadata_Eye_Item_Unsupported = 2449801445,
+    /**
+    * Biometrics: RB metadata hair item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Hair_Item_Incorrect = 2449801446,
+    /**
+    * Biometrics: RB metadata hair item unsupported
+    */
+    ntfLDS_Biometrics_RB_Metadata_Hair_Item_Unsupported = 2449801447,
+    /**
+    * Biometrics: RB metadata height item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Height_Item_Incorrect = 2449801448,
+    /**
+    * Biometrics: RB metadata props item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Props_Item_Incorrect = 2449801449,
+    /**
+    * Biometrics: RB metadata props item unexpected
+    */
+    ntfLDS_Biometrics_RB_Metadata_Props_Item_Unexpected = 2449801450,
+    /**
+    * Biometrics: RB metadata express item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Express_Item_Incorrect = 2449801451,
+    /**
+    * Biometrics: RB metadata express item unexpected
+    */
+    ntfLDS_Biometrics_RB_Metadata_Express_Item_Unexpected = 2449801452,
+    /**
+    * Biometrics: RB metadata pose item incorrect
+    */
+    ntfLDS_Biometrics_RB_Metadata_Pose_Item_Incorrect = 2449801453,
+    /**
+    * Biometrics: RB metadata pose item unexpected
+    */
+    ntfLDS_Biometrics_RB_Metadata_Pose_Item_Unexpected = 2449801454,
+    /**
+    * Biometrics: RB landmark item incorrect
+    */
+    ntfLDS_Biometrics_RB_LandMark_Item_Incorrect = 2449801456,
+    /**
+    * Biometrics: RB landmark item missing
+    */
+    ntfLDS_Biometrics_RB_LandMark_Item_Missing = 2449801457,
+    /**
+    * Biometrics: RB landmark item unexpected
+    */
+    ntfLDS_Biometrics_RB_LandMark_Item_Unexpected = 2449801458,
+    /**
+    * Biometrics: RB landmark kind item incorrect
+    */
+    ntfLDS_Biometrics_RB_LandMark_Kind_Item_Incorrect = 2449801459,
+    /**
+    * Biometrics: RB landmark mpeg4 item incorrect
+    */
+    ntfLDS_Biometrics_RB_LandMark_Mpeg4_Item_Incorrect = 2449801460,
+    /**
+    * Biometrics: RB landmark mpeg4 item unsupported
+    */
+    ntfLDS_Biometrics_RB_LandMark_Mpeg4_Item_Unsupported = 2449801461,
+    /**
+    * Biometrics: RB landmark antr L item incorrect
+    */
+    ntfLDS_Biometrics_RB_LandMark_AntrL_Item_Incorrect = 2449801462,
+    /**
+    * Biometrics: RB landmark coordinate item incorrect
+    */
+    ntfLDS_Biometrics_RB_LandMark_Coord_Item_Incorrect = 2449801463,
+    /**
+    * DTC content info: Version incorrect
+    */
+    ntfLDS_DTC_ContentInfo_Version_Incorrect = 2415919872,
+    /**
+    * SI: PACE info unsupported std parameters
     */
     ntfLDS_SI_PACE_Info_UnsupportedStdParameters = 2432696320,
     /**
-    * SI: PACE Info Deprecated Version
+    * SI: PACE info deprecated version
     */
     ntfLDS_SI_PACE_Info_DeprecatedVersion = 2432696321,
     /**
-    * SI: PACE Domain Params Using Std Ref
+    * SI: PACE domain params using std ref
     */
     ntfLDS_SI_PACE_DomainParams_UsingStdRef = 2432696322,
     /**
-    * SI: PACE Domain Params Unsupported Algorithm
+    * SI: PACE domain params unsupported algorithm
     */
     ntfLDS_SI_PACE_DomainParams_UnsupportedAlgorithm = 2432696323,
     /**
-    * SI: CA Info Incorrect Version
+    * SI: CA info incorrect version
     */
     ntfLDS_SI_CA_Info_IncorrectVersion = 2432696324,
     /**
-    * SI: CA PublicKey Unsupported Algorithm
+    * SI: CA public key unsupported algorithm
     */
     ntfLDS_SI_CA_PublicKey_UnsupportedAlgorithm = 2432696325,
     /**
-    * SI: CA Domain Params Unsupported Algorithm
+    * SI: CA domain params unsupported algorithm
     */
     ntfLDS_SI_CA_DomainParams_UnsupportedAlgorithm = 2432696326,
     /**
-    * SI: TA Info Incorrect Version
+    * SI: TA info incorrect version
     */
     ntfLDS_SI_TA_Info_IncorrectVersion = 2432696327,
     /**
-    * SI: TA Info File ID For Version 2
+    * SI: TA info file ID for version 2
     */
     ntfLDS_SI_TA_Info_FileIDForVersion2 = 2432696328,
     /**
-    * SI: eID Security Unsupported Digest Algorithm
+    * SI: eID security unsupported digest algorithm
     */
     ntfLDS_SI_eIDSecurity_UnsupportedDigestAlgorithm = 2432696329,
     /**
@@ -786,87 +1206,87 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_SI_AA_Info_InconsistentAlgorithmReference = 2432696334,
     /**
-    * SI: PACE Info Not Available
+    * SI: storage PACE info not available
     */
     ntfLDS_SI_Storage_PACE_Info_NotAvailable = 2432696576,
     /**
-    * SI: PACE Info No Std Parameters
+    * SI: storage PACE info no std parameters
     */
     ntfLDS_SI_Storage_PACE_Info_NoStdParameters = 2432696577,
     /**
-    * SI: PACE Info No Matching Domain Params
+    * SI: storage PACE info no matching domain params
     */
     ntfLDS_SI_Storage_PACE_Info_NoMatchingDomainParams = 2432696578,
     /**
-    * SI: CA Info Not Available
+    * SI: storage CA info not available
     */
     ntfLDS_SI_Storage_CA_Info_NotAvailable = 2432696579,
     /**
-    * SI: CA Domain Params No Required Option
+    * SI: storage CA domain params no required option
     */
     ntfLDS_SI_Storage_CA_DomainParams_NoRequiredOption = 2432696580,
     /**
-    * SI: CA Domain Params Not Available
+    * SI: storage CA domain params not available
     */
     ntfLDS_SI_Storage_CA_DomainParams_NotAvailable = 2432696581,
     /**
-    * SI: CA Anonymous Infos
+    * SI: storage CA anonymous infos
     */
     ntfLDS_SI_Storage_CA_AnonymousInfos = 2432696582,
     /**
-    * SI: CA Info No Matching Domain Params
+    * SI: storage CA info no matching domain params
     */
     ntfLDS_SI_Storage_CA_Info_NoMatchingDomainParams = 2432696583,
     /**
-    * SI: CA Info No Matching Public Key
+    * SI: storage CA info no matching public key
     */
     ntfLDS_SI_Storage_CA_Info_NoMatchingPublicKey = 2432696584,
     /**
-    * SI: CA Incorrect Infos Quantity
+    * SI: storage CA incorrect infos quantity
     */
     ntfLDS_SI_Storage_CA_IncorrectInfosQuantity = 2432696585,
     /**
-    * SI: TA Info Not Available
+    * SI: storage TA info not available
     */
     ntfLDS_SI_Storage_TA_Info_NotAvailable = 2432696586,
     /**
-    * SI: Card Info Locator Multiple Entries
+    * SI: storage card info locator multiple entries
     */
     ntfLDS_SI_Storage_CardInfoLocator_MultipleEntries = 2432696587,
     /**
-    * SI: eID Security Info Multiple Entries
+    * SI: storage eID security info multiple entries
     */
     ntfLDS_SI_Storage_eIDSecurityInfo_MultipleEntries = 2432696588,
     /**
-    * SI: Privileged TI Multiple Entries
+    * SI: storage privileged TI multiple entries
     */
     ntfLDS_SI_Storage_PrivilegedTI_MultipleEntries = 2432696589,
     /**
-    * SI: Privileged TI Incorrect Usage
+    * SI: storage privileged TI incorrect usage
     */
     ntfLDS_SI_Storage_PrivilegedTI_IncorrectUsage = 2432696590,
     /**
-    * SI: RI domain params multiple entries
+    * SI: storage RI domain params multiple entries
     */
     ntfLDS_SI_Storage_RI_DomainParams_MultipleEntries = 2432696591,
     /**
-    * SI: Storage PACE Info Non Consistant
+    * SI: storage PACE infos non consistent
     */
     ntfLDS_SI_Storage_PACEInfos_NonConsistant = 2432696592,
     /**
-    * CV Certificate: Profile incorrect version
+    * CV certificate: Profile incorrect version
     */
     ntfLDS_CVCertificate_Profile_IncorrectVersion = 2432696833,
     /**
-    * CV Certificate: Validity
+    * CV certificate: Validity
     */
     ntfLDS_CVCertificate_Validity = 2432696834,
     /**
-    * CV Certificate: Non CVCA domain parameters
+    * CV certificate: non CVCA domain parameters
     */
     ntfLDS_CVCertificate_NonCVCADomainParameters = 2432696835,
     /**
-    * CV Certificate: Private key incorrect version
+    * CV certificate: private key incorrect version
     */
     ntfLDS_CV_Certificate_PrivateKey_IncorrectVersion = 2432696836,
     /**
@@ -882,7 +1302,7 @@ export enum ParsingNotificationCodes {
     */
     ntfLDS_Auth_MLSignerInfo_Certificate_RootIsNotTrusted = 2449473814,
     /**
-    * Auth ML signer info: Certificate cannot find CSCA
+    * Auth ML signer info: Certificate can&#39;t find CSCA
     */
     ntfLDS_Auth_MLSignerInfo_Certificate_CantFindCSCA = 2449473815,
     /**
@@ -892,31 +1312,7 @@ export enum ParsingNotificationCodes {
     /**
     * Auth ML signer info: Certificate signature invalid
     */
-    ntfLDS_Auth_MLSignerInfo_Certificate_SignatureInvalid = 2449473817,
-    /**
-    * Country Codes from certificate chain don&#39;t match
-    */
-    ntfLDS_ICAO_Certificate_Chain_Country_NonMatching = 2415919696,
-    /**
-    * Country Codes from certificate and visual MRZ don&#39;t match
-    */
-    ntfLDS_ICAO_Certificate_VisualMrz_Country_NonMatching = 2415919697,
-    /**
-    * Incorrect MRZ, country code doesn&#39;t match codes from Visual MRZ
-    */
-    ntfLDS_MRZ_CountryCode_VisualMrz_NonMatching = 139289,
-    /**
-    * Country Codes from certificate and DG1 MRZ don&#39;t match
-    */
-    ntfLDS_ICAO_Certificate_MRZ_Country_NonMatching = 2415919698,
-    /**
-    * ICAO certificate: Issuer country non upper case
-    */
-    ntfLDS_ICAO_Certificate_Issuer_CountryNonUpperCase = 2415919699,
-    /**
-    * ICAO certificate: Subject country non upper case
-    */
-    ntfLDS_ICAO_Certificate_Subject_CountryNonUpperCase = 2415919700
+    ntfLDS_Auth_MLSignerInfo_Certificate_SignatureInvalid = 2449473817
 }
 
 

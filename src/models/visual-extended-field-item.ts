@@ -28,12 +28,6 @@ import type { TextFieldType } from './text-field-type';
 export interface VisualExtendedFieldItem {
     /**
      * 
-     * @type {number}
-     * @memberof VisualExtendedFieldItem
-     */
-    'FieldType': number;
-    /**
-     * 
      * @type {TextFieldType}
      * @memberof VisualExtendedFieldItem
      */

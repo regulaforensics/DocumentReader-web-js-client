@@ -48,7 +48,11 @@ export enum RfidPasswordType {
     /**
     * Scanning Area Identifier (for eDL application)
     */
-    SAI = 6
+    SAI = 6,
+    /**
+    * MRZ hash
+    */
+    MRZ_HASH = 7
 }
 
 

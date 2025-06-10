@@ -91,12 +91,6 @@ export interface OCRSecurityTextItem {
      * @type {number}
      * @memberof OCRSecurityTextItem
      */
-    'ResultCode'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof OCRSecurityTextItem
-     */
     'Reserved1'?: number;
     /**
      * 

@@ -26,6 +26,14 @@ export enum Light {
     */
     OFF = 0,
     /**
+    * Upper/lower lighters of white light scheme
+    */
+    WHITE_TOP = 2,
+    /**
+    * Side lighters of white light scheme
+    */
+    WHITE_SIDE = 4,
+    /**
     * White
     */
     WHITE = 6,
@@ -38,9 +46,9 @@ export enum Light {
     */
     UV = 128,
     /**
-    * Right and left lighters of white coaxial light scheme
+    * White coaxial
     */
-    AXIAL_WHITE_FULL = 3072
+    AXIAL_WHITE = 3072
 }
 
 
