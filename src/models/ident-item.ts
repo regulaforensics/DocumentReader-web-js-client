@@ -77,12 +77,6 @@ export interface IdentItem {
      * @memberof IdentItem
      */
     'ElementID'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof IdentItem
-     */
-    'Result'?: number;
 }
 
 

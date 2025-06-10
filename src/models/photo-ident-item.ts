@@ -85,12 +85,6 @@ export interface PhotoIdentItem {
      * @type {number}
      * @memberof PhotoIdentItem
      */
-    'Result'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PhotoIdentItem
-     */
     'Reserved3'?: number;
 }
 

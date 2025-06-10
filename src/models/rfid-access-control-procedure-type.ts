@@ -52,7 +52,11 @@ export enum RfidAccessControlProcedureType {
     /**
     * Card info
     */
-    CARD_INFO = 10
+    CARD_INFO = 10,
+    /**
+    * DTC info
+    */
+    DTC_INFO = 11
 }
 
 

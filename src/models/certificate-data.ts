@@ -28,9 +28,9 @@ export interface CertificateData {
     'Data': string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof CertificateData
      */
-    'Length': string;
+    'Length': number;
 }
 

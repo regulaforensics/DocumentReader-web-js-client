@@ -80,12 +80,6 @@ export interface FiberItem {
      * @memberof FiberItem
      */
     'ColorValues': Array<number>;
-    /**
-     * 
-     * @type {number}
-     * @memberof FiberItem
-     */
-    'ErrorCode'?: number;
 }
 
 
