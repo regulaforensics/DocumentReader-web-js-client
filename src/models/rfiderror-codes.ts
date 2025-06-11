@@ -22,461 +22,469 @@
 
 export enum RFIDErrorCodes {
     /**
-    * LAYER6: Reading beyond EOF / Unexpected EOF
+    * RFID: No error
     */
-    RFID_ERROR_LAYER6_FILE_EOF1 = 2147508866,
+    RFID_Error_NoError = 1,
     /**
-    * LAYER6: PWD deactivated
+    * RFID: Already done
     */
-    RFID_ERROR_LAYER6_PWD_DEACTIVATED = 2147508867,
-    /**
-    * LAYER6: PWD blocked
-    */
-    RFID_ERROR_LAYER6_PWD_BLOCKED = 2147509184,
-    /**
-    * LAYER6: PWD suspended
-    */
-    RFID_ERROR_LAYER6_PWD_SUSPEND = 2147509185,
-    /**
-    * LAYER6: PWD blocked 2
-    */
-    RFID_ERROR_LAYER6_PWD_BLOCKED2 = 2147510659,
-    /**
-    * LAYER6: PWD deactivated 2
-    */
-    RFID_ERROR_LAYER6_PWD_DEACTIVATED2 = 2147510660,
-    /**
-    * LAYER6: PWD suspended 2
-    */
-    RFID_ERROR_LAYER6_PWD_SUSPEND2 = 2147510661,
-    /**
-    * LAYER6: Incorrect params
-    */
-    RFID_ERROR_LAYER6_INCORRECT_PARAMS = 2147510912,
-    /**
-    * LAYER6: File selection failure / file not found
-    */
-    RFID_ERROR_LAYER6_FILE_NOT_FOUND = 2147510914,
-    /**
-    * LAYER6: No reference data
-    */
-    RFID_ERROR_LAYER6_NO_REFERENCE_DATA = 2147510920,
-    /**
-    * LAYER6: Reading beyond EOF / Unexpected EOF
-    */
-    RFID_ERROR_LAYER6_FILE_EOF2 = 2147511040,
-    /**
-    * RFID: No chip is detected
-    */
-    RFID_ERROR_NO_CHIP_DETECTED = 2147549185,
-    /**
-    * RFID: Unavailable
-    */
-    RFID_ERROR_NOT_AVAILABLE = 2147549186,
-    /**
-    * RFID: Invalid parameter in ExecuteCommand() call found
-    */
-    RFID_ERROR_INVALID_PARAMETER = 2147549188,
-    /**
-    * RFID: Device is uninitialized
-    */
-    RFID_ERROR_NOT_INITIALIZED = 2147549189,
-    /**
-    * RFID: Out of memory
-    */
-    RFID_ERROR_NOT_ENOUGH_MEMORY = 2147549190,
-    /**
-    * RFID: Invalid directory
-    */
-    RFID_ERROR_INVALID_DIRECTORY = 2147549192,
-    /**
-    * RFID: Unknown command
-    */
-    RFID_ERROR_UNKNOWN_COMMAND = 2147549193,
-    /**
-    * RFID File: IO Error
-    */
-    RFID_ERROR_FILE_IO_ERROR = 2147549194,
-    /**
-    * RFID: RFID is busy
-    */
-    RFID_ERROR_BUSY = 2147549195,
-    /**
-    * RFID: The firmware needs to be updated to a newer version
-    */
-    RFID_ERROR_OLD_FIRMWARE = 2147549196,
-    /**
-    * PCSC: Failed
-    */
-    RFID_ERROR_PCSC_FAILED = 2147614720,
-    /**
-    * PCSC: The reader is unavailable
-    */
-    RFID_ERROR_PCSC_READER_NOT_AVAILABLE = 2147614721,
-    /**
-    * PCSC: The card cannot be connected
-    */
-    RFID_ERROR_PCSC_CANT_CONNECT_CARD = 2147614722,
-    /**
-    * PCSC: The card is not connected
-    */
-    RFID_ERROR_PCSC_CARD_IS_NOT_CONNECTED = 2147614723,
-    /**
-    * PCSC: Operation is cancelled
-    */
-    RFID_ERROR_PCSC_OPERATION_CANCELLED = 2147614724,
-    /**
-    * PCSC: The card is busy
-    */
-    RFID_ERROR_PCSC_CARD_IS_BUSY = 2147614725,
-    /**
-    * PCSC: Failed Smart Card
-    */
-    RFID_ERROR_PCSC_FAILED_SCARD = 2147614726,
-    /**
-    * PCSC: ExtLe Failed
-    */
-    RFID_ERROR_PCSC_EXT_LE_FAILED = 2147614736,
-    /**
-    * LAYER6: PWD failed
-    */
-    RFID_ERROR_LAYER6_PWD_FAILED = 2148557760,
-    /**
-    * RFID: Not performed
-    */
-    RFID_ERROR_NOT_PERFORMED = 2197815296,
-    /**
-    * RFID: Session is closed
-    */
-    RFID_ERROR_SESSION_IS_CLOSED = 2197815297,
-    /**
-    * RFID: Unsupported terminal operation
-    */
-    RFID_ERROR_SESSION_TERMINAL_UNSUPPORTED_OPERATION = 2197815298,
-    /**
-    * RFID: Terminal type unknown
-    */
-    RFID_ERROR_SESSION_TERMINAL_TYPE_UNKNOWN = 2197815312,
-    /**
-    * RFID: Terminal type bad certificate
-    */
-    RFID_ERROR_SESSION_TERMINAL_TYPE_BAD_CERTIFICATE = 2197815313,
-    /**
-    * RFID: Terminal type not set
-    */
-    RFID_ERROR_SESSION_TERMINAL_TYPE_NOT_SET = 2197815314,
-    /**
-    * RFID: Unknown procedure type
-    */
-    RFID_ERROR_SESSION_PROCEDURE_TYPE_UNKNOWN = 2197815315,
-    /**
-    * RFID: Unsupported procedure type
-    */
-    RFID_ERROR_Session_Procedure_Type_Unsupported = 2197815316,
-    /**
-    * RFID: Procedure type not set
-    */
-    RFID_ERROR_SESSION_PROCEDURE_TYPE_NOT_SET = 2197815317,
-    /**
-    * RFID: Access key unknown type
-    */
-    RFID_ERROR_SESSION_ACCESS_KEY_UNKNOWN_TYPE = 2197815318,
-    /**
-    * RFID: Access key unsupported SM type
-    */
-    RFID_ERROR_SESSION_ACCESS_KEY_UNSUPPORTED_SM_TYPE = 2197815319,
-    /**
-    * RFID: Access key incorrect SM type
-    */
-    RFID_ERROR_SESSION_ACCESS_KEY_INCORRECT_SM_TYPE = 2197815320,
-    /**
-    * RFID: Access key restricted
-    */
-    RFID_ERROR_SESSION_ACCESS_KEY_RESTRICTED = 2197815321,
-    /**
-    * RFID: Access key incorrect data
-    */
-    RFID_ERROR_SESSION_ACCESS_KEY_INCORRECT_DATA = 2197815322,
-    /**
-    * RFID: Access key not set
-    */
-    RFID_ERROR_SESSION_ACCESS_KEY_NOT_SET = 2197815323,
-    /**
-    * RFID: PWD management not authorized
-    */
-    RFID_ERROR_SESSION_PWD_MANAGEMENT_NOT_AUTHORIZED = 2197815324,
-    /**
-    * RFID: Access control unknown type
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_UNKNOWN_TYPE = 2197815328,
-    /**
-    * RFID: SM required
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_REQUIRES_SM = 2197815329,
-    /**
-    * RFID: PACE required
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_REQUIRES_PACE = 2197815330,
-    /**
-    * RFID: CA keys required
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_REQUIRES_CA_KEYS = 2197815331,
-    /**
-    * RFID: TA required
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_REQUIRES_TA = 2197815332,
-    /**
-    * RFID: CA required
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_REQUIRES_CA = 2197815333,
-    /**
-    * RFID: Incorrect option CA
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_INCORRECT_OPTION_CA = 2197815334,
-    /**
-    * RFID: CA failed
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_CA_FAILED = 2197815335,
-    /**
-    * RFID: TA failed
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_TA_FAILED = 2197815336,
-    /**
-    * RFID: AA failed
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_AA_FAILED = 2197815337,
-    /**
-    * RFID: RI failed
-    */
-    RFID_ERROR_SESSION_ACCESS_CONTROL_RI_FAILED = 2197815338,
-    /**
-    * RFID: SO signature check failed
-    */
-    RFID_ERROR_SESSION_PA_SIGNATURE_CHECK_FAILED = 2197815344,
-    /**
-    * RFID: Hash check failed
-    */
-    RFID_ERROR_SESSION_PA_HASH_CHECK_FAILED = 2197815345,
-    /**
-    * RFID: Invalid aux data - date of expiry
-    */
-    RFID_ERROR_SESSION_INVALID_AUX_DATA_DATE_OF_EXPIRY = 2197815360,
-    /**
-    * RFID: Invalid aux data - date of birth
-    */
-    RFID_ERROR_SESSION_INVALID_AUX_DATA_DATE_OF_BIRTH = 2197815361,
-    /**
-    * RFID: Invalid aux data - community ID
-    */
-    RFID_ERROR_SESSION_INVALID_AUX_DATA_COMMUNITY_ID = 2197815362,
-    /**
-    * RFID: eSign requires app selection
-    */
-    RFID_ERROR_SESSION_E_SIGN_REQUIRES_APP_SELECTION = 2197815376,
-    /**
-    * RFID: eSign PIN not set
-    */
-    RFID_ERROR_SESSION_E_SIGN_PIN_NOT_SET = 2197815377,
-    /**
-    * RFID: eSign PIN not verified
-    */
-    RFID_ERROR_SESSION_E_SIGN_PIN_NOT_VERIFIED = 2197815378,
-    /**
-    * RFID: Incorrect data
-    */
-    RFID_ERROR_SESSION_INCORRECT_DATA = 2197815392,
-    /**
-    * RFID file: Insufficient data
-    */
-    RFID_ERROR_SESSION_FILE_NOT_ENOUGH_DATA = 2197880832,
-    /**
-    * RFID file: Incorrect data
-    */
-    RFID_ERROR_SESSION_FILE_INCORRECT_DATA = 2197946368,
-    /**
-    * RFID file: Unexpected data
-    */
-    RFID_ERROR_SESSION_FILE_UNEXPECTED_DATA = 2198011904,
-    /**
-    * RFID file: Contains unexpected data
-    */
-    RFID_ERROR_SESSION_FILE_CONTENTS_UNEXPECTED_DATA = 2198077440,
-    /**
-    * RFID file: Wrong tag
-    */
-    RFID_ERROR_SESSION_FILE_WRONG_TAG = 2198142976,
-    /**
-    * RFID file: Cannot use data
-    */
-    RFID_ERROR_SESSION_FILE_CANT_USE_DATA = 2198208512,
-    /**
-    * RFID file: Cannot read data
-    */
-    RFID_ERROR_SESSION_FILE_CANT_READ_DATA = 2198274048,
-    /**
-    * RFID file: Access denied
-    */
-    RFID_ERROR_SESSION_FILE_ACCESS_DENIED = 2198339584,
-    /**
-    * RFID: Layer 34 - No error
-    */
-    RFID_ERROR_LAYER34_NO_ERROR = 2214592512,
-    /**
-    * RFID: Layer 34 - Timeout
-    */
-    RFID_ERROR_LAYER34_TIME_OUT = 2214658048,
-    /**
-    * RFID: Layer 34 - Collision
-    */
-    RFID_ERROR_LAYER34_COLLISION = 2214723584,
-    /**
-    * RFID: Layer 34 - CRC
-    */
-    RFID_ERROR_LAYER34_CRC = 2214789120,
-    /**
-    * RFID: Layer 34 - Data integrity
-    */
-    RFID_ERROR_LAYER34_DATA_INTEGRITY = 2214854656,
-    /**
-    * RFID: Layer 34 - Data length
-    */
-    RFID_ERROR_LAYER34_DATA_LENGTH = 2214920192,
-    /**
-    * RFID: Layer 34 - RFU
-    */
-    RFID_ERROR_Layer34_RFU = 2214985728,
-    /**
-    * RFID: Layer 34 - Too many collision
-    */
-    RFID_ERROR_LAYER34_COLLISION_TOO_MANY = 2215051264,
-    /**
-    * RFID: Layer 34 - Protocol B
-    */
-    RFID_ERROR_LAYER34_PROTOCOL_B = 2215116800,
-    /**
-    * RFID: Layer 34 - Data contents
-    */
-    RFID_ERROR_LAYER34_DATA_CONTENTS = 2215182336,
-    /**
-    * RFID: Layer 34 - Protocol
-    */
-    RFID_ERROR_LAYER34_PROTOCOL = 2215247872,
-    /**
-    * RFID: Layer 34 - Globa timeout
-    */
-    RFID_ERROR_LAYER34_GLOBAL_TIME_OUT = 2215313408,
-    /**
-    * RFID: Layer 34 - MIFARE auth
-    */
-    RFID_ERROR_LAYER34_MIFARE_AUTH = 2215378944,
-    /**
-    * RFID: Layer 34 - SAM error
-    */
-    RFID_ERROR_LAYER34_SAM_ERROR = 2215444480,
-    /**
-    * RFID: Layer 34 - SAM collision
-    */
-    RFID_ERROR_LAYER34_SAM_COLLISION = 2215510016,
-    /**
-    * RFID: Layer 34 - SAM acknowledge
-    */
-    RFID_ERROR_LAYER34_SAM_ACKNOWLEDGE = 2215575552,
-    /**
-    * LAYER6: Secure Messaging was not activated
-    */
-    RFID_ERROR_LAYER6_SECURITY_MANAGER = 2248146944,
-    /**
-    * LAYER6: ISO7816_A_03 Application selection failure
-    */
-    RFID_ERROR_LAYER6_APP_SELECTION_FAILURE = 2248146945,
-    /**
-    * LAYER6: ISO7816_B_01 Mutual authentication MAC failure
-    */
-    RFID_ERROR_LAYER6_MUTUAL_AUTH_MAC_FAIL = 2248147200,
-    /**
-    * LAYER6: ISO7816_B_02 Mutual authentication encryption failure
-    */
-    RFID_ERROR_LAYER6_MUTUAL_AUTH_ENC_FAIL = 2248147201,
-    /**
-    * LAYER6: ISO7816_B_03 Mutual authentication failure
-    */
-    RFID_ERROR_LAYER6_MUTUAL_AUTH_FAILURE = 2248147202,
-    /**
-    * LAYER6: ISO7816_B_03 Mutual authentication failure data
-    */
-    RFID_ERROR_LAYER6_MUTUAL_AUTH_FAILURE_DATA = 2248147203,
-    /**
-    * LAYER6: SM failure – MAC missing
-    */
-    RFID_ERROR_LAYER6_SM_DO_8E_MISSING = 2248147456,
-    /**
-    * LAYER6: SM failure – cryptogram missing
-    */
-    RFID_ERROR_LAYER6_SM_DO_87_MISSING = 2248147457,
-    /**
-    * LAYER6: SM failure – secured status bytes missing
-    */
-    RFID_ERROR_LAYER6_SM_DO_99_MISSING = 2248147458,
-    /**
-    * LAYER6: SM failure – incorrect MAC
-    */
-    RFID_ERROR_LAYER6_SM_MAC_INCORRECT = 2248147459,
-    /**
-    * LAYER6: SM failure – incorrect cryptogram
-    */
-    RFID_ERROR_LAYER6_SM_DO_87_INCORRECT = 2248147460,
-    /**
-    * LAYER6: Not TLV response data
-    */
-    RFID_ERROR_LAYER6_NON_TLV_RESPONSE_DATA = 2248147712,
-    /**
-    * LAYER6: Wrong data length (APDU_INS_GET_CHALLENGE)
-    */
-    RFID_ERROR_LAYER6_WRONG_RND_ICC_LENGTH = 2248147713,
-    /**
-    * LAYER6: APDU_INS_INTERNAL_AUTHENTICATE failure
-    */
-    RFID_ERROR_LAYER6_INT_AUTH_FAILURE = 2248147714,
-    /**
-    * LAYER6: MSE:Set KAT failure
-    */
-    RFID_ERROR_LAYER6_MSE_SET_KAT_FAILURE = 2248147715,
-    /**
-    * LAYER6: MSE:Set DST failure
-    */
-    RFID_ERROR_LAYER6_MSE_SET_DST_FAILURE = 2248147716,
-    /**
-    * LAYER6: PSO CERTIFICATE failure
-    */
-    RFID_ERROR_LAYER6_PSO_CERTIFICATE_FAILURE = 2248147717,
-    /**
-    * LAYER6: MSE:Set AT failure
-    */
-    RFID_ERROR_LAYER6_MSE_SET_AT_FAILURE = 2248147718,
-    /**
-    * LAYER6: GET CHALLENGE failure
-    */
-    RFID_ERROR_LAYER6_GET_CHALLENGE_FAILURE = 2248147719,
-    /**
-    * LAYER6: APDU_INS_EXTERNAL_AUTHENTICATE (external authentication) failure
-    */
-    RFID_ERROR_LAYER6_EXT_AUTH_FAILURE = 2248147720,
-    /**
-    * LAYER6: General Authenticity Failure
-    */
-    RFID_ERROR_LAYER6_GENERAL_AUTH_FAILURE = 2248147721,
+    RFID_Error_AlreadyDone = 2,
     /**
     * RFID: Failed
     */
-    RFID_ERROR_FAILED = 4294967295,
+    RFID_Error_Failed = 4294967295,
     /**
-    * RFID: No error
+    * RFID: No chip detected
     */
-    RFID_ERROR_NO_ERROR = 1,
+    RFID_Error_NoChipDetected = 2147549185,
     /**
-    * RFID: The requested operation is already performed
+    * RFID: Not available
     */
-    RFID_ERROR_ALREADY_DONE = 2
+    RFID_Error_NotAvailable = 2147549186,
+    /**
+    * RFID: Invalid parameter
+    */
+    RFID_Error_InvalidParameter = 2147549188,
+    /**
+    * RFID: Not initialized
+    */
+    RFID_Error_NotInitialized = 2147549189,
+    /**
+    * RFID: Not enough memory
+    */
+    RFID_Error_NotEnoughMemory = 2147549190,
+    /**
+    * RFID: Not enough data
+    */
+    RFID_Error_NotEnoughData = 2147549191,
+    /**
+    * RFID: Invalid directory
+    */
+    RFID_Error_InvalidDirectory = 2147549192,
+    /**
+    * RFID: Unknown command
+    */
+    RFID_Error_UnknownCommand = 2147549193,
+    /**
+    * RFID: File IO error
+    */
+    RFID_Error_FileIOError = 2147549194,
+    /**
+    * RFID: Busy
+    */
+    RFID_Error_Busy = 2147549195,
+    /**
+    * RFID: Old firmware
+    */
+    RFID_Error_OldFirmware = 2147549196,
+    /**
+    * PCSC: Failed
+    */
+    RFID_Error_PCSC_Failed = 2147614720,
+    /**
+    * PCSC: Reader not available
+    */
+    RFID_Error_PCSC_ReaderNotAvailable = 2147614721,
+    /**
+    * PCSC: Can&#39;t connect card
+    */
+    RFID_Error_PCSC_CantConnectCard = 2147614722,
+    /**
+    * PCSC: Card is not connected
+    */
+    RFID_Error_PCSC_CardIsNotConnected = 2147614723,
+    /**
+    * PCSC: Operation cancelled
+    */
+    RFID_Error_PCSC_OperationCancelled = 2147614724,
+    /**
+    * PCSC: Card is busy
+    */
+    RFID_Error_PCSC_CardIsBusy = 2147614725,
+    /**
+    * PCSC: Failed smart card
+    */
+    RFID_Error_PCSC_FailedSCard = 2147614726,
+    /**
+    * PCSC: ExtLe failed
+    */
+    RFID_Error_PCSC_ExtLe_Failed = 2147614736,
+    /**
+    * Layer 6: Security manager
+    */
+    RFID_LAYER6_SECURITY_MANAGER = 2248146944,
+    /**
+    * Layer 6: App selection failure
+    */
+    RFID_LAYER6_APP_SELECTION_FAILURE = 2248146945,
+    /**
+    * Layer 6: Mutual auth MAC fail
+    */
+    RFID_LAYER6_MUTUAL_AUTH_MAC_FAIL = 2248147200,
+    /**
+    * Layer 6: Mutual auth ENC fail
+    */
+    RFID_LAYER6_MUTUAL_AUTH_ENC_FAIL = 2248147201,
+    /**
+    * Layer 6: Mutual auth failure
+    */
+    RFID_LAYER6_MUTUAL_AUTH_FAILURE = 2248147202,
+    /**
+    * Layer 6: Mutual auth failure data
+    */
+    RFID_LAYER6_MUTUAL_AUTH_FAILURE_DATA = 2248147203,
+    /**
+    * Layer 6: SM DO8E missing
+    */
+    RFID_LAYER6_SM_DO8E_MISSING = 2248147456,
+    /**
+    * Layer 6: SM DO87 missing
+    */
+    RFID_LAYER6_SM_DO87_MISSING = 2248147457,
+    /**
+    * Layer 6: SM DO99 missing
+    */
+    RFID_LAYER6_SM_DO99_MISSING = 2248147458,
+    /**
+    * Layer 6: SM MAC incorrect
+    */
+    RFID_LAYER6_SM_MAC_INCORRECT = 2248147459,
+    /**
+    * Layer 6: SM DO87 incorrect
+    */
+    RFID_LAYER6_SM_DO87_INCORRECT = 2248147460,
+    /**
+    * Layer 6: NON TLV response data
+    */
+    RFID_LAYER6_NON_TLV_RESPONSE_DATA = 2248147712,
+    /**
+    * Layer 6: Wrong RND ICC length
+    */
+    RFID_LAYER6_WRONG_RND_ICC_LENGTH = 2248147713,
+    /**
+    * Layer 6: Int auth failure
+    */
+    RFID_LAYER6_INT_AUTH_FAILURE = 2248147714,
+    /**
+    * Layer 6: MSE set KAT failure
+    */
+    RFID_LAYER6_MSE_SET_KAT_FAILURE = 2248147715,
+    /**
+    * Layer 6: MSE set DST failure
+    */
+    RFID_LAYER6_MSE_SET_DST_FAILURE = 2248147716,
+    /**
+    * Layer 6: PSO certificate failure
+    */
+    RFID_LAYER6_PSO_CERTIFICATE_FAILURE = 2248147717,
+    /**
+    * Layer 6: MSE set at failure
+    */
+    RFID_LAYER6_MSE_SET_AT_FAILURE = 2248147718,
+    /**
+    * Layer 6: Get challenge failure
+    */
+    RFID_LAYER6_GET_CHALLENGE_FAILURE = 2248147719,
+    /**
+    * Layer 6: EXT auth failure
+    */
+    RFID_LAYER6_EXT_AUTH_FAILURE = 2248147720,
+    /**
+    * Layer 6: GENERAL auth failure
+    */
+    RFID_LAYER6_GENERAL_AUTH_FAILURE = 2248147721,
+    /**
+    * Layer 6: File not found
+    */
+    RFID_LAYER6_FILE_NOT_FOUND = 2147510914,
+    /**
+    * Layer 6: File EOF1
+    */
+    RFID_LAYER6_FILE_EOF1 = 2147508866,
+    /**
+    * Layer 6: File EOF2
+    */
+    RFID_LAYER6_FILE_EOF2 = 2147511040,
+    /**
+    * Layer 6: Wrong length
+    */
+    RFID_LAYER6_WRONG_LENGTH = 2147510016,
+    /**
+    * Layer 6: Incorrect params
+    */
+    RFID_LAYER6_INCORRECT_PARAMS = 2147510912,
+    /**
+    * Layer 6: No reference data
+    */
+    RFID_LAYER6_NO_REFERENCE_DATA = 2147510920,
+    /**
+    * Layer 6: PWD suspended
+    */
+    RFID_LAYER6_PWD_SUSPENDED = 2147509185,
+    /**
+    * Layer 6: PWD blocked
+    */
+    RFID_LAYER6_PWD_BLOCKED = 2147509184,
+    /**
+    * Layer 6: PWD deactivated
+    */
+    RFID_LAYER6_PWD_DEACTIVATED = 2147508867,
+    /**
+    * Layer 6: PWD blocked 2
+    */
+    RFID_LAYER6_PWD_BLOCKED_2 = 2147510659,
+    /**
+    * Layer 6: PWD deactivated 2
+    */
+    RFID_LAYER6_PWD_DEACTIVATED_2 = 2147510660,
+    /**
+    * Layer 6: PWD suspended 2
+    */
+    RFID_LAYER6_PWD_SUSPENDED_2 = 2147510661,
+    /**
+    * Layer 6: PWD failed
+    */
+    RFID_LAYER6_PWD_FAILED = 2148557760,
+    /**
+    * RFID: NotPerformed
+    */
+    RFID_Error_NotPerformed = 2197815296,
+    /**
+    * RFID: Session is closed
+    */
+    RFID_Error_Session_IsClosed = 2197815297,
+    /**
+    * Session terminal: Unsupported operation
+    */
+    RFID_Error_Session_Terminal_UnsupportedOperation = 2197815298,
+    /**
+    * Session terminal type: Unknown
+    */
+    RFID_Error_Session_TerminalType_Unknown = 2197815312,
+    /**
+    * Session terminal type: Bad certificate
+    */
+    RFID_Error_Session_TerminalType_BadCertificate = 2197815313,
+    /**
+    * Session terminal type: Not set
+    */
+    RFID_Error_Session_TerminalType_NotSet = 2197815314,
+    /**
+    * Session procedure type: Unknown
+    */
+    RFID_Error_Session_ProcedureType_Unknown = 2197815315,
+    /**
+    * Session procedure type: Unsupported
+    */
+    RFID_Error_Session_ProcedureType_Unsupported = 2197815316,
+    /**
+    * Session procedure type: Not set
+    */
+    RFID_Error_Session_ProcedureType_NotSet = 2197815317,
+    /**
+    * Session access key: Unknown type
+    */
+    RFID_Error_Session_AccessKey_UnknownType = 2197815318,
+    /**
+    * Session access key: Unsupported SM type
+    */
+    RFID_Error_Session_AccessKey_UnsupportedSMType = 2197815319,
+    /**
+    * Session access key: Incorrect SM type
+    */
+    RFID_Error_Session_AccessKey_IncorrectSMType = 2197815320,
+    /**
+    * Session access key: Restricted
+    */
+    RFID_Error_Session_AccessKey_Restricted = 2197815321,
+    /**
+    * Session access key: Incorrect data
+    */
+    RFID_Error_Session_AccessKey_IncorrectData = 2197815322,
+    /**
+    * Session access key: Not set
+    */
+    RFID_Error_Session_AccessKey_NotSet = 2197815323,
+    /**
+    * Session pwd management: Not authorized
+    */
+    RFID_Error_Session_PwdManagement_NotAuthorized = 2197815324,
+    /**
+    * Session access control: Unknown type
+    */
+    RFID_Error_Session_AccessControl_UnknownType = 2197815328,
+    /**
+    * Session access control: Requires SM
+    */
+    RFID_Error_Session_AccessControl_RequiresSM = 2197815329,
+    /**
+    * Session access control: Requires PACE
+    */
+    RFID_Error_Session_AccessControl_RequiresPACE = 2197815330,
+    /**
+    * Session access control: Requires CA keys
+    */
+    RFID_Error_Session_AccessControl_RequiresCAKeys = 2197815331,
+    /**
+    * Session access control: Requires TA
+    */
+    RFID_Error_Session_AccessControl_RequiresTA = 2197815332,
+    /**
+    * Session access control: Requires CA
+    */
+    RFID_Error_Session_AccessControl_RequiresCA = 2197815333,
+    /**
+    * Session access control: Incorrect option CA
+    */
+    RFID_Error_Session_AccessControl_IncorrectOptionCA = 2197815334,
+    /**
+    * Session access control: CA Failed
+    */
+    RFID_Error_Session_AccessControl_CA_Failed = 2197815335,
+    /**
+    * Session access control: TA Failed
+    */
+    RFID_Error_Session_AccessControl_TA_Failed = 2197815336,
+    /**
+    * Session access control: AA Failed
+    */
+    RFID_Error_Session_AccessControl_AA_Failed = 2197815337,
+    /**
+    * Session access control: RI Failed
+    */
+    RFID_Error_Session_AccessControl_RI_Failed = 2197815338,
+    /**
+    * Session PA: Signature check failed
+    */
+    RFID_Error_Session_PA_SignatureCheckFailed = 2197815344,
+    /**
+    * Session PA: Hash check failed
+    */
+    RFID_Error_Session_PA_HashCheckFailed = 2197815345,
+    /**
+    * Session invalid aux data: Date of expiry
+    */
+    RFID_Error_Session_InvalidAuxData_DateOfExpiry = 2197815360,
+    /**
+    * Session invalid aux data: Date of birth
+    */
+    RFID_Error_Session_InvalidAuxData_DateOfBirth = 2197815361,
+    /**
+    * Session invalid aux data: Community ID
+    */
+    RFID_Error_Session_InvalidAuxData_CommunityID = 2197815362,
+    /**
+    * Session eSign: Requires app selection
+    */
+    RFID_Error_Session_eSign_RequiresAppSelection = 2197815376,
+    /**
+    * Session eSign: PIN not set
+    */
+    RFID_Error_Session_eSign_PIN_NotSet = 2197815377,
+    /**
+    * Session eSign: PIN not verified
+    */
+    RFID_Error_Session_eSign_PIN_NotVerified = 2197815378,
+    /**
+    * Session: Incorrect data
+    */
+    RFID_Error_Session_IncorrectData = 2197815392,
+    /**
+    * Session file: Not enough data
+    */
+    RFID_Error_Session_File_NotEnoughData = 2197880832,
+    /**
+    * Session file: Incorrect data
+    */
+    RFID_Error_Session_File_IncorrectData = 2197946368,
+    /**
+    * Session file: Unexpected data
+    */
+    RFID_Error_Session_File_UnexpectedData = 2198011904,
+    /**
+    * Session file: Contents unexpected data
+    */
+    RFID_Error_Session_File_Contents_UnexpectedData = 2198077440,
+    /**
+    * Session file: Wrong tag
+    */
+    RFID_Error_Session_File_WrongTag = 2198142976,
+    /**
+    * Session file: Cant use data
+    */
+    RFID_Error_Session_File_CantUseData = 2198208512,
+    /**
+    * Session file: Cant read data
+    */
+    RFID_Error_Session_File_CantReadData = 2198274048,
+    /**
+    * Session file: Access denied
+    */
+    RFID_Error_Session_File_AccessDenied = 2198339584,
+    /**
+    * Layer 34: No error
+    */
+    RFID_Error_Layer34_NoError = 2214592512,
+    /**
+    * Layer 34: Time out
+    */
+    RFID_Error_Layer34_TimeOut = 2214658048,
+    /**
+    * Layer 34: Collision
+    */
+    RFID_Error_Layer34_Collision = 2214723584,
+    /**
+    * Layer 34: CRC
+    */
+    RFID_Error_Layer34_CRC = 2214789120,
+    /**
+    * Layer 34: Data integrity
+    */
+    RFID_Error_Layer34_DataIntegrity = 2214854656,
+    /**
+    * Layer 34: Data length
+    */
+    RFID_Error_Layer34_DataLength = 2214920192,
+    /**
+    * Layer 34: RFU
+    */
+    RFID_Error_Layer34_RFU = 2214985728,
+    /**
+    * Layer 34: Collision too many
+    */
+    RFID_Error_Layer34_Collision_TooMany = 2215051264,
+    /**
+    * Layer 34: Protocol B
+    */
+    RFID_Error_Layer34_ProtocolB = 2215116800,
+    /**
+    * Layer 34: Data contents
+    */
+    RFID_Error_Layer34_DataContents = 2215182336,
+    /**
+    * Layer 34: Protocol
+    */
+    RFID_Error_Layer34_Protocol = 2215247872,
+    /**
+    * Layer 34: Global timeOut
+    */
+    RFID_Error_Layer34_GlobalTimeOut = 2215313408,
+    /**
+    * Layer 34: MIFARE auth
+    */
+    RFID_Error_Layer34_MIFARE_Auth = 2215378944,
+    /**
+    * Layer 34: SAM error
+    */
+    RFID_Error_Layer34_SAM_Error = 2215444480,
+    /**
+    * Layer 34: SAM collision
+    */
+    RFID_Error_Layer34_SAM_Collision = 2215510016,
+    /**
+    * Layer 34: SAM acknowledge
+    */
+    RFID_Error_Layer34_SAM_Acknowledge = 2215575552
 }
 
 

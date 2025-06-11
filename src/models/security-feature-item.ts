@@ -70,12 +70,6 @@ export interface SecurityFeatureItem {
      * @type {number}
      * @memberof SecurityFeatureItem
      */
-    'Result'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SecurityFeatureItem
-     */
     'Reserved2'?: number;
 }
 

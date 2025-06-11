@@ -25,6 +25,9 @@ import type { BcROIDETECT } from './bc-roidetect';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DataModule } from './data-module';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { TextFieldType } from './text-field-type';
 
 /**
  * 
@@ -76,10 +79,10 @@ export interface PArrayField {
     'bcTextDecoderTypes'?: number;
     /**
      * 
-     * @type {number}
+     * @type {TextFieldType}
      * @memberof PArrayField
      */
-    'bcTextFieldType'?: number;
+    'bcTextFieldType'?: TextFieldType;
     /**
      * 
      * @type {BarcodeType}

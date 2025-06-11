@@ -18,9 +18,6 @@
 import type { ContainerList } from './container-list';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { LCID } from './lcid';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { ProcessParams } from './process-params';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -107,11 +104,5 @@ export interface ProcessRequest {
      * @memberof ProcessRequest
      */
     'ImageUrls'?: Array<string>;
-    /**
-     * The list of LCID types to recognize. If empty, values with all LCID types will be extracted. Empty by default.
-     * @type {Array<LCID>}
-     * @memberof ProcessRequest
-     */
-    'lcidFilter'?: Array<LCID>;
 }
 

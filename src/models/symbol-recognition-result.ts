@@ -56,11 +56,5 @@ export interface SymbolRecognitionResult {
      * @memberof SymbolRecognitionResult
      */
     'BaseLineTop'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SymbolRecognitionResult
-     */
-    'Reserved'?: number;
 }
 

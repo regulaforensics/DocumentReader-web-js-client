@@ -94,6 +94,26 @@ export enum RfidDataGroupTypeTag {
     */
     SOD = 119,
     /**
+    * Data Group 17
+    */
+    DG17 = 113,
+    /**
+    * Data Group 18
+    */
+    DG18 = 114,
+    /**
+    * Data Group 22
+    */
+    DG22 = 115,
+    /**
+    * Data Group 23
+    */
+    DG23 = 116,
+    /**
+    * Data Group 24
+    */
+    DG24 = 98,
+    /**
     * eID, Data Group 1
     */
     EID_DG1 = 97,
@@ -188,7 +208,7 @@ export enum RfidDataGroupTypeTag {
     /**
     * eDL, Card Entitlement
     */
-    EDL_CE = 119,
+    EDL_CE = 83,
     /**
     * eDL, Data Group 1
     */
