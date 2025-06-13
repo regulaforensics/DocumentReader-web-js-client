@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { LCID } from './lcid';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { StringRecognitionResult } from './string-recognition-result';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -82,10 +85,10 @@ export interface VisualExtendedFieldItem {
     'InComparison'?: number;
     /**
      * 
-     * @type {number}
+     * @type {LCID}
      * @memberof VisualExtendedFieldItem
      */
-    'wLCID'?: number;
+    'wLCID'?: LCID;
     /**
      * 
      * @type {number}
