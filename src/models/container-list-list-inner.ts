@@ -102,9 +102,6 @@ import type { MRZTestQuality } from './mrztest-quality';
 import type { MRZTestQualityResult } from './mrztest-quality-result';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MrzPosition } from './mrz-position';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { OneCandidate } from './one-candidate';
 // May contain unused imports in some cases
 // @ts-ignore
