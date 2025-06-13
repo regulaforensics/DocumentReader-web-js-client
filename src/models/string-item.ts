@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { CheckResult } from './check-result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ErrorCoordinates } from './error-coordinates';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -34,16 +37,16 @@ import type { SymbolEstimationItem } from './symbol-estimation-item';
 export interface StringItem {
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof StringItem
      */
-    'ALIGNMENT_SYMBOLS_IN_STRING': number;
+    'ALIGNMENT_SYMBOLS_IN_STRING': CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof StringItem
      */
-    'CHECK_SUMS': number;
+    'CHECK_SUMS': CheckResult;
     /**
      * 
      * @type {ErrorCoordinates}
@@ -64,34 +67,34 @@ export interface StringItem {
     'Fields': Array<FieldItem>;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof StringItem
      */
-    'STRINGS_DISTANCE': number;
+    'STRINGS_DISTANCE': CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof StringItem
      */
-    'STRINGS_INTERVAL': number;
+    'STRINGS_INTERVAL': CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof StringItem
      */
-    'STRING_FILLING': number;
+    'STRING_FILLING': CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof StringItem
      */
-    'STRING_POSITION': number;
+    'STRINGS_POSITION'?: CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof StringItem
      */
-    'SYMBOLS_PARAM': number;
+    'SYMBOLS_PARAM': CheckResult;
     /**
      * 
      * @type {number}
@@ -135,4 +138,6 @@ export interface StringItem {
      */
     'SymbolsEstimations': Array<SymbolEstimationItem>;
 }
+
+
 
