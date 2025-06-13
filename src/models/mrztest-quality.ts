@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { CheckResult } from './check-result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { StringItem } from './string-item';
 
 /**
@@ -25,16 +28,16 @@ import type { StringItem } from './string-item';
 export interface MRZTestQuality {
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof MRZTestQuality
      */
-    'CHECK_SUMS': number;
+    'CHECK_SUMS': CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof MRZTestQuality
      */
-    'CONTRAST_PRINT': number;
+    'CONTRAST_PRINT': CheckResult;
     /**
      * 
      * @type {number}
@@ -49,22 +52,22 @@ export interface MRZTestQuality {
     'MRZ_FORMAT': number;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof MRZTestQuality
      */
-    'PRINT_POSITION': number;
+    'PRINT_POSITION': CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof MRZTestQuality
      */
-    'STAIN_MRZ': number;
+    'STAIN_MRZ': CheckResult;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof MRZTestQuality
      */
-    'SYMBOLS_PARAM': number;
+    'SYMBOLS_PARAM': CheckResult;
     /**
      * 
      * @type {number}
@@ -79,9 +82,11 @@ export interface MRZTestQuality {
     'Strings': Array<StringItem>;
     /**
      * 
-     * @type {number}
+     * @type {CheckResult}
      * @memberof MRZTestQuality
      */
-    'TEXTUAL_FILLING': number;
+    'TEXTUAL_FILLING': CheckResult;
 }
+
+
 

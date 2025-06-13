@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { MrzPosition } from './mrz-position';
+import type { DocumentPosition } from './document-position';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { MrzPositionItem } from './mrz-position-item';

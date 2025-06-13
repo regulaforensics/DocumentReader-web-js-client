@@ -113,7 +113,6 @@ export * from './mrztest-quality-item';
 export * from './mrztest-quality-result';
 export * from './measure-system';
 export * from './mrz-detect-mode-enum';
-export * from './mrz-position';
 export * from './mrz-position-item';
 export * from './ocrsecurity-text-item';
 export * from './ocrsecurity-text-result';

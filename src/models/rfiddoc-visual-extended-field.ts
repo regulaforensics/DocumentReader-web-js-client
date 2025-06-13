@@ -15,6 +15,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { LCID } from './lcid';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { RFIDDocVisualExtendedFieldItem } from './rfiddoc-visual-extended-field-item';
 // May contain unused imports in some cases
 // @ts-ignore
