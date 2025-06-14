@@ -200,10 +200,8 @@ export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequest
     });
 
     return {
-        processParam: request.processParam,
+        ...request,
         List: imageList,
-        systemInfo: request.systemInfo,
-        passBackObject: request.passBackObject,
     };
 }
 
