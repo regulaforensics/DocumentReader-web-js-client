@@ -6,6 +6,7 @@ import {
     TextField,
     TextFieldType,
     TextFieldValue,
+    LCID,
 } from '../models';
 
 const LCID_MAP: Record<number, string> = {
@@ -156,7 +157,8 @@ export class TextFieldExt implements TextField {
     // see BaseTextField for docs
     fieldType: TextFieldType;
     fieldName: string;
-    lcid?: number;
+    lcid: LCID;
+    lcidName?: string;
 
     status: CheckResult;
     validityStatus: CheckResult;
@@ -178,6 +180,7 @@ export class TextFieldExt implements TextField {
         this.valueList = origin.valueList;
         this.validityList = origin.validityList;
         this.comparisonList = origin.comparisonList;
+        this.lcidName = origin.lcidName;
     }
 
     /**

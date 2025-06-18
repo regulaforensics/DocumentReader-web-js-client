@@ -1,6 +1,5 @@
-import { DefaultApi } from '../api/default-api';
-import { ProcessApi } from '../api/process-api';
 import { HealthcheckApi } from '../api/healthcheck-api';
+import { ProcessApi } from '../api/process-api';
 import { TransactionApi } from '../api/transaction-api';
 import { Response } from './process-response';
 import { Configuration, ConfigurationParameters } from '../configuration';
@@ -14,7 +13,7 @@ import {
     Result,
     DeviceInfo,
     TransactionProcessRequest,
-    InlineResponse200,
+    TransactionProcessResult,
     ListTransactionsByTagResponse,
     TransactionProcessGetResponse,
     Healthcheck,
@@ -24,7 +23,6 @@ import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
 import * as converter from 'base64-arraybuffer';
 
 export class DocumentReaderApi {
-    private readonly defaultApi: DefaultApi;
     private readonly healthcheckApi: HealthcheckApi;
     private readonly processApi: ProcessApi;
     private readonly transactionApi: TransactionApi;
@@ -36,14 +34,13 @@ export class DocumentReaderApi {
         basePath: string = BASE_PATH,
         axios: AxiosInstance = globalAxios,
     ) {
-        this.defaultApi = new DefaultApi(new Configuration(configuration), basePath, axios);
         this.healthcheckApi = new HealthcheckApi(new Configuration(configuration), basePath, axios);
         this.processApi = new ProcessApi(new Configuration(configuration), basePath, axios);
         this.transactionApi = new TransactionApi(new Configuration(configuration), basePath, axios);
     }
 
     async ping(xRequestID?: string): Promise<DeviceInfo> {
-        const axiosResult = await this.defaultApi.ping(xRequestID);
+        const axiosResult = await this.healthcheckApi.ping(xRequestID);
         return axiosResult.data;
     }
 
@@ -110,7 +107,7 @@ export class DocumentReaderApi {
         transactionId: string,
         transactionProcessRequest: TransactionProcessRequest,
         options?: any,
-    ): Promise<AxiosResponse<InlineResponse200, any>> {
+    ): Promise<AxiosResponse<TransactionProcessResult, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdProcessPost(
             transactionId,
             transactionProcessRequest,
@@ -203,10 +200,8 @@ export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequest
     });
 
     return {
-        processParam: request.processParam,
+        ...request,
         List: imageList,
-        systemInfo: request.systemInfo,
-        passBackObject: request.passBackObject,
     };
 }
 
