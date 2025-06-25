@@ -22,7 +22,7 @@ import * as converter from 'base64-arraybuffer';
 import { Authenticity } from './authenticity';
 import * as pako from 'pako';
 
-export class Response {
+export class ProcessResult {
     // other future modules:
     // - authenticity
     // - document
@@ -193,3 +193,8 @@ export class LowLvlResponse implements ProcessResponse {
         return this.ContainerList.List.filter((container) => container.result_type === type);
     }
 }
+
+/**
+ * @deprecated use `ProcessResult` instead.
+ */
+export { ProcessResult as Response };

@@ -1,7 +1,7 @@
 import { HealthcheckApi } from '../api/healthcheck-api';
 import { ProcessApi } from '../api/process-api';
 import { TransactionApi } from '../api/transaction-api';
-import { Response } from './process-response';
+import { ProcessResult } from './process-result';
 import { Configuration, ConfigurationParameters } from '../configuration';
 import globalAxios, { AxiosInstance, AxiosResponse } from 'axios';
 import { BASE_PATH } from '../base';
@@ -60,7 +60,7 @@ export class DocumentReaderApi {
         request: ProcessRequestExt | ProcessRequestBase,
         xRequestID?: string,
         options?: any,
-    ): Promise<Response> {
+    ): Promise<ProcessResult> {
         let baseRequest;
 
         if (instanceOfProcessRequest(request)) {
@@ -84,7 +84,7 @@ export class DocumentReaderApi {
         }
 
         const axiosResult = await this.processApi.apiProcess(baseRequest, xRequestID, options);
-        return new Response(axiosResult.data);
+        return new ProcessResult(axiosResult.data);
     }
 
     public setLicense(license: ArrayBuffer | Base64String) {
@@ -123,13 +123,17 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getReprocessTransactionResult(transactionId: string, withImages?: boolean, options?: any): Promise<Response> {
+    async getReprocessTransactionResult(
+        transactionId: string,
+        withImages?: boolean,
+        options?: any,
+    ): Promise<ProcessResult> {
         const axiosResult = await this.transactionApi.apiV2TransactionTransactionIdResultsGet(
             transactionId,
             withImages,
             options,
         );
-        return new Response(axiosResult.data);
+        return new ProcessResult(axiosResult.data);
     }
 
     /**
