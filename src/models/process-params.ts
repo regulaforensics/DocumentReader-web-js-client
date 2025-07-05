@@ -445,6 +445,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'pdfPagesLimit'?: number;
+    /**
+     * This parameter if enabled will ignore the minimum barcode resolution needed to start processing.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'disableAuthResolutionFilter'?: boolean;
 }
 
 
