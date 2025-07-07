@@ -24,13 +24,13 @@ export interface TransactionProcessResult {
      * @type {OutData}
      * @memberof TransactionProcessResult
      */
-    'OutData'?: OutData;
+    'outData'?: OutData;
     /**
      * 
      * @type {InData}
      * @memberof TransactionProcessResult
      */
-    'InData'?: InData;
+    'inData'?: InData;
     /**
      * 
      * @type {string}
