@@ -2601,7 +2601,15 @@ export enum TextFieldType {
     /**
     * Nationality code (Alpha-2)
     */
-    FT_NATIONALITY_CODE_ALPHA2 = 697
+    FT_NATIONALITY_CODE_ALPHA2 = 697,
+    /**
+    * First issue date check digit
+    */
+    FT_FIRST_ISSUE_DATE_CHECK_DIGIT = 698,
+    /**
+    * First issue date checksum
+    */
+    FT_FIRST_ISSUE_DATE_CHECKSUM = 699
 }
 
 
