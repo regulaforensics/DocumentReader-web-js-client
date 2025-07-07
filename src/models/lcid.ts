@@ -223,9 +223,9 @@ export enum LCID {
     */
     ESTONIAN = 1061,
     /**
-    * Faeroese
+    * Faroese
     */
-    FAEROESE = 1080,
+    FAROESE = 1080,
     /**
     * Farsi
     */
