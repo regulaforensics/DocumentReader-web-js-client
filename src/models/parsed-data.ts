@@ -6,6 +6,9 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
+import type { ParsingNotificationCodes } from './parsing-notification-codes';
 
 /**
  * 
@@ -15,9 +18,9 @@
 export interface ParsedData {
     /**
      * 
-     * @type {Array<number>}
+     * @type {Array<ParsingNotificationCodes>}
      * @memberof ParsedData
      */
-    'ParsingNotifications'?: Array<number>;
+    'ParsingNotifications'?: Array<ParsingNotificationCodes>;
 }
 

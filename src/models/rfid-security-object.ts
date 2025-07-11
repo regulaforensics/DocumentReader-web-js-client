@@ -8,7 +8,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ParsingNotificationCodes } from './parsing-notification-codes';
+import type { ParsingErrorCodes } from './parsing-error-codes';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { RfidSignerInfoEx } from './rfid-signer-info-ex';
@@ -39,10 +39,10 @@ export interface RfidSecurityObject {
     'FileReference': number;
     /**
      * List of remarks arisen during the analysis of SO data structure.
-     * @type {Array<ParsingNotificationCodes>}
+     * @type {Array<ParsingErrorCodes>}
      * @memberof RfidSecurityObject
      */
-    'Notifications': Array<ParsingNotificationCodes>;
+    'Notifications': Array<ParsingErrorCodes>;
     /**
      * List of containers to store information about digital signature objects contained in the SO
      * @type {Array<RfidSignerInfoEx>}

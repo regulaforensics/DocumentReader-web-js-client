@@ -8,7 +8,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ParsingNotificationCodes } from './parsing-notification-codes';
+import type { ParsingErrorCodes } from './parsing-error-codes';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { RFIDErrorCodes } from './rfiderror-codes';
@@ -42,10 +42,10 @@ export interface RfidAccessControlInfo {
     'ActiveOptionIdx'?: number;
     /**
      * List of remarks arisen during the procedure.
-     * @type {Array<ParsingNotificationCodes>}
+     * @type {Array<ParsingErrorCodes>}
      * @memberof RfidAccessControlInfo
      */
-    'Notifications': Array<ParsingNotificationCodes>;
+    'Notifications': Array<ParsingErrorCodes>;
     /**
      * List of structures with are used to describe the variants of the authentication or secure data access procedure performance within the context of the communication session with electronic document
      * @type {Array<any>}
