@@ -14,7 +14,7 @@ import type { GraphicFieldType } from './graphic-field-type';
 import type { ParsedData } from './parsed-data';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ParsingNotificationCodes } from './parsing-notification-codes';
+import type { ParsingErrorCodes } from './parsing-error-codes';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { RFIDErrorCodes } from './rfiderror-codes';
@@ -75,10 +75,10 @@ export interface RfidDataFile {
     'PA_Status'?: RFIDErrorCodes;
     /**
      * List of remarks arisen when reading data from the memory of the chip and analysing their ASN.1-structure.
-     * @type {Array<ParsingNotificationCodes>}
+     * @type {Array<ParsingErrorCodes>}
      * @memberof RfidDataFile
      */
-    'Notifications'?: Array<ParsingNotificationCodes>;
+    'Notifications'?: Array<ParsingErrorCodes>;
     /**
      * List of document text fields formed on the basis of the file contents
      * @type {Array<TextFieldType>}
