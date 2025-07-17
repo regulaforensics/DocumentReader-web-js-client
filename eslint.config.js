@@ -7,12 +7,12 @@ export default [
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     prettierRecommended,
+    { ignores: ['dist/*', 'lib/*', '!.*'] },
     {
         files: ['**/*.{js,mjs,cjs,ts}'],
         languageOptions: {
             globals: { ...globals.browser, ...globals.node },
         },
-        ignores: ['dist/*', 'lib/*', '!.*'],
         rules: {
             '@typescript-eslint/no-explicit-any': 'off',
             '@typescript-eslint/no-unused-vars': 'off',
