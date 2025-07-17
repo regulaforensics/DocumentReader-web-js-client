@@ -8,9 +8,6 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ParsingErrorCodes } from './parsing-error-codes';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { RFIDErrorCodes } from './rfiderror-codes';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -98,11 +95,11 @@ export interface RfidSignerInfoEx {
      */
     'DataToHash': string;
     /**
-     * 
-     * @type {Array<ParsingErrorCodes>}
+     * Can be ParsingErrorCodes or ParsingNotificationCodes enum.
+     * @type {Array<number>}
      * @memberof RfidSignerInfoEx
      */
-    'Notifications': Array<ParsingErrorCodes>;
+    'Notifications': Array<number>;
 }
 
 

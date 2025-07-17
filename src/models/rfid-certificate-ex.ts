@@ -8,9 +8,6 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { ParsingErrorCodes } from './parsing-error-codes';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { RFIDErrorCodes } from './rfiderror-codes';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -86,11 +83,11 @@ export interface RfidCertificateEx {
      */
     'Extensions': Array<RfidPkiExtension>;
     /**
-     * List of remarks arisen during the analysis of the certificate data structure and its validity verification.
-     * @type {Array<ParsingErrorCodes>}
+     * List of remarks arisen during the analysis of the certificate data structure and its validity verification. Can be ParsingErrorCodes or ParsingNotificationCodes enum.
+     * @type {Array<number>}
      * @memberof RfidCertificateEx
      */
-    'Notifications': Array<ParsingErrorCodes>;
+    'Notifications': Array<number>;
     /**
      * 
      * @type {RfidCertificateOrigin}
