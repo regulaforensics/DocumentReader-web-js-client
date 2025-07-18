@@ -42,10 +42,10 @@ import type { RfidTerminal } from './rfid-terminal';
 export interface RfidSessionData {
     /**
      * Sign of virtual session when working with loaded data from a previous communication session with the electronic document
-     * @type {string}
+     * @type {boolean}
      * @memberof RfidSessionData
      */
-    'VirtualMode'?: string;
+    'VirtualMode'?: boolean;
     /**
      * Text SDKVersion value in format A.B (e.g. 3.1)
      * @type {string}
