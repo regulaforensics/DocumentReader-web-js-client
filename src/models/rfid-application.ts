@@ -11,9 +11,6 @@
 import type { RFIDErrorCodes } from './rfiderror-codes';
 // May contain unused imports in some cases
 // @ts-ignore
-import type { RfidApplicationType } from './rfid-application-type';
-// May contain unused imports in some cases
-// @ts-ignore
 import type { RfidDataFile } from './rfid-data-file';
 
 /**
@@ -24,10 +21,10 @@ import type { RfidDataFile } from './rfid-data-file';
 export interface RfidApplication {
     /**
      * 
-     * @type {RfidApplicationType}
+     * @type {number}
      * @memberof RfidApplication
      */
-    'Type': RfidApplicationType;
+    'Type': number;
     /**
      * 
      * @type {RFIDErrorCodes}

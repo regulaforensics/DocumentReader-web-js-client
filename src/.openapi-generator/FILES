@@ -156,7 +156,6 @@ models/rfid-access-control-info.ts
 models/rfid-access-control-procedure-type.ts
 models/rfid-access-key.ts
 models/rfid-achip.ts
-models/rfid-application-type.ts
 models/rfid-application.ts
 models/rfid-attribute-data.ts
 models/rfid-attribute-name.ts
@@ -168,7 +167,6 @@ models/rfid-certificate-origin.ts
 models/rfid-certificate-type.ts
 models/rfid-data-file-type.ts
 models/rfid-data-file.ts
-models/rfid-data-group-type-tag.ts
 models/rfid-dg1.ts
 models/rfid-distinguished-name.ts
 models/rfid-location.ts
