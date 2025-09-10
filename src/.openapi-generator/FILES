@@ -168,7 +168,6 @@ models/rfid-certificate-origin.ts
 models/rfid-certificate-type.ts
 models/rfid-data-file-type.ts
 models/rfid-data-file.ts
-models/rfid-data-group-type-tag.ts
 models/rfid-dg1.ts
 models/rfid-distinguished-name.ts
 models/rfid-location.ts

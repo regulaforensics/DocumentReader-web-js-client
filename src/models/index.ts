@@ -170,7 +170,6 @@ export * from './rfid-certificate-type';
 export * from './rfid-dg1';
 export * from './rfid-data-file';
 export * from './rfid-data-file-type';
-export * from './rfid-data-group-type-tag';
 export * from './rfid-distinguished-name';
 export * from './rfid-location';
 export * from './rfid-origin';
