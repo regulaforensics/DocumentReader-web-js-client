@@ -15,9 +15,9 @@
 
 export enum RfidApplicationType {
     /**
-    * Not defined
+    * Root files
     */
-    UNSPECIFIED = 0,
+    ROOT_FILES = 0,
     /**
     * ePassport application
     */
@@ -49,11 +49,7 @@ export enum RfidApplicationType {
     /**
     * Digital Travel Credentials
     */
-    eDTC_PC = 8,
-    /**
-    * Master File
-    */
-    ROOT_FILES = 0
+    eDTC_PC = 8
 }
 
 
