@@ -38,7 +38,7 @@
     "*.{js,ts}": "eslint --fix"
   },
   "dependencies": {
-    "axios": "^1.11.0",
+    "axios": "^1.12.2",
     "base64-arraybuffer": "^1.0.2",
     "pako": "^2.1.0"
   },
