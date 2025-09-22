@@ -37,7 +37,15 @@ export enum Source {
     /**
     * External
     */
-    EXTERNAL = 'EXTERNAL'
+    EXTERNAL = 'EXTERNAL',
+    /**
+    * Live
+    */
+    LIVE = 'LIVE',
+    /**
+    * Fingerprint
+    */
+    FINGERPRINT = 'FINGERPRINT'
 }
 
 
