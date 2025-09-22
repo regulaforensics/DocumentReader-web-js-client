@@ -117,7 +117,7 @@ export interface RfidSessionData {
      * @type {RfidAccessKey}
      * @memberof RfidSessionData
      */
-    'Session_key': RfidAccessKey;
+    'Session_key'?: RfidAccessKey;
     /**
      * 
      * @type {RfidTerminal}

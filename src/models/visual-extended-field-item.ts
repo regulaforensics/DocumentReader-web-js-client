@@ -57,7 +57,7 @@ export interface VisualExtendedFieldItem {
      * @type {string}
      * @memberof VisualExtendedFieldItem
      */
-    'Buf_Text': string;
+    'Buf_Text'?: string;
     /**
      * 
      * @type {string}
