@@ -27,9 +27,9 @@ export interface FaceApiSearch {
     'threshold'?: number;
     /**
      *  The groups where to conduct the search.
-     * @type {Array<number>}
+     * @type {Array<string>}
      * @memberof FaceApiSearch
      */
-    'group_ids'?: Array<number>;
+    'group_ids'?: Array<string>;
 }
 

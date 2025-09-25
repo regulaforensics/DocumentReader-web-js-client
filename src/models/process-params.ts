@@ -451,6 +451,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'disableAuthResolutionFilter'?: boolean;
+    /**
+     * When enabled, this parameter marks security checks that don’t meet minimum requirements as \'Failed\' (instead of \'WasNotDone\'), which causes the overall security status to be \'Failed\'.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'strictSecurityChecks'?: boolean;
 }
 
 

@@ -9,9 +9,6 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { DocumentFormat } from './document-format';
-// May contain unused imports in some cases
-// @ts-ignore
-import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 
 /**
  * Structure used to store the contents of EF.DG1 informational data group of ePassport application – document MRZ data
@@ -21,10 +18,10 @@ import type { RfidDataGroupTypeTag } from './rfid-data-group-type-tag';
 export interface RfidDG1 {
     /**
      * 
-     * @type {RfidDataGroupTypeTag}
+     * @type {number}
      * @memberof RfidDG1
      */
-    'Type': RfidDataGroupTypeTag;
+    'Type': number;
     /**
      * 
      * @type {DocumentFormat}

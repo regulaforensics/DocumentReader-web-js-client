@@ -14,6 +14,9 @@ import type { AuthenticityCheckList } from './authenticity-check-list';
 import type { AuthenticityResult } from './authenticity-result';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { BarcodePositionResult } from './barcode-position-result';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { ByteArrayResult } from './byte-array-result';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -137,6 +140,6 @@ import type { TextResult } from './text-result';
  * @type ContainerListListInner
  * @export
  */
-export type ContainerListListInner = AuthenticityResult | ByteArrayResult | ChosenDocumentTypeResult | DocBarCodeInfo | DocumentBinaryInfoResult | DocumentImageResult | DocumentPositionResult | DocumentTypesCandidatesResult | EncryptedRCLResult | FaceDetectionResult | GraphicsResult | ImageQualityResult | ImagesResult | LexicalAnalysisResult | LicenseResult | MRZDetectorResult | MRZPositionResult | MRZTestQualityResult | RFIDGraphicsInfoResult | RFIDTextDataResult | StatusResult | TextDataResult | TextResult;
+export type ContainerListListInner = AuthenticityResult | BarcodePositionResult | ByteArrayResult | ChosenDocumentTypeResult | DocBarCodeInfo | DocumentBinaryInfoResult | DocumentImageResult | DocumentPositionResult | DocumentTypesCandidatesResult | EncryptedRCLResult | FaceDetectionResult | GraphicsResult | ImageQualityResult | ImagesResult | LexicalAnalysisResult | LicenseResult | MRZDetectorResult | MRZPositionResult | MRZTestQualityResult | RFIDGraphicsInfoResult | RFIDTextDataResult | StatusResult | TextDataResult | TextResult;
 
 
