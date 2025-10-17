@@ -8,6 +8,9 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import type { GlaresCheckParams } from './glares-check-params';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { InputImageQualityChecks } from './input-image-quality-checks';
 
 /**
@@ -70,5 +73,11 @@ export interface ImageQA {
      * @memberof ImageQA
      */
     'expectedPass'?: Array<InputImageQualityChecks>;
+    /**
+     * 
+     * @type {GlaresCheckParams}
+     * @memberof ImageQA
+     */
+    'glaresCheckParams'?: GlaresCheckParams;
 }
 

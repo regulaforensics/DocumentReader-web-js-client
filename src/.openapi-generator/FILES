@@ -74,6 +74,7 @@ models/fiber-result.ts
 models/field-item.ts
 models/file-image.ts
 models/get-transactions-by-tag-response.ts
+models/glares-check-params.ts
 models/graph-data.ts
 models/graphic-field-type.ts
 models/graphic-field.ts
