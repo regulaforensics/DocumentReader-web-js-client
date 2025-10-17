@@ -68,6 +68,7 @@ export * from './fiber-result';
 export * from './field-item';
 export * from './file-image';
 export * from './get-transactions-by-tag-response';
+export * from './glares-check-params';
 export * from './graph-data';
 export * from './graphic-field';
 export * from './graphic-field-type';
