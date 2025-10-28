@@ -178,10 +178,11 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
          * @summary Reprocess
          * @param {string} transactionId Transaction id
          * @param {TransactionProcessRequest} transactionProcessRequest 
+         * @param {boolean} [useCache] Get processed values from storage in case transaction has already processed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdProcessPost: async (transactionId: string, transactionProcessRequest: TransactionProcessRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiV2TransactionTransactionIdProcessPost: async (transactionId: string, transactionProcessRequest: TransactionProcessRequest, useCache?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'transactionId' is not null or undefined
             assertParamExists('apiV2TransactionTransactionIdProcessPost', 'transactionId', transactionId)
             // verify required parameter 'transactionProcessRequest' is not null or undefined
@@ -198,6 +199,10 @@ export const TransactionApiAxiosParamCreator = function (configuration?: Configu
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (useCache !== undefined) {
+                localVarQueryParameter['useCache'] = useCache;
+            }
 
 
     
@@ -320,11 +325,12 @@ export const TransactionApiFp = function(configuration?: Configuration) {
          * @summary Reprocess
          * @param {string} transactionId Transaction id
          * @param {TransactionProcessRequest} transactionProcessRequest 
+         * @param {boolean} [useCache] Get processed values from storage in case transaction has already processed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TransactionProcessResult>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options);
+        async apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, useCache?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TransactionProcessResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, useCache, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['TransactionApi.apiV2TransactionTransactionIdProcessPost']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -399,11 +405,12 @@ export const TransactionApiFactory = function (configuration?: Configuration, ba
          * @summary Reprocess
          * @param {string} transactionId Transaction id
          * @param {TransactionProcessRequest} transactionProcessRequest 
+         * @param {boolean} [useCache] Get processed values from storage in case transaction has already processed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, options?: RawAxiosRequestConfig): AxiosPromise<TransactionProcessResult> {
-            return localVarFp.apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options).then((request) => request(axios, basePath));
+        apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, useCache?: boolean, options?: RawAxiosRequestConfig): AxiosPromise<TransactionProcessResult> {
+            return localVarFp.apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, useCache, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -480,12 +487,13 @@ export class TransactionApi extends BaseAPI {
      * @summary Reprocess
      * @param {string} transactionId Transaction id
      * @param {TransactionProcessRequest} transactionProcessRequest 
+     * @param {boolean} [useCache] Get processed values from storage in case transaction has already processed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TransactionApi
      */
-    public apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, options?: RawAxiosRequestConfig) {
-        return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, options).then((request) => request(this.axios, this.basePath));
+    public apiV2TransactionTransactionIdProcessPost(transactionId: string, transactionProcessRequest: TransactionProcessRequest, useCache?: boolean, options?: RawAxiosRequestConfig) {
+        return TransactionApiFp(this.configuration).apiV2TransactionTransactionIdProcessPost(transactionId, transactionProcessRequest, useCache, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
