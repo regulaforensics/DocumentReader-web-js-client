@@ -457,6 +457,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'strictSecurityChecks'?: boolean;
+    /**
+     * Allows transliteration to be turned on or off; by default, it is enabled.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'returnTransliteratedFields'?: boolean;
 }
 
 
