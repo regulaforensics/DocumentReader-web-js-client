@@ -1,9 +1,10 @@
 import { HealthcheckApi } from '../api/healthcheck-api';
 import { ProcessApi } from '../api/process-api';
 import { TransactionApi } from '../api/transaction-api';
+import { ResourcesApi } from '../api/resources-api';
 import { ProcessResult } from './process-result';
 import { Configuration, ConfigurationParameters } from '../configuration';
-import globalAxios, { AxiosInstance, AxiosResponse } from 'axios';
+import globalAxios, { AxiosInstance, AxiosResponse, RawAxiosRequestConfig } from 'axios';
 import { BASE_PATH } from '../base';
 import {
     ProcessRequestImage,
@@ -17,6 +18,7 @@ import {
     ListTransactionsByTagResponse,
     TransactionProcessGetResponse,
     Healthcheck,
+    DatabaseDocumentList,
 } from '../models';
 import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
 import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
@@ -26,6 +28,7 @@ export class DocumentReaderApi {
     private readonly healthcheckApi: HealthcheckApi;
     private readonly processApi: ProcessApi;
     private readonly transactionApi: TransactionApi;
+    private readonly resourcesApi: ResourcesApi;
 
     private license: string | undefined;
 
@@ -37,15 +40,21 @@ export class DocumentReaderApi {
         this.healthcheckApi = new HealthcheckApi(new Configuration(configuration), basePath, axios);
         this.processApi = new ProcessApi(new Configuration(configuration), basePath, axios);
         this.transactionApi = new TransactionApi(new Configuration(configuration), basePath, axios);
+        this.resourcesApi = new ResourcesApi(new Configuration(configuration), basePath, axios);
     }
 
-    async ping(xRequestID?: string): Promise<DeviceInfo> {
-        const axiosResult = await this.healthcheckApi.ping(xRequestID);
+    async doclist(options?: RawAxiosRequestConfig): Promise<DatabaseDocumentList> {
+        const axiosResult = await this.resourcesApi.doclist(options);
         return axiosResult.data;
     }
 
-    async health(xRequestID?: string): Promise<Healthcheck> {
-        const axiosResult = await this.healthcheckApi.healthz(xRequestID);
+    async ping(xRequestID?: string, options?: RawAxiosRequestConfig): Promise<DeviceInfo> {
+        const axiosResult = await this.healthcheckApi.ping(xRequestID, options);
+        return axiosResult.data;
+    }
+
+    async health(xRequestID?: string, options?: RawAxiosRequestConfig): Promise<Healthcheck> {
+        const axiosResult = await this.healthcheckApi.healthz(xRequestID, options);
         return axiosResult.data;
     }
 
@@ -53,13 +62,14 @@ export class DocumentReaderApi {
      *
      * @summary Process list of documents images and return extracted data
      * @param {ProcessRequestExt} [request] Request options such as image, results types and etc.
+     * @param {string} xRequestID It allows the client and server to correlate each HTTP request.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError} If some request params are missed
      * */
     async process(
         request: ProcessRequestExt | ProcessRequestBase,
         xRequestID?: string,
-        options?: any,
+        options?: RawAxiosRequestConfig,
     ): Promise<ProcessResult> {
         let baseRequest;
 
@@ -100,17 +110,20 @@ export class DocumentReaderApi {
      * @summary Reprocess
      * @param {string} transactionId Transaction id
      * @param {TransactionProcessRequest} transactionProcessRequest
+     * @param {boolean} useCache Get processed values from storage in case transaction has already processed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     public reprocessTransaction(
         transactionId: string,
         transactionProcessRequest: TransactionProcessRequest,
-        options?: any,
+        useCache?: boolean,
+        options?: RawAxiosRequestConfig,
     ): Promise<AxiosResponse<TransactionProcessResult, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdProcessPost(
             transactionId,
             transactionProcessRequest,
+            useCache,
             options,
         );
     }
@@ -126,7 +139,7 @@ export class DocumentReaderApi {
     async getReprocessTransactionResult(
         transactionId: string,
         withImages?: boolean,
-        options?: any,
+        options?: RawAxiosRequestConfig,
     ): Promise<ProcessResult> {
         const axiosResult = await this.transactionApi.apiV2TransactionTransactionIdResultsGet(
             transactionId,
@@ -143,7 +156,10 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getTransactionsByTag(tagId: string, options?: any): Promise<AxiosResponse<ListTransactionsByTagResponse>> {
+    async getTransactionsByTag(
+        tagId: string,
+        options?: RawAxiosRequestConfig,
+    ): Promise<AxiosResponse<ListTransactionsByTagResponse>> {
         return this.transactionApi.apiV2TagTagIdTransactionsGet(tagId, options);
     }
 
@@ -154,7 +170,10 @@ export class DocumentReaderApi {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async deleteReprocessTransactionsByTag(tagId: string, options?: any): Promise<AxiosResponse<object, any>> {
+    async deleteReprocessTransactionsByTag(
+        tagId: string,
+        options?: RawAxiosRequestConfig,
+    ): Promise<AxiosResponse<object, any>> {
         return this.transactionApi.apiV2TagTagIdDelete(tagId, options);
     }
 
@@ -169,7 +188,7 @@ export class DocumentReaderApi {
     async getReprocessTransactionFile(
         transactionId: string,
         name: string,
-        options?: any,
+        options?: RawAxiosRequestConfig,
     ): Promise<AxiosResponse<any, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdFileGet(transactionId, name, options);
     }
@@ -183,7 +202,7 @@ export class DocumentReaderApi {
      */
     async getReprocessTransactionData(
         transactionId: string,
-        options?: any,
+        options?: RawAxiosRequestConfig,
     ): Promise<AxiosResponse<TransactionProcessGetResponse, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdGet(transactionId, options);
     }
