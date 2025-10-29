@@ -28,6 +28,8 @@ export * from './container-list-list-inner';
 export * from './critical';
 export * from './cross-source-value-comparison';
 export * from './data-module';
+export * from './database-document';
+export * from './database-document-list';
 export * from './details-optical';
 export * from './details-rfid';
 export * from './device-info';

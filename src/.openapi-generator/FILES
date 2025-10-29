@@ -1,5 +1,6 @@
 api/healthcheck-api.ts
 api/process-api.ts
+api/resources-api.ts
 api/transaction-api.ts
 base.ts
 common.ts
@@ -34,6 +35,8 @@ models/container-list.ts
 models/critical.ts
 models/cross-source-value-comparison.ts
 models/data-module.ts
+models/database-document-list.ts
+models/database-document.ts
 models/details-optical.ts
 models/details-rfid.ts
 models/device-info-documents-database.ts
