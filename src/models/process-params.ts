@@ -150,11 +150,17 @@ export interface ProcessParams {
      */
     'generateDoublePageSpreadImage'?: boolean;
     /**
-     * List of text field types to extract. If empty, all text fields from template will be extracted. Narrowing the list can shorten processing time. Empty by default.
+     * If a document contains Visual zone, you can set the list of field types to extract. In this case, other fields are skipped during the processing, i.e. document recognition becomes faster. This filter is not applicable to the MRZ, barcode or RFID. If the fieldTypesFilter is empty, all fields are extracted. Empty by default. If fieldTypesFilter and fieldTypesIgnoreFilter are used simultaneously, fieldTypesFilter takes priority.
      * @type {Array<TextFieldType>}
      * @memberof ProcessParams
      */
     'fieldTypesFilter'?: Array<TextFieldType>;
+    /**
+     * If a document contains a Visual zone, you can specify a list of field types that should be excluded from extraction. All field types listed in this array are skipped during processing, while the remaining fields are recognized. This filter is not applicable to the MRZ, barcode or RFID. If the fieldTypesIgnoreFilter is empty, all fields are extracted. Empty by default. If fieldTypesFilter and fieldTypesIgnoreFilter are used simultaneously, fieldTypesFilter takes priority.
+     * @type {Array<TextFieldType>}
+     * @memberof ProcessParams
+     */
+    'fieldTypesIgnoreFilter'?: Array<TextFieldType>;
     /**
      * This option allows you to set dates format so that solution will return dates in this format. For example, if you supply \'MM/dd/yyyy\', and document have printed date \'09 JUL 2020\' for the date os issue, you will get \'07/09/2020\' as a result. By default it is set to system locale default (where the service is running).
      * @type {string}
