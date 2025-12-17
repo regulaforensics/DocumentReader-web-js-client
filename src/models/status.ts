@@ -11,6 +11,9 @@
 import type { CheckResult } from './check-result';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { DetailsAge } from './details-age';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { DetailsOptical } from './details-optical';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -64,6 +67,24 @@ export interface Status {
      * @memberof Status
      */
     'detailsOptical': DetailsOptical;
+    /**
+     * 
+     * @type {CheckResult}
+     * @memberof Status
+     */
+    'age': CheckResult;
+    /**
+     * 
+     * @type {DetailsAge}
+     * @memberof Status
+     */
+    'detailsAge': DetailsAge;
+    /**
+     * 
+     * @type {CheckResult}
+     * @memberof Status
+     */
+    'mDL': CheckResult;
 }
 
 

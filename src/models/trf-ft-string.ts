@@ -36,6 +36,6 @@ export interface TrfFtString {
      * @type {string}
      * @memberof TrfFtString
      */
-    'Data': string;
+    'Data'?: string;
 }
 

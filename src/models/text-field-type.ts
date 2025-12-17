@@ -2609,7 +2609,19 @@ export enum TextFieldType {
     /**
     * First issue date checksum
     */
-    FT_FIRST_ISSUE_DATE_CHECKSUM = 699
+    FT_FIRST_ISSUE_DATE_CHECKSUM = 699,
+    /**
+    * Commercial indicator
+    */
+    FT_COMMERCIAL_INDICATOR = 701,
+    /**
+    * Non domiciled indicator
+    */
+    FT_NON_DOMICILED_INDICATOR = 702,
+    /**
+    * Jurisdiction specific data
+    */
+    FT_JURISDICTION_SPECIFIC_DATA = 703
 }
 
 
