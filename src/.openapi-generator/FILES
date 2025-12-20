@@ -121,6 +121,8 @@ models/liveness-params.ts
 models/log-level.ts
 models/mdldevice-engagement.ts
 models/mdldevice-retrieval.ts
+models/mdlitem.ts
+models/mdlresult.ts
 models/mdlserver-retrieval.ts
 models/measure-system.ts
 models/message.ts

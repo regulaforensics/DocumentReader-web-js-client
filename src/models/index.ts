@@ -113,6 +113,8 @@ export * from './liveness-params';
 export * from './log-level';
 export * from './mdldevice-engagement';
 export * from './mdldevice-retrieval';
+export * from './mdlitem';
+export * from './mdlresult';
 export * from './mdlserver-retrieval';
 export * from './mrzdetector-result';
 export * from './mrzformat';
