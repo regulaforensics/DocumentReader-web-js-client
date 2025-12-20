@@ -86,6 +86,9 @@ import type { LicenseResult } from './license-result';
 import type { ListVerifiedFields } from './list-verified-fields';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { MDLResult } from './mdlresult';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { MRZDetectorResult } from './mrzdetector-result';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -152,6 +155,6 @@ import type { VDSNCDataResult } from './vdsncdata-result';
  * @type ContainerListListInner
  * @export
  */
-export type ContainerListListInner = AuthenticityResult | BarcodePositionResult | ByteArrayResult | ChosenDocumentTypeResult | DocBarCodeInfo | DocumentBinaryInfoResult | DocumentImageResult | DocumentPositionResult | DocumentTypesCandidatesResult | EncryptedRCLResult | FaceDetectionResult | GraphicsResult | ImageQualityResult | ImagesResult | LexicalAnalysisResult | LicenseResult | MRZDetectorResult | MRZPositionResult | MRZTestQualityResult | RFIDGraphicsInfoResult | RFIDTextDataResult | StatusResult | TextDataResult | TextResult | VDSDataResult | VDSNCDataResult;
+export type ContainerListListInner = AuthenticityResult | BarcodePositionResult | ByteArrayResult | ChosenDocumentTypeResult | DocBarCodeInfo | DocumentBinaryInfoResult | DocumentImageResult | DocumentPositionResult | DocumentTypesCandidatesResult | EncryptedRCLResult | FaceDetectionResult | GraphicsResult | ImageQualityResult | ImagesResult | LexicalAnalysisResult | LicenseResult | MDLResult | MRZDetectorResult | MRZPositionResult | MRZTestQualityResult | RFIDGraphicsInfoResult | RFIDTextDataResult | StatusResult | TextDataResult | TextResult | VDSDataResult | VDSNCDataResult;
 
 
