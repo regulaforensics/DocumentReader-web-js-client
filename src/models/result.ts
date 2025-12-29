@@ -157,7 +157,19 @@ export enum Result {
     /**
     * Digital Travel Credential data
     */
-    DTC_VC = 109
+    DTC_VC = 109,
+    /**
+    * Contains mDL parsed response
+    */
+    MDL_PARSED_RESPONSE = 121,
+    /**
+    * Contains result of VDS NC
+    */
+    VDS_NC = 124,
+    /**
+    * Contains result of VDS
+    */
+    VDS = 125
 }
 
 

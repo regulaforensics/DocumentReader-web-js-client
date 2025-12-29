@@ -86,6 +86,9 @@ import type { LicenseResult } from './license-result';
 import type { ListVerifiedFields } from './list-verified-fields';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { MDLResult } from './mdlresult';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { MRZDetectorResult } from './mrzdetector-result';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -135,11 +138,23 @@ import type { TextDataResult } from './text-data-result';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { TextResult } from './text-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { VDSData } from './vdsdata';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { VDSDataResult } from './vdsdata-result';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { VDSNCData } from './vdsncdata';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { VDSNCDataResult } from './vdsncdata-result';
 
 /**
  * @type ContainerListListInner
  * @export
  */
-export type ContainerListListInner = AuthenticityResult | BarcodePositionResult | ByteArrayResult | ChosenDocumentTypeResult | DocBarCodeInfo | DocumentBinaryInfoResult | DocumentImageResult | DocumentPositionResult | DocumentTypesCandidatesResult | EncryptedRCLResult | FaceDetectionResult | GraphicsResult | ImageQualityResult | ImagesResult | LexicalAnalysisResult | LicenseResult | MRZDetectorResult | MRZPositionResult | MRZTestQualityResult | RFIDGraphicsInfoResult | RFIDTextDataResult | StatusResult | TextDataResult | TextResult;
+export type ContainerListListInner = AuthenticityResult | BarcodePositionResult | ByteArrayResult | ChosenDocumentTypeResult | DocBarCodeInfo | DocumentBinaryInfoResult | DocumentImageResult | DocumentPositionResult | DocumentTypesCandidatesResult | EncryptedRCLResult | FaceDetectionResult | GraphicsResult | ImageQualityResult | ImagesResult | LexicalAnalysisResult | LicenseResult | MDLResult | MRZDetectorResult | MRZPositionResult | MRZTestQualityResult | RFIDGraphicsInfoResult | RFIDTextDataResult | StatusResult | TextDataResult | TextResult | VDSDataResult | VDSNCDataResult;
 
 
