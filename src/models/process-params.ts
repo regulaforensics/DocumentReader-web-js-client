@@ -469,6 +469,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'returnTransliteratedFields'?: boolean;
+    /**
+     * When enabled, returns processing results in accordance with the BSI TR-03135 standard in addition to the existing processing results.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'bsiTr03135Results'?: boolean;
 }
 
 

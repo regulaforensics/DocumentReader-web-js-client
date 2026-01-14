@@ -123,6 +123,10 @@ export enum Result {
     */
     BARCODE_POSITION = 62,
     /**
+    * Contains results in accordance with the BSI TR-03135 standard
+    */
+    BSI_XML_V2 = 73,
+    /**
     * Contains information about document position on the input image, its center, angle, etc
     */
     DOCUMENT_POSITION = 85,
