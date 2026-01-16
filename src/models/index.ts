@@ -8,6 +8,8 @@ export * from './authenticity-check-result-item';
 export * from './authenticity-check-result-list-inner';
 export * from './authenticity-result';
 export * from './authenticity-result-type';
+export * from './bsiv2-item';
+export * from './bsiv2-result';
 export * from './bar-code-module-type';
 export * from './barcode-position-item';
 export * from './barcode-position-result';
