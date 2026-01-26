@@ -475,12 +475,6 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'bsiTr03135Results'?: boolean;
-    /**
-     * When enabled, activates detection of the document holder’s signature presence.
-     * @type {boolean}
-     * @memberof ProcessParams
-     */
-    'checkHoldersSignature'?: boolean;
 }
 
 
