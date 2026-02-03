@@ -17,6 +17,7 @@ export * from './barcode-type';
 export * from './bc-pdf417-info';
 export * from './bc-roidetect';
 export * from './binary-data';
+export * from './bsi-tr03135';
 export * from './byte-array-item';
 export * from './byte-array-result';
 export * from './candidates-list-item';
