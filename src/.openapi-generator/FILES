@@ -22,6 +22,7 @@ models/barcode-type.ts
 models/bc-pdf417-info.ts
 models/bc-roidetect.ts
 models/binary-data.ts
+models/bsi-tr03135.ts
 models/bsiv2-item.ts
 models/bsiv2-result.ts
 models/byte-array-item.ts
