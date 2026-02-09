@@ -11,6 +11,9 @@
 import type { AuthParams } from './auth-params';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { BsiTr03135 } from './bsi-tr03135';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { DocumentFormat } from './document-format';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -469,6 +472,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'returnTransliteratedFields'?: boolean;
+    /**
+     * 
+     * @type {BsiTr03135}
+     * @memberof ProcessParams
+     */
+    'bsiTr03135'?: BsiTr03135;
 }
 
 
