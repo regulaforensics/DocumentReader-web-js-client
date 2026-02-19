@@ -478,6 +478,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'bsiTr03135'?: BsiTr03135;
+    /**
+     * When disabled, date of expiry doesn\'t affect the mrz and text statuses.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'strictExpiryDate'?: boolean;
 }
 
 
