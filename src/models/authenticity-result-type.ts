@@ -101,7 +101,11 @@ export enum AuthenticityResultType {
     /**
     * Encrypted IPI
     */
-    ENCRYPTED_IPI = 16777216
+    ENCRYPTED_IPI = 16777216,
+    /**
+    * Document property check
+    */
+    PROPERTY = 33554432
 }
 
 

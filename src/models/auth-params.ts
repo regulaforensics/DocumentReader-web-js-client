@@ -9,6 +9,9 @@
 // May contain unused imports in some cases
 // @ts-ignore
 import type { LivenessParams } from './liveness-params';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { PropertiesParams } from './properties-params';
 
 /**
  * 
@@ -112,5 +115,17 @@ export interface AuthParams {
      * @memberof AuthParams
      */
     'checkSecurityText'?: boolean;
+    /**
+     * Set to true to enable detection of the document properties, such as holder\'s signature and other attributes.
+     * @type {boolean}
+     * @memberof AuthParams
+     */
+    'checkProperties'?: boolean;
+    /**
+     * 
+     * @type {PropertiesParams}
+     * @memberof AuthParams
+     */
+    'propertiesParams'?: PropertiesParams;
 }
 
