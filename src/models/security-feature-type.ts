@@ -257,7 +257,11 @@ export enum SecurityFeatureType {
     /**
     * External vs ghost portrait comparison
     */
-    PORTRAIT_COMPARISON_EXT_VS_GHOST = 61
+    PORTRAIT_COMPARISON_EXT_VS_GHOST = 61,
+    /**
+    * Signature presence
+    */
+    SIGNATURE_PRESENCE = 62
 }
 
 
