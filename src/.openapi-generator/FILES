@@ -163,6 +163,7 @@ models/process-request.ts
 models/process-response.ts
 models/process-system-info.ts
 models/processing-status.ts
+models/properties-params.ts
 models/raw-image-container-item.ts
 models/raw-image-container-list.ts
 models/rectangle-coordinates.ts
