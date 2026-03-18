@@ -106,6 +106,18 @@ export interface DatabaseDocument {
      * @memberof DatabaseDocument
      */
     'deprecated'?: boolean;
+    /**
+     * ICAO country code.
+     * @type {string}
+     * @memberof DatabaseDocument
+     */
+    'icao_code'?: string;
+    /**
+     * Document codes.
+     * @type {string}
+     * @memberof DatabaseDocument
+     */
+    'doc_codes'?: string;
 }
 
 
