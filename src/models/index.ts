@@ -155,6 +155,7 @@ export * from './process-request-image';
 export * from './process-response';
 export * from './process-system-info';
 export * from './processing-status';
+export * from './properties-params';
 export * from './rfiddoc-visual-extended-field';
 export * from './rfiddoc-visual-extended-field-item';
 export * from './rfiddoc-visual-extended-info';
