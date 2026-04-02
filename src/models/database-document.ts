@@ -33,7 +33,7 @@ export interface DatabaseDocument {
      * @type {string}
      * @memberof DatabaseDocument
      */
-    'createad': string;
+    'created': string;
     /**
      * 
      * @type {DocumentType}
