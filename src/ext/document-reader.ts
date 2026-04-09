@@ -210,8 +210,9 @@ export class DocumentReaderApi {
 
 export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequestBase {
     const imageList: Array<ProcessRequestImage> = [];
+    const { images, ...rest } = request;
 
-    request.images.forEach((image, index) => {
+    images.forEach((image, index) => {
         if (typeof image === 'string') {
             imageList.push({ ImageData: { image: image }, light: Light.WHITE, page_idx: index });
         } else if (image instanceof ArrayBuffer) {
@@ -223,7 +224,7 @@ export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequest
     });
 
     return {
-        ...request,
+        ...rest,
         List: imageList,
     };
 }
