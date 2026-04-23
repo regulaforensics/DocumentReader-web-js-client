@@ -2629,7 +2629,11 @@ export enum TextFieldType {
     /**
     * Date of data expiry
     */
-    FT_DATA_DATE_OF_EXPIRY = 704
+    FT_DATA_DATE_OF_EXPIRY = 704,
+    /**
+    * Consul
+    */
+    FT_CONSUL = 705
 }
 
 
