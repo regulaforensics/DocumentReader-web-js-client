@@ -490,6 +490,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'checkVDS'?: boolean;
+    /**
+     * When enabled, the age check status affects the overall status.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'strictAgeCheck'?: boolean;
 }
 
 
