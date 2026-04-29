@@ -55,5 +55,11 @@ export interface LivenessParams {
      * @memberof LivenessParams
      */
     'checkGeometry'?: boolean;
+    /**
+     * This parameter is used to enable Barcode background check as part of the Liveness checks
+     * @type {boolean}
+     * @memberof LivenessParams
+     */
+    'checkBarcodeBackground'?: boolean;
 }
 

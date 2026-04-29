@@ -317,12 +317,6 @@ export interface ProcessParams {
      */
     'mrzFormatsFilter'?: Array<MRZFormat>;
     /**
-     * When enabled, make sure that in series processing MRZ is located fully inside the result document image, if present on the document. Enabling this option may add extra processing time, by disabling optimizations, but allows more stability in output image quality. Disabled by default.
-     * @type {boolean}
-     * @memberof ProcessParams
-     */
-    'forceReadMrzBeforeLocate'?: boolean;
-    /**
      * This option can be disabled to stop parsing after barcode is read. Enabled by default.
      * @type {boolean}
      * @memberof ProcessParams
@@ -490,6 +484,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'checkVDS'?: boolean;
+    /**
+     * When enabled, the age check status affects the overall status.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'strictAgeCheck'?: boolean;
 }
 
 
