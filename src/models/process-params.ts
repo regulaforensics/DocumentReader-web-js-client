@@ -80,12 +80,6 @@ export interface ProcessParams {
      */
     'lcidFilter'?: Array<LCID>;
     /**
-     * This parameter is used to enable document liveness check.
-     * @type {boolean}
-     * @memberof ProcessParams
-     */
-    'checkLiveness'?: boolean;
-    /**
      * The list of LCID types to ignore during the recognition. If empty, values with all LCID types will be extracted. Narrowing down the list can reduce processing time. Empty by default.
      * @type {Array<LCID>}
      * @memberof ProcessParams
