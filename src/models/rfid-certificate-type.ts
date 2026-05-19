@@ -61,7 +61,15 @@ export enum RfidCertificateType {
     /**
     * DTC signer
     */
-    DTCS = 11
+    DTCS = 11,
+    /**
+    * Separate CA for Barcode signer (VDS-NC)
+    */
+    CA = 12,
+    /**
+    * mDL signer
+    */
+    MDLS = 13
 }
 
 
