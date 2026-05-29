@@ -80,12 +80,6 @@ export interface ProcessParams {
      */
     'lcidFilter'?: Array<LCID>;
     /**
-     * This parameter is used to enable document liveness check.
-     * @type {boolean}
-     * @memberof ProcessParams
-     */
-    'checkLiveness'?: boolean;
-    /**
      * The list of LCID types to ignore during the recognition. If empty, values with all LCID types will be extracted. Narrowing down the list can reduce processing time. Empty by default.
      * @type {Array<LCID>}
      * @memberof ProcessParams
@@ -317,12 +311,6 @@ export interface ProcessParams {
      */
     'mrzFormatsFilter'?: Array<MRZFormat>;
     /**
-     * When enabled, make sure that in series processing MRZ is located fully inside the result document image, if present on the document. Enabling this option may add extra processing time, by disabling optimizations, but allows more stability in output image quality. Disabled by default.
-     * @type {boolean}
-     * @memberof ProcessParams
-     */
-    'forceReadMrzBeforeLocate'?: boolean;
-    /**
      * This option can be disabled to stop parsing after barcode is read. Enabled by default.
      * @type {boolean}
      * @memberof ProcessParams
@@ -490,6 +478,12 @@ export interface ProcessParams {
      * @memberof ProcessParams
      */
     'checkVDS'?: boolean;
+    /**
+     * When enabled, the age check status affects the overall status.
+     * @type {boolean}
+     * @memberof ProcessParams
+     */
+    'strictAgeCheck'?: boolean;
 }
 
 

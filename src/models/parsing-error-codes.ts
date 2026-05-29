@@ -439,6 +439,14 @@ export enum ParsingErrorCodes {
     */
     errLDS_CV_Certificate_PrivateKey_InvalidParams = 2164260965,
     /**
+    * PACE: CAM usage data incorrect
+    */
+    errLDS_PACE_CAM_Data_Usage_Incorrect = 2164261163,
+    /**
+    * PACE: IM mapping data incorrect
+    */
+    errLDS_PACE_IM_MappingData_Incorrect = 2164261167,
+    /**
     * CV Certificate: Incorrect data
     */
     errLDS_CV_Certificate_IncorrectData = 2164261216,
