@@ -329,7 +329,7 @@ export interface ProcessParams {
      */
     'splitNames'?: boolean;
     /**
-     * When enabled, OCR of perforated fields in the document template will not be performed. Disabled by default.
+     * When enabled, OCR of perforated fields in the document template will not be performed. Enabled by default.
      * @type {boolean}
      * @memberof ProcessParams
      */
