@@ -7,7 +7,7 @@
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
