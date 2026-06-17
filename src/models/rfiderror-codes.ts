@@ -195,9 +195,9 @@ export enum RFIDErrorCodes {
     */
     RFID_LAYER6_FILE_EOF1 = 2147508866,
     /**
-    * Layer 6: File EOF2
+    * Layer 6: Wrong parameters
     */
-    RFID_LAYER6_FILE_EOF2 = 2147511040,
+    RFID_LAYER6_WRONG_PARAMS = 2147511040,
     /**
     * Layer 6: Wrong length
     */
