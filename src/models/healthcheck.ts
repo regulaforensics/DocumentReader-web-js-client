@@ -65,6 +65,12 @@ export interface Healthcheck {
      */
     'metadata'?: { [key: string]: any; };
     /**
+     * The list of country identifiers that are defined for processing in the license. If the array is empty, there are no restrictions for processing.
+     * @type {Array<string>}
+     * @memberof Healthcheck
+     */
+    'countryFilter'?: Array<string>;
+    /**
      * 
      * @type {HealthcheckDocumentsDatabase}
      * @memberof Healthcheck
