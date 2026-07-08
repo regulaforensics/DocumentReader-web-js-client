@@ -76,5 +76,11 @@ export interface FaceApi {
      * @memberof FaceApi
      */
     'childDocValidityYears'?: number;
+    /**
+     * This parameter allows you to use a liveness transaction id instead of a selfie photo.
+     * @type {string}
+     * @memberof FaceApi
+     */
+    'livenessTransactionId'?: string;
 }
 
