@@ -13,5 +13,5 @@
     "noUnusedParameters": false,
     "isolatedModules": true,
   },
-   "exclude": ["examples"]
+   "exclude": ["examples", "node_modules"]
 }
