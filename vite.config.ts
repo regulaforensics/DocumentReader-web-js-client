@@ -1,9 +1,9 @@
 import { UserConfig } from 'vite';
-import dts from 'vite-plugin-dts';
+import dts from 'unplugin-dts/vite';
 
 // https://vitejs.dev/config/
 export default {
-    plugins: [dts({ rollupTypes: true, outDir: 'dist' })],
+    plugins: [dts({ bundleTypes: true, outDirs: 'dist', include: 'src' })],
     build: {
         lib: {
             entry: 'src/index.ts',
