@@ -12,6 +12,9 @@ import type { GlaresCheckParams } from './glares-check-params';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { InputImageQualityChecks } from './input-image-quality-checks';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { OcclusionCheckParams } from './occlusion-check-params';
 
 /**
  * 
@@ -79,5 +82,11 @@ export interface ImageQA {
      * @memberof ImageQA
      */
     'glaresCheckParams'?: GlaresCheckParams;
+    /**
+     * 
+     * @type {OcclusionCheckParams}
+     * @memberof ImageQA
+     */
+    'occlusionCheckParams'?: OcclusionCheckParams;
 }
 

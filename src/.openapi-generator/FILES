@@ -138,6 +138,7 @@ models/mrzrows-item.ts
 models/mrztest-quality-item.ts
 models/mrztest-quality-result.ts
 models/mrztest-quality.ts
+models/occlusion-check-params.ts
 models/ocrsecurity-text-item.ts
 models/ocrsecurity-text-result.ts
 models/one-candidate-item.ts

@@ -132,6 +132,7 @@ export * from './mrz-detect-mode-enum';
 export * from './mrz-position-item';
 export * from './ocrsecurity-text-item';
 export * from './ocrsecurity-text-result';
+export * from './occlusion-check-params';
 export * from './one-candidate';
 export * from './one-candidate-item';
 export * from './original-symbol';
