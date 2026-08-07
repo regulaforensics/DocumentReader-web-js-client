@@ -83,6 +83,12 @@ export interface ImageQA {
      */
     'glaresCheckParams'?: GlaresCheckParams;
     /**
+     * This option enables the occlusion detection to identify cases where parts of a document are covered by fingers, hands, or other objects during image capture.
+     * @type {boolean}
+     * @memberof ImageQA
+     */
+    'occlusionCheck'?: boolean;
+    /**
      * 
      * @type {OcclusionCheckParams}
      * @memberof ImageQA
