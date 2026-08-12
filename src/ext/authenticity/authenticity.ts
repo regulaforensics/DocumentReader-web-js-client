@@ -8,10 +8,12 @@ import { SecurityFeatureChecks } from './security-feature';
 export class Authenticity implements AuthenticityCheckList {
     List: Array<AuthenticityCheckResult>;
     page_idx: number;
+    Count: number;
 
     constructor(origin: AuthenticityCheckList, page_idx: number) {
         this.List = origin.List;
         this.page_idx = page_idx;
+        this.Count = origin.Count;
     }
 
     public uvLuminescenceChecks(): SecurityFeatureChecks | undefined {
@@ -80,6 +82,10 @@ export class Authenticity implements AuthenticityCheckList {
 
     public mrzChecks(): SecurityFeatureChecks | undefined {
         return this.securityFeatureOrUndefined(AuthenticityResultType.EXTENDED_MRZ_CHECK);
+    }
+
+    public livenessChecks(): IdentChecks | undefined {
+        return this.identOrUndefined(AuthenticityResultType.LIVENESS);
     }
 
     public resultByType(authenticityType: number): AuthenticityCheckResult | undefined {

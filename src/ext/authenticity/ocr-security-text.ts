@@ -6,7 +6,7 @@ export class OCRSecurityTextChecks implements AuthenticityCheckResult {
     Type: AuthenticityResultType;
 
     constructor(origin: AuthenticityCheckResult) {
-        this.List = <Array<OCRSecurityTextChecks>>origin.List;
+        this.List = <Array<OCRSecurityTextResult>>origin.List;
         this.Result = origin.Result;
         this.Type = origin.Type;
     }

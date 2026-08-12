@@ -5,6 +5,7 @@ export class TextExt implements Text {
     status: CheckResult;
     validityStatus: CheckResult;
     comparisonStatus: CheckResult;
+    dateFormat: string;
 
     availableSourceList: Array<TextAvailableSource>;
     fieldList: Array<TextFieldExt>;
@@ -13,6 +14,7 @@ export class TextExt implements Text {
         this.status = origin.status;
         this.validityStatus = origin.validityStatus;
         this.comparisonStatus = origin.comparisonStatus;
+        this.dateFormat = origin.dateFormat;
         this.availableSourceList = origin.availableSourceList;
         this.fieldList = origin.fieldList.map((field) => new TextFieldExt(field));
     }

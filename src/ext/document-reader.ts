@@ -1,9 +1,10 @@
-import { DefaultApi } from '../api/default-api';
+import { HealthcheckApi } from '../api/healthcheck-api';
 import { ProcessApi } from '../api/process-api';
 import { TransactionApi } from '../api/transaction-api';
-import { Response } from './process-response';
+import { ResourcesApi } from '../api/resources-api';
+import { ProcessResult } from './process-result';
 import { Configuration, ConfigurationParameters } from '../configuration';
-import globalAxios, { AxiosInstance, AxiosResponse } from 'axios';
+import globalAxios, { AxiosInstance, AxiosResponse, RawAxiosRequestConfig } from 'axios';
 import { BASE_PATH } from '../base';
 import {
     ProcessRequestImage,
@@ -13,18 +14,21 @@ import {
     Result,
     DeviceInfo,
     TransactionProcessRequest,
-    InlineResponse200,
+    TransactionProcessResult,
     ListTransactionsByTagResponse,
     TransactionProcessGetResponse,
+    Healthcheck,
+    DatabaseDocumentList,
 } from '../models';
 import { Base64String, instanceOfProcessRequest, ProcessRequestExt } from './process-request-ext';
 import { ProcessRequestImageWrapper } from './process-request-image-wrapper';
 import * as converter from 'base64-arraybuffer';
 
 export class DocumentReaderApi {
-    private readonly defaultApi: DefaultApi;
+    private readonly healthcheckApi: HealthcheckApi;
     private readonly processApi: ProcessApi;
     private readonly transactionApi: TransactionApi;
+    private readonly resourcesApi: ResourcesApi;
 
     private license: string | undefined;
 
@@ -33,13 +37,24 @@ export class DocumentReaderApi {
         basePath: string = BASE_PATH,
         axios: AxiosInstance = globalAxios,
     ) {
-        this.defaultApi = new DefaultApi(new Configuration(configuration), basePath, axios);
+        this.healthcheckApi = new HealthcheckApi(new Configuration(configuration), basePath, axios);
         this.processApi = new ProcessApi(new Configuration(configuration), basePath, axios);
         this.transactionApi = new TransactionApi(new Configuration(configuration), basePath, axios);
+        this.resourcesApi = new ResourcesApi(new Configuration(configuration), basePath, axios);
     }
 
-    async ping(xRequestID?: string): Promise<DeviceInfo> {
-        const axiosResult = await this.defaultApi.ping(xRequestID);
+    async doclist(options?: RawAxiosRequestConfig): Promise<DatabaseDocumentList> {
+        const axiosResult = await this.resourcesApi.doclist(options);
+        return axiosResult.data;
+    }
+
+    async ping(xRequestID?: string, options?: RawAxiosRequestConfig): Promise<DeviceInfo> {
+        const axiosResult = await this.healthcheckApi.ping(xRequestID, options);
+        return axiosResult.data;
+    }
+
+    async health(xRequestID?: string, options?: RawAxiosRequestConfig): Promise<Healthcheck> {
+        const axiosResult = await this.healthcheckApi.healthz(xRequestID, options);
         return axiosResult.data;
     }
 
@@ -47,14 +62,15 @@ export class DocumentReaderApi {
      *
      * @summary Process list of documents images and return extracted data
      * @param {ProcessRequestExt} [request] Request options such as image, results types and etc.
+     * @param {string} xRequestID It allows the client and server to correlate each HTTP request.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError} If some request params are missed
      * */
     async process(
         request: ProcessRequestExt | ProcessRequestBase,
         xRequestID?: string,
-        options?: any,
-    ): Promise<Response> {
+        options?: RawAxiosRequestConfig,
+    ): Promise<ProcessResult> {
         let baseRequest;
 
         if (instanceOfProcessRequest(request)) {
@@ -78,7 +94,7 @@ export class DocumentReaderApi {
         }
 
         const axiosResult = await this.processApi.apiProcess(baseRequest, xRequestID, options);
-        return new Response(axiosResult.data);
+        return new ProcessResult(axiosResult.data);
     }
 
     public setLicense(license: ArrayBuffer | Base64String) {
@@ -92,19 +108,22 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Reprocess
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {TransactionProcessRequest} transactionProcessRequest
+     * @param {boolean} useCache Get processed values from storage in case transaction has already processed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     public reprocessTransaction(
-        transactionId: number,
+        transactionId: string,
         transactionProcessRequest: TransactionProcessRequest,
-        options?: any,
-    ): Promise<AxiosResponse<InlineResponse200, any>> {
+        useCache?: boolean,
+        options?: RawAxiosRequestConfig,
+    ): Promise<AxiosResponse<TransactionProcessResult, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdProcessPost(
             transactionId,
             transactionProcessRequest,
+            useCache,
             options,
         );
     }
@@ -112,54 +131,64 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Get Reprocess transaction result
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {boolean} [withImages] With base64 images or url
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getReprocessTransactionResult(transactionId: number, withImages?: boolean, options?: any): Promise<Response> {
+    async getReprocessTransactionResult(
+        transactionId: string,
+        withImages?: boolean,
+        options?: RawAxiosRequestConfig,
+    ): Promise<ProcessResult> {
         const axiosResult = await this.transactionApi.apiV2TransactionTransactionIdResultsGet(
             transactionId,
             withImages,
             options,
         );
-        return new Response(axiosResult.data);
+        return new ProcessResult(axiosResult.data);
     }
 
     /**
      *
      * @summary Get transactions by tag
-     * @param {number} tagId Tag id
+     * @param {string} tagId Tag id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async getTransactionsByTag(tagId: string, options?: any): Promise<AxiosResponse<ListTransactionsByTagResponse>> {
+    async getTransactionsByTag(
+        tagId: string,
+        options?: RawAxiosRequestConfig,
+    ): Promise<AxiosResponse<ListTransactionsByTagResponse>> {
         return this.transactionApi.apiV2TagTagIdTransactionsGet(tagId, options);
     }
 
     /**
      *
      * @summary Delete Reprocess transactions by tag
-     * @param {number} tagId Tag id
+     * @param {string} tagId Tag id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    async deleteReprocessTransactionsByTag(tagId: number, options?: any): Promise<AxiosResponse<object, any>> {
+    async deleteReprocessTransactionsByTag(
+        tagId: string,
+        options?: RawAxiosRequestConfig,
+    ): Promise<AxiosResponse<object, any>> {
         return this.transactionApi.apiV2TagTagIdDelete(tagId, options);
     }
 
     /**
      *
      * @summary Get Reprocess transaction file
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {string} name File name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async getReprocessTransactionFile(
-        transactionId: number,
+        transactionId: string,
         name: string,
-        options?: any,
+        options?: RawAxiosRequestConfig,
     ): Promise<AxiosResponse<any, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdFileGet(transactionId, name, options);
     }
@@ -167,13 +196,13 @@ export class DocumentReaderApi {
     /**
      *
      * @summary Get Reprocess transaction data
-     * @param {number} transactionId Transaction id
+     * @param {string} transactionId Transaction id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     async getReprocessTransactionData(
-        transactionId: number,
-        options?: any,
+        transactionId: string,
+        options?: RawAxiosRequestConfig,
     ): Promise<AxiosResponse<TransactionProcessGetResponse, any>> {
         return this.transactionApi.apiV2TransactionTransactionIdGet(transactionId, options);
     }
@@ -181,8 +210,9 @@ export class DocumentReaderApi {
 
 export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequestBase {
     const imageList: Array<ProcessRequestImage> = [];
+    const { images, ...rest } = request;
 
-    request.images.forEach((image, index) => {
+    images.forEach((image, index) => {
         if (typeof image === 'string') {
             imageList.push({ ImageData: { image: image }, light: Light.WHITE, page_idx: index });
         } else if (image instanceof ArrayBuffer) {
@@ -194,10 +224,8 @@ export function requestToBaseRequest(request: ProcessRequestExt): ProcessRequest
     });
 
     return {
-        processParam: request.processParam,
+        ...rest,
         List: imageList,
-        systemInfo: request.systemInfo,
-        passBackObject: request.passBackObject,
     };
 }
 
