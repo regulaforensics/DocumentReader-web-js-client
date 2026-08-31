@@ -134,10 +134,9 @@ export interface ProcessParams {
      */
     'resultTypeOutput'?: Array<Result>;
     /**
-     * Enable this option if the image you provide contains double page spread of the passport and you want to process both pages in one go. It makes sense to use it for documents that have meaningful information on both pages, like Russian domestic passport, or some others. Disabled by default.
+     * This option can be set to true if the image you provide contains double page spread of the passport and you want to process both pages in one go. It makes sense to use it for documents that have meaningful information on both pages. If disabled, only one page is extracted.
      * @type {boolean}
      * @memberof ProcessParams
-     * @deprecated
      */
     'doublePageSpread'?: boolean;
     /**
