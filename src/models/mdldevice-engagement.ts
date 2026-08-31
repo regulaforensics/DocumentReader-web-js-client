@@ -14,7 +14,13 @@
  */
 
 export enum MDLDeviceEngagement {
+    /**
+    * Device Engagement using the QR code
+    */
     QR = 0,
+    /**
+    * Device Engagement using the NFC module
+    */
     NFC = 1
 }
 

@@ -14,106 +14,409 @@
  */
 
 export enum RfidDataFileType {
+    /**
+    * Not specified
+    */
     UNSPECIFIED = 0,
+    /**
+    * Passport DG1
+    */
     PASSPORT_DG1 = 1,
+    /**
+    * Passport DG2
+    */
     PASSPORT_DG2 = 2,
+    /**
+    * Passport DG3
+    */
     PASSPORT_DG3 = 3,
+    /**
+    * Passport DG4
+    */
     PASSPORT_DG4 = 4,
+    /**
+    * Passport DG5
+    */
     PASSPORT_DG5 = 5,
+    /**
+    * Passport DG6
+    */
     PASSPORT_DG6 = 6,
+    /**
+    * Passport DG7
+    */
     PASSPORT_DG7 = 7,
+    /**
+    * Passport DG8
+    */
     PASSPORT_DG8 = 8,
+    /**
+    * Passport DG9
+    */
     PASSPORT_DG9 = 9,
+    /**
+    * Passport DG10
+    */
     PASSPORT_DG10 = 10,
+    /**
+    * Passport DG11
+    */
     PASSPORT_DG11 = 11,
+    /**
+    * Passport DG12
+    */
     PASSPORT_DG12 = 12,
+    /**
+    * Passport DG13
+    */
     PASSPORT_DG13 = 13,
+    /**
+    * Passport DG14
+    */
     PASSPORT_DG14 = 14,
+    /**
+    * Passport DG15
+    */
     PASSPORT_DG15 = 15,
+    /**
+    * Passport DG16
+    */
     PASSPORT_DG16 = 16,
+    /**
+    * Passport DG17
+    */
     PASSPORT_DG17 = 17,
+    /**
+    * Passport DG18
+    */
     PASSPORT_DG18 = 18,
+    /**
+    * Passport DG19
+    */
     PASSPORT_DG19 = 19,
+    /**
+    * Passport DG20
+    */
     PASSPORT_DG20 = 20,
+    /**
+    * Passport SOD
+    */
     PASSPORT_SOD = 21,
+    /**
+    * Passport CVCA
+    */
     PASSPORT_CVCA = 22,
+    /**
+    * Passport COM
+    */
     PASSPORT_COM = 23,
+    /**
+    * DTC DG17
+    */
     DTC_DG17 = 57,
+    /**
+    * DTC DG18
+    */
     DTC_DG18 = 58,
+    /**
+    * DTC DG22
+    */
     DTC_DG22 = 62,
+    /**
+    * DTC DG23
+    */
     DTC_DG23 = 63,
+    /**
+    * DTC DG24
+    */
     DTC_DG24 = 64,
+    /**
+    * ID DG1
+    */
     ID_DG1 = 101,
+    /**
+    * ID DG2
+    */
     ID_DG2 = 102,
+    /**
+    * ID DG3
+    */
     ID_DG3 = 103,
+    /**
+    * ID DG4
+    */
     ID_DG4 = 104,
+    /**
+    * ID DG5
+    */
     ID_DG5 = 105,
+    /**
+    * ID DG6
+    */
     ID_DG6 = 106,
+    /**
+    * ID DG7
+    */
     ID_DG7 = 107,
+    /**
+    * ID DG8
+    */
     ID_DG8 = 108,
+    /**
+    * ID DG9
+    */
     ID_DG9 = 109,
+    /**
+    * ID DG10
+    */
     ID_DG10 = 110,
+    /**
+    * ID DG11
+    */
     ID_DG11 = 111,
+    /**
+    * ID DG12
+    */
     ID_DG12 = 112,
+    /**
+    * ID DG13
+    */
     ID_DG13 = 113,
+    /**
+    * ID DG14
+    */
     ID_DG14 = 114,
+    /**
+    * ID DG15
+    */
     ID_DG15 = 115,
+    /**
+    * ID DG16
+    */
     ID_DG16 = 116,
+    /**
+    * ID DG17
+    */
     ID_DG17 = 117,
+    /**
+    * ID DG18
+    */
     ID_DG18 = 118,
+    /**
+    * ID DG19
+    */
     ID_DG19 = 119,
+    /**
+    * ID DG20
+    */
     ID_DG20 = 120,
+    /**
+    * ID DG21
+    */
     ID_DG21 = 121,
+    /**
+    * ID DG22
+    */
     ID_DG22 = 122,
+    /**
+    * DL COM
+    */
     DL_COM = 150,
+    /**
+    * DL DG1
+    */
     DL_DG1 = 151,
+    /**
+    * DL DG2
+    */
     DL_DG2 = 152,
+    /**
+    * DL DG3
+    */
     DL_DG3 = 153,
+    /**
+    * DL DG4
+    */
     DL_DG4 = 154,
+    /**
+    * DL DG5
+    */
     DL_DG5 = 155,
+    /**
+    * DL DG6
+    */
     DL_DG6 = 156,
+    /**
+    * DL DG7
+    */
     DL_DG7 = 157,
+    /**
+    * DL DG8
+    */
     DL_DG8 = 158,
+    /**
+    * DL DG9
+    */
     DL_DG9 = 159,
+    /**
+    * DL DG10
+    */
     DL_DG10 = 160,
+    /**
+    * DL DG11
+    */
     DL_DG11 = 161,
+    /**
+    * DL DG12
+    */
     DL_DG12 = 162,
+    /**
+    * DL DG13
+    */
     DL_DG13 = 163,
+    /**
+    * DL DG14
+    */
     DL_DG14 = 164,
+    /**
+    * DL SOD
+    */
     DL_SOD = 165,
+    /**
+    * DL CE
+    */
     DL_CE = 166,
+    /**
+    * DL CVCA
+    */
     DL_CVCA = 167,
+    /**
+    * PACE card access
+    */
     PACE_CARD_ACCESS = 200,
+    /**
+    * PACE card security
+    */
     PACE_CARD_SECURITY = 201,
+    /**
+    * PACE chip security
+    */
     PACE_CHIP_SECURITY = 202,
+    /**
+    * MIFARE data
+    */
     MIFARE_DATA = 300,
+    /**
+    * MIFARE validity
+    */
     MIFARE_VALIDITY = 301,
+    /**
+    * Authenticity V2
+    */
     AUTHENTICITY_V2 = 302,
+    /**
+    * ATR
+    */
     ATR = 400,
+    /**
+    * DIR
+    */
     DIR = 401,
+    /**
+    * eSign PK
+    */
     E_SIGN_PK = 500,
+    /**
+    * eSign signed data
+    */
     E_SIGN_SIGNED_DATA = 501,
+    /**
+    * Certificate
+    */
     CERTIFICATE = 600,
+    /**
+    * Master list
+    */
     MASTER_LIST = 601,
+    /**
+    * Defect list
+    */
     DEFECT_LIST = 602,
+    /**
+    * Deviation list
+    */
     DEVIATION_LIST = 603,
+    /**
+    * Black list
+    */
     BLACK_LIST = 604,
+    /**
+    * App directory
+    */
     APP_DIRECTORY = 700,
+    /**
+    * Session
+    */
     SESSION = 701,
+    /**
+    * Log data
+    */
     LOG_DATA = 702,
+    /**
+    * Chip properties
+    */
     CHIP_PROPERTIES = 703,
+    /**
+    * DTC info
+    */
     DTC_INFO = 704,
+    /**
+    * Post CA response
+    */
     POST_CA_RESPONSE = 710,
+    /**
+    * Post CA public key
+    */
     POST_CA_PUBLIC_KEY = 711,
+    /**
+    * Post CA info
+    */
     POST_CA_INFO = 712,
+    /**
+    * Post CA params
+    */
     POST_CA_D_PARAMS = 713,
+    /**
+    * Post CA check PK
+    */
     POST_CA_CHECK_PK = 714,
+    /**
+    * Post CA check SK
+    */
     POST_CA_CHECK_SK = 715,
+    /**
+    * SAM data
+    */
     SAM_DATA = 800,
+    /**
+    * SAM data max
+    */
     SAM_DATA_MAX = 832,
+    /**
+    * VDS
+    */
     VDS = 900,
+    /**
+    * VDS-NC
+    */
     VDS_NC = 901,
+    /**
+    * DS
+    */
     DS = 902,
+    /**
+    * User defined
+    */
     USER_DEFINED = 1000
 }
 

@@ -14,8 +14,17 @@
  */
 
 export enum MrzDetectModeEnum {
+    /**
+    * Default detection mode
+    */
     eMDM_Default = 0,
+    /**
+    * Apply window resizing for image binarization
+    */
     eMDM_ResizeBinarizeWindow = 1,
+    /**
+    * Apply blur image processing before binarization
+    */
     eMDM_BlurBeforeBinarization = 2
 }
 
