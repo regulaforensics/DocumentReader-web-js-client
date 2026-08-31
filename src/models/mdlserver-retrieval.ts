@@ -14,7 +14,13 @@
  */
 
 export enum MDLServerRetrieval {
+    /**
+    * Retrieval using the Web API
+    */
     WEB_API = 0,
+    /**
+    * Retrieval using OpenID Connect
+    */
     OIDC = 1
 }
 
