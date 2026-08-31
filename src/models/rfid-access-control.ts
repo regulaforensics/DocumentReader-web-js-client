@@ -13,19 +13,23 @@
  * @enum {number}
  */
 
-export enum MDLDeviceRetrieval {
+export enum RfidAccessControl {
     /**
-    * Device Retrieval using the NFC module
+    * Default
     */
-    NFC = 1,
+    DEFAULT = 0,
     /**
-    * Device Retrieval using the Bluetooth module
+    * Chip access BAC
     */
-    BLE = 2,
+    CHIP_ACCESS_BAC = 1,
     /**
-    * Device Retrieval using the Wi-Fi Aware module
+    * Chip access PACE
     */
-    WIFI_AWARE = 3
+    CHIP_ACCESS_PACE = 2,
+    /**
+    * Local PIN
+    */
+    LOCAL_PIN = 3
 }
 
 

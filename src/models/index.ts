@@ -173,6 +173,7 @@ export * from './result-item';
 export * from './result-mrzdetector';
 export * from './result-mrzdetector-item';
 export * from './rfid-achip';
+export * from './rfid-access-control';
 export * from './rfid-access-control-info';
 export * from './rfid-access-control-procedure-type';
 export * from './rfid-access-key';
