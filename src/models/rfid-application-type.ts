@@ -49,7 +49,15 @@ export enum RfidApplicationType {
     /**
     * Digital Travel Credentials
     */
-    eDTC_PC = 8
+    eDTC_PC = 8,
+    /**
+    * Master File
+    */
+    APPLET_ROOT = 50,
+    /**
+    * Applet root
+    */
+    USER_DEFINED = 100
 }
 
 
