@@ -8,7 +8,7 @@
 
 
 /**
- * 
+ * Enumeration contains possible data engagement methods with mDL
  * @export
  * @enum {number}
  */

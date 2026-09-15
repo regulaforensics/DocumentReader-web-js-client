@@ -8,7 +8,7 @@
 
 
 /**
- * 
+ * Enumeration contains a pool of constants which determine the type of resulting data formed during the data scanning and processing cycle and passed to the user application
  * @export
  * @enum {number}
  */
