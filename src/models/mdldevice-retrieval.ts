@@ -8,7 +8,7 @@
 
 
 /**
- * 
+ * Enumeration contains possible data retrieval methods from mDL
  * @export
  * @enum {number}
  */

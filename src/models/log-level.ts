@@ -8,7 +8,7 @@
 
 
 /**
- * 
+ * Enumeration contains identificators which determinate the level of logs detalization
  * @export
  * @enum {string}
  */
