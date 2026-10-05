@@ -17,7 +17,7 @@ import type { RectangleCoordinates } from './rectangle-coordinates';
  */
 export interface DocVisualExtendedFieldItem {
     /**
-     * 
+     * Coordinates of the text field in the normalized image of the document. Only for Result.VISUAL_TEXT and Result.MRZ_TEXT results.
      * @type {RectangleCoordinates}
      * @memberof DocVisualExtendedFieldItem
      */

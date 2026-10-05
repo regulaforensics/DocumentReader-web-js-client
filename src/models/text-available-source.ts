@@ -26,7 +26,7 @@ export interface TextAvailableSource {
      */
     'source': Source;
     /**
-     * 
+     * Overall status of validity from all fields for given source
      * @type {CheckResult}
      * @memberof TextAvailableSource
      */

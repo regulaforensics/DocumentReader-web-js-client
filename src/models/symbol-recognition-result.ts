@@ -20,7 +20,7 @@ import type { SymbolCandidate } from './symbol-candidate';
  */
 export interface SymbolRecognitionResult {
     /**
-     * 
+     * Coordinates of the symbol in the normalized image of the document
      * @type {RectangleCoordinates}
      * @memberof SymbolRecognitionResult
      */

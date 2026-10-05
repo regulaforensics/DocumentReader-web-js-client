@@ -35,13 +35,77 @@ export enum Light {
     */
     IR = 24,
     /**
+    * Transmitted
+    */
+    TRANSMITTED = 32,
+    /**
+    * Transmitted IR
+    */
+    TRANSMITTED_IR = 64,
+    /**
     * Ultraviolet
     */
     UV = 128,
     /**
+    * White UV
+    */
+    WHITE_UV = 134,
+    /**
+    * IR luminescence
+    */
+    IR_LUMINESCENCE = 256,
+    /**
     * Axial white
     */
-    AXIAL_WHITE = 3072
+    AXIAL_WHITE = 3072,
+    /**
+    * IR720
+    */
+    IR_720 = 4096,
+    /**
+    * IR940
+    */
+    IR_940 = 8192,
+    /**
+    * Transmitted AntiStokes
+    */
+    ANTI_STOKES = 65536,
+    /**
+    * UVС 254 (mod. 88X0)
+    */
+    UVC = 524288,
+    /**
+    * UVB 313 (mod. 88X0)
+    */
+    UVB = 1048576,
+    /**
+    * White oblique light
+    */
+    WHITE_OBL = 2097152,
+    /**
+    * For internal use
+    */
+    WHITE_SPECIAL = 4194304,
+    /**
+    * OVD light for hologram visualization
+    */
+    OVD = 67108864,
+    /**
+    * Light IR 870 oblique
+    */
+    IR_870_OBL = 268435456,
+    /**
+    * HR white
+    */
+    HR_WHITE = 1073741830,
+    /**
+    * HR IR
+    */
+    HR_IR = 1073741848,
+    /**
+    * HR UV
+    */
+    HR_UV = 1073741952
 }
 
 

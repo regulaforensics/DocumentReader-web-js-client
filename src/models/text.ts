@@ -23,19 +23,19 @@ import type { TextField } from './text-field';
  */
 export interface Text {
     /**
-     * 
+     * Overall status of all checks from all text fields
      * @type {CheckResult}
      * @memberof Text
      */
     'status': CheckResult;
     /**
-     * 
+     * Overall status of validity from all text fields from all sources
      * @type {CheckResult}
      * @memberof Text
      */
     'validityStatus': CheckResult;
     /**
-     * 
+     * Overall status of data comparison from different sources for each text field
      * @type {CheckResult}
      * @memberof Text
      */
