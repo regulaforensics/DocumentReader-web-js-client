@@ -20,7 +20,7 @@ import type { OneCandidate } from './one-candidate';
  */
 export interface DocumentTypesCandidates {
     /**
-     * 
+     * Overall recognition result
      * @type {DocumentTypeRecognitionResult}
      * @memberof DocumentTypesCandidates
      */

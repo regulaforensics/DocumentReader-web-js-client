@@ -47,13 +47,13 @@ export interface IdentItem {
      */
     'Area'?: RectangleCoordinates;
     /**
-     * 
+     * Original image
      * @type {ImageData}
      * @memberof IdentItem
      */
     'Image': ImageData;
     /**
-     * 
+     * Reference image
      * @type {ImageData}
      * @memberof IdentItem
      */
