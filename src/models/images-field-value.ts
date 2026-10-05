@@ -38,7 +38,7 @@ export interface ImagesFieldValue {
      */
     'value'?: string;
     /**
-     * Base64 encoded image
+     * Only for images from RFID. Image as was originally stored in the RFID chip.
      * @type {string}
      * @memberof ImagesFieldValue
      */
@@ -68,13 +68,13 @@ export interface ImagesFieldValue {
      */
     'containerType': number;
     /**
-     * 
+     * Only for images from VISUAL. Coordinates of the image in the normalized image of the document.
      * @type {RectangleCoordinates}
      * @memberof ImagesFieldValue
      */
     'fieldRect'?: RectangleCoordinates;
     /**
-     * 
+     * Only for images from RFID. Image location in RFID chip.
      * @type {RfidOrigin}
      * @memberof ImagesFieldValue
      */

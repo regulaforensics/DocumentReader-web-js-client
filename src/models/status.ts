@@ -26,31 +26,31 @@ import type { DetailsRFID } from './details-rfid';
  */
 export interface Status {
     /**
-     * 
+     * Overall checks status. Rootx status
      * @type {CheckResult}
      * @memberof Status
      */
     'overallStatus': CheckResult;
     /**
-     * 
+     * Overall optical checks combined status
      * @type {CheckResult}
      * @memberof Status
      */
     'optical': CheckResult;
     /**
-     * 
+     * Portrait comparison status
      * @type {CheckResult}
      * @memberof Status
      */
     'portrait': CheckResult;
     /**
-     * 
+     * Overall RFID checks combined status
      * @type {CheckResult}
      * @memberof Status
      */
     'rfid': CheckResult;
     /**
-     * 
+     * Stop list check status
      * @type {CheckResult}
      * @memberof Status
      */
