@@ -655,9 +655,9 @@ export enum DocumentType {
     */
     PASSPORT_CARD = 172,
     /**
-    * Passport resident card
+    * Permanent resident card
     */
-    PASSPORT_RESIDENT_CARD = 173,
+    PERMANENT_RESIDENT_CARD = 173,
     /**
     * Personal identification verification
     */

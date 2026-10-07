@@ -8,7 +8,7 @@
 
 
 /**
- * 
+ * Enumeration contains a set of constants that define scanning process completion status
  * @export
  * @enum {number}
  */
