@@ -71,13 +71,13 @@ export interface TextFieldValue {
      */
     'probability': number;
     /**
-     * 
+     * Only for visual and mrz results. Coordinates of the rectangle region on a document image(result type 1). Represented by two points - (left, top) + (right, bottom)
      * @type {RectangleCoordinates}
      * @memberof TextFieldValue
      */
     'fieldRect'?: RectangleCoordinates;
     /**
-     * 
+     * Only for RFID images. Text location in RFID chip.
      * @type {RfidOrigin}
      * @memberof TextFieldValue
      */

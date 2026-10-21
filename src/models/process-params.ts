@@ -164,7 +164,7 @@ export interface ProcessParams {
      */
     'dateFormat'?: string;
     /**
-     * 
+     * This option allows you to set the system of measurement used for converting original values in document to output result values. Metric by default.
      * @type {MeasureSystem}
      * @memberof ProcessParams
      */
@@ -200,7 +200,7 @@ export interface ProcessParams {
      */
     'log'?: boolean;
     /**
-     * 
+     * When used together with \'log\' parameter enabled, sets the level of logs detalization. \'INFO\' by default.
      * @type {LogLevel}
      * @memberof ProcessParams
      */
@@ -262,7 +262,7 @@ export interface ProcessParams {
      */
     'respectImageQuality'?: boolean;
     /**
-     * 
+     * Force use of specified document format when locating and recognizing document to reduce the number of candidates.
      * @type {DocumentFormat}
      * @memberof ProcessParams
      */
@@ -316,7 +316,7 @@ export interface ProcessParams {
      */
     'parseBarcodes'?: boolean;
     /**
-     * 
+     * This option allows output text case transformation. No changes applied by default to original values.
      * @type {TextPostProcessing}
      * @memberof ProcessParams
      */

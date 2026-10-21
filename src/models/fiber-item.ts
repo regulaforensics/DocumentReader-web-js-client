@@ -32,7 +32,7 @@ export interface FiberItem {
      */
     'ExpectedCount': number;
     /**
-     * 
+     * For UV_Background authentication result type
      * @type {Light}
      * @memberof FiberItem
      */
@@ -68,7 +68,7 @@ export interface FiberItem {
      */
     'Area': Array<number>;
     /**
-     * Fibers color value
+     * Fibers color value. Example: [BLUE, GREEN, RED]
      * @type {Array<number>}
      * @memberof FiberItem
      */
