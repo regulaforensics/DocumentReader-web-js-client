@@ -20,7 +20,7 @@ import type { ImageQualityCheck } from './image-quality-check';
  */
 export interface ImageQualityCheckList {
     /**
-     * 
+     * Overall image quality status, combined from check statuses in the list.
      * @type {CheckResult}
      * @memberof ImageQualityCheckList
      */

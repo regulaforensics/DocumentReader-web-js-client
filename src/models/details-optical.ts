@@ -17,31 +17,31 @@ import type { CheckResult } from './check-result';
  */
 export interface DetailsOptical {
     /**
-     * 
+     * Overall optical checks combined status
      * @type {CheckResult}
      * @memberof DetailsOptical
      */
     'overallStatus': CheckResult;
     /**
-     * 
+     * Status of document type recognition
      * @type {CheckResult}
      * @memberof DetailsOptical
      */
     'docType': CheckResult;
     /**
-     * 
+     * Status of document expiration
      * @type {CheckResult}
      * @memberof DetailsOptical
      */
     'expiry': CheckResult;
     /**
-     * 
+     * Status of document image quality check
      * @type {CheckResult}
      * @memberof DetailsOptical
      */
     'imageQA': CheckResult;
     /**
-     * 
+     * Status of document MRZ
      * @type {CheckResult}
      * @memberof DetailsOptical
      */
@@ -53,13 +53,13 @@ export interface DetailsOptical {
      */
     'pagesCount': number;
     /**
-     * 
+     * Authenticity verification status
      * @type {CheckResult}
      * @memberof DetailsOptical
      */
     'security': CheckResult;
     /**
-     * 
+     * Status of text fields analysis
      * @type {CheckResult}
      * @memberof DetailsOptical
      */
