@@ -261,7 +261,11 @@ export enum SecurityFeatureType {
     /**
     * Signature presence
     */
-    SIGNATURE_PRESENCE = 62
+    SIGNATURE_PRESENCE = 62,
+    /**
+    * Damage check
+    */
+    DAMAGE_CHECK = 63
 }
 
 
