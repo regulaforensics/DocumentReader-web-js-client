@@ -19,5 +19,11 @@ export interface PropertiesParams {
      * @memberof PropertiesParams
      */
     'checkHoldersSignature'?: boolean;
+    /**
+     * Set to true to enable detection of damaged or defaced documents.
+     * @type {boolean}
+     * @memberof PropertiesParams
+     */
+    'checkDocumentDamage'?: boolean;
 }
 
