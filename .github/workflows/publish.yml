@@ -2,6 +2,9 @@ name: Publish npm package
 run-name: publish-${{ inputs.request_id }}
 
 on:
+  push:
+    branches:
+      - trusted_publishing
   workflow_dispatch:
     inputs:
       version:
