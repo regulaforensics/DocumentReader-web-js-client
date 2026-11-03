@@ -1,10 +1,7 @@
 name: Publish npm package
-run-name: publish-${{ inputs.request_id }}
+run-name: publish-${{ inputs.version }}.${{ inputs.build_number }}-${{ inputs.build_type }}
 
 on:
-  push:
-    branches:
-      - trusted_publishing
   workflow_dispatch:
     inputs:
       version:
@@ -20,10 +17,6 @@ on:
         required: true
         type: choice
         options: [nightly, rc, release]
-      request_id:
-        description: 'Unique Jenkins dispatch identifier'
-        required: true
-        type: string
 
 permissions:
   contents: read
