@@ -2649,7 +2649,11 @@ export enum TextFieldType {
     /**
     * Post office
     */
-    FT_ADDRESS_POST_OFFICE = 709
+    FT_ADDRESS_POST_OFFICE = 709,
+    /**
+    * Address (Lot)
+    */
+    FT_ADDRESS_LOT = 710
 }
 
 
