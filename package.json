@@ -16,7 +16,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git@github.com/regulaforensics/DocumentReader-api-js-client"
+    "url": "git+https://github.com/regulaforensics/DocumentReader-web-js-client.git"
   },
   "exports": {
     ".": {
