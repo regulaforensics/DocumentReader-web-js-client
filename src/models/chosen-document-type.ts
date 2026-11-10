@@ -44,7 +44,7 @@ export interface ChosenDocumentType {
      */
     'Rotated180': number;
     /**
-     * 
+     * Indication of the presence of an RFID chip in the document (electronic document indicator)
      * @type {RfidLocation}
      * @memberof ChosenDocumentType
      */

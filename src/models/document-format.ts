@@ -43,6 +43,10 @@ export enum DocumentFormat {
     */
     ID3_X2 = 5,
     /**
+    * Turkey ID2 card
+    */
+    ID2_TURKEY = 6,
+    /**
     * ID1 format document rotated 90 °
     */
     ID1_90 = 10,
@@ -55,7 +59,7 @@ export enum DocumentFormat {
     */
     ID1_270 = 12,
     /**
-    * ID2 format document rotated 90 °
+    * ID2 format document rotated 180 °
     */
     ID2_180 = 13,
     /**

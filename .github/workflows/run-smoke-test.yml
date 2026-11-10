@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
@@ -21,4 +21,4 @@ jobs:
       - run: npm install && node --unhandled-rejections=strict index.js
         working-directory: ./examples/basic/
         env:
-          API_BASE_PATH: "https://nightly-api.regulaforensics.com"
+          API_BASE_PATH: ${{ github.base_ref == 'develop' && 'https://nightly-api.regulaforensics.com' || github.base_ref == 'stable' && 'https://rc-api.regulaforensics.com' || github.base_ref == 'master' && 'https://api.regulaforensics.com' || 'https://nightly-api.regulaforensics.com' }}

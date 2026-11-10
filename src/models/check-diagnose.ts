@@ -541,7 +541,15 @@ export enum CheckDiagnose {
     /**
     * Fingerprint as signature
     */
-    PROPERTY_FINGERPRINT_AS_SIGNATURE = 262
+    PROPERTY_FINGERPRINT_AS_SIGNATURE = 262,
+    /**
+    * Document damaged
+    */
+    PROPERTY_DOCUMENT_DAMAGED = 263,
+    /**
+    * Document cancelled
+    */
+    PROPERTY_DOCUMENT_CANCELLED = 264
 }
 
 

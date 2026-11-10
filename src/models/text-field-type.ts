@@ -2645,7 +2645,15 @@ export enum TextFieldType {
     /**
     * DL category B3 codes
     */
-    DL_CLASS_CODE_B3_NOTES = 708
+    DL_CLASS_CODE_B3_NOTES = 708,
+    /**
+    * Post office
+    */
+    FT_ADDRESS_POST_OFFICE = 709,
+    /**
+    * Address (Lot)
+    */
+    FT_ADDRESS_LOT = 710
 }
 
 

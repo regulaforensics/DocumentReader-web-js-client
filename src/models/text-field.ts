@@ -56,19 +56,19 @@ export interface TextField {
      */
     'lcidName'?: string;
     /**
-     * 
+     * Overall status of all checks from all values
      * @type {CheckResult}
      * @memberof TextField
      */
     'status': CheckResult;
     /**
-     * 
+     * Overall status of validity from all values
      * @type {CheckResult}
      * @memberof TextField
      */
     'validityStatus': CheckResult;
     /**
-     * 
+     * Overall status of data comparison from different sources
      * @type {CheckResult}
      * @memberof TextField
      */

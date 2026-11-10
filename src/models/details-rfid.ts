@@ -17,43 +17,43 @@ import type { CheckResult } from './check-result';
  */
 export interface DetailsRFID {
     /**
-     * 
+     * Overall RFID checks combined status
      * @type {CheckResult}
      * @memberof DetailsRFID
      */
     'overallStatus': CheckResult;
     /**
-     * 
+     * Active Authentication status
      * @type {CheckResult}
      * @memberof DetailsRFID
      */
     'AA': CheckResult;
     /**
-     * 
+     * Basic Access Control (BAC) status
      * @type {CheckResult}
      * @memberof DetailsRFID
      */
     'BAC': CheckResult;
     /**
-     * 
+     * Chip Authentication status
      * @type {CheckResult}
      * @memberof DetailsRFID
      */
     'CA': CheckResult;
     /**
-     * 
+     * Passive Authentication status
      * @type {CheckResult}
      * @memberof DetailsRFID
      */
     'PA': CheckResult;
     /**
-     * 
+     * Password Authenticated Connection Establishment (PACE) status
      * @type {CheckResult}
      * @memberof DetailsRFID
      */
     'PACE': CheckResult;
     /**
-     * 
+     * Terminal Authentication status
      * @type {CheckResult}
      * @memberof DetailsRFID
      */
